@@ -3,7 +3,7 @@
 **ECOCD31-Restore-GPO**
 ------------------------------------------------------------------------------------------------------
 
-Traitement automatisé des GPOs CD31
+Traitement automatisé des stratégies de groupe
 
 Accompagné des fichiers modèles de stratégies et des stratégies de groupe
 de référence, le script Restore-GPO.ps1 met-à-jour les modèles de stratégies,
@@ -14,7 +14,7 @@ de référence, permettant ainsi de les restaurer rapidement.
 
 Si des modifications sont effectuées dans l'établissement, elles peuvent
 être sauvegardées et/ou devenir les stratégies de référence en utilisant
-le paramètre MakeCurrentAsRef.
+le paramètre **-MakeCurrentAsRef**.
 
 Ces étapes sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
 Avec les paramètres, chacune d'elles peut être désactivée.
