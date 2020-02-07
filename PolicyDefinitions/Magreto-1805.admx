@@ -1,0 +1,941 @@
+<!--MAGRET : Modèle Magret-Ordinateur-1805.admx (DANE - G. Picou, JP. Gau, T. Chassain - mai 2018)-->
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="magreto-1805" namespace="Microsoft.Policies.Magreto-1805" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+
+  <categories>
+    <category name="Magret_Ordinateurs" displayName="$(string.mag_0)">
+    </category>
+    <category name="InitialisationSysteme" displayName="$(string.mag_100)">
+      <parentCategory ref="Magret_Ordinateurs" />
+    </category>
+    <category name="OuverturedesessionetProfilitinerant" displayName="$(string.mag_200)">
+      <parentCategory ref="Magret_Ordinateurs" />
+    </category>
+    <category name="Services" displayName="$(string.mag_300)">
+      <parentCategory ref="Magret_Ordinateurs" />
+    </category>
+    <category name="ReseauetAccesdistant" displayName="$(string.mag_400)">
+      <parentCategory ref="Magret_Ordinateurs" />
+    </category>
+    <category name="ComposantsWindows" displayName="$(string.mag_500)">
+      <parentCategory ref="Magret_Ordinateurs" />
+    </category>
+    <category name="ExplorateurWindows" displayName="$(string.mag_510)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="WindowsMessenger" displayName="$(string.mag_520)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="WindowsInstaller" displayName="$(string.mag_530)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="WindowsApps" displayName="$(string.mag_540)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="Cortana" displayName="$(string.mag_550)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="Imprimantes" displayName="$(string.mag_600)">
+      <parentCategory ref="Magret_Ordinateurs" />
+    </category>
+    <category name="ApplicationsMAGRET" displayName="$(string.mag_700)">
+      <parentCategory ref="Magret_Ordinateurs" />
+    </category>
+    <category name="ParametresduserveurMAGRET" displayName="$(string.mag_710)">
+      <parentCategory ref="ApplicationsMAGRET" />
+    </category>
+    <category name="Extinctionstations" displayName="$(string.mag_720)">
+      <parentCategory ref="ApplicationsMAGRET" />
+    </category>
+    <category name="ClefsUSB" displayName="$(string.mag_730)">
+      <parentCategory ref="ApplicationsMAGRET" />
+    </category>
+    <category name="Controledesstations" displayName="$(string.mag_740)">
+      <parentCategory ref="ApplicationsMAGRET" />
+    </category>
+  </categories>
+  
+  
+  <policies>
+  
+    
+    
+<!--Initialisation Système-->
+    <policy name="MessagesdetatdeDemarrageArretdetaillesounormaux" class="Machine" displayName="$(string.mag_101)" presentation="$(presentation.MessagesdetatdeDemarrageArretdetaillesounormaux)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="VerboseStatus">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverlessonsdedemarragesousW7" class="Machine" displayName="$(string.mag_102)" presentation="$(presentation.DesactiverlessonsdedemarragesousW7)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="DisableStartupSound">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+    </policy>
+    <policy name="Desactiverlalectureautomatique" class="Machine" displayName="$(string.mag_103)" presentation="$(presentation.Desactiverlalectureautomatique)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Desactiverlalecturepour" valueName="NoDriveTypeAutoRun" required="true">
+          <item displayName="$(string.mag_104)">
+            <value>
+              <decimal value="181" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_105)">
+            <value>
+              <decimal value="255" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="DesactiverlutilisationdesclefsUSB" class="Machine" displayName="$(string.mag_106)" presentation="$(presentation.DesactiverlutilisationdesclefsUSB)" key="SYSTEM\CurrentControlSet\Services\usbstor">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Audemarragedusysteme" valueName="Start" required="true">
+          <item displayName="$(string.mag_107)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_108)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="Supprimerlesprofilsitinerantsmisencache" class="Machine" displayName="$(string.mag_109)" presentation="$(presentation.Supprimerlesprofilsitinerantsmisencache)" key="Software\Policies\Microsoft\Windows\System">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledList>
+        <item key="Software\Policies\Microsoft\Windows\System" valueName="DeleteRoamingCache">
+          <value>
+            <string>1</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Microsoft\Windows NT\CurrentVersion\WinLogon" valueName="DeleteRoamingCache">
+          <value>
+            <string>1</string>
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Policies\Microsoft\Windows\System" valueName="DeleteRoamingCache">
+          <value>
+            <string>0</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Microsoft\Windows NT\CurrentVersion\WinLogon" valueName="DeleteRoamingCache">
+          <value>
+            <string>0</string>
+          </value>
+        </item>
+      </disabledList>
+    </policy>
+    <policy name="DesactiverlalistedexecutionuniqueRunOnce" class="Machine" displayName="$(string.mag_110)" presentation="$(presentation.DesactiverlalistedexecutionuniqueRunOnce)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="DisableLocalMachineRunOnce">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverlalistedexecutionRun" class="Machine" displayName="$(string.mag_111)" presentation="$(presentation.DesactiverlalistedexecutionRun)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="DisableLocalMachineRun">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Nepasexecuterlesscriptsdedemarragedemaniereasynchrone" class="Machine" displayName="$(string.mag_112)" presentation="$(presentation.Nepasexecuterlesscriptsdedemarragedemaniereasynchrone)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="RunStartupScriptSync">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="Nepasexecuterlesscriptsdedemarrageenmodevisible" class="Machine" displayName="$(string.mag_113)" presentation="$(presentation.Nepasexecuterlesscriptsdedemarrageenmodevisible)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="HideStartupScripts">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Nepasexecuterlesscriptsdarretenmodevisible" class="Machine" displayName="$(string.mag_114)" presentation="$(presentation.Nepasexecuterlesscriptsdarretenmodevisible)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="HideShutdownScripts">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Nepasdetecterlesconnexionsreseaulentes" class="Machine" displayName="$(string.mag_115)" presentation="$(presentation.Nepasdetecterlesconnexionsreseaulentes)" key="Software\Policies\Microsoft\Windows\System" valueName="SlowLinkDetectEnabled">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="DEPaideHTML" class="Machine" displayName="$(string.mag_116)" presentation="$(presentation.DEPaideHTML)" key="Software\Policies\Microsoft\Windows\System" valueName="DisableHHDEP">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+    </policy>
+    <policy name="lancementapplications16b" class="Machine" displayName="$(string.mag_117)" presentation="$(presentation.lancementapplications16b)" key="Software\Policies\Microsoft\Windows\AppCompat" valueName="VDMDisallowed">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+    </policy>
+    <policy name="moteurdecompatiblite" class="Machine" displayName="$(string.mag_118)" presentation="$(presentation.moteurdecompatiblite)" key="Software\Policies\Microsoft\Windows\AppCompat" valueName="DisableEngine">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+    </policy>
+    <policy name="taillejetonkerberos" class="Machine" displayName="$(string.mag_119)" explainText="$(string.taillejeton)" presentation="$(presentation.taillejetonkerberos)" key="SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters" valueName="MaxTokenSize">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="65535" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DesactiverAntiSpyware" class="Machine" displayName="$(string.mag_120)" explainText="$(string.DesactiverAntiSpyware_Explain)" key="Software\Policies\Microsoft\Windows Defender" valueName="DisableAntiSpyware">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="MessageEcranAccueil" class="Machine" displayName="$(string.mag_121)" explainText="$(string.MessageEcranAccueil_Explain)" presentation="$(presentation.MessageEcranAccueil)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <elements>
+        <text id="TitreduMessage" valueName="legalnoticecaption" required="true" />
+        <text id="Message" valueName="legalnoticetext" required="true" />
+      </elements>
+    </policy>
+    <policy name="RemoveWindowsStore" class="Machine" displayName="$(string.mag_122)" explainText="$(string.RemoveWindowsStore_Help)" key="Software\Policies\Microsoft\WindowsStore" valueName="RemoveWindowsStore">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_Windows8" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableAutoInstall" class="Machine" displayName="$(string.mag_123)" explainText="$(string.DisableAutoInstall_Help)" key="Software\Policies\Microsoft\WindowsStore" valueName="AutoDownload">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <enabledValue>
+        <decimal value="2" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="4" />
+      </disabledValue>
+    </policy>
+    <policy name="Checkforupdatesatstart" class="Machine" displayName="$(string.mag_124)" explainText="$(string.Checkforupdatesatstart_Help)" presentation="$(presentation.Checkforupdatesatstart)" key="SOFTWARE\JavaSoft\Java Update\Policy" valueName="EnableAutoUpdateCheck">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="EnableJavaUpdater" class="Machine" displayName="$(string.mag_125)" explainText="$(string.EnableJavaUpdater_Help)" presentation="$(presentation.EnableJavaUpdater)" key="SOFTWARE\JavaSoft\Java Update\Policy" valueName="EnableJavaUpdate">
+      <parentCategory ref="InitialisationSysteme" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DemarrageRapide" class="Machine" displayName="$(string.mag_126)" explainText="$(string.DemarrageRapide)" key="System\CurrentControlSet\Control\Session Manager\Power" valueName="HiberbootEnabled">
+        <parentCategory ref="InitialisationSysteme" />
+        <supportedOn ref="windows:SUPPORTED_Windows8" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+    </policy>
+    <policy name="Hibernation" class="Machine" displayName="$(string.mag_127)" explainText="$(string.Hibernation)" key="System\CurrentControlSet\Control\Power" valueName="HibernateEnabled">
+        <parentCategory ref="InitialisationSysteme" />
+        <supportedOn ref="windows:SUPPORTED_Windows7" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+    </policy>
+       
+<!--Ouverture de session et Profil itinérant-->
+    <policy name="Ecranbienvenue" class="Machine" displayName="$(string.mag_201)" presentation="$(presentation.Ecranbienvenue)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoWelcomeScreen">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Attendrereseau" class="Machine" displayName="$(string.mag_202)" explainText="$(string.SyncForegroundPolicy_Help)" presentation="$(presentation.Attendrereseau)" key="Software\Policies\Microsoft\Windows NT\CurrentVersion\Winlogon" valueName="SyncForegroundPolicy">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Utilisateurprecedent" class="Machine" displayName="$(string.mag_203)" presentation="$(presentation.Utilisateurprecedent)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="DontDisplayLastUsername">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Executerlesscriptsdouverturedesessionsimultanement" class="Machine" displayName="$(string.mag_204)" presentation="$(presentation.Executerlesscriptsdouverturedesessionsimultanement)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="RunLogonScriptSync">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Attendrelechargementduprofilitinerant" class="Machine" displayName="$(string.mag_205)" presentation="$(presentation.Attendrelechargementduprofilitinerant)" key="Software\Policies\Microsoft\Windows\System" valueName="SlowLinkProfileDefault">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Fermerlasessionutilisateurlorsdunechecduprofilitinerant" class="Machine" displayName="$(string.mag_206)" explainText="$(string.ProfileErrorAction_Help)" presentation="$(presentation.Fermerlasessionutilisateurlorsdunechecduprofilitinerant)" key="Software\Policies\Microsoft\Windows\System" valueName="ProfileErrorAction">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Nombremaximaldetentativesdemiseajourduprofilutilisateur" class="Machine" displayName="$(string.mag_207)" explainText="$(string.ProfileUnloadTimeout_Help)" presentation="$(presentation.Nombremaximaldetentativesdemiseajourduprofilutilisateur)" key="Software\Policies\Microsoft\Windows\System">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <decimal id="Nombremaximaldetentatives" valueName="ProfileUnloadTimeout" required="true" maxValue="4294967295" />
+      </elements>
+    </policy>
+    <policy name="NepasverifierlesproprietairesdesdossiersProfilsitinerants" class="Machine" displayName="$(string.mag_208)" explainText="$(string.CompatibleRUPSecurity_Help)" presentation="$(presentation.NepasverifierlesproprietairesdesdossiersProfilsitinerants)" key="Software\Policies\Microsoft\Windows\System" valueName="CompatibleRUPSecurity">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="AjouterlegroupeAdministrateursauxprofilsitinerantsutilisateurs" class="Machine" displayName="$(string.mag_209)" presentation="$(presentation.AjouterlegroupeAdministrateursauxprofilsitinerantsutilisateurs)" key="Software\Policies\Microsoft\Windows\System" valueName="AddAdminGroupToRUP">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Nautoriserquelesprofilsdutilisateurslocaux" class="Machine" displayName="$(string.mag_210)" explainText="$(string.LocalProfile_Help)" presentation="$(presentation.Nautoriserquelesprofilsdutilisateurslocaux)" key="Software\Policies\Microsoft\Windows\System" valueName="LocalProfile">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Dechargementprofil" class="Machine" displayName="$(string.mag_211)" presentation="$(presentation.Dechargementprofil)" key="Software\Policies\Microsoft\Windows\System" valueName="DisableForceUnload">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+    </policy>
+    <policy name="Suppressionprofilsanciens" class="Machine" displayName="$(string.mag_212)" explainText="$(string.Cleanup_Profiles)" presentation="$(presentation.Suppressionprofilsanciens)" key="Software\Policies\Microsoft\Windows\System">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <elements>
+        <decimal id="Nombredejourdanciennete" valueName="CleanupProfiles" required="true" defaultValue="1" />
+      </elements>
+    </policy>
+    <policy name="Changementrapideutilisateur" class="Machine" displayName="$(string.mag_213)" presentation="$(presentation.Changementrapideutilisateur)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="HideFastUserSwitching">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+    </policy>
+    <policy name="LimiterUAC" class="Machine" displayName="$(string.mag_214)" presentation="$(presentation.LimiterUAC)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="FilterAdministratorToken">
+          <value><decimal value="0" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableUIADesktopToggle">
+          <value><decimal value="1" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="ConsentPromptBehaviorAdmin">
+          <value><decimal value="0" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="ConsentPromptBehaviorUser">
+          <value><decimal value="3" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableInstallerDetection">
+          <value><decimal value="0" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="ValidateAdminCodeSignatures">
+          <value><decimal value="0" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableSecureUIAPaths">
+          <value><decimal value="0" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableLUA">
+          <value><decimal value="1" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="PromptOnSecureDesktop">
+          <value><decimal value="0" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableVirtualization">
+          <value><decimal value="1" /></value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="FilterAdministratorToken">
+          <value><decimal value="1" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableUIADesktopToggle">
+          <value><decimal value="0" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="ConsentPromptBehaviorAdmin">
+          <value><decimal value="5" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="ConsentPromptBehaviorUser">
+          <value><decimal value="0" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableInstallerDetection">
+          <value><decimal value="1" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="ValidateAdminCodeSignatures">
+          <value><decimal value="1" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableSecureUIAPaths">
+          <value><decimal value="1" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableLUA">
+          <value><decimal value="1" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="PromptOnSecureDesktop">
+          <value><decimal value="1" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableVirtualization">
+          <value><decimal value="0" /></value>
+        </item>
+    </disabledList>
+    </policy>
+    <policy name="AnimationPremiereOuvertureSession" class="Machine" displayName="$(string.mag_215)" presentation="$(presentation.AnimationPremiereOuvertureSession)" key="Software\Microsoft\Windows NT\CurrentVersion\Winlogon" valueName="EnableFirstLogonAnimation">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <enabledValue>                             
+        <decimal value="0" /> 
+      </enabledValue> 
+      <disabledValue> 
+        <decimal value="1" /> 
+      </disabledValue>
+    </policy>
+    <policy name="InformationsUtilisateurprecedent" class="Machine" displayName="$(string.mag_217)" presentation="$(presentation.InformationsUtilisateurprecedent)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="DisplayLastLogonInfo">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="ExtensionsProfilItinerant"  class="Machine" displayName="$(string.mag_218)" presentation="$(presentation.ExtensionsProfilItinerant)" key="SYSTEM\CurrentControlSet\Services\ProfSvc\Parameters" valueName="UseProfilePathExtensionVersion"> 
+    <parentCategory ref="OuverturedesessionetProfilitinerant" />
+    <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <enabledValue>                             
+        <decimal value="1" /> 
+      </enabledValue> 
+      <disabledValue> 
+        <decimal value="0" /> 
+      </disabledValue>
+    </policy>
+    <policy name="SuggestionsConsommateurMicrosoft" class="Machine" displayName="$(string.mag_219)" explainText="$(string.SuggestionsConsommateurMicrosoft_Help)" key="Software\Policies\Microsoft\Windows\CloudContent" valueName="DisableWindowsConsumerFeatures">
+      <parentCategory ref="OuverturedesessionetProfilitinerant" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOSERVER" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>  
+    
+      
+    
+<!--Services-->
+    <policy name="DesactiverlecentredesecuriteXPSP2etSP3" class="Machine" displayName="$(string.mag_301)" presentation="$(presentation.DesactiverlecentredesecuriteXPSP2etSP3)" key="SYSTEM\CurrentControlSet\Services\wscsvc" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="Desactiverlesmisesajourautomatiques" class="Machine" displayName="$(string.mag_302)" presentation="$(presentation.Desactiverlesmisesajourautomatiques)" key="SYSTEM\CurrentControlSet\Services\wuauserv" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="Desactiverleplanificateurdetaches" class="Machine" displayName="$(string.mag_303)" presentation="$(presentation.Desactiverleplanificateurdetaches)" key="SYSTEM\CurrentControlSet\Services\Schedule" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="Desactiverleparefeu" class="Machine" displayName="$(string.mag_304)" presentation="$(presentation.Desactiverleparefeu)" key="SYSTEM\CurrentControlSet\Services\SharedAccess" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="Desactiverlepartagedeconnexioninternet" class="Machine" displayName="$(string.mag_305)" presentation="$(presentation.Desactiverlepartagedeconnexioninternet)" key="SYSTEM\CurrentControlSet\Services\ALG" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="Desactiverlaccesadistanceauregistre" class="Machine" displayName="$(string.mag_306)" presentation="$(presentation.Desactiverlaccesadistanceauregistre)" key="SYSTEM\CurrentControlSet\Services\RemoteRegistry" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="Desactiverlaconfigurationautomatiquesansfil" class="Machine" displayName="$(string.mag_307)" presentation="$(presentation.Desactiverlaconfigurationautomatiquesansfil)" key="SYSTEM\CurrentControlSet\Services\WZCSVC" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="DesactiverNLANetworkLocationAwareness" class="Machine" displayName="$(string.mag_308)" presentation="$(presentation.DesactiverNLANetworkLocationAwareness)" key="SYSTEM\CurrentControlSet\Services\Nla" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="DesactiverlesservicesTerminalServer" class="Machine" displayName="$(string.mag_309)" presentation="$(presentation.DesactiverlesservicesTerminalServer)" key="SYSTEM\CurrentControlSet\Services\TermService" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="DesactiverleservicedaffichagedesmessagesNETSEND" class="Machine" displayName="$(string.mag_310)" presentation="$(presentation.DesactiverleservicedaffichagedesmessagesNETSEND)" key="SYSTEM\CurrentControlSet\Services\Messenger" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXPOnly" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="3" />
+      </disabledValue>
+    </policy>
+    <policy name="DesactiverlelogicieldegravagedesCD" class="Machine" displayName="$(string.mag_311)" presentation="$(presentation.DesactiverlelogicieldegravagedesCD)" key="SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer" valueName="NoCDBurning">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverWindowsSearchWindows7" class="Machine" displayName="$(string.mag_312)" presentation="$(presentation.DesactiverWindowsSearchWindows7)" key="SYSTEM\CurrentControlSet\Services\WSearch" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="2" />
+      </disabledValue>
+    </policy>
+    <policy name="DesactiverWindowsSuperFetchWindows7" class="Machine" displayName="$(string.mag_313)" presentation="$(presentation.DesactiverWindowsSuperFetchWindows7)" key="SYSTEM\CurrentControlSet\Services\SysMain" valueName="Start">
+      <parentCategory ref="Services" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="2" />
+      </disabledValue>
+    </policy>
+        
+<!--Réseau et accès distant-->
+    <policy name="Desactiverlaconfigurationutilisateurdesfichiershorsconnexion" class="Machine" displayName="$(string.mag_401)" explainText="$(string.NoConfigCache_Help)" presentation="$(presentation.Desactiverlaconfigurationutilisateurdesfichiershorsconnexion)" key="Software\Policies\Microsoft\Windows\NetCache" valueName="NoConfigCache">
+      <parentCategory ref="ReseauetAccesdistant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlecachedesfichiershorsconnexion" class="Machine" displayName="$(string.mag_402)"  presentation="$(presentation.Desactiverlecachedesfichiershorsconnexion)" key="Software\Microsoft\Windows\CurrentVersion\NetCache" valueName="Enabled">
+      <parentCategory ref="ReseauetAccesdistant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="Autoriserlaconfigurationdupartagedeconnexion" class="Machine" displayName="$(string.mag_403)" explainText="$(string.NC_ShowSharedAccessUi_Help)" presentation="$(presentation.Autoriserlaconfigurationdupartagedeconnexion)" key="Software\Policies\Microsoft\Windows\Network Connections" valueName="NC_ShowSharedAccessUi">
+      <parentCategory ref="ReseauetAccesdistant" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="ServeurProxyApplicationsW81" class="Machine" displayName="$(string.mag_404)" explainText="$(string.ServeurProxyApplicationsW81_Help)" presentation="$(presentation.ServeurProxyApplicationsW81)" key="SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation" >
+      <parentCategory ref="ReseauetAccesdistant" />
+      <supportedOn ref="windows:SUPPORTED_Windows8" />
+	      <elements>
+         <text id="ServeurProxyApplicationsW81_Box" valueName="DomainProxies" required="true" />
+        </elements> 
+    </policy>
+    <policy name="ProxyObligatoireW81" class="Machine" displayName="$(string.mag_405)" explainText="$(string.ProxyObligatoireW81_Help)" presentation="$(presentation.ProxyObligatoireW81)" key="SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation"  valueName="DProxiesAuthoritive" >
+      <parentCategory ref="ReseauetAccesdistant" />
+      <supportedOn ref="windows:SUPPORTED_Windows8" />
+	 		<enabledValue>
+    	  	<decimal value="1" />
+    		</enabledValue>
+    		<disabledValue>
+     		   <decimal value="0" />
+    		</disabledValue>
+    </policy>
+    <policy name="ActiverConnexionBureauDistant" class="Machine" displayName="$(string.mag_406)" presentation="$(presentation.ActiverConnexionBureauDistant)" key="SYSTEM\CurrentControlSet\Control\Terminal Server"  valueName="fDenyTSConnections" >
+    <parentCategory ref="ReseauetAccesdistant" />
+    <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+        <enabledValue>
+    	  	<decimal value="0" />
+    		</enabledValue>
+    		<disabledValue>
+     		   <decimal value="1" />
+    		</disabledValue>
+    </policy>
+    <policy name="DesactiverConnexiondassistance" class="Machine" displayName="$(string.mag_407)" presentation="$(presentation.ActiverConnexionBureauDistant)" key="SYSTEM\CurrentControlSet\Control\Remote Assistance"  valueName="fAllowToGetHelp" >
+    <parentCategory ref="ReseauetAccesdistant" />
+    <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+        <enabledValue>
+    	  	<decimal value="0" />
+    		</enabledValue>
+    		<disabledValue>
+     		   <decimal value="1" />
+    		</disabledValue>
+    </policy>
+    
+<!--Composants Windows-->
+<!--Explorateur Windows-->
+      <policy name="Afficherleslettresdeslecteursavantleursnoms" class="Machine" displayName="$(string.mag_511)" presentation="$(presentation.Afficherleslettresdeslecteursavantleursnoms)" key="Software\Microsoft\Windows\CurrentVersion\Explorer" valueName="ShowDriveLettersFirst">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="4" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Effetdudoubleclicsurunlecteurouundossier" class="Machine" displayName="$(string.mag_512)" explainText="$(string.Doubleclic)" presentation="$(presentation.Effetdudoubleclicsurunlecteurouundossier)" key="SOFTWARE\Classes\Folder" >
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Action" valueName="Shell" required="true">
+          <item displayName="$(string.mag_513)" key="SOFTWARE\Classes\Folder\shell" valueName="open">
+            <value>
+              <string>open</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_514)" key="SOFTWARE\Classes\Folder\shell" valueName="explore">
+          <value>
+           <string>explore</string> 
+          </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="Masquerladecouvertedureseaudanslexplorateur" class="Machine" displayName="$(string.mag_515)" explainText="$(string.Masquerdecouvertereseau)" presentation="$(presentation.Masquerladecouvertedureseaudanslexplorateur)" key="Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum" valueName="{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+    </policy>
+    <policy name="NoDataExecutionPrevention" class="Machine" displayName="$(string.mag_516)" explainText="$(string.NoDataExecutionPrevention_Help)" presentation="$(presentation.Desactiverlapreventionexecutiondedonneesdanslexplorateur)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="NoDataExecutionPrevention">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    
+<!--Windows Messenger-->
+    <policy name="NepasautoriserlexecutiondeWindowsMessenger" class="Machine" displayName="$(string.mag_521)" presentation="$(presentation.NepasautoriserlexecutiondeWindowsMessenger)" key="Software\Policies\Microsoft\Messenger\Client" valueName="PreventRun">
+      <parentCategory ref="WindowsMessenger" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="NepasdemarrerautomatiquementWindowsMessenger" class="Machine" displayName="$(string.mag_522)" presentation="$(presentation.NepasdemarrerautomatiquementWindowsMessenger)" key="Software\Policies\Microsoft\Messenger\Client" valueName="PreventAutoRun">
+      <parentCategory ref="WindowsMessenger" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    
+<!--Windows Installer-->
+    <policy name="Toujoursinstalleravecdesdroitseleves" class="Machine" displayName="$(string.mag_531)" presentation="$(presentation.Toujoursinstalleravecdesdroitseleves)" key="Software\Policies\Microsoft\Windows\Installer">
+      <parentCategory ref="WindowsInstaller" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <boolean id="Cocherpouractiver" valueName="AlwaysInstallElevated" />
+      </elements>
+    </policy>
+   
+<!--WindowsApps-->
+    <policy name="AllowDeploymentInSpecialProfiles" class="Machine" displayName="$(string.mag_541)" explainText="$(string.AllowDeploymentInSpecialProfiles_Help)" key="Software\Policies\Microsoft\Windows\Appx" valueName="AllowDeploymentInSpecialProfiles">
+      <parentCategory ref="WindowsApps" />
+      <supportedOn ref="windows:SUPPORTED_Windows8" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="AppxDeploymentAllowAllTrustedApps" class="Machine" displayName="$(string.mag_542)" explainText="$(string.AppxDeploymentAllowAllTrustedApps_Help)" key="Software\Policies\Microsoft\Windows\Appx" valueName="AllowAllTrustedApps">
+      <parentCategory ref="WindowsApps" />
+      <supportedOn ref="windows:SUPPORTED_Windows8" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="RestrictAppDataToSystemVolume" class="Machine" displayName="$(string.mag_543)" explainText="$(string.RestrictAppDataToSystemVolume_Help)" key="Software\Policies\Microsoft\Windows\Appx" valueName="RestrictAppDataToSystemVolume">
+      <parentCategory ref="WindowsApps" />
+      <supportedOn ref="windows:SUPPORTED_Windows8" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="PasdestockagesurOneDrive"  class="Machine" displayName="$(string.mag_544)" key="Software\Policies\Microsoft\Windows\OneDrive" valueName="DisableFileSyncNGSC">
+      <parentCategory ref="WindowsApps" />
+      <supportedOn ref="windows:SUPPORTED_Windows8" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    
+    <!--Cortana-->    
+    <policy name="AllowCortana" class="Machine" clientExtension="{29BBE2D5-DE47-4855-97D7-2745E166DC6D}" displayName="$(string.mag_551)" explainText="$(string.ExplainAllowCortana)" key="SOFTWARE\Policies\Microsoft\Windows\Windows Search" valueName="AllowCortana">
+      <parentCategory ref="Cortana" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+ <!--Imprimantes-->
+    <policy name="Autoriserlapublicationdesimprimantes" class="Machine" displayName="$(string.mag_601)" presentation="$(presentation.Autoriserlapublicationdesimprimantes)" key="Software\Policies\Microsoft\Windows NT\Printers" valueName="PublishPrinters">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="PublierautomatiquementlesnouvellesimprimantesdansActiveDirectory" class="Machine" displayName="$(string.mag_602)" presentation="$(presentation.PublierautomatiquementlesnouvellesimprimantesdansActiveDirectory)" key="Software\Policies\Microsoft\Windows NT\Printers\Wizard" valueName="Auto Publishing">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Interdirelenettoyagedesimprimantespubliees" class="Machine" displayName="$(string.mag_603)" presentation="$(presentation.Interdirelenettoyagedesimprimantespubliees)" key="Software\Policies\Microsoft\Windows NT\Printers" valueName="Immortal">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Parcoursdesimprimantes" class="Machine" displayName="$(string.mag_604)" explainText="$(string.PrinterServerThread_Help)" presentation="$(presentation.Parcoursdesimprimantes)" key="Software\Policies\Microsoft\Windows NT\Printers" valueName="ServerThread">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Nettoyagedesimprimantesquinesontpaspublieesanouveau" class="Machine" displayName="$(string.mag_605)" explainText="$(string.PruneDownlevel_Help)" presentation="$(presentation.Nettoyagedesimprimantesquinesontpaspublieesanouveau)" key="Software\Policies\Microsoft\Windows NT\Printers">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Selectionnezlamethodedenettoyage" valueName="PruneDownlevel">
+          <item displayName="$(string.mag_606)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_607)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_608)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="AutorisersousW7linstallationdedriversdimprimantespourlesnonadministrateurs" class="Machine" displayName="$(string.mag_609)" presentation="$(presentation.AutorisersousW7linstallationdedriversdimprimantespourlesnonadministrateurs)" key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledList>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="AllowUserDeviceClasses">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="{4658ee7e-f050-11d1-b6bd-00c04fa372a7}">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="{49ce6ac8-6f86-11d2-ble5-0080c72e74a2}">
+          <value>
+            <decimal value="2" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="{4d36e979-e325-11ce-bfc1-08002be10318}">
+          <value>
+            <decimal value="3" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="{4d36e97a-e325-11ce-bfc1-08002be10318}">
+          <value>
+            <decimal value="4" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="AllowUserDeviceClasses">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="{4658ee7e-f050-11d1-b6bd-00c04fa372a7}">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="{49ce6ac8-6f86-11d2-ble5-0080c72e74a2}">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="{4d36e979-e325-11ce-bfc1-08002be10318}">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\Microsoft\Windows\DriverInstall\Restrictions" valueName="{4d36e97a-e325-11ce-bfc1-08002be10318}">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+      </disabledList>
+    </policy>
+       
+<!--Applications MAGRET-->
+    <policy name="SaisirlenomduserveursurlequelestinstalleMAGRET" class="Machine" displayName="$(string.mag_711)" presentation="$(presentation.SaisirlenomduserveursurlequelestinstalleMAGRET)" key="Software\Magret">
+      <parentCategory ref="ParametresduserveurMAGRET" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Nomduserveur" valueName="ServeurMagret" required="true" />
+      </elements>
+    </policy>
+    <policy name="SaisirladresseIPduserveursurlequelestinstalleMAGRET" class="Machine" displayName="$(string.mag_712)" presentation="$(presentation.SaisirladresseIPduserveursurlequelestinstalleMAGRET)" key="Software\Magret">
+      <parentCategory ref="ParametresduserveurMAGRET" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="IPduserveur" valueName="IPServeurMagret" required="true" />
+      </elements>
+    </policy>
+    <policy name="SaisirlenomdudomainesurlequelestinstalleMAGRET" class="Machine" displayName="$(string.mag_713)" presentation="$(presentation.SaisirlenomdudomainesurlequelestinstalleMAGRET)" key="Software\Magret">
+      <parentCategory ref="ParametresduserveurMAGRET" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="NomduDomaine" valueName="DomaineMagret" required="true" />
+      </elements>
+    </policy>
+    
+<!--Extinction des stations-->
+    <policy name="Extinctionautomatiquedesstationsenfindejournee" class="Machine" displayName="$(string.mag_721)" presentation="$(presentation.Extinctionautomatiquedesstationsenfindejournee)" key="Software\Magret\StopMachine">
+      <parentCategory ref="Extinctionstations" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Heuredextinctionhhmm" valueName="Heure" required="true" />
+        <text id="Intervalledetestenmn" valueName="Intervalle" required="true" />
+        <text id="Temporisationdelavertissementens" valueName="Temporisation" required="true" />
+      </elements>
+    </policy>
+    <policy name="Extinctionautomatiquedesstationsencasdinactivite" class="Machine" displayName="$(string.mag_722)" presentation="$(presentation.Extinctionautomatiquedesstationsencasdinactivite)" key="Software\Magret\StopMachine">
+      <parentCategory ref="Extinctionstations" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Delaidinactiviteavantextinctionenmn" valueName="IdleDelayBeforeShutdown" required="true" />
+      </elements>
+    </policy>
+    
+<!--Clefs USB-->
+    <policy name="Comportementpardefaut" class="Machine" displayName="$(string.mag_731)" explainText="$(string.Clefs_USB)" presentation="$(presentation.Comportementpardefaut)" key="Software\Policies\Magret\USBStorage">
+      <parentCategory ref="ClefsUSB" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Valeurpardefaut" valueName="USBDefault" required="true">
+          <item displayName="$(string.mag_732)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_733)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    
+<!--Contrôle des stations-->
+    <policy name="Messagedavertissementlorsducontroledelastation" class="Machine" displayName="$(string.mag_741)" presentation="$(presentation.Messagedavertissementlorsducontroledelastation)" key="Software\Magret\ControleStations">
+      <parentCategory ref="Controledesstations" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Messagedavertissement" valueName="Avertissement" required="true" />
+      </elements>
+    </policy>
+    <policy name="Parametragemagretclientstation" class="Machine" displayName="$(string.mag_742)" explainText="$(string.MagretClientStation_Help)" presentation="$(presentation.Parametragemagretclientstation)" key="SYSTEM\CurrentControlSet\Services\MagClientStation">
+      <parentCategory ref="Controledesstations" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <elements>
+        <enum id="TypeDemarrage" valueName="DelayedAutostart" required="true">
+          <item displayName="$(string.mag_743)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_744)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+  </policies>
+  
+</policyDefinitions>

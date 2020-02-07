@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--MAGRET : Modèle Magret-Ordinateur-1805.admx (DANE - G. Picou, JP. Gau, T. Chassain - mai 2018)-->
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="mag_0">Magret-Ordinateurs 1805</string>
+      <string id="mag_100">1. Initialisation Système</string>
+              <string id="mag_101">Messages d'état de Démarrage / Arrêt détaillés ou normaux</string>
+              <string id="mag_102">Désactiver les sons de démarrage sous W7</string>
+              <string id="mag_103">Désactiver la lecture automatique</string>
+                      <string id="mag_104">Lecteurs de CD-ROM</string>
+                      <string id="mag_105">Tous les lecteurs</string>
+              <string id="mag_106">Désactiver l'utilisation des clés USB</string>
+                      <string id="mag_107">Oui, au démarrage du système</string>
+                      <string id="mag_108">Non, pas au démarrage du système</string>
+              <string id="mag_109">Supprimer les profils itinérants mis en cache</string>
+              <string id="mag_110">Désactiver la liste d'exécution unique (RunOnce)</string>
+              <string id="mag_111">Désactiver la liste d'exécution (Run)</string>
+              <string id="mag_112">Ne pas exécuter les scripts de démarrage de manière asynchrone</string>
+              <string id="mag_113">Ne pas exécuter les scripts de démarrage en mode visible</string>
+              <string id="mag_114">Ne pas exécuter les scripts d'arrêt en mode visible</string>
+              <string id="mag_115">Ne pas détecter les connexions réseau lentes</string>
+              <string id="mag_116">Désactiver la prévention de l'exécution des données pour les fichiers d'aide au format HTML</string>
+              <string id="mag_117">Désactiver le lancement d'applications 16b</string>
+              <string id="mag_118">Désactiver le moteur de compatiblité d'applications</string>
+              <string id="mag_119">Augmenter au maximum la taille du jeton d'accès</string>
+              <string id="mag_120">Désactiver Windows Defender</string>
+              <string id="mag_121">Afficher un message sur l'écran d'accueil des stations</string>
+              <string id="mag_122">Désactiver Windows Store sous W8.1 et W10</string>
+              <string id="mag_123">Désactiver la mise à jour automatique des applications depuis le Windows Store</string>
+              <string id="mag_124">Vérifier les mises à jour de Java au démarrage</string>
+              <string id="mag_125">Activer la mise à jour automatique de Java</string>
+              <string id="mag_126">Démarrage rapide sous W8.1 et W10</string>
+              <string id="mag_127">Hibernation ou mise en veille prolongée</string>
+                                
+      <string id="mag_200">2. Ouverture de session et Profil itinérant</string>
+              <string id="mag_201">Ne pas afficher l'écran de bienvenue à l'ouverture de session</string>
+              <string id="mag_202">Toujours attendre le réseau lors du démarrage de l'ordinateur et de l'ouverture de session</string>
+              <string id="mag_203">Ne pas afficher le nom de l'utilisateur précédent</string>
+              <string id="mag_204">Exécuter les scripts d'ouverture de session simultanément</string>
+              <string id="mag_205">Attendre le chargement du profil itinérant</string>
+              <string id="mag_206">Fermer la session utilisateur lors d'un échec du profil itinérant</string>
+              <string id="mag_207">Nombre maximal de tentatives de mise à jour du profil utilisateur</string>
+              <string id="mag_208">Ne pas vérifier les propriétaires des dossiers Profils itinérants</string>
+              <string id="mag_209">Ajouter le groupe Administrateurs aux profils itinérants utilisateurs</string>
+              <string id="mag_210">N'autoriser que les profils d'utilisateurs locaux</string>
+              <string id="mag_211">Sous W7 attendre la fermeture des processus pour décharger le profil utilisateur à sa fermeture de session</string>
+              <string id="mag_212">Sous W7 supprimer au redémarrage du système les profils utilisateur plus anciens quun nombre de jours spécifiés </string>
+              <string id="mag_213">Masquer les points d'entrée pour le changement rapide d'utilisateur sous W7</string>
+              <string id="mag_214">Limiter le contrôle de compte utilisateur (UAC)</string>
+              <string id="mag_215">Désactiver l'animation longue lors de la première ouverture de session sous W8.1 et W10</string>
+              <string id="mag_217">Ne pas afficher d'informations sur l'utlisateur précédent</string>
+              <string id="mag_218">Activer les extensions de profil itinérant sous W8.1 et W10</string>
+              <string id="mag_219">Désactiver les expériences consommateur de Microsoft sous W10</string>
+              
+      <string id="mag_300">3. Services</string>
+              <string id="mag_301">Désactiver le centre de sécurité (XP SP2 et SP3)</string>
+              <string id="mag_302">Désactiver les mises à jour automatiques</string>
+              <string id="mag_303">Désactiver le planificateur de tâches</string>
+              <string id="mag_304">Désactiver le service du pare-feu</string>
+              <string id="mag_305">Désactiver le partage de connexion à l'internet</string>
+              <string id="mag_306">Désactiver l'accès à distance au registre</string>
+              <string id="mag_307">Désactiver la configuration automatique sans fil</string>
+              <string id="mag_308">Désactiver NLA (Network Location Awareness)</string>
+              <string id="mag_309">Désactiver les services Terminal Server</string>
+              <string id="mag_310">Désactiver le service d'affichage des messages NET SEND</string>
+              <string id="mag_311">Désactiver le logiciel de gravage des CD</string>
+              <string id="mag_312">Désactiver Windows Search (Windows 7 et 8)</string>
+              <string id="mag_313">Désactiver Windows SuperFetch (Windows 7 et 8)</string>
+                            
+      <string id="mag_400">4. Réseau et Accès distant</string>
+              <string id="mag_401">Désactiver la configuration utilisateur des fichiers hors connexion</string>
+              <string id="mag_402">Désactiver le cache des fichiers hors connexion</string>
+              <string id="mag_403">Autoriser la configuration du partage de connexion</string>
+              <string id="mag_404">Serveur proxy pour les applications Windosw W8.1 et W10</string>
+              <string id="mag_405">Proxy obligatoire pour les applications Windows W8.1 et W10</string>
+              <string id="mag_406">Activer les connexions de bureau à distance</string>
+              <string id="mag_407">Désactiver les connexions d'assistance à distance</string>
+              
+      <string id="mag_500">5. Composants Windows</string>
+              <string id="mag_510">5.1. Explorateur Windows</string>
+                      <string id="mag_511">Afficher les lettres des lecteurs avant leurs noms</string>
+                      <string id="mag_512">Effet du double-clic sur un lecteur ou un dossier.</string>
+                              <string id="mag_513">Ouvrir</string>
+                              <string id="mag_514">Explorer</string>
+                      <string id="mag_515">Masquer la découverte du réseau dans l'explorateur.</string>                             
+                      <string id="mag_516">Désactiver la prévention de l'exécution des données pour l'explorateur</string>
+              <string id="mag_520">5.2. Windows Messenger</string>
+                      <string id="mag_521">Ne pas autoriser l'exécution de Windows Messenger</string>
+                      <string id="mag_522">Ne pas démarrer automatiquement Windows Messenger</string>
+              <string id="mag_530">5.3. Windows Installer</string>
+                      <string id="mag_531">Toujours installer avec des droits élevés</string>
+              <string id="mag_540">5.4. Applications Windows pour W8.1 et W10</string>
+                      <string id="mag_541">Permettre le déploiement d'applications pour les des profils itinérants</string>
+                      <string id="mag_542">Autoriser l’installation des applications approuvées</string>
+                      <string id="mag_543">Autoriser le stockage des données d'applications des utilisateurs sur des volumes non-système</string>
+                      <string id="mag_544">Empêcher le stockage de données sur OneDrive</string>
+              <string id="mag_550">5.5. Cortana</string>
+                      <string id="mag_551">Autoriser Cortana</string>
+ 
+      <string id="mag_600">6. Imprimantes</string>
+              <string id="mag_601">Autoriser la publication des imprimantes</string>
+              <string id="mag_602">Publier automatiquement les nouvelles imprimantes dans Active Directory</string>
+              <string id="mag_603">Interdire le nettoyage des imprimantes publiées</string>
+              <string id="mag_604">Parcours des imprimantes</string>
+              <string id="mag_605">Nettoyage des imprimantes qui ne sont pas publiées à nouveau</string>
+                      <string id="mag_606">Jamais</string>
+                      <string id="mag_607">Si le serveur d'impression est trouvé</string>
+                      <string id="mag_608">Si l'imprimante n'est pas trouvée</string>
+              <string id="mag_609">Autoriser sous W7 l'installation de drivers d'imprimantes pour les non-administrateurs</string>
+                                   
+      <string id="mag_700">7. Applications MAGRET</string>
+              <string id="mag_710">7.1. Paramètres du serveur MAGRET</string>
+                      <string id="mag_711">Saisir le nom du serveur sur lequel est installé MAGRET</string>
+                      <string id="mag_712">Saisir l'adresse IP du serveur sur lequel est installé MAGRET</string>
+                      <string id="mag_713">Saisir le nom du domaine sur lequel est installé MAGRET</string>
+              <string id="mag_720">7.2. Extinction des stations</string>
+                      <string id="mag_721">Extinction automatique des stations en fin de journée</string>
+                      <string id="mag_722">Extinction automatique des stations en cas d'inactivité</string>
+              <string id="mag_730">7.3. Clefs USB</string>
+                      <string id="mag_731">Comportement par défaut</string>
+                              <string id="mag_732">Désactiver</string>
+                              <string id="mag_733">Activer</string>
+              <string id="mag_740">7.4 Contrôle des stations</string>
+                      <string id="mag_741">Message d'avertissement lors du contrôle de la station</string>
+                      <string id="mag_742">Paramétrage du service MagretClientStation</string>
+                              <string id="mag_743">Démarrage automatique</string>
+                              <string id="mag_744">Démarrage automatique à début différé</string>
+
+<!--Textes Aides-->
+      <string id="NoDataExecutionPrevention_Help">
+La désactivation de la prévention de l'exécution des données peut permettre à certaines applications de plug-ins hérités de fonctionner sans arrêter l'explorateur.
+      </string>      
+      <string id="EnforceShellExtensionSecurity_Help">
+Indique à Windows qu'il ne doit démarrer que les extensions d'interface utilisateur qui ont été approuvées par la sécurité système ou par l'utilisateur.
+Lorsque le système détecte que l'utilisateur télécharge un programme externe qui s'exécute en tant que partie de l'interface Windows, le système recherche un certificat numérique ou demande à l'utilisateur d'approuver l'action. Si vous activez cette stratégie, Windows ne démarrera pas les programmes tant qu'ils ne sont pas approuvés.
+Cette stratégie est conçue pour protéger le système des dommages apportés par des programmes qui peuvent ne pas fonctionner correctement ou qui sont conçus pour endommager le système.
+Astuce : pour afficher les extensions de l'interface utilisateur approuvées d'un système, démarrez l'Éditeur de Registre (Regedt32 ou Regedit). Le système stocke les entrées représentant les extensions d'interface utilisateur approuvées à la clé de Registre suivante :
+  HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved.
+      </string>
+      <string id="PromptRunAsInstallNetPath_Help">
+Demande à l'utilisateur d'autres informations d'identification d'ouverture de session aux cours des installations basées sur le réseau.
+Cette stratégie affiche la boîte de dialogue "Installer le programme en tant qu'utilisateur différent", même quand un programme est installé à partir de fichiers sur un ordinateur réseau par le biais d'une connexion réseau local.
+Si vous désactivez cette stratégie, ou si vous ne la configurez pas, cette boîte de dialogue apparaîtra uniquement quand les utilisateurs installeront des programmes à partir d'un média local.
+La boîte de dialogue "Installer le programme en tant qu'utilisateur différent" demande à l'utilisateur courant un nom d'utilisateur et un mot de passe d'administrateur. Cette stratégie permet aux administrateurs qui se sont connectés comme utilisateurs normaux d'installer des programmes sans se déconnecter et se reconnecter en utilisant leurs informations d'identification administrateur.
+Si la boîte de dialogue n'apparaît pas, l'installation a lieu avec les autorisations de l'utilisateur courant. Si ces autorisations ne sont pas suffisantes, l'installation peut échouer, ou elle peut se terminer, mais sans inclure toutes les fonctions, ou elle peut sembler se terminer correctement, mais le programme installé peut ne pas fonctionner correctement.
+Remarque : Si elle est activée, la stratégie "Ne pas demander d'autres informations d'identification" a priorité sur les paramètres de cette stratégie. Lorsque cette stratégie est activée, les utilisateurs ne devront pas entrer d'autres informations d'identification de connexion pour aucune installation.
+      </string>
+      <string id="MMC_Restrict_Explain">
+Autorise ou interdit l'utilisation de ce composant logiciel enfichable.
+Si vous activez cette stratégie, l'utilisation du composant logiciel enfichable est autorisée. Si vous désactivez cette stratégie, l'utilisation du composant logiciel enfichable est interdite.
+Si cette stratégie n'est pas configurée, le paramètre de la stratégie "Restreindre les utilisateurs à la liste des composants logiciels enfichables explicitement autorisés" détermine si l'utilisation de ce composant logiciel enfichable est autorisée ou non.
+-- Si la stratégie "Restreindre les utilisateurs à la liste des composants logiciels enfichables explicitement autorisés" est activée, les utilisateurs ne peuvent utiliser aucun composant logiciel enfichable sauf ceux qui sont autorisés explicitement.    Pour autoriser explicitement l'utilisation de ce composant logiciel enfichable, activez cette stratégie. Si vous désactivez cette stratégie ou si vous ne la configurez pas, l'utilisation du composant logiciel enfichable est interdite.
+-- Si "Restreindre les utilisateurs à la liste des composants logiciels enfichables explicitement autorisés" est désactivée ou n'est pas configurée, les utilisateurs peuvent utiliser n'importe quel composant logiciel enfichable à l'exception de ceux qui sont explicitement interdits. 
+Pour interdire explicitement l'utilisation de ce composant logiciel enfichable, désactivez cette stratégie. Si vous désactivez cette stratégie ou si vous ne la configurez pas, le composant logiciel enfichable est autorisé.
+Quand l'utilisation d'un composant logiciel enfichable est interdite, il n'apparaît pas dans la fenêtre Ajouter/Supprimer un composant logiciel enfichable dans la Console de gestion Microsoft. Également, quand un utilisateur ouvre un fichier de console qui inclut un composant logiciel enfichable interdit, le fichier de console s'ouvre, mais le composant logiciel enfichable interdit n'apparaît pas.
+      </string>
+      <string id="PrinterServerThread_Help">
+Annonce la présence d'imprimantes partagées aux serveurs maîtres de parcours d'impression pour le domaine.
+Sur les domaines Active Directory, les ressources d'imprimantes partagées sont disponibles dans Active Directory et ne sont pas annoncées.
+Si vous activez cette stratégie, le spouleur d'impression annonce les imprimantes partagées aux serveurs maîtres de parcours d'impression. De ce fait, les imprimantes partagées apparaissent dans la liste du domaine dans la boîte de dialogue Rechercher une imprimante de l'Assistant Ajout d'imprimante.
+Si vous activez cette stratégie, les imprimantes partagées ne sont pas annoncées aux serveurs maîtres de parcours d'impression, même si Active Directory n'est pas disponible.
+Si vous ne configurez pas cette stratégie, les imprimantes partagées sont annoncées aux serveur maîtres de parcours d'impression uniquement lorsque Active Directory n'est pas disponible.
+Remarque : une licence client est utilisée à chaque fois qu'un ordinateur client annonce une imprimante au maître de parcours d'impression du domaine.
+      </string>
+      <string id="PruneDownlevel_Help">
+Détermine si le système nettoie (supprime d'Active Directory) les imprimantes qui ne sont pas automatiquement republiées. Cette stratégie s'applique aux imprimantes publiées en dehors de leur domaine.
+Le service de nettoyage nettoie les objets Imprimantes d'Active Directory quand l'ordinateur qui les a publiées ne répond pas aux demandes de contact. Les ordinateurs détectent et republient les objets Imprimantes supprimés quand ils rejoignent le réseau. Cependant, les ordinateurs des autres domaines ne peuvent pas republier leurs imprimantes dans Active Directory automatiquement, et c'est pourquoi, par défaut, le système ne nettoie jamais leurs objets Imprimantes.
+Vous pouvez activer cette stratégie pour modifier le comportement par défaut. Pour utiliser cette stratégie, sélectionnez l'une des options suivantes dans la case "Nettoyer les imprimantes qui ne seront pas republiées" :
+--  "Jamais" spécifie que les objets Imprimantes qui ne sont pas republiés automatiquement ne sont pas nettoyées. "Jamais" est l'option par défaut.
+--  "Uniquement si le serveur d'impression est trouvé" nettoie les objets Imprimantes qui ne sont pas republiés automatiquement seulement si le serveur d'impression répond, mais que l'imprimante n'est pas disponible.
+--  "Toutes les fois que l'imprimante ne peut pas être trouvée" nettoie les objets Imprimantes qui ne sont pas republiés automatiquement, à chaque fois que l'ordinateur hôte ne répond pas.
+Remarque : cette stratégie s'applique aux imprimantes publiées en utilisant le composant Utilisateurs et ordinateurs Active Directory. Elle ne s'applique pas aux imprimantes publiées en utilisant Imprimantes dans le Panneau de configuration.
+Astuce : si vous désactivez le nettoyage automatique, pensez à supprimer manuellement les objets Imprimantes à chaque fois que vous supprimez une imprimante ou un serveur d'impression.
+      </string>
+      <string id="ProfileErrorAction_Help">
+Déconnecte automatiquement un utilisateur quand le système ne parvient pas à charger le profil itinérant de l'utilisateur.
+Cette stratégie est utilisée quand le système ne parvient pas à trouver le profil itinérant ou que le profil contient des erreurs qui empêchent qu'il soit chargé correctement.
+Si vous désactivez cette stratégie ou que vous ne la configurez pas, lors de l'échec du profil itinérant, le système charge une copie locale du profil itinérant, s'il en existe un disponible. Autrement, le système charge le profil utilisateur par défaut (stocké dans %Systemroot%\Documents and Settings\Default User).
+Consultez également la stratégie "Supprimer les copies mises en cache des profils itinérants".
+      </string>
+      <string id="ProfileUnloadTimeout_Help">
+Détermine combien de fois le système essaie de décharger et de mettre à jour la partie Registre d'un profil utilisateur. Quand le nombre de tentatives spécifié par cette stratégie est atteint, le système cesse d'essayer. En conséquence, le profil utilisateur peut ne pas être à jour, et les profils utilisateur local et itinérant peuvent ne pas coïncider.
+Quand un utilisateur ferme une session sur l'ordinateur, le système décharge la partie du Registre relative à l'utilisateur (HKEY_CURRENT_USER) vers un fichier (NTUSER.DAT) et le met à jour. Cependant, si un autre programme ou service effectue une lecture ou une modification sur le Registre, le système ne peut pas le décharger. Le système essaie plusieurs fois (avec une fréquence d'une fois par seconde) de décharger et de mettre à jour les paramètres du Registre. Par défaut, le système répète ces tentatives périodiques 60 fois (donc pendant une minute).
+Si vous activez cette stratégie, vous pouvez régler le nombre de fois que le système essaie de décharger et de mettre à jour les paramètres du Registre pour l'utilisateur. Vous ne pouvez pas modifier la fréquence des tentatives.
+Si vous désactivez cette stratégie ou que vous ne la configurez pas, le système répète sa tentative 60 fois.
+Si vous fixez le nombre de tentatives à 0, le système n'effectue la tentative qu'une seule fois et ne réessaie pas.
+Remarque : cette stratégie est particulièrement importante pour les serveurs sur lesquels fonctionnent les services Terminal Server. Comme les services Terminal Server modifient les paramètres du Registre pour les utilisateurs quand ils ferment leur session, les premières tentatives de déchargement des paramètres utilisateur sont les plus susceptibles d'échouer.
+Cette stratégie est sans conséquence sur les tentatives du système de mettre à jour les fichiers dans les profils utilisateur.
+Astuce : envisagez d'augmenter le nombre de tentatives spécifié dans cette stratégie si de nombreux profils utilisateur sont stockés dans la mémoire de cet ordinateur. Ceci indique que le système n'a pas pu décharger les profils.
+En outre, vérifiez le journal des applications dans l'Observateur d'événements et recherchez des événements générés par Userenv. Le système garde la trace d'un événement à chaque fois qu'il essaie de décharger la partie du Registre d'un profil utilisateur. Le système enregistre également un événement lorsqu'il lui est impossible de mettre à jour les fichiers qui composent le profil utilisateur.
+      </string>
+      <string id="PrimaryDnsSuffix_Help">
+Spécifie le suffixe du système de noms de domaine (DNS) primaire pour tous les ordinateurs affectés. Le suffixe DNS primaire est utilisé dans l'inscription de noms DNS et la résolution de noms DNS.
+Cette stratégie vous permet de spécifier un suffixe DNS primaire pour un groupe d'ordinateurs, et empêche les utilisateurs, y compris les administrateurs, de le modifier.
+Si vous désactivez cette stratégie ou si vous ne la configurez pas, chaque ordinateur utilisera son suffixe DNS primaire local, qui est généralement le nom DNS du domaine Active Directory auquel il a été joint. Cependant, les administrateurs peuvent utiliser l'application Système du Panneau de configuration pour modifier le suffixe DNS primaire d'un ordinateur.
+Pour utiliser cette stratégie, dans la zone de texte fournie, entrez le suffixe DNS primaire complet que vous voulez attribuer. Par exemple, microsoft.com.
+Cette stratégie ne désactive pas la boîte de dialogue Nom d'ordinateur NetBIOS et suffixe DNS que les administrateurs utilisent pour modifier le suffixe DNS primaire d'un ordinateur. Toutefois, si les administrateurs entrent un suffixe, ce suffixe sera ignoré tant que la stratégie sera activée.
+Important : pour que les modifications apportées à cette stratégie soient prises en compte, vous devez redémarrer Windows 2000 sur tous les ordinateurs affectés par la stratégie.
+Remarque : cette stratégie est sans effet sur les contrôleurs de domaine.
+Astuce : pour modifier le suffixe DNS primaire d'un ordinateur sans recourir à une stratégie, double-cliquez sur Système dans le Panneau de configuration, cliquez sur l'onglet Identification réseau, cliquez sur Propriétés, cliquez sur Autres, puis entrez un suffixe dans la case "Suffixe DNS primaire cet ordinateur".
+Pour plus d'information à propos de DNS, consultez "Système de noms de domaine (DNS)" dans l'aide de Windows 2000.
+      </string>
+      <string id="taillejeton">  
+Activer cette stratégie uniquement si l'établissement a besoin de plus de 250 ateliers Magret. Sinon laisser à Non Configuré.
+Si cette stratégie est désactivée et qu'il existe plus de 250 ateliers, de nombreux désagréments peuvent survenir :
+        - Non applications des stratégies utilisateurs
+        - Impossibilité de connexion des professeurs sur les stations W7 avec le message erreur du Service de profil utilisateur
+        - etc..      
+      </string>      
+      <string id="DesactiverAntiSpyware_Explain">
+Désactive la protection en temps réel de Windows Defender et aucune analyse n’est plus planifiée.
+Si vous activez ce paramètre de stratégie, Windows Defender ne s’exécutera pas et la recherche de logiciels espions et d’autres programmes potentiellement indésirables ne sera pas effectuée sur les ordinateurs.
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows Defender s’exécutera par défaut et la recherche de logiciels espions et d’autres programmes potentiellement indésirables sera effectuée sur les ordinateurs.
+Désactivation conseillée pour éviter les conflits avec l'anti-virus académique.
+      </string>
+      <string id="Checkforupdatesatstart_Help">
+Lorsqu'il est réglé à Activé, Java va vérifier les mises à jour au démarrage.
+Lorsqu'il est réglé à Désactivé les mises à jour ne seront pas vérifiées au démarrage.
+      </string>
+      <string id="EnableJavaUpdater_Help">
+Lorsqu'elle est activée, Java Updater peut s'ouvrir et le bilan des mises à jour de l'option s'affiche dans le menu A propos du panneau de configuration Java. 
+Lorsqu'il est réglé sur Désactivé, Java Updater ne peut pas fonctionner et le bilan des mises à jour de l'option ne s'affiche pas.
+      </string>
+      <string id="NoConfigCache_Help">
+Cette stratégie supprime l'onglet Fichiers hors connexion de la boîte de dialogue Options des dossiers.    
+Elle supprime également l'élément Paramètres du menu contextuel Fichiers hors connexion et désactive le bouton Paramètres de la boîte de dialogue État des fichiers hors connexion.
+      </string>
+      <string id="NC_ShowSharedAccessUi_Help">
+Détermine si les administrateurs peuvent activer, désactiver et configurer la fonctionnalité Partage de connexion Internet d'une connexion à distance.
+Si vous activez cette stratégie ou que vous ne la configurez pas, le système affiche l'onglet Partage de connexion Internet (ICS) dans la boîte de dialogue Propriétés des connexions distantes. Sur Windows 2000 Server, elle affiche également la page Partage de connexion Internet dans l'Assistant Connexion réseau. (Cette page n'est disponible que dans Windows 2000 Server.)
+Si vous désactivez cette stratégie, l'onglet Partage de connexion Internet et la page d'Assistant pour le Partage de connexion Internet sont supprimés.
+Le Partage de connexion Internet permet aux utilisateurs de configurer leur système comme une passerelle Internet pour un petit réseau. Il fournit au réseau des services réseau, tels que la résolution de noms.
+Par défaut, le Partage de connexion Internet est désactivé quand vous créez une connexion distante, mais les administrateurs peuvent utiliser l'onglet Partage de connexion Internet et la page d'Assistant pour le Partage de connexion Internet pour l'activer.
+Remarque : cette stratégie apparaît dans les dossiers Configuration de l'ordinateur et Configuration de l'utilisateur. Si les deux stratégies sont appliquées, le paramètre dans Configuration de l'ordinateur l'emporte sur le paramètre dans Configuration de l'utilisateur.
+Important : cette stratégie ne s'applique qu'aux utilisateurs du groupe des Administrateurs.
+      </string>
+      <string id="LocalProfile_Help">
+Ce paramètre détermine si les profils d'utilisateur itinérant sont disponibles sur un ordinateur particulier. Par défaut, lorsque les utilisateurs à profil itinérant ouvrent une session sur un ordinateur, leur profil itinérant est copié sur l'ordinateur local. S'ils ont déjà ouvert une session sur cet ordinateur précédemment, le profil itinérant est fusionné avec le profil local. De la même manière, lorsque l'utilisateur ferme une session sur cet ordinateur, la copie locale de son profil, y compris toute modification effectuée, est fusionnée avec la copie sur le serveur de son profil.
+En utilisant le paramètre, vous pouvez empêcher les utilisateurs configurés pour utiliser les profils itinérants de recevoir leur profil sur un ordinateur spécifique.
+Si vous activez ce paramètre, les actions suivantes se produisent sur l'ordinateur affecté : à la première ouverture de session, l'utilisateur reçoit un nouveau profil local, plutôt que son profil itinérant. À la fermeture de session, les modifications sont enregistrées sur le profil local. Toutes les ouvertures de session suivantes utilisent le profil local. 
+Si vous désactivez ce paramètre ou si vous ne le configurez pas, le comportement par défaut indiqué ci-dessus se produit.
+Si vous activez à la fois le paramètre "Empêcher la propagation des modifications de profils itinérants vers le serveur" paramètre et le paramètre "N'autoriser que les profils d'utilisateurs locaux", les profils itinérants sont désactivés.
+Remarque : ce paramètre n'affecte que les utilisateurs à profil itinérant.
+      </string>
+      <string id="CompatibleRUPSecurity_Help">
+Empêche Windows de vérifier les autorisations du dossier des profils itinérants d'un utilisateur. Dans les versions antérieures à Windows XP SP1, aucune vérification n'était effectuée sur la validité des autorisations si le dossier des profils existait. 
+Si vous désactivez ou ne configurez pas ce paramètre ET que le dossier des profils itinérants existe, ET que l'utilisateur ou le groupe Administrateurs n'est pas le propriétaire du dossier, Windows ne copie PAS les fichiers dans ou depuis le dossier des profils itinérants. 
+Si vous activez ce paramètre, le comportement est le même que dans Windows XP avant SP1.
+      </string>
+      <string id="SyncForegroundPolicy_Help">
+Par défaut, Windows XP n'attend pas que le réseau soit entièrement initialisé au démarrage et à l'ouverture de session. Les utilisateurs existants ouvrent une session en utilisant des informations d'identification mises en cache, ce qui produit une ouverture de session plus rapide. La stratégie de groupe est appliquée en arrière-plan une fois que le réseau devient disponible.
+Notez que puisqu'il s'agit d'une actualisation en arrière plan, les extensions telles que Software de logiciels et Redirection de dossier nécessitent deux ouvertures de session pour que les modifications soient appliquées. Pour agir en toute sécurité, ces extensions nécessitent qu'aucun utilisateur n'ait de session ouverte. Elles doivent donc être traitées en premier plan avant que les utilisateurs ne soient actifs sur l'ordinateur. De plus, les modifications effectuées sur l'objet utilisateur, telles que l'ajout d'un chemin d'accès de profil itinérant, le répertoire d'accueil ou un script d'ouverture de session d'objet utilisateur, peuvent nécessiter jusqu'à deux ouvertures de session avant d'être détectées.
+Si un utilisateur avec un profil itinérant, un répertoire d'accueil ou un script d'ouverture de session d'objet utilisateur ouvre une session sur un ordinateur, Windows XP attend toujours que le réseau soit initialisé avant d'ouvrir la session de l'utilisateur.
+Si un utilisateur n'a jamais ouvert de session sur cet ordinateur précédemment, Windows XP attend toujours que le réseau soit initialisé.
+Si vous activez ce paramètre, les ouvertures de session sont effectuées de la même manière que les clients Windows 2000, dans ce sens que Windows XP attend que le réseau soit entièrement initialisé avant d'ouvrir les sessions des utilisateurs. La stratégie de groupe s'applique en premier plan, de manière synchrone.
+Si vous désactivez ou si vous ne configurez pas ce paramètre, Windows n'attend pas que le réseau soit entièrement initialisé et les utilisateurs ouvrent une session avec les informations d'identification mises en cache. La stratégie de groupe est appliquée de manière asynchrone en arrière-plan.
+Remarque : si vous voulez garantir l'application de la Redirection de dossier, de l'Installation de logiciels ou des paramètres du profil de l'utilisateur itinérant en une seule ouverture de session, activez ce paramètre pour vous assurer que Windows attend que le réseau soit disponible avant d'appliquer la stratégie.
+Remarque : pour les serveurs, le traitement du démarrage et de l'ouverture de session se produit toujours comme si ce paramètre de stratégie était activé.
+      </string>      
+      <string id="Cleanup_Profiles">
+Une fois que vous avez activé cette stratégie de groupe, cette dernière active le service Profils utilisateur. Lorsque vous redémarrez l'ordinateur puis vous reconnectez à l'aide d'un compte d'utilisateur qui est membre du groupe d'administrateurs, le service Profils utilisateur supprime les profils utilisateur qui n'ont pas été utilisés pendant un nombre de jours défini.
+Remarque Une journée est interprétée comme 24 heures au terme desquelles un profil utilisateur spécifique a été le plus récemment utilisé.
+Si vous désactivez cette stratégie de groupe, ou si vous n'en configurez pas le paramètre, le service Profils utilisateur ne supprime aucun profil utilisateur au redémarrage de l'ordinateur.
+      </string>
+      <string id="Doubleclic">
+Ouvrir :
+- Exécute autorun.inf s'il existe
+- Affiche le contenu.
+Explorer :
+- Affiche le contenu et l'arborescence
+- N'exécute pas les éventuels autorun.inf
+Le choix Explorer limite donc les risques de virus de clé.
+      </string>
+      <string id="Masquerdecouvertereseau">
+L'activation permet de masquer le résultat du processus de découverte du réseau dans l'explorateur Windows.
+Ce qui évite les tentations de rechercher des partages publics et le repérage des machines sensibles.
+      </string>
+      <string id="Clefs_USB">
+'Désactiver' : clés désactivées au démarrage de la station et à la déconnexion de l'utilisateur.
+L'activation-désactivation se gère ensuite par les stratégies utilisateurs.
+Cette option empêche le fonctionnement d'une clé insérée dans la station
+avant l'application des stratégies mais elle verrouille la clé pour
+un utilisateur local de la station (ex. mod_loc).
+'Activer' : clés activées au démarrage de la station et à la déconnexion de l'utilisateur.
+L'activation-désactivation se gère ensuite par les stratégies utilisateurs.
+Cette option n'empêche pas le fonctionnement d'une clé insérée dans la station
+avant l'application des stratégies mais elle ne verrouille pas la clé pour
+un utilisateur local de la station (ex. mod_loc).
+      </string>
+      <string id="MessageEcranAccueil_Explain">
+Cette stratégie permet d'afficher un message (de préférence important...) sur l'écran d'accueil des stations Windows.
+L'écran devra être validé par le bouton OK pour que s'affiche la boîte d'authentification.
+Il est également possible de personnaliser l'image du fond d'écran d'accueil en placant un fichier image jpg ou bmp de 256ko au plus à l'emplacement suivant :
+C:\Windows\System32\oobe\info\backgrounds\
+Le nom du fichier doit être obligatoirement : backgroundDefault.jpg ou backgroundDefault.bmp
+Sa résolution doit être adaptée aux écrans (4/3 ou 16/9) par exemple 800x600, 1600x1000 etc...
+      </string>
+      <string id="RemoveWindowsStore_Help">
+Refuse ou autorise l'accès à l'application du Windows Store.
+Si vous activez ce paramètre, l’accès à l’application du Windows Store est refusé. L’accès à l’application du Windows Store est nécessaire pour installer les mises à jour des applications.
+Si vous désactivez ce paramètre ou ne le configurez pas, l’accès à l’application du Windows Store est autorisé.
+      </string>
+      <string id="DisableAutoInstall_Help">
+Active ou désactive le téléchargement automatique et l’installation des mises à jour des applications.
+Si vous activez ce paramètre, le téléchargement automatique et l’installation des mises à jour des applications sont désactivés.
+Si vous désactivez ce paramètre, le téléchargement automatique et l’installation des mises à jour des applications sont activés.
+      </string>
+      <string id="ServeurProxyApplicationsW81_Help">
+Adresse IP du serveur proxy et port dans le cadre de l'isolement réseau pour les applications Windows 8.1 et 10.
+Si vous activez ce paramètre il faut également activer la stratégie précédente pour rendre ce proxy obligatoire.
+      </string>
+      <string id="ProxyObligatoireW81_Help">
+Activer ce paramètre pour désactiver la recherche automatique du proxy pour les applications W8.1 et W10. Nécessaire si l'adresse du proxy est déclarée dans la stratégie suivante.
+      </string>
+      <string id="DemarrageRapide">Ce paramètre de stratégie contrôle l’utilisation du démarrage rapide pour Windows 8.1 et 10. S'il est activé, d'une part le système va requerir l'activation de la mise en veille prolongée,
+d'autre part l'application des GPO sera en général perturbée,le wake-on-lan inactif ainsi que le boot par F12.        
+Désactivation fortement conseillée.
+      </string>
+      <string id="Hibernation">Ce paramètre de stratégie contrôle l’utilisation de la mise en veille prolongée pour Windows. S'il est activé, d'une part le système ne pourra plus être réveillé à distance
+d'autre part l'application des GPO sera en général perturbée, et il faudra que l'utilisateur l'ayant initiée se réauthentifie.        
+Désactivation fortement conseillée.
+      </string>
+      <string id="AllowDeploymentInSpecialProfiles_Help">Ce paramètre de stratégie vous permet de gérer le déploiement d’applications du Windows Store pour les profils itinérants.
+Si vous activez ce paramètre de stratégie, la stratégie de groupe autorise les opérations de déploiement (ajout, inscription, mise en lots, mise à jour ou suppression d’un package d’applications) d’applications du Windows Store.
+Activation obligatoire si vous activez le Windows Store.
+      </string>
+      <string id="AppxDeploymentAllowAllTrustedApps_Help">Ce paramètre de stratégie vous permet de gérer l’installation d’applications métier ou signées par les développeurs approuvées du Windows Store.
+Si vous activez ce paramètre de stratégie, les utilisateurs pourront installer n’importe quelle application métier ou signée par les développeurs du Windows Store (laquelle doit être signée avec une chaîne de certificats pouvant être validée par l’ordinateur local).
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les utilisateurs ne pourront pas installer d’applications métier ou signées par les développeurs du Windows Store.
+      </string>
+      <string id="RestrictAppDataToSystemVolume_Help"> Autorise le déplacement des données d'applications des utilisateurs vers un autre emplacement lors du déplacement ou de l'installation d'une application à un autre emplacement.
+Si vous désactivez ce paramètre, toutes les données d'applications des utilisateurs seront conservées sur le volume système, quel que soit l'emplacement d'installation de l'application.
+Si vous activez ou ne configurez pas ce paramètre, lorsqu'une application est déplacée vers un autre volume, les données d'applications des utilisateurs sont également déplacées vers ce volume.
+      </string>     
+      <string id="SuggestionsConsommateurMicrosoft_Help">Ce paramètre de stratégie désactive les expériences qui aident les consommateurs à tirer le meilleur parti de leurs périphériques et d’un compte Microsoft.
+
+Si vous activez ce paramètre de stratégie, les utilisateurs ne verront plus les recommandations personnalisées de Microsoft et les notifications sur leurs comptes Microsoft.
+
+Si vous désactivez ce paramètre de stratégie, ou si vous ne le configurez pas, les utilisateurs peuvent voir les suggestions de Microsoft et les notifications sur leurs comptes Microsoft.
+
+Remarque : ce paramètre s’applique uniquement aux références (SKU) Enterprise et Education.</string>
+
+<string id="MagretClientStation_Help">Sur certaines stations, le démarrage automatique immédiat du service MagretClientStation peut perturber l'exécution du script magsys.bat, voire l'installation de paquets MSI par GPO.
+Ces dysfonctionnements disparaissent lorsqu'il est paramétré avec un démarrage automatique à début différé.</string>
+
+<string id="ExplainAllowCortana">Ce paramètre de stratégie spécifie si Cortana est autorisée sur l’appareil.
+Si vous activez ou ne configurez pas ce paramètre, Cortana sera autorisée sur l’appareil. Si vous désactivez ce paramètre, Cortana sera désactivée. 
+Lorsque Cortana est désactivée, les utilisateurs sont toujours en mesure d’utiliser la recherche sur l’appareil.</string>
+
+</stringTable>
+
+<presentationTable>
+    
+<!--Catégorie Redirection des dossiers locaux communs-->
+      <presentation id="Bureaucommun">
+        <textBox refId="Chemindubureaucommun">
+          <label>Chemin du bureau commun:</label>
+          <defaultValue>%PUBLIC%\Desktop</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Menudemarrercommun">
+        <textBox refId="Chemindumenudemarrercommun">
+          <label>Chemin du menu démarrer commun :</label>
+          <defaultValue>%ProgramData%\Microsoft\Windows\Start Menu</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Programmescommuns">
+        <textBox refId="Chemindesprogrammescommuns">
+          <label>Chemin des programmes communs :</label>
+          <defaultValue>%ProgramData%\Microsoft\Windows\Start Menu\Programs</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Demarragecommun">
+        <textBox refId="Chemindudemarragecommun">
+          <label>Chemin du démarrage commun :</label>
+          <defaultValue>%ProgramData%\Microsoft\Windows\Start Menu\Programs\Startup</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Modelescommuns">
+        <textBox refId="Chemindesmodelescommuns">
+          <label>Chemin des modèles communs :</label>
+          <defaultValue>%ProgramData%\Microsoft\Windows\Templates</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Documentscommuns">
+        <textBox refId="Chemindesdocumentscommuns">
+          <label>Chemin des documents communs :</label>
+          <defaultValue>%PUBLIC%\Documents</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Donneesdesapplicationscommunes">
+        <textBox refId="Chemindesdonneesdesapplicationscommunes">
+          <label>Chemin des données des applications communes :</label>
+          <defaultValue>%ProgramData%</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Dossierslocalises">
+        <text>Activation conseillée.</text>
+      </presentation>
+      
+<!--Imprimantes-->
+      <presentation id="Autoriserlapublicationdesimprimantes">
+        <text>Par défaut,l'ordinateur est autorisé à publier les imprimantes</text>
+      </presentation>
+      <presentation id="PublierautomatiquementlesnouvellesimprimantesdansActiveDirectory">
+        <text>Par défaut, la publication est automatique</text>
+      </presentation>
+      <presentation id="Interdirelenettoyagedesimprimantespubliees">
+        <text>Par défaut, le nettoyage est autorisé</text>
+      </presentation>
+      <presentation id="Parcoursdesimprimantes">
+        <text>Voir explications</text>
+      </presentation>
+      <presentation id="Nettoyagedesimprimantesquinesontpaspublieesanouveau">
+        <dropdownList refId="Selectionnezlamethodedenettoyage" noSort="true" defaultItem="0">Sélectionnez la méthode de nettoyage</dropdownList>
+      </presentation>
+      <presentation id="AutorisersousW7linstallationdedriversdimprimantespourlesnonadministrateurs" />
+      
+<!--Initialisation Système-->      
+      <presentation id="MessagesdetatdeDemarrageArretdetaillesounormaux" />
+      <presentation id="DesactiverlessonsdedemarragesousW7" />
+      <presentation id="Desactiverlalectureautomatique">
+        <dropdownList refId="Desactiverlalecturepour" defaultItem="0">Désactiver la lecture pour : </dropdownList>
+      </presentation>
+      <presentation id="DesactiverlutilisationdesclefsUSB">
+        <dropdownList refId="Audemarragedusysteme" defaultItem="1">Désactiver les clefs USB : </dropdownList>
+      </presentation>
+      <presentation id="Supprimerlesprofilsitinerantsmisencache">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="DesactiverlalistedexecutionuniqueRunOnce" />
+      <presentation id="DesactiverlalistedexecutionRun" />
+      <presentation id="Nepasexecuterlesscriptsdedemarragedemaniereasynchrone">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="Nepasexecuterlesscriptsdedemarrageenmodevisible">
+        <text>Par défaut, les scripts s'exécutent en mode caché.</text>
+      </presentation>
+      <presentation id="Nepasexecuterlesscriptsdarretenmodevisible">
+        <text>Par défaut, les scripts s'exécutent en mode caché.</text>
+      </presentation>
+      <presentation id="Nepasdetecterlesconnexionsreseaulentes">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="DEPaideHTML" />
+      <presentation id="lancementapplications16b" />
+      <presentation id="moteurdecompatiblite" />
+      <presentation id="taillejetonkerberos">
+        <text>Lire l'aide.</text>
+      </presentation>
+      <presentation id="MessageEcranAccueil">
+        <textBox refId="TitreduMessage">
+          <label>Saisir le titre du message :</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="Message">
+          <label>Saisir le texte du message :</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <text>Lire le volet d'aide.</text>
+      </presentation>
+      <presentation id="Checkforupdatesatstart" />
+      <presentation id="EnableJavaUpdater" />
+      <presentation id="DemarrageRapide">
+      <text>Désactivation conseillée.</text>
+      </presentation>
+      <presentation id="Hibernation">
+      <text>Désactivation conseillée.</text>
+      </presentation>
+      
+      
+<!--Ouverture de session et Profil itinérant-->
+      <presentation id="Ecranbienvenue" />
+      <presentation id="Attendrereseau">
+        <text>Détermine si Windows attend l'initialisation du réseau lors du démarrage de l'ordinateur</text>
+        <text>et de l'ouverture de session de l'utilisateur. Conseillé.</text>
+      </presentation>
+      <presentation id="Utilisateurprecedent">
+      <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="Executerlesscriptsdouverturedesessionsimultanement">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="Attendrelechargementduprofilitinerant">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="Fermerlasessionutilisateurlorsdunechecduprofilitinerant" />
+      <presentation id="Nombremaximaldetentativesdemiseajourduprofilutilisateur">
+        <decimalTextBox refId="Nombremaximaldetentatives" defaultValue="60" spinStep="5">Nombre maximal de tentatives : </decimalTextBox>
+      </presentation>
+      <presentation id="NepasverifierlesproprietairesdesdossiersProfilsitinerants">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="AjouterlegroupeAdministrateursauxprofilsitinerantsutilisateurs">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="Nautoriserquelesprofilsdutilisateurslocaux">
+        <text>N'activer cette option que pour des stations particulières</text>
+      </presentation>
+      <presentation id="Dechargementprofil">
+        <text>Désactiver obligatoirement.</text>
+      </presentation>
+      <presentation id="Suppressionprofilsanciens">
+        <decimalTextBox refId="Nombredejourdanciennete">Nombre de jour d'ancienneté: </decimalTextBox>
+      </presentation>
+      <presentation id="Changementrapideutilisateur">
+        <text>Supprimer le changement rapide d'utilisateur du menu démarrer et des autres éléments d'environnement. Conseillé.</text>
+      </presentation>
+      <presentation id="LimiterUAC">
+        <text>Pour W7 cette stratégie peut rester à non configurée mais il est conseillé de l'activer</text>
+        <text>pour les systèmes W8.1 et W10 sinon les nouveaux éléments d'environnements</text>
+        <text>ne fonctionneront pas.</text>
+        <text></text>
+        <text>La désactivation de cette stratégie est à réserver à des stations fortement sécurisées.</text>
+        <text>Les effets de bords sont nombreux, par exemple</text>
+        <text>le téléchargement de fichiers sera impossible sous IE11, etc...</text>
+      </presentation>
+      <presentation id="AnimationPremiereOuvertureSession">
+      <text>Conseillé...</text>
+      </presentation>
+      <!--<presentation id="DelMagProfiles">
+        <textBox refId="AutresProfils">
+        <label>Vous pouvez saisir d'autres profils du domaine séparés par des virgules ex: ADMINSTA,MOD_PROF</label>
+        </textBox>
+        <text>Ne fonctionne que si le magretclientstation est en version 15030 minimum.</text>
+        <text>Si cette stratégie est activée, il est inutile d'appeler l'exécutable DelMagProfiles au démarrage de la station.</text>
+      </presentation>-->
+      <presentation id="InformationsUtilisateurprecedent">
+      <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="ExtensionsProfilItinerant">
+      <text>Activer obligatoirement pour le bon fonctionnement des profils V4 pour W8.1</text>
+      </presentation>
+      <presentation id="SuggestionsConsommateurMicrosoft"> 
+      <text>Activer de préfrérence</text>
+      </presentation>
+      
+<!--Services-->
+      <presentation id="DesactiverlecentredesecuriteXPSP2etSP3" />
+      <presentation id="Desactiverlesmisesajourautomatiques" />
+      <presentation id="Desactiverleplanificateurdetaches" />
+      <presentation id="Desactiverleparefeu">
+      <text>A réactiver manuellement pour installer une</text>
+        <text>imprimante sur la station W7 qui doit la partager.</text>
+      </presentation>
+      <presentation id="Desactiverlepartagedeconnexioninternet" />
+      <presentation id="Desactiverlaccesadistanceauregistre" />
+      <presentation id="Desactiverlaconfigurationautomatiquesansfil">
+        <text>Ne pas désactiver pour les stations</text>
+        <text>qui utilisent le WIFI</text>
+      </presentation>
+      <presentation id="DesactiverNLANetworkLocationAwareness">
+        <text>Ne pas désactiver pour les stations</text>
+        <text>qui partagent des ressources (dossiers ou imprimantes)</text>
+      </presentation>
+      <presentation id="DesactiverlesservicesTerminalServer" />
+      <presentation id="DesactiverleservicedaffichagedesmessagesNETSEND" />
+      <presentation id="DesactiverlelogicieldegravagedesCD" />
+      <presentation id="DesactiverWindowsSearchWindows7" />
+      <presentation id="DesactiverWindowsSuperFetchWindows7" />
+      <presentation id="DesactiverWindowsDefenderWindows7" />
+      
+<!--Réseau et accès distant-->
+      <presentation id="Desactiverlaconfigurationutilisateurdesfichiershorsconnexion">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="Desactiverlecachedesfichiershorsconnexion">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="Autoriserlaconfigurationdupartagedeconnexion">
+        <text>Cette stratégie ne s'applique qu'aux utilisateurs du groupe des Administrateurs.</text>
+      </presentation>
+      <presentation id="ServeurProxyApplicationsW81">
+        <textBox refId="ServeurProxyApplicationsW81_Box">
+          <label>Saisir adresseIP:port du proxy</label>
+        </textBox>
+      </presentation>
+      <presentation id="ProxyObligatoireW81">
+      </presentation>
+      <presentation id="ActiverConnexionBureauDistant">
+      </presentation>
+      <presentation id="DesactiverConnexiondassistance">
+      </presentation>
+      
+<!--Composants Windows-->
+<!--Explorateur Windows-->
+      <presentation id="Afficherleslettresdeslecteursavantleursnoms" />
+      <presentation id="Effetdudoubleclicsurunlecteurouundossier">
+        <dropdownList refId="Action" noSort="true" defaultItem="1">Action : </dropdownList>
+      </presentation>
+      <presentation id="Masquerladecouvertedureseaudanslexplorateur" />
+      <presentation id="Desactiverlapreventionexecutiondedonneesdanslexplorateur" />
+      
+<!--Windows Messenger-->
+      <presentation id="NepasautoriserlexecutiondeWindowsMessenger" />
+      <presentation id="NepasdemarrerautomatiquementWindowsMessenger" />
+      
+<!--Windows Installer-->
+      <presentation id="Toujoursinstalleravecdesdroitseleves">
+        <checkBox refId="Cocherpouractiver">Cocher pour activer </checkBox>
+        <text>Important : cette stratégie apparaît également au niveau des utilisateurs.</text>
+        <text>Pour qu'elle soit effective, elle doit être activée dans les deux niveaux.</text>
+      </presentation>
+      
+<!--WindowsApps-->
+      <presentation id="AllowDeploymentInSpecialProfiles" />
+      <presentation id="AppxDeploymentAllowAllTrustedApps" />
+      <presentation id="RestrictAppDataToSystemVolume" />
+      <presentation id="PasdestockagesurOneDrive" />
+      
+<!--Applications MAGRET-->      
+      <presentation id="SaisirlenomduserveursurlequelestinstalleMAGRET">
+        <textBox refId="Nomduserveur">
+          <label>Nom du serveur précédé de '\\' : </label>
+          <defaultValue>\\Serveur01</defaultValue>
+        </textBox>
+        <text>Saisie obligatoire</text>
+      </presentation>
+      <presentation id="SaisirladresseIPduserveursurlequelestinstalleMAGRET">
+        <textBox refId="IPduserveur">
+          <label>IP du serveur : </label>
+          <defaultValue>10.255.X.Y</defaultValue>
+        </textBox>
+        <text>Saisie obligatoire</text>
+      </presentation>
+      <presentation id="SaisirlenomdudomainesurlequelestinstalleMAGRET">
+        <textBox refId="NomduDomaine">
+          <label>Nom du Domaine : </label>
+          <defaultValue>D-ETABLISSEMENT</defaultValue>
+        </textBox>
+        <text>Saisie obligatoire. NE PAS METTRE '.local'</text>
+      </presentation>
+      
+<!--Extinction des stations-->
+      <presentation id="Extinctionautomatiquedesstationsenfindejournee">
+        <textBox refId="Heuredextinctionhhmm">
+          <label>Heure d'extinction (hh:mm) : </label>
+          <defaultValue>18:30</defaultValue>
+        </textBox>
+        <textBox refId="Intervalledetestenmn">
+          <label>Intervalle de test (en mn) : </label>
+          <defaultValue>15</defaultValue>
+        </textBox>
+        <text>La valeur 0 désactive l'extinction automatique</text>
+        <textBox refId="Temporisationdelavertissementens">
+          <label>Temporisation de l'avertissement (en s) : </label>
+          <defaultValue>45</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Extinctionautomatiquedesstationsencasdinactivite">
+        <textBox refId="Delaidinactiviteavantextinctionenmn">
+          <label>Délai d'inactivité avant extinction(en mn) : </label>
+          <defaultValue>30</defaultValue>
+        </textBox>
+        <text>La valeur 0 désactive l'extinction automatique pour inactivité</text>
+        <text>Attention : clients magret station et utilisateur en version 8.017 mini</text>
+      </presentation>
+      
+<!--Clefs USB-->
+      <presentation id="Comportementpardefaut">
+        <dropdownList refId="Valeurpardefaut" defaultItem="0">Valeur par défaut : </dropdownList>
+      </presentation>
+      
+<!--Contrôle des stations-->
+      <presentation id="Messagedavertissementlorsducontroledelastation">
+        <textBox refId="Messagedavertissement">
+          <label>Message d'avertissement : </label>
+          <defaultValue>Souriez, votre session est sous surveillance !</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Parametragemagretclientstation">
+        <dropdownList refId="TypeDemarrage" defaultItem="0">Type de démarrage : </dropdownList>
+      </presentation>
+      
+      
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

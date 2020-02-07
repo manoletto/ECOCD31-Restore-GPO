@@ -1,0 +1,3046 @@
+<!--MAGRET : Modèle Magret-Utilisateur-1805.admx (DANE - G. Picou, JP. Gau, T. Chassain - mai 2018)-->
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="magretu-1805" namespace="Microsoft.Policies.Magretu-1805" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  
+  <categories>
+    <category name="Magret-Utilisateurs" displayName="$(string.mag_0)" />
+    <category name="Redirectiondedossierscomplements" displayName="$(string.mag_1000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="Redirectiondescachesdefichierstemporaires" displayName="$(string.mag_2000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="Bureau" displayName="$(string.mag_3000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="Papierpeint" displayName="$(string.mag_3100)">
+      <parentCategory ref="Bureau" />
+    </category>
+    <category name="ActiveDesktop" displayName="$(string.mag_3200)">
+      <parentCategory ref="Bureau" />
+    </category>
+    <category name="ActiveDirectory" displayName="$(string.mag_3300)">
+      <parentCategory ref="Bureau" />
+    </category>
+    <category name="MenuDemarreretBarredestaches" displayName="$(string.mag_4000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="LiensdiverspourW7" displayName="$(string.mag_4100)">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+    </category>
+    <category name="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" displayName="$(string.mag_4200)">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+    </category>
+    <category name="PersonnaliserlevoletdroitdumenudemarrerdeW7" displayName="$(string.mag_4300)">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+    </category>
+    <category name="FonctionnalitesspecifiquesW81" displayName="$(string.mag_4400)">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+    </category>
+    <category name="Panneaudeconfiguration" displayName="$(string.mag_5000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="Affichage" displayName="$(string.mag_5100)">
+      <parentCategory ref="Panneaudeconfiguration" />
+    </category>
+    <category name="ThemessousW7" displayName="$(string.mag_5200)">
+      <parentCategory ref="Panneaudeconfiguration" />
+    </category>
+    <category name="Imprimantes" displayName="$(string.mag_5300)">
+      <parentCategory ref="Panneaudeconfiguration" />
+    </category>
+    <category name="AjoutSuppressiondeprogrammes" displayName="$(string.mag_5400)">
+      <parentCategory ref="Panneaudeconfiguration" />
+    </category>
+    <category name="Sonsenvahissants" displayName="$(string.mag_5500)">
+      <parentCategory ref="Panneaudeconfiguration" />
+    </category>
+    <category name="Systeme" displayName="$(string.mag_6000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="OuvertureFermeturedesession" displayName="$(string.mag_6100)">
+      <parentCategory ref="Systeme" />
+    </category>
+    <category name="Restrictions" displayName="$(string.mag_6200)">
+      <parentCategory ref="Systeme" />
+    </category>
+    <category name="Reseau" displayName="$(string.mag_7000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="Fichiershorsconnexion" displayName="$(string.mag_7100)">
+      <parentCategory ref="Reseau" />
+    </category>
+    <category name="ComposantsWindows" displayName="$(string.mag_8000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="ExplorateurWindows" displayName="$(string.mag_8100)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="DisquesamoviblessousW7" displayName="$(string.mag_8200)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="NouveauxcomposantsWindows7" displayName="$(string.mag_8300)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="Gadgets" displayName="$(string.mag_8310)">
+      <parentCategory ref="NouveauxcomposantsWindows7" />
+    </category>
+    <category name="Miniatures" displayName="$(string.mag_8320)">
+      <parentCategory ref="NouveauxcomposantsWindows7" />
+    </category>
+    <category name="ExplorateurWindows7" displayName="$(string.mag_8330)">
+      <parentCategory ref="NouveauxcomposantsWindows7" />
+    </category>
+    <category name="Diaporamas" displayName="$(string.mag_8340)">
+      <parentCategory ref="NouveauxcomposantsWindows7" />
+    </category>
+    <category name="Enregisteurdesons" displayName="$(string.mag_8350)">
+      <parentCategory ref="NouveauxcomposantsWindows7" />
+    </category>
+    <category name="OptionsregionalesetlanguessousW7" displayName="$(string.mag_8400)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="CentredesprogrammesetfonctionnalitessousW7" displayName="$(string.mag_8500)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="CentrereseauxetpartagessousW7" displayName="$(string.mag_8600)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="CentredecontroledesperformancesdeW7" displayName="$(string.mag_8700)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="Planificateurdetaches" displayName="$(string.mag_8800)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="WindowsInstaller" displayName="$(string.mag_8900)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="InternetExplorer" displayName="$(string.mag_81000)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="OptionsInternetExplorer" displayName="$(string.mag_81017)">
+      <parentCategory ref="InternetExplorer" />
+    </category>
+    <category name="Applicationsdecourrier" displayName="$(string.mag_81100)">
+      <parentCategory ref="ComposantsWindows" />
+    </category>
+    <category name="ModulesMAGRET" displayName="$(string.mag_9000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="FonctionnalitesMagretUtilisateurs" displayName="$(string.mag_9100)">
+      <parentCategory ref="ModulesMAGRET" />
+    </category>
+    <category name="Magicuser" displayName="$(string.mag_9200)">
+      <parentCategory ref="ModulesMAGRET" />
+    </category>
+    <category name="ConsoleUtilisateurs" displayName="$(string.mag_9300)">
+      <parentCategory ref="ModulesMAGRET" />
+    </category>
+    <category name="Applicationsdiverses" displayName="$(string.mag_10000)">
+      <parentCategory ref="Magret-Utilisateurs" />
+    </category>
+    <category name="ENTetInternetExplorer" displayName="$(string.mag_10100)">
+      <parentCategory ref="Applicationsdiverses" />
+    </category>
+    <category name="GoogleEarth" displayName="$(string.mag_10200)">
+      <parentCategory ref="Applicationsdiverses" />
+    </category>
+    <category name="FrontMotionFirefoxCommunityEditionV305aV3612pourENTMIPsousMAGRET" displayName="$(string.mag_10300)">
+      <parentCategory ref="Applicationsdiverses" />
+    </category>
+    <category name="ConfigurationNavigateur" displayName="$(string.mag_10310)">
+      <parentCategory ref="FrontMotionFirefoxCommunityEditionV305aV3612pourENTMIPsousMAGRET" />
+    </category>
+    <category name="ConfigurationduProxy" displayName="$(string.mag_10330)">
+      <parentCategory ref="FrontMotionFirefoxCommunityEditionV305aV3612pourENTMIPsousMAGRET" />
+    </category>
+    <category name="NavigateursIE7etsuperieurs" displayName="$(string.mag_10400)">
+      <parentCategory ref="Applicationsdiverses" />
+    </category>
+    <category name="Audacity" displayName="$(string.mag_10500)">
+      <parentCategory ref="Applicationsdiverses" />
+    </category>
+    
+  </categories>
+  
+  <policies>
+  
+<!--Redirection de dossiers et compléments-->
+    <policy name="MesDocuments" class="User" displayName="$(string.mag_1001)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.MesDocuments)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeMesDocuments" valueName="Personal" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Mesimages" class="User" displayName="$(string.mag_1002)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Mesimages)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeMesimages" valueName="My Pictures" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Mamusique" class="User" displayName="$(string.mag_1003)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Mamusique)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeMamusique" valueName="My Music" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Mesvideos" class="User" displayName="$(string.mag_1004)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Mesvideos)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeMesvideos" valueName="My Video" required="true" expandable="true" />
+      </elements>
+    </policy>
+      <policy name="Telechargements" class="User" displayName="$(string.mag_1005)" explainText="$(string.RedirectionsDossierTelechargements_Help)" presentation="$(presentation.Telechargements)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsW7" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeTelechargements" valueName="{374DE290-123F-4565-9164-39C4925E467B}" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="ApplicationData" class="User" displayName="$(string.mag_1006)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.ApplicationData)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Cheminpourobtenirleselementsdesdonneesdapplications" valueName="AppData" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Bureau" class="User" displayName="$(string.mag_1007)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Bureau)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+         <text id="Cheminpourobtenirleselementsdubureau" valueName="Desktop" required="true" expandable="true" />      
+      </elements>
+    </policy>
+    <policy name="MenuDemarrer" class="User" displayName="$(string.mag_1008)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.MenuDemarrer)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsduMenuDemarrer" valueName="Start Menu" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Programmes" class="User" displayName="$(string.mag_1009)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Programmes)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+       <text id="CheminpourobtenirleselementsdeProgrammes" valueName="Programs" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Demarrage" class="User" displayName="$(string.mag_1010)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Demarrage)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeDemarrage" valueName="Startup" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Outilsdadministration" class="User" displayName="$(string.mag_1011)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Outilsdadministration)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Chemindesoutilsdadministration" valueName="Administrative Tools" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Favorisreseau" class="User" displayName="$(string.mag_1012)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Favorisreseau)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeFavorisreseau" valueName="NetHood" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Documentsrecents" class="User" displayName="$(string.mag_1013)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Documentsrecents)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Cheminpourobtenirleselementslesplusrecents" valueName="Recent" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Envoyervers" class="User" displayName="$(string.mag_1014)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Envoyervers)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeEnvoyervers" valueName="SendTo" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Documentsfavoris" class="User" displayName="$(string.mag_1015)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Documentsfavoris)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeFavoris" valueName="Favorites" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Nouveaudocument" class="User" displayName="$(string.mag_1016)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Nouveaudocument)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminpourobtenirleselementsdeNouveaudocument" valueName="Templates" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Historique" class="User" displayName="$(string.mag_1017)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Historique)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Chemindelhistorique" valueName="History" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="CacheInternetTemporaryInternetFiles" class="User" displayName="$(string.mag_1018)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.CacheInternetTemporaryInternetFiles)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="DossierducacheInternet" valueName="Cache" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Cookies" class="User" displayName="$(string.mag_1019)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Cookies)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Dossierdescookiesinternet" valueName="Cookies" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="DossierdegravagedesCD" class="User" displayName="$(string.mag_1020)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.DossierdegravagedesCD)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="ChemindudossierdegravagedesCD" valueName="CD Burning" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Donneeslocales" class="User" displayName="$(string.mag_1021)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Donneeslocales)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Chemindesdonneeslocales" valueName="Local Settings" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Donneeslocalesdesapplications" class="User" displayName="$(string.mag_1022)" explainText="$(string.RedirectionsDossiersEnvironnements_Help)" presentation="$(presentation.Donneeslocalesdesapplications)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders">
+      <parentCategory ref="Redirectiondedossierscomplements" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Chemindesdonneeslocalesdesapplications" valueName="Local AppData" required="true" expandable="true" />
+      </elements>
+    </policy>
+    
+<!--Redirection des caches de fichiers temporaires-->
+    <policy name="CacheTEMP" class="User" displayName="$(string.mag_2001)" presentation="$(presentation.CacheTEMP)" key="Environment">
+      <parentCategory ref="Redirectiondescachesdefichierstemporaires" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="DossierdesFichierstemporaires" valueName="TEMP" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="CacheTMP" class="User" displayName="$(string.mag_2002)" presentation="$(presentation.CacheTMP)" key="Environment">
+      <parentCategory ref="Redirectiondescachesdefichierstemporaires" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="DossierdesFichierstemporaires" valueName="TMP" required="true" expandable="true" />
+      </elements>
+    </policy>
+    
+<!--Bureau-->
+    <policy name="MasquerlesiconesclassiquesdubureauPostedetravailcorbeille" class="User" displayName="$(string.mag_3001)" presentation="$(presentation.MasquerlesiconesclassiquesdubureauPostedetravailcorbeille)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoDesktop">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerliconePostedetravaildubureau" class="User" displayName="$(string.mag_3002)" presentation="$(presentation.SupprimerliconePostedetravaildubureau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum" valueName="{20D04FE0-3AEA-1069-A2D8-08002B30309D}">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum" valueName="{20D04FE0-3AEA-1069-A2D8-08002B30309D}">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+    </disabledList>
+    </policy>
+    <policy name="SupprimerGererdumenucontextuelduPostedetravail" class="User" displayName="$(string.mag_3003)" presentation="$(presentation.SupprimerGererdumenucontextuelduPostedetravail)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoManageMyComputerVerb">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerProprietesdumenucontextuelduPostedetravail" class="User" displayName="$(string.mag_3004)" presentation="$(presentation.SupprimerProprietesdumenucontextuelduPostedetravail)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoPropertiesMyComputer">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerliconeMesDocumentsdubureau" class="User" displayName="$(string.mag_3005)" presentation="$(presentation.SupprimerliconeMesDocumentsdubureau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum" valueName="{450D8FBA-AD25-11D0-98A8-0800361B1103}">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum" valueName="{450D8FBA-AD25-11D0-98A8-0800361B1103}">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+    </disabledList>
+    </policy>
+    <policy name="InterdiredemodifierlecheminversMesDocuments" class="User" displayName="$(string.mag_3006)" presentation="$(presentation.InterdiredemodifierlecheminversMesDocuments)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="DisablePersonalDirChange">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerProprietesdumenucontextueldeMesdocuments" class="User" displayName="$(string.mag_3007)" presentation="$(presentation.SupprimerProprietesdumenucontextueldeMesdocuments)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoPropertiesMyDocuments">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerliconeFavorisreseaudubureau" class="User" displayName="$(string.mag_3008)" presentation="$(presentation.SupprimerliconeFavorisreseaudubureau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoNetHood">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="{208D2C60-3AEA-1069-A2D7-08002B30309D}">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoNetHood">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="{208D2C60-3AEA-1069-A2D7-08002B30309D}">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+    </disabledList>
+    </policy>
+    <policy name="NepasajouterdepartagesdesdocumentsrecemmentouvertsdansFavorisreseau" class="User" displayName="$(string.mag_3009)" presentation="$(presentation.NepasajouterdepartagesdesdocumentsrecemmentouvertsdansFavorisreseau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoRecentDocsNetHood">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerliconeInternetExplorerdubureau" class="User" displayName="$(string.mag_3010)" presentation="$(presentation.SupprimerliconeInternetExplorerdubureau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoInternetIcon">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="{871C5380-42A0-1069-A2EA-08002B30309D}">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoInternetIcon">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="{871C5380-42A0-1069-A2EA-08002B30309D}">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+    </disabledList>
+    </policy>
+    <policy name="Supprimerliconedelacorbeilledubureau" class="User" displayName="$(string.mag_3011)" presentation="$(presentation.Supprimerliconedelacorbeilledubureau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\NonEnum" valueName="{645FF040-5081-101B-9F08-00AA002F954E}">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SupprimerProprietesdumenucontextueldelacorbeille" class="User" displayName="$(string.mag_3012)" presentation="$(presentation.SupprimerProprietesdumenucontextueldelacorbeille)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoPropertiesRecycleBin">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverlajoutleglisserdeplaceretlafermeturedesbarresdoutilsdelaBarredestaches" class="User" displayName="$(string.mag_3013)" presentation="$(presentation.DesactiverlajoutleglisserdeplaceretlafermeturedesbarresdoutilsdelaBarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoCloseDragDropBands">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="EmpecherleredimensionnementdesbarresdoutilsduBureau" class="User" displayName="$(string.mag_3014)" presentation="$(presentation.EmpecherleredimensionnementdesbarresdoutilsduBureau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoMovingBands">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverlassistantdenettoyageduBureau" class="User" displayName="$(string.mag_3015)" presentation="$(presentation.DesactiverlassistantdenettoyageduBureau)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\CleanupWiz" valueName="NoRun">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SupprimerleraccourciverslesfichiersdelutilisateursousW7" class="User" displayName="$(string.mag_3016)" presentation="$(presentation.SupprimerleraccourciverslesfichiersdelutilisateursousW7)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="Bureau" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="{59031a47-3f72-44a7-89c5-5595fe6b30ee}">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="{59031a47-3f72-44a7-89c5-5595fe6b30ee}">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+    </disabledList>
+    </policy>
+    
+<!--Papier peint-->
+    <policy name="Cheminetnomdupapierpeint" class="User" displayName="$(string.mag_3101)" presentation="$(presentation.Cheminetnomdupapierpeint)" key="Control Panel\Desktop">
+      <parentCategory ref="Papierpeint" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Cheminetnom" valueName="Wallpaper" />
+        <enum id="Styledupapierpeint" valueName="Style" required="true">
+          <item displayName="$(string.mag_3102)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_3103)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_3104)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="LaisserMagretgererlepapierpeintWindowsXPetW7" class="User" displayName="$(string.mag_3105)" presentation="$(presentation.LaisserMagretgererlepapierpeintWindowsXPetW7)" key="Software\Magret\Connexion" valueName="DuckAndDesktop">
+      <parentCategory ref="Papierpeint" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+      <elements>
+        <text id="Papierpeintimpose" valueName="DuckWallpaper" expandable="true" />
+      </elements>
+    </policy>
+    
+ <!--Active Desktop-->   
+    <policy name="ActiverActiveDesktop" class="User" displayName="$(string.mag_3201)" presentation="$(presentation.ActiverActiveDesktop)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="ForceActiveDesktopOn">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverActiveDesktop" class="User" displayName="$(string.mag_3202)" presentation="$(presentation.DesactiverActiveDesktop)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoActiveDesktop">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactivertousleselements" class="User" displayName="$(string.mag_3203)" presentation="$(presentation.Desactivertousleselements)" key="Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" valueName="NoComponents">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Interdirelesmodifications" class="User" displayName="$(string.mag_3204)" presentation="$(presentation.Interdirelesmodifications)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoActiveDesktopChanges">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Empecherlajoutdelements" class="User" displayName="$(string.mag_3205)" presentation="$(presentation.Empecherlajoutdelements)" key="Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" valueName="NoAddingComponents">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Empecherlasuppressiondelements" class="User" displayName="$(string.mag_3206)" presentation="$(presentation.Empecherlasuppressiondelements)" key="Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" valueName="NoDeletingComponents">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Empecherlamodificationdelements" class="User" displayName="$(string.mag_3207)" presentation="$(presentation.Empecherlamodificationdelements)" key="Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" valueName="NoEditingComponents">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Empecherlafermeturedelements" class="User" displayName="$(string.mag_3208)" presentation="$(presentation.Empecherlafermeturedelements)" key="Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" valueName="NoClosingComponents">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="AjouterSupprimerdeselements" class="User" displayName="$(string.mag_3209)" presentation="$(presentation.AjouterSupprimerdeselements)" key="Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop\AdminComponent">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="EntrezlesURLdeselementsdeBureauaajouterseparesparunespace" valueName="Add" />
+        <text id="EntrezlesURLdeselementsdeBureauasupprimerseparesparunespace" valueName="Delete" />
+      </elements>
+    </policy>
+    <policy name="PapierpeintActiveDesktop" class="User" displayName="$(string.mag_3210)" presentation="$(presentation.PapierpeintActiveDesktop)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Nomdupapierpeint" valueName="Wallpaper" />
+        <enum id="Styledupapierpeint" valueName="WallpaperStyle" required="true">
+          <item displayName="$(string.mag_3211)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_3212)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_3213)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="NautoriserquelespapierspeintsBMP" class="User" displayName="$(string.mag_3214)" presentation="$(presentation.NautoriserquelespapierspeintsBMP)" key="Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" valueName="NoHTMLWallPaper">
+      <parentCategory ref="ActiveDesktop" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    
+<!--Active Directory-->
+    <policy name="MasquerledossierActiveDirectory" class="User" displayName="$(string.mag_3301)" presentation="$(presentation.MasquerledossierActiveDirectory)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="HideDirectoryFolder">
+      <parentCategory ref="ActiveDirectory" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="TaillemaximaledesrecherchesdansActiveDirectory" class="User" displayName="$(string.mag_3302)" presentation="$(presentation.TaillemaximaledesrecherchesdansActiveDirectory)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="ActiveDirectory" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <decimal id="Nombredobjetsrenvoyes" valueName="QueryLimit" required="true" minValue="0" maxValue="4000000000" />
+      </elements>
+    </policy>
+    <policy name="ActiverlefiltragedanslaboitededialogueRechercher" class="User" displayName="$(string.mag_3303)" presentation="$(presentation.ActiverlefiltragedanslaboitededialogueRechercher)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="EnableFilter">
+      <parentCategory ref="ActiveDirectory" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    
+<!--Menu Démarrer et Barre des tâches-->
+    <policy name="AfficherleMenuDemarrerenmodeclassique" class="User" displayName="$(string.mag_4001)" presentation="$(presentation.AfficherleMenuDemarrerenmodeclassique)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSimpleStartMenu">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerlasectionsuperieuredumenuDemarrer" class="User" displayName="$(string.mag_4002)" presentation="$(presentation.SupprimerlasectionsuperieuredumenuDemarrer)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoStartMenuSubFolders">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerWindowsUpdate" class="User" displayName="$(string.mag_4003)" presentation="$(presentation.SupprimerWindowsUpdate)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoWindowsUpdate">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerleselementsduprofilAllUsers" class="User" displayName="$(string.mag_4004)" presentation="$(presentation.SupprimerleselementsduprofilAllUsers)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoCommonGroups">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerlemenuDocuments" class="User" displayName="$(string.mag_4005)" presentation="$(presentation.SupprimerlemenuDocuments)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoRecentDocsMenu">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerliconeMesDocumentsdumenuDemarrer" class="User" displayName="$(string.mag_4006)" presentation="$(presentation.SupprimerliconeMesDocumentsdumenuDemarrer)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSMMyDocs">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverlesprogrammesdumenuParametres" class="User" displayName="$(string.mag_4007)" presentation="$(presentation.DesactiverlesprogrammesdumenuParametres)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSetFolders">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerlesConnexionsreseauetAccesadistance" class="User" displayName="$(string.mag_4008)" presentation="$(presentation.SupprimerlesConnexionsreseauetAccesadistance)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoNetworkConnections">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerlemenuFavoris" class="User" displayName="$(string.mag_4009)" presentation="$(presentation.SupprimerlemenuFavoris)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoFavoritesMenu">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerlemenuRechercher" class="User" displayName="$(string.mag_4010)" presentation="$(presentation.SupprimerlemenuRechercher)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoFind">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerlemenuAide" class="User" displayName="$(string.mag_4011)" presentation="$(presentation.SupprimerlemenuAide)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSMHelp">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerlemenuExecuter" class="User" displayName="$(string.mag_4012)" presentation="$(presentation.SupprimerlemenuExecuter)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoRun">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="AjouterlemenuFermerlasessionutilisateur" class="User" displayName="$(string.mag_4013)" presentation="$(presentation.AjouterlemenuFermerlasessionutilisateur)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="ForceStartMenuLogOff">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverleglisserdeplacerdesmenuscontextuels" class="User" displayName="$(string.mag_4014)" presentation="$(presentation.Desactiverleglisserdeplacerdesmenuscontextuels)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoChangeStartMenu">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Empecherlamodificationdesparametresdelabarredestaches" class="User" displayName="$(string.mag_4015)" presentation="$(presentation.Empecherlamodificationdesparametresdelabarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSetTaskbar">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlesmenuscontextuelspourlabarredestaches" class="User" displayName="$(string.mag_4016)" presentation="$(presentation.Desactiverlesmenuscontextuelspourlabarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoTrayContextMenu">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="GriserlesraccourcisdesprogrammesWindowsInstaller" class="User" displayName="$(string.mag_4017)" presentation="$(presentation.GriserlesraccourcisdesprogrammesWindowsInstaller)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="GreyMSIAds">
+      <parentCategory ref="MenuDemarreretBarredestaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    
+<!--Liens divers pour W7-->
+    <policy name="ActiverlelienRecherchersurInternetdanslaboitederecherchedumenuDemarrer" class="User" displayName="$(string.mag_4101)" presentation="$(presentation.ActiverlelienRecherchersurInternetdanslaboitederecherchedumenuDemarrer)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="AddSearchInternetLinkInStartMenu">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherdelienversledossierdetelechargement" class="User" displayName="$(string.mag_4102)" presentation="$(presentation.Nepasafficherdelienversledossierdetelechargement)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoStartMenuDownloads">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="NepasafficherdelienversGroupeResidentiel" class="User" displayName="$(string.mag_4103)" presentation="$(presentation.NepasafficherdelienversGroupeResidentiel)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoStartMenuHomegroup">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="NepasafficherdelienverslenregistrementTV" class="User" displayName="$(string.mag_4104)" presentation="$(presentation.NepasafficherdelienverslenregistrementTV)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoStartMenuRecordedTV">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherlelienverslarechercheetendue" class="User" displayName="$(string.mag_4105)" presentation="$(presentation.Nepasafficherlelienverslarechercheetendue)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSearchEverywhereLinkInStartMenu">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherdelienverslabibliothequevideos" class="User" displayName="$(string.mag_4106)" presentation="$(presentation.Nepasafficherdelienverslabibliothequevideos)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoStartMenuVideos">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasepinglerdeliensdanslesmenusflottants" class="User" displayName="$(string.mag_4107)" presentation="$(presentation.Nepasepinglerdeliensdanslesmenusflottants)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoPinningToDestinations">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasepinglerdeliensdanslabarredestaches" class="User" displayName="$(string.mag_4108)" presentation="$(presentation.Nepasepinglerdeliensdanslabarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoPinningToTaskbar">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherdeliensversdesfichiersdistants" class="User" displayName="$(string.mag_4109)" presentation="$(presentation.Nepasafficherdeliensversdesfichiersdistants)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoRemoteDestinations">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasepinglerdeprogrammesdanslabarredestaches" class="User" displayName="$(string.mag_4110)" presentation="$(presentation.Nepasepinglerdeprogrammesdanslabarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="TaskbarNoPinnedList">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepaspromouvoirderaccourcisdanslazonedenotification" class="User" displayName="$(string.mag_4111)" presentation="$(presentation.Nepaspromouvoirderaccourcisdanslazonedenotification)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSystraySystemPromotion">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherlesbullesdavertissements" class="User" displayName="$(string.mag_4112)" presentation="$(presentation.Nepasafficherlesbullesdavertissements)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoBalloonFeatureAdvertisements">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasaffichercentremaintenance" class="User" displayName="$(string.mag_4113)" explainText="$(string.HideSCAHealth_Help)" presentation="$(presentation.Nepasaffichercentremaintenance)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="HideSCAHealth">
+      <parentCategory ref="LiensdiverspourW7" />
+      <supportedOn ref="windows:SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    
+<!--Fonctionnalités Menu Démarrer et barre des tâches spécifiques W7-->
+    <policy name="ForcerlaffichagedumenuExecuter" class="User" displayName="$(string.mag_4201)" presentation="$(presentation.ForcerlaffichagedumenuExecuter)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="ForceRunOnStartMenu">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Effacerlalistedesprogrammesrecentsalapremiereconnexion" class="User" displayName="$(string.mag_4202)" presentation="$(presentation.Effacerlalistedesprogrammesrecentsalapremiereconnexion)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="ClearRecentProgForNewUserInStartMenu">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasrechercherdecommunications" class="User" displayName="$(string.mag_4203)" presentation="$(presentation.Nepasrechercherdecommunications)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSearchCommInStartMenu">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasrechercherdefichiersdanslaboitederecherche" class="User" displayName="$(string.mag_4204)" presentation="$(presentation.Nepasrechercherdefichiersdanslaboitederecherche)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSearchFilesInStartMenu">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasrechercherdeprogrammesdanslaboitederecherche" class="User" displayName="$(string.mag_4205)" presentation="$(presentation.Nepasrechercherdeprogrammesdanslaboitederecherche)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSearchProgramsInStartMenu">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherledossierdesjeuxpersonnels" class="User" displayName="$(string.mag_4206)" presentation="$(presentation.Nepasafficherledossierdesjeuxpersonnels)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoStartMenuMyGames">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherdelienversledossierdestockagedelutilisateur" class="User" displayName="$(string.mag_4207)" presentation="$(presentation.Nepasafficherdelienversledossierdestockagedelutilisateur)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoUserFolderInStartMenu">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Empecherleschangementsdeproprietesdelabarredestaches" class="User" displayName="$(string.mag_4208)" presentation="$(presentation.Empecherleschangementsdeproprietesdelabarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="TaskbarLockAll">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasajouterousupprimerdoutilsalabarredestaches" class="User" displayName="$(string.mag_4209)" presentation="$(presentation.Nepasajouterousupprimerdoutilsalabarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="TaskbarNoAddRemoveToolbar">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasdeplacerlabarredestaches" class="User" displayName="$(string.mag_4210)" presentation="$(presentation.Nepasdeplacerlabarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="TaskbarNoRedock">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasrearrangerlabarredestaches" class="User" displayName="$(string.mag_4211)" presentation="$(presentation.Nepasrearrangerlabarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="TaskbarNoDragToolbar">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasredimensionnerlabarredestaches" class="User" displayName="$(string.mag_4212)" presentation="$(presentation.Nepasredimensionnerlabarredestaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="TaskbarNoResize">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="NepasafficherleCentredePrevention" class="User" displayName="$(string.mag_4213)" presentation="$(presentation.NepasafficherleCentredePrevention)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="HideSCAHealth">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherlajaugedelabatterie" class="User" displayName="$(string.mag_4214)" presentation="$(presentation.Nepasafficherlajaugedelabatterie)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="HideSCAPower">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherliconereseau" class="User" displayName="$(string.mag_4215)" presentation="$(presentation.Nepasafficherliconereseau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="HideSCANetwork">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherlevolume" class="User" displayName="$(string.mag_4216)" presentation="$(presentation.Nepasafficherlevolume)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="HideSCAVolume">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Nepasafficherlesbullesdenotification" class="User" displayName="$(string.mag_4217)" presentation="$(presentation.Nepasafficherlesbullesdenotification)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="TaskbarNoNotification">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="AfficherSystemTray" class="User" displayName="$(string.mag_4218)" explainText="$(string.AfficherSystemTray_Help)" presentation="$(presentation.AfficherSystemTray)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="FonctionnalitesMenuDemarreretbarredestachesspecifiquesW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoAutoTrayNotify">
+          <value><decimal value="1" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoTrayItemsDisplay">
+          <value><decimal value="0" /></value>
+        </item>
+      </enabledList>
+      <disabledList>
+      <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoAutoTrayNotify">
+          <value><decimal value="0" /></value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoTrayItemsDisplay">
+          <value><decimal value="1" /></value>
+        </item>                                                               
+        </disabledList>
+    </policy>
+    
+<!--Personnaliser le volet droit du menu démarrer de W7-->
+    <policy name="NepasafficherdelienversDocuments" class="User" displayName="$(string.mag_4301)" presentation="$(presentation.NepasafficherdelienversDocuments)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="Start_ShowMyDocs">
+      <parentCategory ref="PersonnaliserlevoletdroitdumenudemarrerdeW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="NepasafficherdelienversImages" class="User" displayName="$(string.mag_4302)" presentation="$(presentation.NepasafficherdelienversImages)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="Start_ShowMyPics">
+      <parentCategory ref="PersonnaliserlevoletdroitdumenudemarrerdeW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="NepasafficherdelienversMusique" class="User" displayName="$(string.mag_4303)" presentation="$(presentation.NepasafficherdelienversMusique)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="Start_ShowMyMusic">
+      <parentCategory ref="PersonnaliserlevoletdroitdumenudemarrerdeW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="NepasafficherdelienversJeux" class="User" displayName="$(string.mag_4304)" presentation="$(presentation.NepasafficherdelienversJeux)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="Start_ShowMyGames">
+      <parentCategory ref="PersonnaliserlevoletdroitdumenudemarrerdeW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="NepasafficherdelienversVideos" class="User" displayName="$(string.mag_4305)" presentation="$(presentation.NepasafficherdelienversVideos)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="Start_ShowVideos">
+      <parentCategory ref="PersonnaliserlevoletdroitdumenudemarrerdeW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="Nepasafficherdelienverslesfichiersdelutilisateur" class="User" displayName="$(string.mag_4306)" presentation="$(presentation.Nepasafficherdelienverslesfichiersdelutilisateur)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="Start_ShowUser">
+      <parentCategory ref="PersonnaliserlevoletdroitdumenudemarrerdeW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="Programmespardefaut" class="User" displayName="$(string.mag_4307)" explainText="$(string.NoSMConfigurePrograms_Help)" presentation="$(presentation.Programmespardefaut)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSMConfigurePrograms">
+      <parentCategory ref="PersonnaliserlevoletdroitdumenudemarrerdeW7" />
+      <supportedOn ref="windows:SUPPORTED_W7" />
+    </policy>
+    <policy name="ParametrerleboutondalimentationdeW7" class="User" displayName="$(string.mag_4308)" presentation="$(presentation.ParametrerleboutondalimentationdeW7)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced">
+      <parentCategory ref="PersonnaliserlevoletdroitdumenudemarrerdeW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <elements>
+        <enum id="Actionprincipaleduboutondalimentation" valueName="Start_PowerButtonAction" required="true">
+          <item displayName="$(string.mag_4309)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_4310)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_4311)">
+            <value>
+              <decimal value="200" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_4312)">
+            <value>
+              <decimal value="10" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_4313)">
+            <value>
+              <decimal value="40" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    
+<!--Fonctionnalités spécifiques Windows 8.1-->
+    <policy name="GoToDesktopOnSignIn" class="User" displayName="$(string.mag_4401)" explainText="$(string.GoToDesktopOnSignIn_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="GoToDesktopOnSignIn">
+      <parentCategory ref="FonctionnalitesspecifiquesW81" />
+      <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="ShowAppsViewOnStart" class="User" displayName="$(string.mag_4402)" explainText="$(string.ShowAppsViewOnStart_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="ShowAppsViewOnStart">
+      <parentCategory ref="FonctionnalitesspecifiquesW81" />
+      <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableGlobalSearchOnAppsView" class="User" displayName="$(string.mag_4403)" explainText="$(string.DisableGlobalSearchOnAppsView_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="DisableGlobalSearchOnAppsView">
+      <parentCategory ref="FonctionnalitesspecifiquesW81" />
+      <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DesktopAppsFirstInAppsView" class="User" displayName="$(string.mag_4404)" explainText="$(string.DesktopAppsFirstInAppsView_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="DesktopAppsFirstInAppsView">
+      <parentCategory ref="FonctionnalitesspecifiquesW81" />
+      <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="LockedStartLayout" class="User" displayName="$(string.mag_4405)" explainText="$(string.LockedStartLayout_Help)" presentation="$(presentation.LockedStartLayout)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="LockedStartLayout">
+      <parentCategory ref="FonctionnalitesspecifiquesW81" />
+      <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <elements>            
+        <text id="LockedStartLayout_Name" valueName="StartLayoutFile" expandable="true"/>
+      </elements>
+    </policy>
+    <policy name="DesactiverFonctionnalitesWindowsalaUne" class="User" displayName="$(string.mag_4406)" explainText="$(string.DesactiverFonctionnalitesWindowsalaUne_Help)" key="Software\Policies\Microsoft\Windows\CloudContent" valueName="DisableWindowsSpotlightFeatures">
+      <parentCategory ref="FonctionnalitesspecifiquesW81" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOSERVER" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="ForceStartSize" class="User" displayName="$(string.mag_4407)" explainText="$(string.ForceStartSize_ExplainText)" presentation="$(presentation.ForceStartSize)" key="Software\Policies\Microsoft\Windows\Explorer">
+      <parentCategory ref="FonctionnalitesspecifiquesW81" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <elements>
+        <enum id="ForceStartSizeDropdown" valueName="ForceStartSize" required="true">
+          <item displayName="$(string.mag_4408)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_4409)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    
+<!--Panneau de configuration-->
+    <policy name="DesactiverlePanneaudeconfiguration" class="User" displayName="$(string.mag_5001)" explainText="$(string.NoControlPanel_Help)" presentation="$(presentation.DesactiverlePanneaudeconfiguration)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoControlPanel">
+      <parentCategory ref="Panneaudeconfiguration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Masquerlesapplicationsspecifiees" class="User" displayName="$(string.mag_5002)" presentation="$(presentation.Masquerlesapplicationsspecifiees)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="DisallowCpl">
+      <parentCategory ref="Panneaudeconfiguration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <list id="Listedesapplicationsnonautorisees" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowCpl" valuePrefix="" />
+      </elements>
+    </policy>
+    <policy name="Nafficherquelesapplicationsspecifiees" class="User" displayName="$(string.mag_5003)" explainText="$(string.RestrictCpls_Help)" presentation="$(presentation.Nafficherquelesapplicationsspecifiees)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="RestrictCpl">
+      <parentCategory ref="Panneaudeconfiguration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <list id="Listedesapplicationsautorisees" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictCpl" valuePrefix="" />
+      </elements>
+    </policy>
+    <policy name="Forcerlestyleclassique" class="User" displayName="$(string.mag_5004)" presentation="$(presentation.Forcerlestyleclassique)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="ForceClassicControlPanel">
+      <parentCategory ref="Panneaudeconfiguration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    
+<!--Affichage-->
+    <policy name="DesactiverAffichage" class="User" displayName="$(string.mag_5101)" presentation="$(presentation.DesactiverAffichage)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="NoDispCPL">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletArriereplan" class="User" displayName="$(string.mag_5102)" presentation="$(presentation.MasquerlongletArriereplan)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="NoDispBackgroundPage">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Empecherlechangementdepapierpeint" class="User" displayName="$(string.mag_5103)" presentation="$(presentation.Empecherlechangementdepapierpeint)" key="Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" valueName="NoChangingWallPaper">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletApparence" class="User" displayName="$(string.mag_5104)" presentation="$(presentation.MasquerlongletApparence)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="NoDispAppearancePage">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletConfiguration" class="User" displayName="$(string.mag_5105)" presentation="$(presentation.MasquerlongletConfiguration)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="NoDispSettingsPage">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletEcrandeveille" class="User" displayName="$(string.mag_5106)" presentation="$(presentation.MasquerlongletEcrandeveille)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="NoDispScrSavPage">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Activerlecrandeveille" class="User" displayName="$(string.mag_5107)" presentation="$(presentation.Activerlecrandeveille)" key="Software\Policies\Microsoft\Windows\Control Panel\Desktop" valueName="ScreenSaveActive">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="Nomdufichierexecutabledelecrandeveille" class="User" displayName="$(string.mag_5108)" presentation="$(presentation.Nomdufichierexecutabledelecrandeveille)" key="Software\Policies\Microsoft\Windows\Control Panel\Desktop">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Nomdelexecutable" valueName="SCRNSAVE.EXE" />
+      </elements>
+    </policy>
+    <policy name="Delaidactivationdelecrandeveille" class="User" displayName="$(string.mag_5109)" presentation="$(presentation.Delaidactivationdelecrandeveille)" key="Software\Policies\Microsoft\Windows\Control Panel\Desktop">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <decimal id="Delaidactivationensecondes" valueName="ScreenSaveTimeOut" maxValue="599940" storeAsText="true" />
+      </elements>
+    </policy>
+    <policy name="Ecrandeveilleprotegeparmotdepasse" class="User" displayName="$(string.mag_5110)" presentation="$(presentation.Ecrandeveilleprotegeparmotdepasse)" key="Software\Policies\Microsoft\Windows\Control Panel\Desktop" valueName="ScreenSaverIsSecure">
+      <parentCategory ref="Affichage" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    
+<!--Thèmes sous W7-->
+    <policy name="FichierdeTheme" class="User" displayName="$(string.mag_5201)" presentation="$(presentation.FichierdeTheme)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="ThemessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <elements>
+        <text id="Nempechepasensuitelutilisateurdelemodifier" valueName="ThemeFile" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Pointeursdesouris" class="User" displayName="$(string.mag_5202)" presentation="$(presentation.Pointeursdesouris)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoChangingMousePointers">
+      <parentCategory ref="ThemessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Themessonores" class="User" displayName="$(string.mag_5203)" presentation="$(presentation.Themessonores)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoChangingSoundScheme">
+      <parentCategory ref="ThemessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    
+<!--Imprimantes-->
+    <policy name="Desactiverlasuppressiondimprimantes" class="User" displayName="$(string.mag_5301)" presentation="$(presentation.Desactiverlasuppressiondimprimantes)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoDeletePrinter">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlajoutdimprimantes" class="User" displayName="$(string.mag_5302)" presentation="$(presentation.Desactiverlajoutdimprimantes)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoAddPrinter">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Rechercherlesimprimantessurlereseau" class="User" displayName="$(string.mag_5303)" presentation="$(presentation.Rechercherlesimprimantessurlereseau)" key="Software\Policies\Microsoft\Windows NT\Printers\Wizard" valueName="Downlevel Browse">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="CheminActiveDirectorypardefautpourlarecherchedimprimantes" class="User" displayName="$(string.mag_5304)" presentation="$(presentation.CheminActiveDirectorypardefautpourlarecherchedimprimantes)" key="Software\Policies\Microsoft\Windows NT\Printers\Wizard">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="CheminActiveDirectorypardefaut" valueName="Default Search Scope" />
+      </elements>
+    </policy>
+    <policy name="ParcourirunsiteWebcommunpourrechercherlesimprimantes" class="User" displayName="$(string.mag_5305)" presentation="$(presentation.ParcourirunsiteWebcommunpourrechercherlesimprimantes)" key="Software\Policies\Microsoft\Windows NT\Printers\Wizard">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="URLdelapagedinstallationdesimprimantes" valueName="Printers Page URL" required="true" />
+      </elements>
+    </policy>
+    <policy name="Restrictionssurlepointagedesserveursdimpression" class="User" displayName="$(string.mag_5306)" presentation="$(presentation.Restrictionssurlepointagedesserveursdimpression)" key="Software\Policies\Microsoft\Windows NT\Printers\PointAndPrint" valueName="Restricted">
+      <parentCategory ref="Imprimantes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <boolean id="Lesutilisateursnepeuventpointeretimprimerquesurcesserveurs" valueName="TrustedServers" />
+        <text id="Entrerlesnomsdeserveursdimpressionapprouvesseparespar" valueName="ServerList" required="true" />
+        <boolean id="Lesutilisateursnepeuventpointeretimprimerquesurdesserveursdudomaine" valueName="InForest" />
+        <enum id="Lorsdelinstallationdespilotespourunenouvelleimprimante" valueName="NoWarningNoElevationOnInstall" required="true">
+          <item displayName="$(string.mag_5307)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_5308)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+        <enum id="Lorsdelamiseajourdespilotespouruneimprimanteexistante" valueName="UpdatePromptSettings" required="true">
+          <item displayName="$(string.mag_5309)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_5310)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_5311)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    
+<!--Ajout Suppression de programmes-->
+    <policy name="DesactiverAjoutSuppressiondeprogrammes" class="User" displayName="$(string.mag_5401)" presentation="$(presentation.DesactiverAjoutSuppressiondeprogrammes)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoAddRemovePrograms">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlapageModifierSupprimerdesprogrammes" class="User" displayName="$(string.mag_5402)" presentation="$(presentation.MasquerlapageModifierSupprimerdesprogrammes)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoRemovePage">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlapageAjouterdenouveauxprogrammes" class="User" displayName="$(string.mag_5403)" presentation="$(presentation.MasquerlapageAjouterdenouveauxprogrammes)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoAddPage">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlapageAjouterSupprimerdescomposantsWindows" class="User" displayName="$(string.mag_5404)" presentation="$(presentation.MasquerlapageAjouterSupprimerdescomposantsWindows)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoWindowsSetupPage">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerloptionAjouterunprogrammeapartirdunCDROMoudunedisquette" class="User" displayName="$(string.mag_5405)" presentation="$(presentation.MasquerloptionAjouterunprogrammeapartirdunCDROMoudunedisquette)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoAddFromCDorFloppy">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerloptionAjouterdesprogrammesapartirdeMicrosoft" class="User" displayName="$(string.mag_5406)" presentation="$(presentation.MasquerloptionAjouterdesprogrammesapartirdeMicrosoft)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoAddFromInternet">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerloptionAjouterdesprogrammesapartirdevotrereseau" class="User" displayName="$(string.mag_5407)" presentation="$(presentation.MasquerloptionAjouterdesprogrammesapartirdevotrereseau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoAddFromNetwork">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="EmpecherlesutilisateursdutiliserAjoutSuppressiondeprogrammespourconfigurerlesservicesinstalles" class="User" displayName="$(string.mag_5408)" presentation="$(presentation.EmpecherlesutilisateursdutiliserAjoutSuppressiondeprogrammespourconfigurerlesservicesinstalles)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoServices">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlesinformationsdepriseencharge" class="User" displayName="$(string.mag_5409)" presentation="$(presentation.Desactiverlesinformationsdepriseencharge)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSupportInfo">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SpecifielacategoriepardefautpourAjouterdenouveauxprogrammes" class="User" displayName="$(string.mag_5410)" presentation="$(presentation.SpecifielacategoriepardefautpourAjouterdenouveauxprogrammes)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="AjoutSuppressiondeprogrammes" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Categorie" valueName="DefaultCategory" required="true" />
+      </elements>
+    </policy>
+    
+<!--Sons envahissants-->
+    <policy name="DesactiverlesevenementssonoresWindows" class="User" displayName="$(string.mag_5501)" presentation="$(presentation.DesactiverlesevenementssonoresWindows)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="Sonsenvahissants" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="lavaleuryeslesreactive" valueName="ExtendedSounds" />
+      </elements>
+    </policy>
+    <policy name="Desactiverlesbipssonoresdusysteme" class="User" displayName="$(string.mag_5502)" presentation="$(presentation.Desactiverlesbipssonoresdusysteme)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="Sonsenvahissants" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="lavaleuryeslesreactive" valueName="Beep" />
+      </elements>
+    </policy>
+    
+<!--Système-->
+<!--Ouverture Fermeture de session-->
+    <policy name="Connecterlerepertoiredebasealaracinedupartage" class="User" displayName="$(string.mag_6101)" explainText="$(string.Connect_HomeDir_ToRoot_Explain)" presentation="$(presentation.Connecterlerepertoiredebasealaracinedupartage)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="ConnectHomeDirToRoot">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Desactiverlegestionnairedetaches" class="User" displayName="$(string.mag_6102)" presentation="$(presentation.Desactiverlegestionnairedetaches)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="DisableTaskMgr">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverleverrouillagedelordinateur" class="User" displayName="$(string.mag_6103)" presentation="$(presentation.Desactiverleverrouillagedelordinateur)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="DisableLockWorkstation">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlamodificationdumotdepasse" class="User" displayName="$(string.mag_6104)" presentation="$(presentation.Desactiverlamodificationdumotdepasse)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="DisableChangePassword">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverDeconnexion" class="User" displayName="$(string.mag_6105)" presentation="$(presentation.DesactiverDeconnexion)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoLogoff">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Executeralaconnexion" class="User" displayName="$(string.mag_6106)" presentation="$(presentation.Executeralaconnexion)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <list id="Programmesaexecuteralaconnexion" explicitValue="true" />
+      </elements>
+    </policy>
+    <policy name="Nepasafficherlecrandebienvenue" class="User" displayName="$(string.mag_6107)" presentation="$(presentation.Nepasafficherlecrandebienvenue)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoWelcomeScreen">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Executerlesscriptsdouverturedesessionsimultanement" class="User" displayName="$(string.mag_6108)" presentation="$(presentation.Executerlesscriptsdouverturedesessionsimultanement)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="RunLogonScriptSync">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Masquerlesinstructionspourlesscripts" class="User" displayName="$(string.mag_6109)" presentation="$(presentation.Masquerlesinstructionspourlesscripts)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="HideLegacyLogonScripts">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Afficherlesscriptsdouverturedesession" class="User" displayName="$(string.mag_6110)" presentation="$(presentation.Afficherlesscriptsdouverturedesession)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="HideLogonScripts">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="Afficherlesscriptsdefermeturedesession" class="User" displayName="$(string.mag_6111)" presentation="$(presentation.Afficherlesscriptsdefermeturedesession)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="HideLogoffScripts">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="Limiterlatailleduprofil" class="User" displayName="$(string.mag_6112)" presentation="$(presentation.Limiterlatailleduprofil)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System" valueName="EnableProfileQuota">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Messagepersonnalise" valueName="ProfileQuotaMessage" />
+        <decimal id="Taillemaximumduprofil" valueName="MaxProfileSize" required="true" minValue="300" maxValue="30000" />
+        <boolean id="Inclureleregistredanslalistedesfichiers" valueName="IncludeRegInProQuota" />
+        <boolean id="Avertirlutilisateurquandlatailleestdepassee" valueName="WarnUser" />
+        <decimal id="Effectuerunrappeltouteslesnminutes" valueName="WarnUserTimeout" required="true" minValue="0" />
+      </elements>
+    </policy>
+    <policy name="Excluredesdossiersdanslesprofilsitinerants" class="User" displayName="$(string.mag_6113)" presentation="$(presentation.Excluredesdossiersdanslesprofilsitinerants)" key="Software\Policies\Microsoft\Windows\System">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Empecherlesdossierssuivantsdecirculeravecleprofil" valueName="ExcludeProfileDirs" />
+      </elements>
+    </policy>
+    <policy name="Desactiverlarecherchedesimprimantesetdossierspartages" class="User" displayName="$(string.mag_6114)" presentation="$(presentation.Desactiverlarecherchedesimprimantesetdossierspartages)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="NoNetCrawling">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Forcerleclavierfrancaisalaconnexion" class="User" displayName="$(string.mag_6115)" presentation="$(presentation.Forcerleclavierfrancaisalaconnexion)" key="Keyboard Layout\Preload" valueName="1">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>0000040c</string>
+      </enabledValue>
+    </policy>
+    <policy name="Pavenumeriqueetmajuscules" class="User" displayName="$(string.mag_6116)" presentation="$(presentation.Pavenumeriqueetmajuscules)" key="Control Panel\Keyboard">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Activesalaconnexion" valueName="InitialKeyboardIndicators">
+          <item displayName="$(string.mag_6117)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_6118)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_6119)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="Activerlesraccourcisverslesoptionsdaccessibilite" class="User" displayName="$(string.mag_6120)" presentation="$(presentation.Activerlesraccourcisverslesoptionsdaccessibilite)" key="Control Panel\Accessibility\StickyKeys" valueName="Flags">
+      <parentCategory ref="OuvertureFermeturedesession" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="511" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="510" />
+      </disabledValue>
+    </policy>
+    
+<!--Restrictions-->
+    <policy name="Signaturesducodedespilotesdeperipheriques" class="User" displayName="$(string.mag_6201)" presentation="$(presentation.Signaturesducodedespilotesdeperipheriques)" key="Software\Policies\Microsoft\Windows NT\Driver Signing">
+      <parentCategory ref="Restrictions" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="LorsqueWindowsdetecteunfichierpilotesanssignaturenumerique" valueName="BehaviorOnFailedVerify">
+          <item displayName="$(string.mag_6202)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_6203)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_6204)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="Desactiverlinvitedecommandes" class="User" displayName="$(string.mag_6205)" presentation="$(presentation.Desactiverlinvitedecommandes)" key="Software\Policies\Microsoft\Windows\System">
+      <parentCategory ref="Restrictions" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Desactiveregalementletraitementdesscripts" valueName="DisableCMD">
+          <item displayName="$(string.mag_6206)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_6207)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="Desactiverlesoutilsdeditionduregistreregeditetregedt32" class="User" displayName="$(string.mag_6208)" presentation="$(presentation.Desactiverlesoutilsdeditionduregistreregeditetregedt32)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
+      <parentCategory ref="Restrictions" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Selectionneruneoption" valueName="DisableRegistryTools">
+          <item displayName="$(string.mag_6209)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_6210)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_6211)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="ExecuterseulementlesapplicationsWindowsautorisees" class="User" displayName="$(string.mag_6212)" presentation="$(presentation.ExecuterseulementlesapplicationsWindowsautorisees)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="RestrictRun">
+      <parentCategory ref="Restrictions" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <list id="Listedesapplicationsautorisees" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun" additive="true" />
+      </elements>
+    </policy>
+    <policy name="NepasexecuterlesapplicationsWindowsspecifiees" class="User" displayName="$(string.mag_6213)" presentation="$(presentation.NepasexecuterlesapplicationsWindowsspecifiees)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="DisallowRun">
+      <parentCategory ref="Restrictions" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <list id="Listedesapplicationsinterdites" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" valuePrefix="" />
+      </elements>
+    </policy>
+    <policy name="Desactiverlalectureautomatique" class="User" displayName="$(string.mag_6214)" presentation="$(presentation.Desactiverlalectureautomatique)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="Restrictions" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Desactiverlalectureautomatiquedes" valueName="NoDriveTypeAutoRun" required="true">
+          <item displayName="$(string.mag_6215)">
+            <value>
+              <decimal value="181" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_6216)">
+            <value>
+              <decimal value="255" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    
+<!--Réseau-->
+<!--Fichiers hors connexion-->
+    <policy name="Desactiverlaconfigurationutilisateurdesfichiershorsconnexion" class="User" displayName="$(string.mag_7101)" presentation="$(presentation.Desactiverlaconfigurationutilisateurdesfichiershorsconnexion)" key="Software\Policies\Microsoft\Windows\NetCache" valueName="NoConfigCache">
+      <parentCategory ref="Fichiershorsconnexion" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Synchroniserlesfichiershorsconnexionavantdeterminerlasession" class="User" displayName="$(string.mag_7102)" presentation="$(presentation.Synchroniserlesfichiershorsconnexionavantdeterminerlasession)" key="Software\Policies\Microsoft\Windows\NetCache" valueName="SyncAtLogoff">
+      <parentCategory ref="Fichiershorsconnexion" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Actionaladeconnexionduserveur" class="User" displayName="$(string.mag_7103)" presentation="$(presentation.Actionaladeconnexionduserveur)" key="Software\Policies\Microsoft\Windows\NetCache">
+      <parentCategory ref="Fichiershorsconnexion" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Action" valueName="GoOfflineAction" required="true">
+          <item displayName="$(string.mag_7104)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_7105)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="DesactiverRendredisponiblehorsconnexion" class="User" displayName="$(string.mag_7106)" presentation="$(presentation.DesactiverRendredisponiblehorsconnexion)" key="Software\Policies\Microsoft\Windows\NetCache" valueName="NoMakeAvailableOffline">
+      <parentCategory ref="Fichiershorsconnexion" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverledossierFichiershorsconnexion" class="User" displayName="$(string.mag_7107)" presentation="$(presentation.DesactiverledossierFichiershorsconnexion)" key="Software\Policies\Microsoft\Windows\NetCache" valueName="NoCacheViewer">
+      <parentCategory ref="Fichiershorsconnexion" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Tailleducachepardefaut" class="User" displayName="$(string.mag_7108)" presentation="$(presentation.Tailleducachepardefaut)" key="Software\Policies\Microsoft\Windows\NetCache">
+      <parentCategory ref="Fichiershorsconnexion" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <decimal id="Tailleducachepardefaut" valueName="DefCacheSize" minValue="0" maxValue="10000" />
+      </elements>
+    </policy>
+    <policy name="Desactiverlesbullesderappel" class="User" displayName="$(string.mag_7109)" presentation="$(presentation.Desactiverlesbullesderappel)" key="Software\Policies\Microsoft\Windows\NetCache" valueName="NoReminders">
+      <parentCategory ref="Fichiershorsconnexion" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Supprimerlescopieslocalesdesfichiershorsconnexion" class="User" displayName="$(string.mag_7110)" presentation="$(presentation.Supprimerlescopieslocalesdesfichiershorsconnexion)" key="Software\Policies\Microsoft\Windows\NetCache" valueName="PurgeAtLogoff">
+      <parentCategory ref="Fichiershorsconnexion" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <boolean id="Supprimeruniquementlesversionshorsconnexiontemporaires" valueName="PurgeOnlyAutoCacheAtLogoff" />
+      </elements>
+    </policy>
+    
+<!--Composants Windows-->
+<!--Explorateur Windows-->
+    <policy name="Activerlenvironnementclassique" class="User" displayName="$(string.mag_8101)" presentation="$(presentation.Activerlenvironnementclassique)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="ClassicShell">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Masquerlesextensionsdesfichiers" class="User" displayName="$(string.mag_8102)" presentation="$(presentation.Masquerlesextensionsdesfichiers)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="HideFileExt">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Masquerlesfichiersetdossierscaches" class="User" displayName="$(string.mag_8103)" presentation="$(presentation.Masquerlesfichiersetdossierscaches)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="Hidden">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="2" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="Masquerlesfichiersprotegesdusystemedexploitation" class="User" displayName="$(string.mag_8104)" presentation="$(presentation.Masquerlesfichiersprotegesdusystemedexploitation)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="ShowSuperHidden">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="Nepasafficherlecontenudesdossierssysteme" class="User" displayName="$(string.mag_8105)" presentation="$(presentation.Nepasafficherlecontenudesdossierssysteme)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="WebViewBarricade">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="SupprimerlelementOptionsdumenuOutils" class="User" displayName="$(string.mag_8106)" presentation="$(presentation.SupprimerlelementOptionsdumenuOutils)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoFolderOptions">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerlemenuFichierdanslexplorateur" class="User" displayName="$(string.mag_8107)" presentation="$(presentation.SupprimerlemenuFichierdanslexplorateur)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoFileMenu">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerConnecterdeconnecterunlecteurreseau" class="User" displayName="$(string.mag_8108)" presentation="$(presentation.SupprimerConnecterdeconnecterunlecteurreseau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoNetConnectDisconnect">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="SupprimerleboutonRechercherdanslexplorateur" class="User" displayName="$(string.mag_8109)" presentation="$(presentation.SupprimerleboutonRechercherdanslexplorateur)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoShellSearchButton">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Assistantderechercheclassique" class="User" displayName="$(string.mag_8110)" presentation="$(presentation.Assistantderechercheclassique)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\CabinetState" valueName="Use Search Asst">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>no</string>
+      </enabledValue>
+      <disabledValue>
+        <string>yes</string>
+      </disabledValue>
+    </policy>
+    <policy name="Desactiverlesmenuscontextuelsleclicdroit" class="User" displayName="$(string.mag_8111)" presentation="$(presentation.Desactiverlesmenuscontextuelsleclicdroit)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoViewContextMenu">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Nautoriserquelesextensionsdelenvironnementapprouvees" class="User" displayName="$(string.mag_8112)" explainText="$(string.EnforceShellExtensionSecurity_Help)" presentation="$(presentation.Nautoriserquelesextensionsdelenvironnementapprouvees)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="EnforceShellExtensionSecurity">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlesuividesraccourcis" class="User" displayName="$(string.mag_8113)" presentation="$(presentation.Desactiverlesuividesraccourcis)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="LinkResolveIgnoreLinkInfo">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Masquerleslecteursspecifies" class="User" displayName="$(string.mag_8114)" presentation="$(presentation.Masquerleslecteursspecifies)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Choisissezlunedescombinaisonssuivantes" valueName="NoDrives" required="true">
+          <item displayName="$(string.mag_8115)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8116)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8117)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8118)">
+            <value>
+              <decimal value="8" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8119)">
+            <value>
+              <decimal value="16" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8120)">
+            <value>
+              <decimal value="512" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8121)">
+            <value>
+              <decimal value="2048" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8122)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8123)">
+            <value>
+              <decimal value="7" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8124)">
+            <value>
+              <decimal value="15" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8125)">
+            <value>
+              <decimal value="31" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8126)">
+            <value>
+              <decimal value="63" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8127)">
+            <value>
+              <decimal value="2565" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8128)">
+            <value>
+              <decimal value="6661" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8129)">
+            <value>
+              <decimal value="2564" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8130)">
+            <value>
+              <decimal value="4612" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8131)">
+            <value>
+              <decimal value="6660" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8132)">
+            <value>
+              <decimal value="4620" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8133)">
+            <value>
+              <decimal value="4628" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8134)">
+            <value>
+              <decimal value="137732" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8135)">
+            <value>
+              <decimal value="137733" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="Empecherlaccesauxlecteursspecifies" class="User" displayName="$(string.mag_8136)" presentation="$(presentation.Empecherlaccesauxlecteursspecifies)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Choisissezlunedescombinaisonssuivantes" valueName="NoViewOnDrive" required="true">
+          <item displayName="$(string.mag_8137)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8138)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8139)">
+            <value>
+              <decimal value="8" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8140)">
+            <value>
+              <decimal value="16" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8141)">
+            <value>
+              <decimal value="512" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8142)">
+            <value>
+              <decimal value="2048" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8143)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8144)">
+            <value>
+              <decimal value="7" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8145)">
+            <value>
+              <decimal value="15" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8146)">
+            <value>
+              <decimal value="31" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8147)">
+            <value>
+              <decimal value="63" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8148)">
+            <value>
+              <decimal value="2565" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8149)">
+            <value>
+              <decimal value="6661" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8150)">
+            <value>
+              <decimal value="2564" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8151)">
+            <value>
+              <decimal value="6660" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8152)">
+            <value>
+              <decimal value="137732" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_8153)">
+            <value>
+              <decimal value="137733" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="MasquerlongletliealaSecurite" class="User" displayName="$(string.mag_8154)" presentation="$(presentation.MasquerlongletSecurite)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSecurityTab">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletMateriel" class="User" displayName="$(string.mag_8155)" presentation="$(presentation.MasquerlongletMateriel)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoHardwareTab">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlamodificationdesparametresdanimation" class="User" displayName="$(string.mag_8156)" presentation="$(presentation.Desactiverlamodificationdesparametresdanimation)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoChangeAnimation">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlesoulignementdesraccourcisclavier" class="User" displayName="$(string.mag_8157)" presentation="$(presentation.Desactiverlesoulignementdesraccourcisclavier)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoChangeKeyboardNavigationIndicators">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverlongletDFS" class="User" displayName="$(string.mag_8158)" presentation="$(presentation.DesactiverlongletDFS)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoDFSTab">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="NepasafficherOrdinateursprochedumiendansFavorisreseau" class="User" displayName="$(string.mag_8159)" presentation="$(presentation.NepasafficherOrdinateursprochedumiendansFavorisreseau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoComputersNearMe">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="NepasafficherToutlereseaudansFavorisreseau" class="User" displayName="$(string.mag_8160)" presentation="$(presentation.NepasafficherToutlereseaudansFavorisreseau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Network" valueName="NoEntireNetwork">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Nombremaximaldedocumentsrecents" class="User" displayName="$(string.mag_8161)" presentation="$(presentation.Nombremaximaldedocumentsrecents)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <decimal id="Nombremaximal" valueName="MaxRecentDocs" required="true" />
+      </elements>
+    </policy>
+    <policy name="DesactiverloptionInstallerentantque" class="User" displayName="$(string.mag_8162)" presentation="$(presentation.DesactiverloptionInstallerentantque)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoRunasInstallPrompt">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Demanderdesinformationsdidentificationpourdesinstallationsapartirdureseau" class="User" displayName="$(string.mag_8163)" explainText="$(string.PromptRunAsInstallNetPath_Help)" presentation="$(presentation.Demanderdesinformationsdidentificationpourdesinstallationsapartirdureseau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="PromptRunasInstallNetPath">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlamiseencachedesminiatures" class="User" displayName="$(string.mag_8164)" presentation="$(presentation.Desactiverlamiseencachedesminiatures)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="DisableThumbnailCache">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="AM_SetModRiskInclusion" class="User" displayName="$(string.mag_8165)" explainText="$(string.AM_ExplainSetModRiskInclusion)" presentation="$(presentation.AM_SetModRiskInclusion)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Associations">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="AM_InstructModRiskInclusionList" valueName="ModRiskFileTypes" required="true" />
+      </elements>
+    </policy>
+    <policy name="NoWindowsHotKeys" class="User" displayName="$(string.mag_8166)" explainText="$(string.NoWindowsHotKeys_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoWinKeys">
+      <parentCategory ref="ExplorateurWindows" />
+      <supportedOn ref="windows:SUPPORTED_W7" />
+    </policy>
+    
+<!--Disques amovibles sous W7-->
+    <policy name="EmpecherlaccesatoutdisqueamovibleUSBCDDVDetc" class="User" displayName="$(string.mag_8201)" presentation="$(presentation.EmpecherlaccesatoutdisqueamovibleUSBCDDVDetc)" key="Software\Policies\Microsoft\Windows\RemovableStorageDevices" valueName="Deny_All">
+      <parentCategory ref="DisquesamoviblessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EmpecherlalecturedeCDetDVD" class="User" displayName="$(string.mag_8202)" presentation="$(presentation.EmpecherlalecturedeCDetDVD)" key="Software\Policies\Microsoft\Windows\RemovableStorageDevices\{53f56308-b6bf-11d0-94f2-00a0c91efb8b}" valueName="Deny_Read">
+      <parentCategory ref="DisquesamoviblessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EmpecherlagravuredeCDetDVD" class="User" displayName="$(string.mag_8203)" presentation="$(presentation.EmpecherlagravuredeCDetDVD)" key="Software\Policies\Microsoft\Windows\RemovableStorageDevices\{53f56308-b6bf-11d0-94f2-00a0c91efb8b}" valueName="Deny_Write">
+      <parentCategory ref="DisquesamoviblessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Empechelaccesauxdisquesdestockageamovibles" class="User" displayName="$(string.mag_8204)" presentation="$(presentation.Empechelaccesauxdisquesdestockageamovibles)" key="Software\Policies\Microsoft\Windows\RemovableStorageDevices\Custom\Deny_Read" valueName="Deny_Read">
+      <parentCategory ref="DisquesamoviblessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EmpechelaccesauxlecteursdedisquettesmemeUSB" class="User" displayName="$(string.mag_8205)" presentation="$(presentation.EmpechelaccesauxlecteursdedisquettesmemeUSB)" key="Software\Policies\Microsoft\Windows\RemovableStorageDevices\{53f56311-b6bf-11d0-94f2-00a0c91efb8b}" valueName="Deny_Read">
+      <parentCategory ref="DisquesamoviblessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Empechelaccesauxlecteursmultimediatelephonesmobilesetc" class="User" displayName="$(string.mag_8206)" presentation="$(presentation.Empechelaccesauxlecteursmultimediatelephonesmobilesetc)" key="Software\Policies\Microsoft\Windows\RemovableStorageDevices\{6AC27878-A6FA-4155-BA85-F98F491D4F33}" valueName="Deny_Read">
+      <parentCategory ref="DisquesamoviblessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+<!--Nouveaux composants Windows 7 et 8-->    
+<!--Gadgets-->
+    <policy name="Desactivertouslesgadgets" class="User" displayName="$(string.mag_8311)" presentation="$(presentation.Desactivertouslesgadgets)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Windows\Sidebar" valueName="TurnOffSidebar">
+      <parentCategory ref="Gadgets" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Autoriserlesgaleriesdegadgetsalternatives" class="User" displayName="$(string.mag_8312)" presentation="$(presentation.Autoriserlesgaleriesdegadgetsalternatives)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Windows\Sidebar" valueName="OverrideMoreGadgetsLink">
+      <parentCategory ref="Gadgets" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Restreindrelinstallationdegadgetsnonsignes" class="User" displayName="$(string.mag_8313)" presentation="$(presentation.Restreindrelinstallationdegadgetsnonsignes)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Windows\Sidebar" valueName="TurnOffUnsignedGadgets">
+      <parentCategory ref="Gadgets" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Desactiverlinstallationdegadgetsmemesignes" class="User" displayName="$(string.mag_8314)" presentation="$(presentation.Desactiverlinstallationdegadgetsmemesignes)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Windows\Sidebar" valueName="TurnOffUserInstalledGadgets">
+      <parentCategory ref="Gadgets" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    
+<!--Miniatures-->
+    <policy name="Desactiverlaffichagedesminiatures" class="User" displayName="$(string.mag_8321)" presentation="$(presentation.Desactiverlaffichagedesminiatures)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="DisableThumbnails">
+      <parentCategory ref="Miniatures" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Desactiverlaffichagedesminiaturesdanslesdossiersreseau" class="User" displayName="$(string.mag_8322)" presentation="$(presentation.Desactiverlaffichagedesminiaturesdanslesdossiersreseau)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="DisableThumbnailsOnNetworkFolders">
+      <parentCategory ref="Miniatures" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    
+<!--Explorateur Windows 7 et 8-->
+    <policy name="DesactiverleboutonChercherencoresurInternetdanslexplorateur" class="User" displayName="$(string.mag_8331)" presentation="$(presentation.DesactiverleboutonChercherencoresurInternetdanslexplorateur)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="NoSearchInternetTryHarderButton">
+      <parentCategory ref="ExplorateurWindows7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Desactiverlessuggestionsdelaboitederecherche" class="User" displayName="$(string.mag_8332)" presentation="$(presentation.Desactiverlessuggestionsdelaboitederecherche)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="DisableSearchBoxSuggestions">
+      <parentCategory ref="ExplorateurWindows7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Desactiverloutildecapturedecran" class="User" displayName="$(string.mag_8333)" presentation="$(presentation.Desactiverloutildecapturedecran)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="HideContentViewModeSnippets">
+      <parentCategory ref="ExplorateurWindows7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Desactiverlesfonctionnalitesdesbibliotheques" class="User" displayName="$(string.mag_8334)" presentation="$(presentation.Desactiverlesfonctionnalitesdesbibliotheques)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="DisableIndexedLibraryExperience">
+      <parentCategory ref="ExplorateurWindows7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Montrerarborescence" class="User" displayName="$(string.mag_8335)" explainText="$(string.Montrerarborescence_Help)" presentation="$(presentation.Montrerarborescence)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="NavPaneShowAllFolders">
+      <parentCategory ref="ExplorateurWindows7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="DevelopperDossierCourant" class="User" displayName="$(string.mag_8336)" explainText="$(string.DevelopperDossierCourant_Help)" presentation="$(presentation.DevelopperDossierCourant)" key="Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" valueName="NavPaneExpandToCurrentFolder">
+      <parentCategory ref="ExplorateurWindows7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    
+<!--Diaporamas-->
+    <policy name="Desactiverlesdiaporamas" class="User" displayName="$(string.mag_8341)" presentation="$(presentation.Desactiverlesdiaporamas)" key="Software\Policies\Microsoft\Windows\SideShow" valueName="Disabled">
+      <parentCategory ref="Diaporamas" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    
+<!--Enregisteur de sons-->
+    <policy name="Activerlenregisteurdesons" class="User" displayName="$(string.mag_8351)" presentation="$(presentation.Activerlenregisteurdesons)" key="SOFTWARE\Policies\Microsoft\SoundRecorder" valueName="Soundrec">
+      <parentCategory ref="Enregisteurdesons" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    
+<!--Options régionales et langues sous W7 et W8-->
+    <policy name="Localisation" class="User" displayName="$(string.mag_8401)" presentation="$(presentation.Localisation)" key="Software\Policies\Microsoft\Control Panel\International" valueName="HideCurrentLocation">
+      <parentCategory ref="OptionsregionalesetlanguessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Langue" class="User" displayName="$(string.mag_8402)" presentation="$(presentation.Langue)" key="Software\Policies\Microsoft\Control Panel\International" valueName="HideLanguageSelection">
+      <parentCategory ref="OptionsregionalesetlanguessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="FormatsRegionaux" class="User" displayName="$(string.mag_8403)" presentation="$(presentation.FormatsRegionaux)" key="Software\Policies\Microsoft\Control Panel\International" valueName="HideLocaleSelectAndCustomize">
+      <parentCategory ref="OptionsregionalesetlanguessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="SeparateurDecimal" class="User" displayName="$(string.mag_8404)" presentation="$(presentation.SeparateurDecimal)" key="Control Panel\International">
+      <parentCategory ref="OptionsregionalesetlanguessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+      <elements>
+        <enum id="SeparateurSelect" valueName="sDecimal" required="true">
+          <item displayName="$(string.Separateur1)">
+            <value>
+              <string>.</string>
+            </value>
+            <valueList>
+              <item key="Control Panel\International" valueName="sMonDecimalSep">
+                <value>
+                  <string>.</string>
+                </value>
+              </item>
+            </valueList>
+          </item>
+          <item displayName="$(string.Separateur2)">
+            <value>
+              <string>,</string>
+            </value>
+            <valueList>
+              <item key="Control Panel\International" valueName="sMonDecimalSep">
+                <value>
+                  <string>,</string>
+                </value>
+              </item>
+            </valueList>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+<!--Centre des programmes et fonctionnalités sous W7 et W8-->
+    <policy name="DesactiverlaccesauCentredesProgrammes" class="User" displayName="$(string.mag_8501)" presentation="$(presentation.DesactiverlaccesauCentredesProgrammes)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Programs" valueName="NoProgramsCPL">
+      <parentCategory ref="CentredesprogrammesetfonctionnalitessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="EmpecherlajoutouleretraitdefonctionnalitesWindows" class="User" displayName="$(string.mag_8502)" presentation="$(presentation.EmpecherlajoutouleretraitdefonctionnalitesWindows)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Programs" valueName="NoWindowsFeatures">
+      <parentCategory ref="CentredesprogrammesetfonctionnalitessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    
+<!--Centre réseaux et partages sous W7 et W8-->
+    <policy name="Desactiverlassistantdeconnexion" class="User" displayName="$(string.mag_8601)" presentation="$(presentation.Desactiverlassistantdeconnexion)" key="Software\Policies\Microsoft\Windows\WCN\UI" valueName="DisableWcnUi">
+      <parentCategory ref="CentrereseauxetpartagessousW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    
+<!--Centre de contrôle des performances de W7 et W8-->
+    <policy name="Accederaucentredecontroledesperformances" class="User" displayName="$(string.mag_8701)" presentation="$(presentation.Accederaucentredecontroledesperformances)" key="Software\Policies\Microsoft\Windows\Control Panel\Performance Control Panel" valueName="PerfCplEnabled">
+      <parentCategory ref="CentredecontroledesperformancesdeW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="Accederauxsolutionsducentredecontroledesperformances" class="User" displayName="$(string.mag_8702)" presentation="$(presentation.Accederauxsolutionsducentredecontroledesperformances)" key="Software\Policies\Microsoft\Windows\Control Panel\Performance Control Panel" valueName="SolutionsEnabled">
+      <parentCategory ref="CentredecontroledesperformancesdeW7" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    
+<!--Planificateur de tâches-->
+    <policy name="Cacherlespagesdepropriete" class="User" displayName="$(string.mag_8801)" presentation="$(presentation.Cacherlespagesdepropriete)" key="Software\Policies\Microsoft\Windows\Task Scheduler5.0" valueName="Property Pages">
+      <parentCategory ref="Planificateurdetaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Empecherlexecutionetlarretdestaches" class="User" displayName="$(string.mag_8802)" presentation="$(presentation.Empecherlexecutionetlarretdestaches)" key="Software\Policies\Microsoft\Windows\Task Scheduler5.0" valueName="Execution">
+      <parentCategory ref="Planificateurdetaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverleglisserdeplacer" class="User" displayName="$(string.mag_8803)" presentation="$(presentation.Desactiverleglisserdeplacer)" key="Software\Policies\Microsoft\Windows\Task Scheduler5.0" valueName="DragAndDrop">
+      <parentCategory ref="Planificateurdetaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlacreationdenouvellestaches" class="User" displayName="$(string.mag_8804)" presentation="$(presentation.Desactiverlacreationdenouvellestaches)" key="Software\Policies\Microsoft\Windows\Task Scheduler5.0" valueName="Task Creation">
+      <parentCategory ref="Planificateurdetaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Desactiverlasuppressiondetaches" class="User" displayName="$(string.mag_8805)" presentation="$(presentation.Desactiverlasuppressiondetaches)" key="Software\Policies\Microsoft\Windows\Task Scheduler5.0" valueName="Task Deletion">
+      <parentCategory ref="Planificateurdetaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverlemenuAvance" class="User" displayName="$(string.mag_8806)" presentation="$(presentation.DesactiverlemenuAvance)" key="Software\Policies\Microsoft\Windows\Task Scheduler5.0" valueName="Disable Advanced">
+      <parentCategory ref="Planificateurdetaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="Interdireleparcours" class="User" displayName="$(string.mag_8807)" presentation="$(presentation.Interdireleparcours)" key="Software\Policies\Microsoft\Windows\Task Scheduler5.0" valueName="Allow Browse">
+      <parentCategory ref="Planificateurdetaches" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    
+<!--Windows Installer-->
+    <policy name="Toujoursinstalleravecdesdroitseleves" class="User" displayName="$(string.mag_8901)" presentation="$(presentation.Toujoursinstalleravecdesdroitseleves)" key="Software\Policies\Microsoft\Windows\Installer">
+      <parentCategory ref="WindowsInstaller" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <boolean id="Cocherpouractiver" valueName="AlwaysInstallElevated" />
+      </elements>
+    </policy>
+    <policy name="Ordrederecherche" class="User" displayName="$(string.mag_8902)" presentation="$(presentation.Ordrederecherche)" key="Software\Policies\Microsoft\Windows\Installer">
+      <parentCategory ref="WindowsInstaller" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Ordrederecherche" valueName="SearchOrder" />
+      </elements>
+    </policy>
+    <policy name="Desactiverlannulation" class="User" displayName="$(string.mag_8903)" presentation="$(presentation.Desactiverlannulation)" key="Software\Policies\Microsoft\Windows\Installer">
+      <parentCategory ref="WindowsInstaller" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <boolean id="Cocherpouractiver" valueName="DisableRollback" />
+      </elements>
+    </policy>
+    <policy name="Desactiverlasourcedemediapourtouteslesinstallations" class="User" displayName="$(string.mag_8904)" presentation="$(presentation.Desactiverlasourcedemediapourtouteslesinstallations)" key="Software\Policies\Microsoft\Windows\Installer">
+      <parentCategory ref="WindowsInstaller" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <boolean id="Cocherpouractiver" valueName="DisableMedia" />
+      </elements>
+    </policy>
+    
+<!--Internet Explorer-->
+
+    <policy name="Activerleproxymanuellementdesactiverloptionautomatique" class="User" displayName="$(string.mag_81001)" presentation="$(presentation.Activerleproxymanuellementdesactiverloptionautomatique)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="ProxyEnable">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <text id="Protocolesadressesetports" valueName="ProxyServer" />
+        <text id="Nepasutiliserleproxypourlesadressescommencantpar" valueName="ProxyOverride" />
+      </elements>
+    </policy>
+    <policy name="Activerleproxyautomatiquementdesactiverloptionmanuelle" class="User" displayName="$(string.mag_81002)" presentation="$(presentation.Activerleproxyautomatiquementdesactiverloptionmanuelle)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Saisissezladressedevotreproxysuivieducheminduscript" valueName="AutoConfigURL" required="true" />
+      </elements>
+    </policy>
+    <policy name="Verifiersilexisteuneversionplusrecentedespagesenregistrees" class="User" displayName="$(string.mag_81003)" presentation="$(presentation.Verifiersilexisteuneversionplusrecentedespagesenregistrees)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Typedemiseajour" valueName="SyncMode5">
+          <item displayName="$(string.mag_81004)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_81005)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_81006)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_81007)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="ViderledossierTemporaryInternetFilesaladeconnexion" class="User" displayName="$(string.mag_81008)" presentation="$(presentation.ViderledossierTemporaryInternetFilesaladeconnexion)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings\Cache" valueName="Persistent">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="Dossierdenregistrementpardefaut" class="User" displayName="$(string.mag_81009)" presentation="$(presentation.Dossierdenregistrementpardefaut)" key="Software\Microsoft\Internet Explorer\Main">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Dossierpardefaut" valueName="Save Directory" />
+      </elements>
+    </policy>
+    <policy name="Dossierdetelechargementpardefaut" class="User" displayName="$(string.mag_81010)" presentation="$(presentation.Dossierdetelechargementpardefaut)" key="Software\Microsoft\Internet Explorer\Main">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Dossiertelechargementpardefaut" valueName="Download Directory" />
+      </elements>
+    </policy>
+    
+    <policy name="Intituledubandeau" class="User" displayName="$(string.mag_81011)" presentation="$(presentation.Intituledubandeau)" key="Software\Microsoft\Internet Explorer\Main">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Intitule" valueName="Window Title" />
+      </elements>
+    </policy>
+    <policy name="PagesdaccueiletderecherchepourIE6" class="User" displayName="$(string.mag_81012)" presentation="$(presentation.PagesdaccueiletderecherchepourIE6)" key="Software\Microsoft\Internet Explorer\Main">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Entrezladressedelapagedaccueil" valueName="Start Page" />
+        <text id="Entrezladressedelapagederecherche" valueName="Search Page" />
+      </elements>
+    </policy>
+    <policy name="Nepasdemanderdeconfirmationpourexecuterdesprogrammesnonsignesnumeriquement" class="User" displayName="$(string.mag_81013)" presentation="$(presentation.Nepasdemanderdeconfirmationpourexecuterdesprogrammesnonsignesnumeriquement)" key="Software\Microsoft\Internet Explorer\Download">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledList>
+        <item key="Software\Microsoft\Internet Explorer\Download" valueName="CheckExeSignatures">
+          <value>
+            <string>yes</string>
+          </value>
+        </item>
+        <item key="Software\Microsoft\Internet Explorer\Download" valueName="RunInvalidSignatures">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Internet Explorer\Download" valueName="CheckExeSignatures">
+          <value>
+            <string>yes</string>
+          </value>
+        </item>
+      </enabledList>
+    </policy>
+    <policy name="Desactiverlemenucontextuelclicdroitdanslespagesvisitees" class="User" displayName="$(string.mag_81014)" presentation="$(presentation.Desactiverlemenucontextuelclicdroitdanslespagesvisitees)" key="Software\Policies\Microsoft\Internet Explorer\Restrictions" valueName="NoBrowserContextMenu">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Desactiverlamemorisationdesmotsdepasse" class="User" displayName="$(string.mag_81015)" presentation="$(presentation.Desactiverlamemorisationdesmotsdepasse)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="DisablePasswordCaching">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Autresparametres" class="User" displayName="$(string.mag_81016)" presentation="$(presentation.Autresparametres)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+
+<!--Options InternetExplorer-->
+    <policy name="MasquerlongletGeneral" class="User" displayName="$(string.mag_81018)" presentation="$(presentation.MasquerlongletGeneral)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="GeneralTab">
+      <parentCategory ref="OptionsInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletSecurite" class="User" displayName="$(string.mag_81019)" presentation="$(presentation.MasquerlongletSecurite)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="SecurityTab">
+      <parentCategory ref="OptionsInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletConfidentialite" class="User" displayName="$(string.mag_81020)" presentation="$(presentation.MasquerlongletConfidentialite)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="PrivacyTab">
+      <parentCategory ref="OptionsInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletContenu" class="User" displayName="$(string.mag_81021)" presentation="$(presentation.MasquerlongletContenu)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="ContentTab">
+      <parentCategory ref="OptionsInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletConnexions" class="User" displayName="$(string.mag_81022)" presentation="$(presentation.MasquerlongletConnexions)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="ConnectionsTab">
+      <parentCategory ref="OptionsInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletProgrammes" class="User" displayName="$(string.mag_81023)" presentation="$(presentation.MasquerlongletProgrammes)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="ProgramsTab">
+      <parentCategory ref="OptionsInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="MasquerlongletAvance" class="User" displayName="$(string.mag_81024)" presentation="$(presentation.MasquerlongletAvance)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="AdvancedTab">
+      <parentCategory ref="OptionsInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    <policy name="DesactiverDetectionautoParametresConnexion" class="User" displayName="$(string.mag_81025)" presentation="$(presentation.DesactiverDetectionautoParametresConnexion)" key="Software\Policies\Microsoft\Internet Explorer\Control Panel" valueName="Autoconfig">
+      <parentCategory ref="OptionsInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    
+    
+<!--Applications de courrier-->
+    <policy name="Chemindesdossiersdecourrier" class="User" displayName="$(string.mag_81101)" presentation="$(presentation.Chemindesdossiersdecourrier)" key="Software\Microsoft\Outlook Express">
+      <parentCategory ref="Applicationsdecourrier" />
+      <supportedOn ref="SUPPORTED_WXP" />
+      <elements>
+        <text id="Chemindesdossiers" valueName="Store Root" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="DesactiverlaccesauxgroupesdeNewsdansWindowsMail" class="User" displayName="$(string.mag_81102)" presentation="$(presentation.DesactiverlaccesauxgroupesdeNewsdansWindowsMail)" key="SOFTWARE\Policies\Microsoft\Windows Mail" valueName="DisableCommunities">
+      <parentCategory ref="Applicationsdecourrier" />
+      <supportedOn ref="SUPPORTED_W7" />
+    </policy>
+    <policy name="DesactiverlaccesaWindowsMail" class="User" displayName="$(string.mag_81103)" presentation="$(presentation.DesactiverlaccesaWindowsMail)" key="SOFTWARE\Policies\Microsoft\Windows Mail" valueName="ManualLaunchAllowed">
+      <parentCategory ref="Applicationsdecourrier" />
+      <supportedOn ref="windows:SUPPORTED_W7" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    
+<!--Applications MAGRET-->
+<!--Fonctionnalités Magret Utilisateurs-->
+    <policy name="ActiverleclientMagretUtilisateur" class="User" displayName="$(string.mag_9101)" presentation="$(presentation.ActiverleclientMagretUtilisateur)" key="Software\Microsoft\Windows\CurrentVersion\Run">
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Cheminetnomduprogramme" valueName="MagretClientUtilisateur" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="Tracerlesapplications" class="User" displayName="$(string.mag_9102)" presentation="$(presentation.Tracerlesapplications)" key="Software\Magret\Logs\Applications">
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Intervalledutestenmn" valueName="Timing" required="true" />
+        <text id="Destinatairedesalertesdesapplicationsinterdites" valueName="Destinataire" required="true" /> 
+      </elements>
+    </policy>
+    <policy name="Tracerlesconnexions" class="User" displayName="$(string.mag_9103)" presentation="$(presentation.Tracerlesconnexions)" key="Software\Magret\Logs\Connexions" valueName="TestConnect">
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>Oui</string>
+      </enabledValue>
+      <disabledValue>
+        <string>Non</string>
+      </disabledValue>
+    </policy>
+    <policy name="Activerlecontroledelatailledelespaceutilisateur" class="User" displayName="$(string.mag_9104)" presentation="$(presentation.Activerlecontroledelatailledelespaceutilisateur)" key="Software\Magret\Logs\Espaces personnels" valueName="ActiveLogUtil">
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>Oui</string>
+      </enabledValue>
+      <disabledValue>
+        <string>Non</string>
+      </disabledValue>
+      <elements>
+        <text id="Taillemaximumautoriseeenkilooctets" valueName="Taille" required="true" />
+        <text id="SaisirMaxtaillefichier" valueName="MaxSizeFic" required="true" />
+        <boolean id="Controledelapresencedefichiers"  valueName="TestExe">
+          <trueValue> 
+              <string>Oui</string> 
+            </trueValue> 
+            <falseValue> 
+              <string>Non</string> 
+            </falseValue>
+        </boolean>
+        <text id="SaisirFichiersExclus" valueName="Outoflist" required="true" />
+        <text id="ListedesextensionsXXXsepareespardeuxpoints" valueName="ListExt" required="true" />
+        <text id="Destinatairedesalertes" valueName="Destinataire" required="true" />
+      </elements>
+    </policy>
+    <policy name="Messagerieinterne" class="User" displayName="$(string.mag_9105)" presentation="$(presentation.Messagerieinterne)" key="Software\Magret\Messagerie interne">
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Saisirlecheminetlenomduprogrammedemessagerieinterne" valueName="Exe" required="true" />
+        <text id="Testerlapresencedemessagesalouverturedesession" valueName="TestMessage" required="true" />
+        <text id="Saisirlataillemaximaledesfichiersjointsenko" valueName="MaxiJoint" required="true" />
+        <text id="Messagederappel" valueName="Avertissement" required="true" />
+        <enum id="Frequencedurappel" valueName="Rappel" required="true">
+          <item displayName="$(string.mag_9106)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_9107)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_9108)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_9109)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_9110)">
+            <value>
+              <decimal value="5" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_9111)">
+            <value>
+              <decimal value="9" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="Empecherlesconnexionsmultiples" class="User" displayName="$(string.mag_9112)" explainText="$(string.Empecherlesconnexionsmultiples_Help)" presentation="$(presentation.Empecherlesconnexionsmultiples)" key="Software\Magret\Connexion" valueName="TestOneConnect">
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>Oui</string>
+      </enabledValue>
+      <disabledValue>
+        <string>Non</string>
+      </disabledValue>
+      <elements>
+        <enum id="Modeinterdictionconnexionmultiple" key="Software\Policies\Magret\Connexion" valueName="CloseOtherConnection" required="true">
+            <item displayName="$(string.mag_9113)">
+            <value>
+              <string>Yes</string>
+            </value>          
+          </item>
+          <item displayName="$(string.mag_9114)">
+            <value>
+              <string>No</string>
+            </value>          
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="Fermerlasessionencasdinactivite" class="User" displayName="$(string.mag_9115)" explainText="$(string.Fermerlasessionencasdinactivite_Help)" presentation="$(presentation.Fermerlasessionencasdinactivite)" key="Software\Magret\Connexion" >
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Delaidinactiviteavantfermeturesessionenmn" valueName="IdleDelayBeforeLogoff" required="true" />
+      </elements>
+    </policy>
+    <policy name="ActiverLogsdimpressions" class="User" displayName="$(string.mag_9116)" explainText="$(string.ActiverLogsdimpressions_Help)" presentation="$(presentation.ActiverLogsdimpressions)" key="Software\Magret\Logs\Impressions" >
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+          <enabledList>
+          <item key="Software\Magret\Logs\Impressions" valueName="MaxPagesMsg">
+            <value>
+              <string>Vous avez imprimé %maxpagesuser% pages et dépassé le quota de %maxpages% pages, le Gestionnaire de réseau est alerté !</string>
+            </value>
+          </item>
+          <item key="Software\Magret\Logs\Impressions" valueName="MaxPagesDocMsg">
+            <value>
+              <string>Vous avez imprimé un document de %maxpagesdocuser% pages et dépassé la limite de %maxpagesdoc% pages par document, le Gestionnaire de réseau est alerté !</string>
+            </value>
+          </item>
+          </enabledList>
+          <disabledList>
+          <item key="Software\Magret\Logs\Impressions" valueName="MaxPagesMsg">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item key="Software\Magret\Logs\Impressions" valueName="MaxPagesDocMsg">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item key="Software\Magret\Logs\Impressions" valueName="MaxPages">
+            <value>
+              <delete />
+            </value>
+          </item>
+          <item key="Software\Magret\Logs\Impressions" valueName="MaxPagesDoc">
+            <value>
+              <delete />
+            </value>
+          </item>
+          </disabledList>
+      <elements>
+        <text id="MaxPages" valueName="MaxPages" required="true" />
+        <text id="MaxPagesDoc" valueName="MaxPagesDoc" required="true" />
+        <text id="ExcludedPrinters" valueName="ExcludedPrinters" required="true" />
+      </elements>
+    </policy>
+    <policy name="Controledesapplicationsautorisees" class="User" displayName="$(string.mag_9117)" presentation="$(presentation.Controledesapplicationsautorisees)" key="Software\Magret\AppTimer" valueName="ActiveAppTimer">
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>Oui</string>
+      </enabledValue>
+      <disabledValue>
+        <string>Non</string>
+      </disabledValue>
+    </policy>
+    <policy name="DesactiverlutilisationdesclesUSB" class="User" displayName="$(string.mag_9118)" presentation="$(presentation.DesactiverlutilisationdesclesUSB)" key="Software\Policies\Magret\USB" valueName="NoUSB">
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Affectationderoutes" class="User" displayName="$(string.mag_9119)" presentation="$(presentation.Affectationderoutes)" key="Software\Policies\Magret\Routes">
+      <parentCategory ref="FonctionnalitesMagretUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="ExempleZMI" valueName="Route" required="true" />
+        <text id="ExempleDMZ" valueName="Route1" />
+        <text id="AutreZone" valueName="Route2" />
+      </elements>
+    </policy>
+          
+<!--Magic user-->
+    <policy name="Listedesapplicationsautorisees" class="User" displayName="$(string.mag_9201)" presentation="$(presentation.Listedesapplicationsautorisees)" key="Software\Policies\Magret\Magic user">
+      <parentCategory ref="Magicuser" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <list id="Applicationsaexecuteravecdesdroitsetendus" explicitValue="true" />
+      </elements>
+    </policy>
+    
+<!--Console Utilisateurs-->
+    <policy name="MasquerlesiconesdegestiondelIntraWeb" class="User" displayName="$(string.mag_9301)" presentation="$(presentation.MasquerlesiconesdegestiondelIntraWeb)" key="Software\Policies\Magret\ConsoleEnseignant\Moi\Outils\Restrictions" valueName="NoIWebMngr">
+      <parentCategory ref="ConsoleUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="Masquerlesiconesdegestiondesaccesalinternet" class="User" displayName="$(string.mag_9302)" presentation="$(presentation.Masquerlesiconesdegestiondesaccesalinternet)" key="Software\Policies\Magret\ConsoleEnseignant\Moi\Outils\Restrictions" valueName="NoWebMngr">
+      <parentCategory ref="ConsoleUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="MasquerlesiconesdegestionEcrannoir" class="User" displayName="$(string.mag_9303)" presentation="$(presentation.MasquerlesiconesdegestionEcrannoir)" key="Software\Policies\Magret\ConsoleEnseignant\Moi\Outils\Restrictions" valueName="NoBSMngr">
+      <parentCategory ref="ConsoleUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="Masquerlesiconesdegestiondesrestrictionsdapplications" class="User" displayName="$(string.mag_9304)" presentation="$(presentation.Masquerlesiconesdegestiondesrestrictionsdapplications)" key="Software\Policies\Magret\ConsoleEnseignant\Moi\Outils\Restrictions" valueName="NoAppMngr">
+      <parentCategory ref="ConsoleUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="RajouterdesitemsdansOutils" class="User" displayName="$(string.mag_9305)" presentation="$(presentation.RajouterdesitemsdansOutils)" key="Software\Magret\ConsoleEnseignant\Moi\OutilsPlus">
+      <parentCategory ref="ConsoleUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <list id="Listedesitemssupplementaires" explicitValue="true" />
+      </elements>
+    </policy>
+    <policy name="Masquerlongletdechangementdemotdepasse" class="User" displayName="$(string.mag_9306)" presentation="$(presentation.Masquerlongletdechangementdemotdepasse)" key="Software\Policies\Magret\ConsoleUtilisateur" valueName="NoChangePassword">
+      <parentCategory ref="ConsoleUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="MasquerlesiconesdaccesalIntraWeb" class="User" displayName="$(string.mag_9307)" presentation="$(presentation.MasquerlesiconesdaccesalIntraWeb)" key="Software\Policies\Magret\ConsoleUtilisateur\Moi\Outils\Restrictions" valueName="NoIWebAccess">
+      <parentCategory ref="ConsoleUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="RajouterdesitemsdansOutils_1" class="User" displayName="$(string.mag_9308)" presentation="$(presentation.RajouterdesitemsdansOutils_1)" key="Software\Magret\ConsoleUtilisateur\Moi\OutilsPlus">
+      <parentCategory ref="ConsoleUtilisateurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <list id="Listedesitemssupplementaires" explicitValue="true" />
+      </elements>
+    </policy>
+    
+<!--Applications diverses-->
+<!--ENT et Internet Explorer-->
+    <policy name="ParametragedIEpourlENTParametresduproxyHTTP" class="User" displayName="$(string.mag_10101)" presentation="$(presentation.ParametragedIEpourlENTParametresduproxyHTTP)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings">
+      <parentCategory ref="ENTetInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="EnableHttp1_1">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="PrivacyAdvanced">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="ProxyHttp1.1">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="EnableHttp1_1">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="PrivacyAdvanced">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="ProxyHttp1.1">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+      </disabledList>
+    </policy>
+    <policy name="ParametragedIEpourlENTPersonnalisationduniveau" class="User" displayName="$(string.mag_10102)" presentation="$(presentation.ParametragedIEpourlENTPersonnalisationduniveau)" key="Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3">
+      <parentCategory ref="ENTetInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" valueName="1A00">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" valueName="CurrentLevel">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" valueName="1A00">
+          <value>
+            <decimal value="20000" />
+          </value>
+        </item>
+        <item key="Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" valueName="CurrentLevel">
+          <value>
+            <decimal value="11500" />
+          </value>
+        </item>
+      </disabledList>
+    </policy>
+    <policy name="AutoriserlecontenuactifasexecuterdanslesfichiersdelazoneOrdinateurlocal" class="User" displayName="$(string.mag_10103)" presentation="$(presentation.AutoriserlecontenuactifasexecuterdanslesfichiersdelazoneOrdinateurlocal)" key="Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN" valueName="iexplore.exe">
+      <parentCategory ref="ENTetInternetExplorer" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+
+<!--Google Earth-->
+    <policy name="CheminsducacheetdesfichiersKML" class="User" displayName="$(string.mag_10201)" presentation="$(presentation.CheminsducacheetdesfichiersKML)" key="SOFTWARE\Google\Google Earth Plus">
+      <parentCategory ref="GoogleEarth" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Cheminducache" valueName="CachePath" required="true" />
+        <text id="ChemindesfichiersKML" valueName="KMLPath" required="true" />
+        <text id="CheminpardefautdesfichiersKML" valueName="DefaultKMLPath" required="true" />
+      </elements>
+    </policy>
+    
+<!--Frontmotion Firefox Community Edition-->
+<!--Configuration Navigateur-->
+    <policy name="Configurationgenerale" class="User" displayName="$(string.mag_10311)" presentation="$(presentation.Configurationgenerale)" key="Software\Policies\Mozilla\Firefox">
+      <parentCategory ref="ConfigurationNavigateur" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Pagedaccueil" valueName="Homepage" required="true" />
+      </elements>
+    </policy>
+    <policy name="UtiliserleparametragedInternetExplorer" class="User" displayName="$(string.mag_10312)" presentation="$(presentation.UtiliserleparametragedInternetExplorer)" key="Software\Policies\Mozilla\Firefox" valueName="FirefoxUseIESettings">
+      <parentCategory ref="ConfigurationNavigateur" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <enabledList>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxHomepage">
+          <value>
+            <string>Using IE's Settings</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxAutoProxyURL">
+          <value>
+            <string>Using IE's Settings</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualHTTP">
+          <value>
+            <string>Using IE's Settings</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualHTTPPort">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualSSL">
+          <value>
+            <string>Using IE's Settings</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualSSLPort">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualFTP">
+          <value>
+            <string>Using IE's Settings</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualFTPPort">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualGopher">
+          <value>
+            <string>Using IE's Settings</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualGopherPort">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualSOCKS">
+          <value>
+            <string>Using IE's Settings</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxManualSOCKSPort">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Policies\Mozilla\Firefox" valueName="FirefoxProxyExceptions">
+          <value>
+            <string>Using IE's Settings</string>
+          </value>
+        </item>
+      </enabledList>
+    </policy>
+    <policy name="Redimensionnementautomatiquedesimages" class="User" displayName="$(string.mag_10313)" presentation="$(presentation.Redimensionnementautomatiquedesimages)" key="Software\Policies\Mozilla\Firefox" valueName="ImageResize">
+      <parentCategory ref="ConfigurationNavigateur" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DesactiverTestdeNavigateurpardefaut" class="User" displayName="$(string.mag_10314)" presentation="$(presentation.DesactiverTestdeNavigateurpardefaut)" key="Software\Policies\Mozilla\Firefox" valueName="CheckDefault">
+      <parentCategory ref="ConfigurationNavigateur" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="DossierdetelechargementpardefautFF" class="User" displayName="$(string.mag_10315)" presentation="$(presentation.DossierdetelechargementpardefautFF)" key="Software\Policies\Mozilla\Firefox">
+      <parentCategory ref="ConfigurationNavigateur" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Choisirlaselectionmanuelledepreference" valueName="DownloadType" required="true">
+          <item displayName="$(string.mag_10316)">
+            <value>
+              <string>My Documents</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10317)">
+            <value>
+              <string>Desktop</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10318)">
+            <value>
+              <string>Set</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10319)">
+            <value>
+              <string>Home Drive</string>
+            </value>
+          </item>
+        </enum>
+        <text id="PTravailsousMAGRETV6" valueName="DownloadLocation" />
+      </elements>
+    </policy>
+    <policy name="Miseajourdunavigateur" class="User" displayName="$(string.mag_10320)" presentation="$(presentation.Miseajourdunavigateur)" key="Software\Policies\Mozilla\Firefox" valueName="app.update.enabled">
+      <parentCategory ref="ConfigurationNavigateur" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Autresparametres_1" class="User" displayName="$(string.mag_10321)" presentation="$(presentation.Autresparametres_1)" key="Software\Policies\Mozilla\Firefox">
+      <parentCategory ref="ConfigurationNavigateur" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+    </policy>
+    
+<!--Configuration du Proxy-->
+    <policy name="Parametragesduproxy" class="User" displayName="$(string.mag_10331)" explainText="$(string.SELECT_PROXY_TYPE)" presentation="$(presentation.Parametragesduproxy)" key="Software\Policies\Mozilla\Firefox">
+      <parentCategory ref="ConfigurationduProxy" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="ChoisirConfigurationmanuelle" valueName="ProxyType" required="true">
+          <item displayName="$(string.mag_10332)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_10333)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_10334)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.mag_10335)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+        <text id="AutomaticProxyConfigurationURL" valueName="AutoProxyURL" />
+        <text id="ManualSetting-HTTPProxy" valueName="ManualHTTP" />
+        <decimal id="HTTPProxyPort" valueName="ManualHTTPPort" maxValue="65535" />
+        <text id="ManualSetting-SSLProxy" valueName="ManualSSL" />
+        <decimal id="SSLProxyPort" valueName="ManualSSLPort" maxValue="65535" />
+        <text id="ManualSetting-FTPProxy" valueName="ManualFTP" />
+        <decimal id="FTPProxyPort" valueName="ManualFTPPort" maxValue="65535" />
+        <text id="ManualSetting-GopherProxy" valueName="ManualGopher" />
+        <decimal id="GopherProxyPort" valueName="ManualGopherPort" maxValue="65535" />
+        <text id="ManualSetting-SOCKSHost" valueName="ManualSOCKS" />
+        <decimal id="SOCKSHostPort" valueName="ManualSOCKSPort" maxValue="65535" />
+        <decimal id="SOCKSVersion4or5" valueName="ManualSOCKSVersion" minValue="4" maxValue="5" />
+        <text id="Valeursaseparerparvirguleetespace" valueName="ProxyExceptions" />
+      </elements>
+    </policy>
+    
+        
+<!--NavigateursIE7etsuperieurs-->
+    <policy name="ListeFournisseurs" class="User" displayName="$(string.mag_10401)" explainText="$(string.ExplainListeFournisseurs)" presentation="$(presentation.ListeFournisseurs)" key="Software\Microsoft\Internet Explorer\SearchScopes">
+      <parentCategory ref="NavigateursIE7etsuperieurs" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <boolean id="ProviderGoogle" valueName="Moteur1" />
+        <boolean id="ProviderLycos" valueName="Moteur2" />
+        <boolean id="ProviderAOL" valueName="Moteur3" />
+        <boolean id="ProviderLiveSearch" valueName="Moteur4" />
+        <boolean id="ProviderMicrosoft" valueName="Moteur5" />
+        <boolean id="ProviderWikipedia" valueName="Moteur6" />
+        <boolean id="ProviderBING" valueName="Moteur7" />
+        <boolean id="ProviderExalead" valueName="Moteur8" />
+        <boolean id="ProviderEcosia" valueName="Moteur9" />
+        <enum id="RechercheParDefaut" valueName="DefaultScope">
+          <item displayName="$(string.mag_10402)">
+            <value>
+              <string>{A6B986CA-4B06-4AC4-A1E3-869D342B3CBA}</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10403)">
+            <value>
+              <string>{43F4D49C-FD29-4737-8AD3-1800E8D58E7D}</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10404)">
+            <value>
+              <string>{51D053F2-A493-4524-B66A-F8AC24D39913}</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10405)">
+            <value>
+              <string>{0633EE93-D776-472f-A0FF-E1416B8B2E3A}</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10406)">
+            <value>
+              <string>{B57B67B8-F87F-49F5-B0C9-2D30AF498105}</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10407)">
+            <value>
+              <string>{F9824129-DCA1-4618-8F92-5BE622144919}</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10408)">
+            <value>
+              <string>{0633EE93-D776-472f-A0FF-E1416B8B2E3A}</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10409)">
+            <value>
+              <string>{379EBDCE-76E8-4498-9C12-997D70773431}</string>
+            </value>
+          </item>
+          <item displayName="$(string.mag_10410)">
+            <value>
+              <string>{50BB7B60-A95B-440B-947B-89D3D8423BAE}</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+
+<!--Paramétrages pour Audacity-->
+    <policy name="CodecMP3" class="User" displayName="$(string.mag_10501)" explainText="$(string.HELP_CodecMP3)" presentation="$(presentation.CodecMP3)" key="Software\Audacity\Audacity\MP3">
+      <parentCategory ref="Audacity" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="ChemindelalibrairieLAME_ENC" key="Software\Audacity\Audacity\MP3" valueName="MP3LibPath" />
+      </elements>
+    </policy>
+    <policy name="LangueInterface" class="User" displayName="$(string.mag_10502)" explainText="$(string.HELP_LangueInterface)" presentation="$(presentation.LangueInterface)" key="Software\Audacity\Audacity\Locale">
+      <parentCategory ref="Audacity" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <elements>
+        <text id="Langueutiliseeparl_interface" key="Software\Audacity\Audacity\Locale" valueName="Language" />
+      </elements>
+    </policy>
+
+  </policies>
+</policyDefinitions>

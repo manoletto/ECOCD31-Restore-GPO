@@ -1,0 +1,1816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--MAGRET : Modèle Magret-Utilisateur-1805.adml (DANE - G. Picou, JP. Gau, T. Chassain - mai 2018)-->
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+<resources>
+<stringTable>
+      <string id="mag_0">Magret-Utilisateurs 1805</string>            
+      <string id="mag_1000">01. Redirection de dossiers complements</string>
+              <string id="mag_1001">Mes Documents</string>
+              <string id="mag_1002">Mes images</string>
+              <string id="mag_1003">Ma musique</string>
+              <string id="mag_1004">Mes vidéos</string>
+              <string id="mag_1005">Téléchargements</string>
+              <string id="mag_1006">Application Data</string>
+              <string id="mag_1007">Bureau</string>
+              <string id="mag_1008">Menu Démarrer</string>
+              <string id="mag_1009">Programmes</string>
+              <string id="mag_1010">Démarrage</string>
+              <string id="mag_1011">Outils d'administration</string>
+              <string id="mag_1012">Favoris réseau</string>
+              <string id="mag_1013">Documents récents</string>
+              <string id="mag_1014">Envoyer vers ...</string>
+              <string id="mag_1015">Documents favoris </string>
+              <string id="mag_1016">Nouveau document</string>
+              <string id="mag_1017">Historique</string>
+              <string id="mag_1018">Cache Internet (Temporary Internet Files)</string>
+              <string id="mag_1019">Cookies</string>
+              <string id="mag_1020">Dossier de gravage des CD</string>
+              <string id="mag_1021">Données locales</string>
+              <string id="mag_1022">Données locales des applications</string>
+      <string id="mag_2000">02. Redirection des caches de fichiers temporaires</string>
+              <string id="mag_2001">Cache TEMP</string>
+              <string id="mag_2002">Cache TMP</string>
+      <string id="mag_3000">03. Bureau</string>
+              <string id="mag_3001">Masquer les icones classiques du bureau : Poste de travail, corbeille,....</string>
+              <string id="mag_3002">Supprimer l'icone Poste de travail du bureau</string>
+              <string id="mag_3003">Supprimer Gérer du menu contextuel du Poste de travail</string>
+              <string id="mag_3004">Supprimer Proprités du menu contextuel du Poste de travail</string>
+              <string id="mag_3005">Supprimer l'icone Mes Documents du bureau</string>
+              <string id="mag_3006">Interdire de modifier le chemin vers Mes Documents</string>
+              <string id="mag_3007">Supprimer Propriétés du menu contextuel de Mes documents</string>
+              <string id="mag_3008">Supprimer l'icone Favoris réseau du bureau</string>
+              <string id="mag_3009">Ne pas ajouter de partages des documents récemment ouverts dans Favoris reseau</string>
+              <string id="mag_3010">Supprimer l'icone Internet Explorer du bureau</string>
+              <string id="mag_3011">Supprimer l'icone de la corbeille du bureau</string>
+              <string id="mag_3012">Supprimer Propriétés du menu contextuel de la corbeille</string>
+              <string id="mag_3013">Désactiver l'ajout, le glisser-déplacer et la fermeture des barres d'outils de la Barre des taches</string>
+              <string id="mag_3014">Empêcher le redimensionnement des barres d'outils du Bureau</string>
+              <string id="mag_3015">Désactiver l'assistant de nettoyage du Bureau</string>
+              <string id="mag_3016">Supprimer le raccourci vers les fichiers de l'utilisateur sous W7</string>
+              <string id="mag_3100">03.1. Papier peint</string>
+                      <string id="mag_3101">Chemin et nom du papier peint</string>
+                              <string id="mag_3102">Centré</string>
+                              <string id="mag_3103">Mosaïque</string>
+                              <string id="mag_3104">Etiré</string>
+                      <string id="mag_3105">Laisser Magret gerer le papier peint (Windows XP et W7)</string>
+              <string id="mag_3200">03.2. Active Desktop</string>
+              <string id="mag_3201">Activer Active Desktop</string>
+                      <string id="mag_3202">Désactiver Active Desktop</string>
+                      <string id="mag_3203">Désactiver tous les éléments</string>
+                      <string id="mag_3204">Interdire les modifications</string>
+                      <string id="mag_3205">Empêcher l'ajout d'éléments</string>
+                      <string id="mag_3206">Empêcher la suppression d'éléments</string>
+                      <string id="mag_3207">Empêcher la modification d'éléments</string>
+                      <string id="mag_3208">Empêcher la fermeture d'éléments</string>
+                      <string id="mag_3209">Ajouter/Supprimer des éléments</string>
+                      <string id="mag_3210">Papier peint Active Desktop</string>
+                              <string id="mag_3211">Centré</string>
+                              <string id="mag_3212">Mosaïque</string>
+                              <string id="mag_3213">Etiré</string>
+                      <string id="mag_3214">N'autoriser que les papiers peints BMP</string>
+              <string id="mag_3300">03.3. Active Directory</string>
+                      <string id="mag_3301">Masquer le dossier Active Directory</string>
+                      <string id="mag_3302">Taille maximale des recherches dans Active Directory</string>
+                      <string id="mag_3303">Activer le filtrage dans la boîte de dialogue Rechercher</string>
+              <string id="mag_4000">04. Menu Démarrer et Barre des taches</string>
+                      <string id="mag_4001">Afficher le Menu Démarrer en mode classique</string>
+                      <string id="mag_4002">Supprimer la section supérieure du menu Démarrer</string>
+                      <string id="mag_4003">Supprimer Windows Update</string>
+                      <string id="mag_4004">Supprimer les éléments du profil All Users</string>
+                      <string id="mag_4005">Supprimer le menu Documents</string>
+                      <string id="mag_4006">Supprimer l'icone Mes Documents du menu Démarrer</string>
+                      <string id="mag_4007">Désactiver les programmes du menu Paramètres</string>
+                      <string id="mag_4008">Supprimer les Connexions réseau et Accès à distance</string>
+                      <string id="mag_4009">Supprimer le menu Favoris</string>
+                      <string id="mag_4010">Supprimer le menu Rechercher</string>
+                      <string id="mag_4011">Supprimer le menu Aide</string>
+                      <string id="mag_4012">Supprimer le menu Exécuter</string>
+                      <string id="mag_4013">Ajouter le menu Fermer la session utilisateur ...</string>
+                      <string id="mag_4014">Désactiver le glisserdeplacer des menus contextuels</string>
+                      <string id="mag_4015">Empêcher la modification des paramètres de la barre des tâches</string>
+                      <string id="mag_4016">Désactiver les menus contextuels pour la barre des tâches</string>
+                      <string id="mag_4017">Griser les raccourcis des programmes Windows Installer</string>
+                      <string id="mag_4100">04.1. Liens divers pour W7</string>
+                              <string id="mag_4101">Activer le lien Rechercher sur Internet dans la boîte de recherche du menu Démarrer</string>
+                              <string id="mag_4102">Ne pas afficher de lien vers le dossier de téléchargement</string>
+                              <string id="mag_4103">Ne pas afficher de lien vers Groupe Résidentiel</string>
+                              <string id="mag_4104">Ne pas afficher de lien vers l'enregistrement TV</string>
+                              <string id="mag_4105">Ne pas afficher le lien vers la recherche étendue</string>
+                              <string id="mag_4106">Ne pas afficher de lien vers la bibliotheque vidéos</string>
+                              <string id="mag_4107">Ne pas epingler de liens dans les menus flottants</string>
+                              <string id="mag_4108">Ne pas epingler de liens dans la barre des tâches</string>
+                              <string id="mag_4109">Ne pas afficher de liens vers des fichiers distants</string>
+                              <string id="mag_4110">Ne pas epingler de programmes dans la barre des tâches</string>
+                              <string id="mag_4111">Ne pas promouvoir de raccourcis dans la zone de notification</string>
+                              <string id="mag_4112">Ne pas afficher les bulles d'avertissements</string>
+                              <string id="mag_4113">Ne pas afficher le Centre de maintenance</string>
+                      <string id="mag_4200">04.2. Fonctionnalites Menu Démarrer et barre des tâches spécifiques W7 et W8</string>
+                              <string id="mag_4201">Forcer l'affichage du menu Exécuter</string>
+                              <string id="mag_4202">Effacer la liste des programmes récents a la première connexion</string>
+                              <string id="mag_4203">Ne pas rechercher de communications</string>
+                              <string id="mag_4204">Ne pas rechercher de fichiers dans la boîte de recherche</string>
+                              <string id="mag_4205">Ne pas rechercher de programmes dans la boîte de recherche</string>
+                              <string id="mag_4206">Ne pas afficher le dossier des jeux personnels</string>
+                              <string id="mag_4207">Ne pas afficher de lien vers le dossier de stockage de l'utilisateur</string>
+                              <string id="mag_4208">Empêcher les changements de propriétés de la barre des tâches</string>
+                              <string id="mag_4209">Ne pas ajouter ou supprimer d'outils à la barre des tâches</string>
+                              <string id="mag_4210">Ne pas déplacer la barre des tâches</string>
+                              <string id="mag_4211">Ne pas réarranger la barre des tâches</string>
+                              <string id="mag_4212">Ne pas redimensionner la barre des tâches</string>
+                              <string id="mag_4213">Ne pas afficher le Centre de Prevention</string>
+                              <string id="mag_4214">Ne pas afficher la jauge de la batterie</string>
+                              <string id="mag_4215">Ne pas afficher l'icône reseau</string>
+                              <string id="mag_4216">Ne pas afficher le volume</string>
+                              <string id="mag_4217">Ne pas afficher les bulles de notification</string>
+                              <string id="mag_4218">Afficher toutes les icônes dans la zone de notification</string>
+                      <string id="mag_4300">04.3. Personnaliser le volet droit du menu démarrer de W7 et W8</string>
+                              <string id="mag_4301">Ne pas afficher de lien vers Documents</string>
+                              <string id="mag_4302">Ne pas afficher de lien vers Images</string>
+                              <string id="mag_4303">Ne pas afficher de lien vers Musique</string>
+                              <string id="mag_4304">Ne pas afficher de lien vers Jeux</string>
+                              <string id="mag_4305">Ne pas afficher de lien vers Vidéos</string>
+                              <string id="mag_4306">Ne pas afficher de lien vers les fichiers de l'utilisateur</string>
+                              <string id="mag_4307">Ne pas afficher de lien vers Programmes par défaut</string>
+                              <string id="mag_4308">Paramétrer le bouton d'alimentation de W7</string>
+                                      <string id="mag_4309">Arrêter</string>
+                                      <string id="mag_4310">Fermer la session</string>
+                                      <string id="mag_4311">Vérouiller</string>
+                                      <string id="mag_4312">Mise en veille</string>
+                                      <string id="mag_4313">Mise en veille prolongée</string>
+                      <string id="mag_4400">04.4. Fonctionnalites specifiques W8.1 et W10</string>
+                              <string id="mag_4401">Accès direct au bureau à la connexion</string>
+                              <string id="mag_4402">Afficher automatiquement l'affichage Applications dans l'écran d'accueil</string>
+                              <string id="mag_4403">Rechercher uniquement les applications à partir de l'affichage Applications</string>
+                              <string id="mag_4404">Répertorier les programmes en premier dans l'affichage Applications</string>
+                              <string id="mag_4405">Imposer la distribution de l'écran d'accueil</string>
+                              <string id="mag_4406">Désactiver les fonctionnalités Windows à la Une de W10</string>
+                              <string id="mag_4407">Forcer l'accueil à la taille plein écran ou taille de menu dans W10</string>
+                                      <string id="mag_4408">Menu Démarrer</string>
+                                      <string id="mag_4409">Plein écran de démarrage</string>
+                                                          
+      <string id="mag_5000">05. Panneau de configuration</string>
+              <string id="mag_5001">Désactiver le Panneau de configuration</string>
+              <string id="mag_5002">Masquer les applications spécifiées</string>
+              <string id="mag_5003">N'afficher que les applications spécifiées</string>
+              <string id="mag_5004">Forcer le style classique</string>
+              <string id="mag_5100">05.1. Affichage</string>
+                      <string id="mag_5101">Désactiver Affichage</string>
+                      <string id="mag_5102">Masquer l'onglet Arriere plan</string>
+                      <string id="mag_5103">Empêcher le changement de papier peint</string>
+                      <string id="mag_5104">Masquer l'onglet Apparence</string>
+                      <string id="mag_5105">Masquer l'onglet Configuration</string>
+                      <string id="mag_5106">Masquer l'onglet Ecran de veille</string>
+                      <string id="mag_5107">Activer l'écran de veille</string>
+                      <string id="mag_5108">Nom du fichier exécutable de l'écran de veille</string>
+                      <string id="mag_5109">Délai d'activation de l'écran de veille</string>
+                      <string id="mag_5110">Ecran de veille protégé par mot de passe</string>
+              <string id="mag_5200">05.2. Thèmes sous W7</string>
+                      <string id="mag_5201">Fichier de Thème</string>
+                      <string id="mag_5202">Pointeurs de souris</string>
+                      <string id="mag_5203">Thèmes sonores</string>
+              <string id="mag_5300">05.3. Imprimantes</string>
+                      <string id="mag_5301">Désactiver la suppression d imprimantes</string>
+                      <string id="mag_5302">Désactiver l'ajout d'imprimantes</string>
+                      <string id="mag_5303">Rechercher les imprimantes sur le réseau</string>
+                      <string id="mag_5304">Chemin Active Directory par défaut pour la recherche d'imprimantes</string>
+                      <string id="mag_5305">Parcourir un site Web commun pour rechercher les imprimantes</string>
+                      <string id="mag_5306">Restrictions sur le pointage des serveurs d'impression</string>
+                              <string id="mag_5307">Afficher l'avertissement et l'invite d'élévation de privilèges</string>
+                              <string id="mag_5308">Ne pas afficher l'avertissement et l'invite d'élévation de privilèges</string>
+                              <string id="mag_5309">Afficher l'avertissement et l'invite d'élévation de privilèges</string>
+                              <string id="mag_5310">Afficher l'avertissement uniquement</string>
+                              <string id="mag_5311">Ne pas afficher l'avertissement et l'invite d'élévation de privilèges</string>
+              <string id="mag_5400">05.4. Ajout/Suppression de programmes</string>
+                      <string id="mag_5401">Désactiver Ajout/Suppression de programmes</string>
+                      <string id="mag_5402">Masquer la page Modifier/Supprimer des programmes</string>
+                      <string id="mag_5403">Masquer la page Ajouter de nouveaux programmes</string>
+                      <string id="mag_5404">Masquer la page Ajouter/Supprimer des composants Windows</string>
+                      <string id="mag_5405">Masquer l'option Ajouter un programme à partir d un CDROM ou d'une disquette</string>
+                      <string id="mag_5406">Masquer l'option Ajouter des programmes à partir de Microsoft</string>
+                      <string id="mag_5407">Masquer l'option Ajouter des programmes à partir de votre réseau</string>
+                      <string id="mag_5408">Empêcher les utilisateurs d'utiliser Ajout/Suppression de programmes pour configurer les services installés.</string>
+                      <string id="mag_5409">Désactiver les informations de prise en charge</string>
+                      <string id="mag_5410">Spécifie la categorie par défaut pour Ajouter de nouveaux programmes</string>
+              <string id="mag_5500">05.5. Sons envahissants</string>
+                      <string id="mag_5501">Désactiver les évènements sonores Windows</string>
+                      <string id="mag_5502">Désactiver les bips sonores du système</string>
+      <string id="mag_6000">06. Système</string>
+              <string id="mag_6100">06.1. Ouverture/Fermeture de session</string>
+                      <string id="mag_6101">Connecter le répertoire de base à la racine du partage</string>
+                      <string id="mag_6102">Désactiver le gestionnaire de tâches</string>
+                      <string id="mag_6103">Désactiver le verrouillage de l'ordinateur</string>
+                      <string id="mag_6104">Désactiver la modification du mot de passe</string>
+                      <string id="mag_6105">Désactiver Deconnexion</string>
+                      <string id="mag_6106">Exécuter à la connexion</string>
+                      <string id="mag_6107">Ne pas afficher l'écran de bienvenue</string>
+                      <string id="mag_6108">Exécuter les scripts d'ouverture de session simultanement</string>
+                      <string id="mag_6109">Masquer les instructions pour les scripts</string>
+                      <string id="mag_6110">Afficher les scripts d'ouverture de session</string>
+                      <string id="mag_6111">Afficher les scripts de fermeture de session</string>
+                      <string id="mag_6112">Limiter la taille du profil</string>
+                      <string id="mag_6113">Exclure des dossiers dans les profils itinérants</string>
+                      <string id="mag_6114">Désactiver la recherche des imprimantes et dossiers partagés</string>
+                      <string id="mag_6115">Forcer le clavier francais à la connexion</string>
+                      <string id="mag_6116">Pavé numérique et majuscules</string>
+                              <string id="mag_6117">Aucun des deux</string>
+                              <string id="mag_6118">Pavé numérique</string>
+                              <string id="mag_6119">Pavé numérique et Majuscules</string>
+                      <string id="mag_6120">Activer les raccourcis vers les options d'accessibilité</string>                                    
+              <string id="mag_6200">06.2. Restrictions</string>
+                      <string id="mag_6201">Signatures du code des pilotes de périphériques</string>
+                              <string id="mag_6202">Ignorer</string>
+                              <string id="mag_6203">Avertir</string>
+                              <string id="mag_6204">Bloquer</string>
+                      <string id="mag_6205">Désactiver l'invite de commandes</string>
+                              <string id="mag_6206">Oui</string>
+                              <string id="mag_6207">Non</string>
+                      <string id="mag_6208">Désactiver les outils d'édition du registre (regedit et regedt32)</string>
+                              <string id="mag_6209">Désactiver complètement</string>
+                              <string id="mag_6210">Autoriser le mode silencieux (/s)</string>
+                              <string id="mag_6211">Ne pas désactiver</string>
+                      <string id="mag_6212">Exécuter seulement les applications Windows autorisées</string>
+                      <string id="mag_6213">Ne pas exécuter les applications Windows spécifiées</string>
+                      <string id="mag_6214">Désactiver la lecture automatique</string>
+                              <string id="mag_6215">Lecteurs de CD ROM</string>
+                              <string id="mag_6216">Tous les lecteurs</string>                                                                                        
+      <string id="mag_7000">07. Réseau</string>
+              <string id="mag_7100">07.1. Fichiers hors connexion</string>
+                      <string id="mag_7101">Désactiver la configuration utilisateur des fichiers hors connexion</string>
+                      <string id="mag_7102">Synchroniser les fichiers hors connexion avant de terminer la session</string>
+                      <string id="mag_7103">Action à la deconnexion du serveur</string>
+                              <string id="mag_7104">Travailler hors connexion</string>
+                              <string id="mag_7105">Ne pas travailler hors connexion</string>
+                      <string id="mag_7106">Désactiver  Rendre disponible hors connexion </string>
+                      <string id="mag_7107">Désactiver le dossier  Fichiers hors connexion </string>
+                      <string id="mag_7108">Taille du cache par défaut</string>
+                      <string id="mag_7109">Désactiver les bulles de rappel</string>
+                      <string id="mag_7110">Supprimer les copies locales des fichiers hors connexion</string>              
+      <string id="mag_8000">08. Composants Windows</string>
+              <string id="mag_8100">08.01. Explorateur Windows</string>
+                      <string id="mag_8101">Activer l'environnement classique</string>
+                      <string id="mag_8102">Masquer les extensions des fichiers</string>
+                      <string id="mag_8103">Masquer les fichiers et dossiers cachés</string>
+                      <string id="mag_8104">Masquer les fichiers protégés du système d'exploitation</string>
+                      <string id="mag_8105">Ne pas afficher le contenu des dossiers système</string>
+                      <string id="mag_8106">Supprimer l'élément  Options  du menu Outils</string>
+                      <string id="mag_8107">Supprimer le menu Fichier dans l'explorateur</string>
+                      <string id="mag_8108">Supprimer Connecter/deconnecter un lecteur réseau</string>
+                      <string id="mag_8109">Supprimer le bouton Rechercher dans l'explorateur</string>
+                      <string id="mag_8110">Assistant de recherche classique</string>
+                      <string id="mag_8111">Désactiver les menus contextuels (le clic droit)</string>
+                      <string id="mag_8112">N'autoriser que les extensions de l'environnement approuvées</string>
+                      <string id="mag_8113">Désactiver le suivi des raccourcis</string>
+                      <string id="mag_8114">Masquer les lecteurs spécifiés</string>
+                              <string id="mag_8115">(Aucun)</string>
+                              <string id="mag_8116">Le lecteur A:</string>
+                              <string id="mag_8117">Le lecteur C:</string>
+                              <string id="mag_8118">Le lecteur D:</string>
+                              <string id="mag_8119">Le lecteur E:</string>
+                              <string id="mag_8120">Le lecteur J:</string>
+                              <string id="mag_8121">Le lecteur L:</string>
+                              <string id="mag_8122">Les lecteurs A: B:</string>
+                              <string id="mag_8123">Les lecteurs A: B: C:</string>
+                              <string id="mag_8124">Les lecteurs A: B: C: D:</string>
+                              <string id="mag_8125">Les lecteurs A: B: C: D: E:</string>
+                              <string id="mag_8126">Les lecteurs A: B: C: D: E: F:</string>
+                              <string id="mag_8127">Les lecteurs A: C: J: L:</string>
+                              <string id="mag_8128">Les lecteurs A: C: J: L: M:</string>
+                              <string id="mag_8129">Les lecteurs C: J: L:</string>
+                              <string id="mag_8130">Les lecteurs C: J: M:</string>
+                              <string id="mag_8131">Les lecteurs C: J: L: M:</string>
+                              <string id="mag_8132">Les lecteurs C: D: J: M:</string>
+                              <string id="mag_8133">Les lecteurs C: E: J: M:</string>
+                              <string id="mag_8134">Les lecteurs C: J: L: M: R:</string>
+                              <string id="mag_8135">Les lecteurs A: C: J: L: M: R:</string>
+                      <string id="mag_8136">Empêcher l'accès aux lecteurs spécifiés</string>
+                              <string id="mag_8137">Le lecteur A:</string>
+                              <string id="mag_8138">Le lecteur C:</string>
+                              <string id="mag_8139">Le lecteur D:</string>
+                              <string id="mag_8140">Le lecteur E:</string>
+                              <string id="mag_8141">Le lecteur J:</string>
+                              <string id="mag_8142">Le lecteur L:</string>
+                              <string id="mag_8143">Les lecteurs A: B:</string>
+                              <string id="mag_8144">Les lecteurs A: B: C:</string>
+                              <string id="mag_8145">Les lecteurs A: B: C: D:</string>
+                              <string id="mag_8146">Les lecteurs A: B: C: D: E:</string>
+                              <string id="mag_8147">Les lecteurs A: B: C: D: E: F:</string>
+                              <string id="mag_8148">Les lecteurs A: C: J: L:</string>
+                              <string id="mag_8149">Les lecteurs A: C: J: L: M:</string>
+                              <string id="mag_8150">Les lecteurs C: J: L:</string>
+                              <string id="mag_8151">Les lecteurs C: J: L: M:</string>
+                              <string id="mag_8152">Les lecteurs C: J: L: M: R:</string>
+                              <string id="mag_8153">Les lecteurs A: C: J: L: M: R:</string>
+                      <string id="mag_8154">Masquer l'onglet Sécurité</string>
+                      <string id="mag_8155">Masquer l'onglet Matériel</string>
+                      <string id="mag_8156">Désactiver la modification des paramètres d'animation</string>
+                      <string id="mag_8157">Désactiver le soulignement des raccourcis clavier</string>
+                      <string id="mag_8158">Désactiver l'onglet DFS</string>
+                      <string id="mag_8159">Ne pas afficher  Ordinateurs proche du mien  dans Favoris réseau</string>
+                      <string id="mag_8160">Ne pas afficher  Tout le réseau  dans Favoris réseau</string>
+                      <string id="mag_8161">Nombre maximal de documents récents</string>
+                      <string id="mag_8162">Désactiver l'option Installer en tant que</string>
+                      <string id="mag_8163">Demander des informations d'identification pour des installations à partir du réseau</string>
+                      <string id="mag_8164">Désactiver la mise en cache des miniatures</string>
+                      <string id="mag_8165">Liste d'inclusion pour les fichiers à risque modéré</string>
+                      <string id="mag_8166">Désactiver les raccourcis Touche Windows +X</string>
+              <string id="mag_8200">08.02. Disques amovibles sous W7 et W8</string>
+                      <string id="mag_8201">Empêcher l'accès à tout disque amovible: USB, CD, DVD, etc..</string>
+                      <string id="mag_8202">Empêcher la lecture de CD et DVD</string>
+                      <string id="mag_8203">Empêcher la gravure de CD et DVD</string>
+                      <string id="mag_8204">Empêche l'accès aux disques de stockage amovibles</string>
+                      <string id="mag_8205">Empêche l'accès aux lecteurs de disquettes, meme USB</string>
+                      <string id="mag_8206">Empêche l'accès aux lecteurs multimédia, téléphones mobiles, etc..</string>
+                      
+              <string id="mag_8300">08.03. Nouveaux composants Windows 7 et 8</string>
+                      <string id="mag_8310">08.03.1. Gadgets</string>
+                              <string id="mag_8311">Désactiver tous les gadgets</string>
+                              <string id="mag_8312">Autoriser les galeries de gadgets alternatives</string>
+                              <string id="mag_8313">Restreindre l'installation de gadgets non signés</string>
+                              <string id="mag_8314">Désactiver l'installation de gadgets même signés</string>
+                      <string id="mag_8320">08.03.2. Miniatures</string>
+                              <string id="mag_8321">Désactiver l'affichage des miniatures</string>
+                              <string id="mag_8322">Désactiver l'affichage des miniatures dans les dossiers réseau</string>
+                      <string id="mag_8330">08.03.3. Explorateur Windows 7 et 8</string>
+                              <string id="mag_8331">Désactiver le bouton Chercher encore sur Internet dans l'explorateur</string>
+                              <string id="mag_8332">Désactiver les suggestions de la boîte de recherche</string>
+                              <string id="mag_8333">Désactiver l'outil de capture d'écran</string>
+                              <string id="mag_8334">Désactiver les fonctionnalites des bibliothèques</string>
+                              <string id="mag_8335">Montrer tous les dossiers dans le volet gauche de l'explorateur</string>
+                              <string id="mag_8336">Développer automatiquement l'arborescence jusqu'au dossier courant</string>
+                      <string id="mag_8340">08.03.4. Diaporamas</string>
+                              <string id="mag_8341">Désactiver les diaporamas</string>
+                      <string id="mag_8350">08.03.5. Enregisteur de sons</string>
+                              <string id="mag_8351">Activer l'enregisteur de sons</string>
+              <string id="mag_8400">08.04. Options régionales et langues sous W7 et W8</string>
+                      <string id="mag_8401">Localisation</string>
+                      <string id="mag_8402">Langue</string>
+                      <string id="mag_8403">Formats Régionaux</string>
+                      <string id="mag_8404">Séparateur décimal</string>
+                        <string id="Separateur1">Point décimal du pavé numérique</string>
+                        <string id="Separateur2">Virgule du clavier français</string>
+              <string id="mag_8500">08.05. Centre des programmes et fonctionnalités sous W7 et W8</string>
+                      <string id="mag_8501">Désactiver l'accès au Centre des Programmes</string>
+                      <string id="mag_8502">Empêcher l'ajout ou le retrait de fonctionnalités Windows</string>
+              <string id="mag_8600">08.06. Centre réseaux et partages sous W7 et W8</string>
+                      <string id="mag_8601">Désactiver l'assistant de connexion</string>
+              <string id="mag_8700">08.07. Centre de contrôle des performances de W7 et W8</string>
+                      <string id="mag_8701">Accéder au centre de contrôle des performances</string>
+                      <string id="mag_8702">Accéder aux solutions du centre de contrôle des performances</string>
+              <string id="mag_8800">08.08. Planificateur de tâches</string>
+                      <string id="mag_8801">Cacher les pages de propriétés</string>
+                      <string id="mag_8802">Empêcher l'exécution et l'arrêt des tâches</string>
+                      <string id="mag_8803">Désactiver le glisser déplacer</string>
+                      <string id="mag_8804">Désactiver la création de nouvelles tâches</string>
+                      <string id="mag_8805">Désactiver la suppression de tâches</string>
+                      <string id="mag_8806">Désactiver le menu Avancé</string>
+                      <string id="mag_8807">Interdire le parcours</string>
+              <string id="mag_8900">08.09. Windows Installer</string>
+                      <string id="mag_8901">Toujours installer avec des droits élevés</string>
+                      <string id="mag_8902">Ordre de recherche</string>
+                      <string id="mag_8903">Désactiver l'annulation</string>
+                      <string id="mag_8904">Désactiver la source de média pour toutes les installations</string>
+              <string id="mag_81000">08.10. Internet Explorer</string>
+                      <string id="mag_81001">Activer le proxy manuellement Désactiver l'option automatique</string>
+                      <string id="mag_81002">Activer le proxy automatiquement Désactiver l'option manuelle</string>
+                      <string id="mag_81003">Vérifier s'il existe une version plus récente des pages enregistrées</string>
+                              <string id="mag_81004">Jamais</string>
+                              <string id="mag_81005">A chaque lancement d'Internet Explorer</string>
+                              <string id="mag_81006">A chaque fois</string>
+                              <string id="mag_81007">Automatiquement</string>
+                      <string id="mag_81008">Vider le dossier Temporary Internet Files à la déconnexion</string>
+                      <string id="mag_81009">Dossier d'enregistrement par défaut</string>
+                      <string id="mag_81010">Dossier de téléchargement par défaut</string>
+                      <string id="mag_81011">Intitulé du bandeau</string>
+                      <string id="mag_81012">Pages d'accueil et de recherche</string>
+                      <string id="mag_81013">Ne pas demander de confirmation pour exécuter des programmes non signés numériquement</string>
+                      <string id="mag_81014">Désactiver le menu contextuel (clic droit) dans les pages visitées</string>
+                      <string id="mag_81015">Désactiver la mémorisation des mots de passe</string>
+                      <string id="mag_81016">Autres paramètres</string>
+                      <string id="mag_81017">08.10.1 Options IE</string>
+                              <string id="mag_81018">Masquer l'onglet Général</string>
+                              <string id="mag_81019">Masquer l'onglet Sécurité</string>
+                              <string id="mag_81020">Masquer l'onglet Confidentialité</string>
+                              <string id="mag_81021">Masquer l'onglet Contenu</string>
+                              <string id="mag_81022">Masquer l'onglet Connexions</string>
+                              <string id="mag_81023">Masquer l'onglet Programmes</string>
+                              <string id="mag_81024">Masquer l'onglet Avancé</string>
+                              <string id="mag_81025">Désactiver la détection automatique des paramètres de connexion</string>
+              <string id="mag_81100">08.11. Applications de courrier</string>
+                      <string id="mag_81101">Chemin des dossiers de courrier</string>
+                      <string id="mag_81102">Désactiver l'accès aux groupes de News dans Windows Mail</string>
+                      <string id="mag_81103">Désactiver l'accés à Windows Mail</string>
+      <string id="mag_9000">09. Modules pédagogiques MAGRET</string>
+              <string id="mag_9100">09.1. Fonctionnalités Magret Utilisateurs</string>
+                      <string id="mag_9101">Activer le client Magret Utilisateur</string>
+                      <string id="mag_9102">Tracer les applications</string>
+                      <string id="mag_9103">Tracer les connexions</string>
+                      <string id="mag_9104">Activer le contrôle de la taille de l'espace utilisateur</string>
+                      <string id="mag_9105">Messagerie interne</string>
+                              <string id="mag_9106">Jamais</string>
+                              <string id="mag_9107">Chaque fois</string>
+                              <string id="mag_9108">Une fois sur 2</string>
+                              <string id="mag_9109">Une fois sur 3</string>
+                              <string id="mag_9110">Une fois sur 5</string>
+                              <string id="mag_9111">Une fois sur 9</string>
+                      <string id="mag_9112">Empêcher les connexions multiples </string>
+                              <string id="mag_9113">Fermeture immédiate de la précédente session</string>
+                              <string id="mag_9114">Fermeture immédiate de la nouvelle session</string>
+                      <string id="mag_9115">Fermeture automatique de la session en cas d'inactivité</string>
+                      <string id="mag_9116">Activer le contrôle des impressions</string>
+                      <string id="mag_9117">Contrôle des applications autorisees</string>
+                      <string id="mag_9118">Désactiver l'utilisation des clés USB</string>
+                      <string id="mag_9119">Affectation de routes vers les zones de l'architecture cible</string>
+              <string id="mag_9200">09.2. Magic user</string>
+                      <string id="mag_9201">Liste des applications autorisées</string>
+              <string id="mag_9300">09.3. Console Utilisateurs</string>
+                      <string id="mag_9301">Masquer pour les enseignants les icônes de gestion de l'IntraWeb</string>
+                      <string id="mag_9302">Masquer pour les enseignants les icônes de gestion des accès à Internet</string>
+                      <string id="mag_9303">Masquer pour les enseignants les icônes de gestion des stations</string>
+                      <string id="mag_9304">Masquer pour les enseignants les icônes de gestion des restrictions d'applications</string>
+                      <string id="mag_9305">Rajouter des items dans Outils pour les enseignants</string>
+                      <string id="mag_9306">Masquer l'onglet de changement de mot de passe pour les élèves et autres utilisateurs</string>
+                      <string id="mag_9307">Masquer les icônes d'accès à l'IntraWeb pour les élèves et autres utilisateurs</string>
+                      <string id="mag_9308">Rajouter des items dans Outils pour les élèves et autres utilisateurs</string>
+      <string id="mag_10000">10. Applications diverses</string>
+              <string id="mag_10100">10.1. ENT et Internet Explorer</string>
+                      <string id="mag_10101">Paramètrage d'IE pour lENT  Paramètres du proxy HTTP</string>
+                      <string id="mag_10102">Paramètrage d'IE pour l'ENT Personnalisation du niveau</string>
+                      <string id="mag_10103">Autoriser le contenu actif à s'exécuter dans les fichiers de la zone Ordinateur local</string>
+              <string id="mag_10200">10.2. GoogleEarth</string>
+                      <string id="mag_10201">Chemins du cache et des fichiers KML</string>
+              <string id="mag_10300">10.3. FrontMotionFirefox Community Edition V3.05 a V3.612 pour ENTMIP sous MAGRET</string>
+                      <string id="mag_10310">10.3.1 Configuration Navigateur</string>
+                              <string id="mag_10311">Configuration générale</string>
+                              <string id="mag_10312">Utiliser le paramètrage d'Internet Explorer</string>
+                              <string id="mag_10313">Redimensionnement automatique des images</string>
+                              <string id="mag_10314">Désactiver Test de Navigateur par défaut</string>
+                              <string id="mag_10315">Dossier de téléchargement par défaut pour Firefox</string>
+                                      <string id="mag_10316">Mes Documents</string>
+                                      <string id="mag_10317">Bureau</string>
+                                      <string id="mag_10318">Sélection manuelle</string>
+                                      <string id="mag_10319">Ressource personnelle</string>
+                              <string id="mag_10320">Mise à jour du navigateur</string>
+                              <string id="mag_10321">Autres paramètres</string>
+                      <string id="mag_10330">10.3.2. Configuration du Proxy</string>
+                              <string id="mag_10331">Paramètrages du proxy</string>
+                                      <string id="mag_10332">Connexion directe à Internet</string>
+                                      <string id="mag_10333">Détection automatique du proxy</string>
+                                      <string id="mag_10334">Configuration manuelle du proxy</string>
+                                      <string id="mag_10335">Configuration auto du proxy via une URL</string>
+              <string id="mag_10400">10.4. Navigateurs IE7 et supérieurs</string>
+                      <string id="mag_10401">Ajout de fournisseurs de recherche à l'interface de Windows Internet Explorer 7 et 8.</string>
+                      <string id="mag_10402">Google</string>
+                      <string id="mag_10403">Lycos</string>
+                      <string id="mag_10404">AOL</string>
+                      <string id="mag_10405">Live Search</string>
+                      <string id="mag_10406">Microsoft</string>
+                      <string id="mag_10407">Wikipedia</string>
+                      <string id="mag_10408">Bing</string>
+                      <string id="mag_10409">Exalead</string>
+                      <string id="mag_10410">Ecosia</string>
+                      <string id="ProviderGoogle">Google</string>
+                      <string id="ProviderLycos">Lycos</string>
+                      <string id="ProviderAOL">AOL</string>
+                      <string id="ProviderLiveSearch">Windows Live Search</string>
+                      <string id="ProviderMicrosoft">Microsoft</string>
+                      <string id="ProviderWikipedia">Wikipedia</string>
+                      <string id="ProviderBING">Bing</string>
+                      <string id="ProviderExalead">Exalead</string>
+                      <string id="ProviderEcosia">Ecosia</string>
+                      <string id="RechercheParDefaut">Fournisseur de recherche par défaut</string>
+              <string id="mag_10500">10.5. Paramétrages Audacity</string>
+                      <string id="mag_10501">Codec MP3</string>
+                      <string id="mag_10502">Langue Interface</string>    
+   
+<!--Commentaires d'aide-->
+<string id="RedirectionsDossiersEnvironnements_Help">
+Dans toute la section 'Redirection des dossiers' :   
+- l'unité %HOMESHARE% correspond à la ressource personnelle de l'utilisateur
+- l'unité M: correspond au modèle lié à l'utilisateur par le script de connexion   
+Sur %HOMESHARE% l'utilisateur a tous les droits donc le dossier est modifiable.
+Sur M: l'utilisateur n'a que le droit de lecture donc le dossier est verrouillé.        
+"Environnement" correspond à un dossier de stockage des éléments d'environnement communs à toutes les versions modernes de Windows.
+Attention : les redirections du menu Démarrer et de ses sous-dossiers Programmes et Démarrage sont fortement déconseillées sous W10 !
+</string>
+<string id="RedirectionsDossierTelechargements_Help">
+Cette stratégie ne fonctionne que pour W7 et ultérieur.
+Pour W7, W8, W10, il est nécessaire de rentrer obligatoirement un chemin UNC du type :
+\\Serveur01\%username%\Travail\Téléchargements
+De plus les dossiers de téléchargements des navigateurs doivents être redirigés vers ce même dossier.
+Les stratégies correspondantes existent pour IE, FF et Chrome.
+</string>
+<string id="HideSCAHealth_Help">
+Empêche l'affichage de l'icône du Centre de maintenance dans la zone de contrôle système. Si vous activez ce paramètre, l'icône du Centre de maintenance n'est pas affichée dans la zone de notification système.
+Si vous désactivez ce paramètre ou si vous ne le configurez pas, l'icône Centre de maintenance est affichée dans la zone de notification système.
+</string>
+<string id="AfficherSystemTray_Help">
+Activé affiche toutes les icônes en permanence dans la zone de notification.
+Désactivé masque toutes les icônes dans la zone de notification.
+Non Configuré correspond au comportement normal  avec affichage d'icônes permanentes et de notifications temporaires.
+</string>
+<string id="NoSMConfigurePrograms_Help">
+Supprime le lien Programmes par défaut du menu Démarrer.
+Le lien Programmes par défaut du menu Démarrer ouvre l'application Programmes par défaut du Panneau de configuration et donne aux administrateurs la possibilité de spécifier les programmes par défaut de certaines activités (par exemple la navigation Web ou l’envoi de courrier électronique), ainsi que les programmes accessibles via le menu Démarrer, le Bureau et d’autres emplacements.
+Remarque : ce paramètre n’empêche pas l’option Définir des programmes par défaut pour cet ordinateur d’apparaître dans l’application Programmes par défaut du Panneau de configuration.
+</string>
+<string id="GoToDesktopOnSignIn_Help">Ce paramètre de stratégie permet aux utilisateurs d’accéder au Bureau plutôt qu’à l’écran d’accueil lors de la connexion ou quand toutes les applications sur un écran sont fermées.  Il s’applique à toutes les versions de Windows et aux versions de Windows Server avec l’Expérience utilisateur installée.
+Si vous activez ce paramètre de stratégie, les utilisateurs accèdent toujours au Bureau quand ils se connectent ou quand toutes les applications sur un écran sont fermées.
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs accèdent par défaut à l’écran d’accueil quand ils se connectent et peuvent configurer ce paramètre.
+</string>
+<string id="ShowAppsViewOnStart_Help">
+Ce paramètre de stratégie permet d’ouvrir par défaut l’affichage Applications quand l’utilisateur accède à Accueil.
+Si vous activez ce paramètre de stratégie, l’affichage Applications apparaît chaque fois que l’utilisateur accède à Accueil.  Les utilisateurs peuvent quand même basculer entre l’affichage Applications et l’écran d’accueil.
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’écran d’accueil est affiché par défaut chaque fois que l’utilisateur accède à Accueil et l’utilisateur peut basculer entre l’affichage Applications et l’écran d’accueil. De plus, l’utilisateur peut configurer ce paramètre.
+</string>
+<string id="DisableGlobalSearchOnAppsView_Help">
+Ce paramètre de stratégie empêche l’utilisateur d’effectuer des recherches dans les applications, les fichiers et les paramètres (et le Web si cette fonctionnalité est activée) quand il effectue une recherche à partir de l’affichage Application.
+Il est appliqué uniquement quand l’affichage Applications est défini comme affichage par défaut pour l’écran d’accueil.
+Si vous activez ce paramètre de stratégie, les recherches à partir de l’affichage Applications ne portent que sur la liste d’applications installées.
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’utilisateur peut configurer ce paramètre.
+</string>
+<string id="DesktopAppsFirstInAppsView_Help">
+Ce paramètre de stratégie permet de répertorier les programmes en premier dans l’affichage Applications.
+Si vous activez ce paramètre de stratégie, les programmes sont répertoriées en premier quand les applications sont triées par catégorie dans l’affichage Applications. Les autres options de tri sont toujours disponibles et les utilisateurs peuvent choisir de modifier les options de tri par défaut.
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les programmes ne sont pas répertoriées en premier quand les applications sont triées par catégorie et les utilisateurs peuvent configurer ce paramètre.
+</string>
+<string id="LockedStartLayout_Help">
+Spécifie la disposition de l’écran d’accueil pour les utilisateurs sous W8.1 Entreprise et W10Edu.
+Ce paramètre vous permet de spécifier la disposition de l’écran d’accueil pour les utilisateurs et les empêche de modifier sa configuration. La disposition de l’écran d’accueil que vous spécifiez doit être stockée dans un fichier XML généré par l’applet de commande PowerShell Export-StartLayout.
+Pour utiliser ce paramètre, vous devez d’abord configurer manuellement la disposition de l’écran d’accueil d’un appareil selon l’apparence souhaitée. Après cela, exécutez l’applet de commande PowerShell Export-StartLayout sur ce même appareil. L’applet de commande génère un fichier XML représentant la disposition que vous avez configurée.
+Une fois le fichier XML généré et déplacé vers le chemin d’accès de fichier souhaité, tapez le nom et le chemin d’accès complet au fichier XML. Vous pouvez taper un chemin d’accès UNC, tel que \\Serveur01\Netlogon\Layout.xml. Si le fichier spécifié n’est pas disponible lorsque l’utilisateur ouvre une session, la disposition n’est pas modifiée. Les utilisateurs ne peuvent pas personnaliser leur écran d’accueil pendant que ce paramètre est activé.
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la disposition de l’écran d’accueil n’est pas modifiée et les utilisateurs peuvent la personnaliser.
+</string>
+<string id="NoControlPanel_Help">
+Désactive tous les programmes du Panneau de configuration.
+Ce paramètre empêche l’exécution de Control.exe, le fichier programme du Panneau de configuration. Ainsi, les utilisateurs ne peuvent pas démarrer le Panneau de configuration ni aucun de ses éléments.
+Ce paramètre supprime également l’option Panneau de configuration du menu Démarrer ainsi que le dossier Panneau de configuration de l’Explorateur Windows.
+Si les utilisateurs tentent de démarrer un élément du Panneau de configuration à partir de l’élément Propriétés d’un menu contextuel, un message s’affiche pour indiquer que cette action est interdite par un paramètre.
+Ne pas activer si vous souhaitez que les utilisateurs puissent modifier les paramètres d'affichage.
+</string>
+<string id="RestrictCpls_Help">
+Masque tous les éléments et dossiers du Panneau de configuration, à l’exception de ceux spécifiés dans ce paramètre.
+Celui-ci supprime tous les éléments (tels que  Souris, Système ou Personnalisation) de la fenêtre du Panneau de configuration et du menu Démarrer. Les seuls éléments affichés dans le Panneau de configuration sont ceux spécifiés dans ce paramètre.
+Pour afficher un élément du Panneau de configuration, cliquez sur Afficher, puis dans la boîte de dialogue Afficher le contenu, dans la colonne Valeur, entrez le nom canonique de l'élément du Panneau de configuration (tels que « Microsoft.Mouse », « Microsoft.System » ou « Microsoft.Personalization »).
+Remarque : pour Windows Vista, Windows Server 2008 et les versions antérieures de Windows, vous devez entrer le nom du module (par exemple, « timedate.cpl » ou « inetcpl.cpl »). Lorsqu'un élément du Panneau de configuration ne comporte pas de fichier CPL ou que ce dernier contient plusieurs applets, vous devez entrer son nom de module et son numéro d'identification de ressource de chaîne (par exemple, « @systemcpl.dll,-1 » pour Système ou « @themecpl.dll,-1 » pour Personnalisation).
+La liste complète des noms canoniques et des noms de modules des éléments du Panneau de configuration est disponible sur MSDN à l'adresse http://msdn.microsoft.com/en-us/library/ee330741(v=vs.85).aspx.
+Ce paramètre affecte le menu Démarrer et le Panneau de configuration, ainsi que les autres moyens d'accéder au éléments du Panneau de configuration (tels que les raccourcis dans le Centre d'aide et de support ou les lignes de commande qui utilisent le fichier control.exe).
+Lorsque les deux paramètres Masquer les éléments du Panneau de configuration spécifiés et N'afficher que les éléments du Panneau de configuration spécifiés sont activés, le second paramètre est ignoré.
+Remarque : vous ne pouvez pas utiliser ce paramètre pour masquer les éléments du Panneau de configuration d'affichage dans le menu Démarrer du Bureau. Pour masquer les éléments du Panneau de configuration d'affichage et empêcher les utilisateurs de modifier les paramètres d'affichage de l'ordinateur, utilisez le paramètre Désactiver le Panneau de configuration d'affichage.
+</string>    
+<string id="Connect_HomeDir_ToRoot_Explain">
+Restaure les définitions des variables d'environnement %HOMESHARE% et %HOMEPATH% à celles utilisées dans Windows NT 4.0 et versions antérieures.
+Si vous activez cette stratégie, le système utilise les définitions Windows NT 4.0. Si vous désactivez cette stratégie ou si vous ne la configurez pas, le système utilise les nouvelles définitions conà§ues pour Windows 2000.
+Avec %HOMESHARE%, ces variables définissent le répertoire de base d'un profil utilisateur. Le répertoire de base est un mappage permanent d'une lettre de lecteur sur l'ordinateur local vers un répertoire local ou distant.
+Par défaut, dans Windows 2000, %HOMESHARE% stocke le chemin qualifié vers le répertoire de base (par exemple \\server\share\dir1\dir2\homedir). Les utilisateurs peuvent accéder au répertoire de base et chacun de ses sous-répertoires à  partir de la lettre du lecteur de base, mais ils ne peuvent pas voir ou accéder à  ses répertoires parent. %HOMEPATH% stocke une barre oblique inversée finale et est inclus pour une compatibilité avec des anciens systèmes.
+Sur Windows NT 4.0 et versions antérieures, %HOMESHARE% ne stocke que le partage réseau (par exemple \\server\share). %HOMEPATH% stocke le reste du chemin d'accès qualifié dans le répertoire de base (par exemple \dir1\dir2\homedir). Par conséquent, les utilisateurs peuvent accéder à  tout répertoire sur le partage de base en utilisant la lettre de lecteur du répertoire de base.
+Astuce : pour spécifier un répertoire de base dans Windows 2000, dans Utilisateurs et ordinateurs Active Directory ou Utilisateurs et groupes locaux, cliquez sur le nom d'un compte utilisateur avec le bouton droit, cliquez sur Propriétés, cliquez sur l'onglet Propriétés, et dans la section "dossier de base", sélectionnez l'option "Se connecter" et sélectionnez une lettre de lecteur et le répertoire de base.
+Exemple : le lecteur Z est mappé vers \\server\share\dir1\dir2\homedir.
+Si cette stratégie est désactivée ou non configurée (comportement Windows 2000) :
+-- %HOMESHARE% = Z: (mappé vers \\server\share\dir1\dir2\homedir)
+-- %HOMESHARE% = \\server\share\dir1\dir2\homedir
+-- %HOMEPATH% = \
+Si la stratégie est activée (comportement Windows NT 4.0) :
+-- %HOMESHARE% = Z: (mappé vers \\server\share)
+-- %HOMESHARE% = \\server\share
+-- %HOMEPATH% = \dir1\dir2\homedir
+</string>
+<string id="EnforceShellExtensionSecurity_Help">
+Indique à  Windows qu'il ne doit démarrer que les extensions d'interface utilisateur qui ont été approuvées par la sécurité système ou par l'utilisateur.
+Lorsque le système détecte que l'utilisateur télécharge un programme externe qui s'exécute en tant que partie de l'interface Windows, le système recherche un certificat numérique ou demande à  l'utilisateur d'approuver l'action. Si vous activez cette stratégie, Windows ne démarrera pas les programmes tant qu'ils ne sont pas approuvés.
+Cette stratégie est conçue pour protéger le système des dommages apportés par des programmes qui peuvent ne pas fonctionner correctement ou qui sont conçus pour endommager le système.
+Astuce : pour afficher les extensions de l'interface utilisateur approuvées d'un système, démarrez l'éditeur de Registre (Regedt32 ou Regedit). Le système stocke les entrées représentant les extensions d'interface utilisateur approuvées à la clé de Registre suivante :
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved.
+</string>
+<string id="AM_ExplainSetModRiskInclusion">
+Ce paramètre de stratégie vous permet de configurer la liste des types de fichiers à risque modéré. Si le fichier téléchargé figure dans la liste des types de fichiers à risque modéré et provient de la zone restreinte ou d’Internet, Windows demande à l’utilisateur s’il souhaite accéder ou exécuter le fichier. Cette liste d’inclusions a priorité sur la liste des types de fichiers à risque potentiellement élevé intégrée à Windows et priorité sur la liste d’inclusions des risques faibles, mais a une priorité moindre que la liste d’inclusions des risques élevés (quand une extension est répertoriée dans plusieurs listes d’inclusions).
+Si vous activez ce paramètre de stratégie, vous pouvez spécifier quels types de fichiers présentent un risque modéré.
+Si vous désactivez ce paramètre de stratégie, Windows utilise sa logique de confiance par défaut.
+Si vous ne configurez pas ce paramètre de stratégie, Windows utilise sa logique de confiance par défaut.
+</string>
+<string id="PromptRunAsInstallNetPath_Help">
+Demande à l'utilisateur d'autres informations d'identification d'ouverture de session aux cours des installations basées sur le réseau.
+Cette stratégie affiche la boîte de dialogue "Installer le programme en tant qu'utilisateur différent", même quand un programme est installé à  partir de fichiers sur un ordinateur réseau par le biais d'une connexion réseau local.
+Si vous désactivez cette stratégie, ou si vous ne la configurez pas, cette boîte de dialogue apparaîtra uniquement quand les utilisateurs installeront des programmes à  partir d'un média local.
+La boîte de dialogue "Installer le programme en tant qu'utilisateur différent" demande à  l'utilisateur courant un nom d'utilisateur et un mot de passe d'administrateur. Cette stratégie permet aux administrateurs qui se sont connectés comme utilisateurs normaux d'installer des programmes sans se déconnecter et se reconnecter en utilisant leurs informations d'identification administrateur.
+Si la boîte de dialogue n'apparaît pas, l'installation a lieu avec les autorisations de l'utilisateur courant. Si ces autorisations ne sont pas suffisantes, l'installation peut échouer, ou elle peut se terminer, mais sans inclure toutes les fonctions, ou elle peut sembler se terminer correctement, mais le programme installé peut ne pas fonctionner correctement.
+Remarque : Si elle est activée, la stratégie "Ne pas demander d'autres informations d'identification" a priorité sur les paramètres de cette stratégie. Lorsque cette stratégie est activée, les utilisateurs ne devront pas entrer d'autres informations d'identification de connexion pour aucune installation.
+</string>
+<string id="Montrerarborescence_Help">
+Dans le volet gauche de l'explorateur, tous les dossiers y compris ceux de l'utilisateur, le panneau de configuration et le voisinage réseau, sont affichés.
+</string>
+<string id="DevelopperDossierCourant_Help">
+Dans le volet gauche de l'explorateur, l'arborescence jusqu'au dossier courant affiché dans le volet droit, est automatiquement développée.
+</string>
+<string id="Empecherlesconnexionsmultiples_Help">
+La première option autorise l'utilisateur à ouvrir une session sur une nouvelle machine, tout en fermant automatiquement la session laissée ouverte sur la machine précédemment utilisée. Option fortement conseillée pour les enseignants.
+La deuxième option ferme autoritairement la nouvelle session de l'utilisateur s'il est déjà connecté par ailleurs.
+</string>
+<string id="Fermerlasessionencasdinactivite_Help">
+Permet de fermer la session de l'utilisateur en cas d'inactivité au delà d'une durée paramétrable en mn.
+Une fois la fermeture de la session effective, la machine s'arrêtera en fonction du délai paramétré dans la GPo Ordinateurs : Arrêt de la station en cas d'inactivité.
+Pour le bon fonctionnement de cette stratégie, le client Magret Utilisateur devra être en version 8.507 minimum.
+</string>
+<string id="ActiverLogsdimpressions_Help">
+Cette fonctionnalité nécessite le service SrvLogPwd et le MagretClientUtilisateur en version 8.510
+L'utilisateur sera averti qu'il a dépassé un quota paramétrable de pages imprimées, ou un quota de pages dans un document volumineux.
+Administa recevra les alertes.
+Les logs par utilisateur ou par imprimante sont consignés dans C:\Magret\Services\Logs\Impressions.
+Pour remettre à zéro le quota d'un utilisateur, il suffira d'effacer le fichier utilisateur.csv correspondant dans le dossier ci-dessus.
+</string>
+<string id="SELECT_PROXY_TYPE">
+Choisir obligatoirement le paramétrage manuel
+</string>
+<string id="ExplainListeFournisseurs">Vous permet de fixer la liste des fournisseurs de recherche présentés à l'utilisateur dans Windows Internet Explorer 7.
+Si le paramètre de stratégie est fixé sur Désactivé, toutes les informations sur les fournisseurs de recherche seront effacées et seul le moteur de recherche Windows Live Search restera.
+</string>
+<string id="HELP_CodecMP3">
+Chemin indispensable pour que Audacity gère les MP3 pour chaque utilisateur.
+</string>
+<string id="HELP_LangueInterface">
+Il y a 34 langues disponibles: fr, es, eu, de, it, ja, pl, etc. ...
+</string>
+<string id="NoWindowsHotKeys_Help">Désactive les touches de raccourci Windows+X.
+Les claviers disposant d’une touche Windows fournissent aux utilisateurs des raccourcis vers les fonctionnalités d’environnement courantes. Par exemple, si vous appuyez sur la combinaison de touches Windows+R, la boîte de dialogue Exécuter s’ouvre ; si vous appuyez sur la combinaison de touches Windows+E, l’Explorateur Windows démarre. L’utilisation de ce paramètre permet de désactiver les touches de raccourci Windows+X.
+Si vous activez ce paramètre, les touches de raccourci Windows+X ne seront pas disponibles.
+Si vous désactivez ce paramètre ou si vous ne le configurez pas, les touches de raccourci Windows+X seront disponibles.
+</string>
+<string id="DesactiverFonctionnalitesWindowsalaUne_Help">Ce paramètre de stratégie vous permet de désactiver toutes les fonctionnalités Windows à la une en une seule opération.
+Si vous activez ce paramètre de stratégie, Windows à la une sur l’écran de verrouillage, les conseils Windows, les fonctionnalités Microsoft grand public et les autres fonctionnalités associées seront désactivés. Vous devez activer ce paramètre de stratégie si votre objectif est de minimiser le trafic réseau à partir d’appareils cibles.
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les fonctionnalités Windows à la une sont autorisées et peuvent être contrôlées individuellement à l’aide de leurs paramètres de stratégie correspondants.
+</string>
+<string id="ForceStartSize_ExplainText">Si vous activez cette stratégie et la définissez sur Menu Démarrer ou Plein écran de démarrage, le démarrage prendra cette taille et les utilisateurs ne pourront pas modifier la taille de démarrage dans les paramètres. 
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows va sélectionner automatiquement la taille en fonction du facteur de forme matérielle et les utilisateurs ne pourront pas modifier la taille de démarrage dans les paramètres.
+</string>
+
+<string id="SUPPORTED_WXP">Microsoft Windows XP</string>
+<string id="SUPPORTED_W7">Microsoft Windows 7</string>
+   
+</stringTable>
+
+<presentationTable>
+    
+<!--Redirection de dossiers et compléments-->
+      <presentation id="MesDocuments">
+        <textBox refId="CheminpourobtenirleselementsdeMesDocuments">
+          <label>Chemin pour obtenir les elements de Mes Documents :</label>
+          <defaultValue>%HOMESHARE%\Travail</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Mesimages">
+        <textBox refId="CheminpourobtenirleselementsdeMesimages">
+          <label>Chemin pour obtenir les elements de Mes images :</label>
+          <defaultValue>%HOMESHARE%\Travail\Mes images</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Mamusique">
+        <textBox refId="CheminpourobtenirleselementsdeMamusique">
+          <label>Chemin pour obtenir les elements de Ma musique :</label>
+          <defaultValue>%HOMESHARE%\Travail\Ma musique</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Mesvideos">
+        <textBox refId="CheminpourobtenirleselementsdeMesvideos">
+          <label>Chemin pour obtenir les elements de Mes videos :</label>
+          <defaultValue>%HOMESHARE%\Travail\Mes videos</defaultValue>
+        </textBox>
+      </presentation>
+      
+      <presentation id="Telechargements">
+        <textBox refId="CheminpourobtenirleselementsdeTelechargements">
+          <label>Dossier des Téléchargements:</label>
+          <defaultValue>\\Serveur01\%username%\Travail\Téléchargements</defaultValue>
+        </textBox>
+        <text>Cette stratégie ne fonctionne que sous W7 et au delà.</text>
+        <text>De plus les dossiers de téléchargements</text>
+        <text>des navigateurs doivents être redirigés vers ce même dossier.</text>
+        <text>Les stratégies existent pour IE, FF et Chrome.</text>
+      </presentation>
+      
+      <presentation id="ApplicationData">
+        <textBox refId="Cheminpourobtenirleselementsdesdonneesdapplications">
+          <label>Chemin pour obtenir les elements des donnees d'applications :</label>
+          <defaultValue>%HOMESHARE%\Environnement\Application Data</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Bureau">        
+        <textBox refId="Cheminpourobtenirleselementsdubureau">
+        <label>Chemin pour obtenir les elements du bureau :</label>
+        <defaultValue>M:\Environnement\Bureau</defaultValue>          
+        </textBox>
+      </presentation>
+      <presentation id="MenuDemarrer">
+        <textBox refId="CheminpourobtenirleselementsduMenuDemarrer">        
+          <label>Chemin pour obtenir les elements du Menu Demarrer :</label>
+          <defaultValue>M:\Environnement\Menu Démarrer</defaultValue>
+        </textBox>
+        <text>Stratégie non compatible avec le menu démarrer de W10.</text>
+        </presentation>
+        <presentation id="Programmes">
+        <textBox refId="CheminpourobtenirleselementsdeProgrammes">
+          <label>Chemin pour obtenir les elements de Programmes :</label>
+          <defaultValue>M:\Environnement\Menu Démarrer\Programmes</defaultValue>
+        </textBox>
+        <text>Stratégie non compatible avec le menu démarrer de W10.</text>
+        </presentation>
+        <presentation id="Demarrage">
+        <textBox refId="CheminpourobtenirleselementsdeDemarrage">
+          <label>Chemin pour obtenir les elements de Demarrage :</label>
+          <defaultValue>M:\Environnement\Menu Démarrer\Programmes\Démarrage</defaultValue>
+        </textBox>
+        <text>Stratégie non compatible avec le menu démarrer de W10.</text>
+        </presentation>
+        <presentation id="Outilsdadministration">
+        <textBox refId="Chemindesoutilsdadministration">
+        <label>Chemin des outils d administration</label>
+        <defaultValue>M:\Environnement\Menu démarrer\Magret</defaultValue>         
+        </textBox>
+        <text>Définir des chemins qui ne donnent les outils d'administration</text>
+        <text>qu'aux administrateurs et des outils moins sensibles aux utilisateurs</text>
+        <text>comme les consoles pédagogiques de Magret par exemple.</text>
+        </presentation>
+        
+      <presentation id="Favorisreseau">
+        <textBox refId="CheminpourobtenirleselementsdeFavorisreseau">
+          <label>Chemin pour obtenir les éléments de Favoris réseau :</label>
+          <defaultValue>%HOMESHARE%\Travail</defaultValue>
+        </textBox>
+        <text>L'unité %HOMESHARE%\Travail correspond au dossier personnel de l'utilisateur.</text>
+        <text>L'utilisateur pourra accéder à son dossier Travail par les favoris réseau.</text>
+        <text>Laisser non configuré pour les administrateurs</text>
+        <text>On peut aussi ne pas configurer cette option et masquer</text>
+        <text>l'icône Favoris Réseau aux utilisateurs dans la stratégie du Bureau.</text>
+      </presentation>
+      
+      <presentation id="Documentsrecents">
+        <textBox refId="Cheminpourobtenirleselementslesplusrecents">
+          <label>Chemin pour obtenir les éléments les plus récents</label>
+          <defaultValue>%HOMESHARE%\Winconf\Recent</defaultValue>
+        </textBox>
+        <text>Laissez l'option par défaut si l'utilisateur doit retrouver</text>
+        <text>les documents récemment ouverts.</text>
+      </presentation>
+      
+      <presentation id="Envoyervers">
+        <textBox refId="CheminpourobtenirleselementsdeEnvoyervers">
+          <label>Chemin pour obtenir les éléments de Envoyer vers ...</label>
+          <defaultValue>M:\Winconf\SendTo</defaultValue>
+        </textBox>
+      </presentation>
+      
+      <presentation id="Documentsfavoris">
+        <textBox refId="CheminpourobtenirleselementsdeFavoris">
+          <label>Chemin pour obtenir les éléments de Favoris </label>
+          <defaultValue>%HOMESHARE%\Environnement\Favoris</defaultValue>
+        </textBox>
+      </presentation>
+      
+      <presentation id="Nouveaudocument">
+        <textBox refId="CheminpourobtenirleselementsdeNouveaudocument">
+          <label>Chemin pour obtenir les éléments de Nouveau document </label>
+          <defaultValue>M:\Winconf\ShellNew</defaultValue>
+        </textBox>
+      </presentation>
+      
+      <presentation id="Historique">
+        <textBox refId="Chemindelhistorique">
+          <label>Chemin de l'historique</label>
+          <defaultValue>%HOMESHARE%\Environnement\Historique</defaultValue>
+        </textBox>
+        <text>%HOMESHARE%\Environnement\Historique correspond au dossier personnel</text>
+        <text>commun à WXP et W7</text>
+      </presentation>
+      
+      <presentation id="CacheInternetTemporaryInternetFiles">
+        <textBox refId="DossierducacheInternet">
+          <label>Dossier du cache Internet</label>
+          <defaultValue>C:\Cache</defaultValue>
+        </textBox>
+        <text>L'idéal est un dossier clairement identifié sur la station.</text>
+        <text>Par exemple C:\Cache</text>
+      </presentation>
+      
+      <presentation id="Cookies">
+        <textBox refId="Dossierdescookiesinternet">
+          <label>Dossier des cookies internet</label>
+          <defaultValue>C:\Cache\Cookies</defaultValue>
+        </textBox>
+        <text>C:\Cache\Cookies correspond à un dossier local</text>
+        <text>%HOMESHARE%\WinConf\Cookies correspond à un dossier de l'utilisateur</text>
+        <text>Si l'utilisateur accepte les cookies, il doit avoir les droits</text>
+        <text>d'écriture dans le dossier.</text>
+        <text>Le dossier sur la station évite la multiplication des cookies</text>
+        <text>dans le dossier personnel de l'utilisateur</text>
+      </presentation>
+      
+      <presentation id="DossierdegravagedesCD">
+        <textBox refId="ChemindudossierdegravagedesCD">
+          <label>Chemin du dossier de gravage des CD</label>
+          <defaultValue>C:\Cache\CDBurning</defaultValue>
+        </textBox>
+      </presentation>
+      
+      <presentation id="Donneeslocales">
+        <textBox refId="Chemindesdonneeslocales">
+          <label>Chemin des données locales</label>
+          <defaultValue>%HOMESHARE%\Environnement\Application Data\LocSet</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Donneeslocalesdesapplications">
+        <textBox refId="Chemindesdonneeslocalesdesapplications">
+          <label>Chemin des données locales des applications</label>
+          <defaultValue>%HOMESHARE%\Environnement\Application Data\LocSet\AppData</defaultValue>
+        </textBox>
+      </presentation>
+      
+<!--Redirection des caches de fichiers temporaires-->
+      <presentation id="CacheTEMP">
+        <textBox refId="DossierdesFichierstemporaires">
+          <label>Dossier des Fichiers temporaires</label>
+        </textBox>
+        <text>C:\Cache correspond à un dossier local</text>
+        <text>%USERPROFILE%\Local Settings\Temp correspond à un dossier de l'utilisateur</text>
+        <text>Le dossier sur la station évite la multiplication des fichiers temporaires</text>
+        <text>dans le dossier personnel de l'utilisateur</text>
+        <text>C:\Cache peut être nettoyé par script à l'arrêt des stations</text>
+        <text>ou aussi par magoff.bat à la fermeture de session de l'utilisateur.</text>
+      </presentation>
+      <presentation id="CacheTMP">
+        <textBox refId="DossierdesFichierstemporaires">
+          <label>Dossier des Fichiers temporaires</label>
+        </textBox>
+        <text>C:\Cache correspond à un dossier local</text>
+        <text>%USERPROFILE%\Local Settings\Temp correspond à un dossier de l'utilisateur</text>
+        <text>Le dossier sur la station évite la multiplication des fichiers temporaires</text>
+        <text>dans le dossier personnel de l'utilisateur</text>
+        <text>C:\Cache peut être nettoyé par script à l'arrêt des stations</text>
+        <text>ou aussi par magoff.bat à la fermeture de session de l'utilisateur.</text>
+      </presentation>
+      
+<!--Bureau-->
+      <presentation id="MasquerlesiconesclassiquesdubureauPostedetravailcorbeille" />
+      <presentation id="SupprimerliconePostedetravaildubureau" />
+      <presentation id="SupprimerGererdumenucontextuelduPostedetravail" />
+      <presentation id="SupprimerProprietesdumenucontextuelduPostedetravail" />
+      <presentation id="SupprimerliconeMesDocumentsdubureau" />
+      <presentation id="InterdiredemodifierlecheminversMesDocuments" />
+      <presentation id="SupprimerProprietesdumenucontextueldeMesdocuments" />
+      <presentation id="SupprimerliconeFavorisreseaudubureau" />
+      <presentation id="NepasajouterdepartagesdesdocumentsrecemmentouvertsdansFavorisreseau" />
+      <presentation id="SupprimerliconeInternetExplorerdubureau" />
+      <presentation id="Supprimerliconedelacorbeilledubureau" />
+      <presentation id="SupprimerProprietesdumenucontextueldelacorbeille" />
+      <presentation id="DesactiverlajoutleglisserdeplaceretlafermeturedesbarresdoutilsdelaBarredestaches" />
+      <presentation id="EmpecherleredimensionnementdesbarresdoutilsduBureau" />
+      <presentation id="DesactiverlassistantdenettoyageduBureau" />
+      <presentation id="SupprimerleraccourciverslesfichiersdelutilisateursousW7">
+        <text>Evite que l'utilisateur ait un accès à la racine de son %HOMESHARE%</text>
+      </presentation>
+      
+<!--Papier peint-->
+      <presentation id="Cheminetnomdupapierpeint">
+        <textBox refId="Cheminetnom">
+          <label>Chemin et nom : </label>
+        </textBox>
+        <text>Exemple :</text>
+        <text>- avec un chemin local : C:\Windows\Logo.bmp</text>
+        <text>- avec un chemin UNC : \\Serveur\Partage\Logo.bmp</text>
+        <text> </text>
+        <dropdownList refId="Styledupapierpeint" defaultItem="2">Style du papier peint : </dropdownList>
+      </presentation>
+      <presentation id="LaisserMagretgererlepapierpeintWindowsXPetW7">
+        <textBox refId="Papierpeintimpose">
+          <label>Papier peint imposé : </label>
+        </textBox>
+        <text>Laissez cette valeur vide pour que les utilisateurs puissent personnaliser leur fond d'écran</text>
+      </presentation>
+      
+<!--Active Desktop-->
+      <presentation id="ActiverActiveDesktop">
+        <text>Autorise les papiers peints HTML et JPEG</text>
+      </presentation>
+      <presentation id="DesactiverActiveDesktop">
+        <text>Interdit les papiers peints HTML et JPEG</text>
+      </presentation>
+      <presentation id="Desactivertousleselements">
+        <text>Continue d'accepter les papiers peints HTML et JPEG</text>
+      </presentation>
+      <presentation id="Interdirelesmodifications" />
+      <presentation id="Empecherlajoutdelements" />
+      <presentation id="Empecherlasuppressiondelements" />
+      <presentation id="Empecherlamodificationdelements" />
+      <presentation id="Empecherlafermeturedelements" />
+      <presentation id="AjouterSupprimerdeselements">
+        <textBox refId="EntrezlesURLdeselementsdeBureauaajouterseparesparunespace">
+          <label>Entrez les URL des éléments de Bureau à ajouter (séparés par un espace)</label>
+        </textBox>
+        <textBox refId="EntrezlesURLdeselementsdeBureauasupprimerseparesparunespace">
+          <label>Entrez les URL des éléments de Bureau à supprimer (séparés par un espace)</label>
+        </textBox>
+      </presentation>
+      <presentation id="PapierpeintActiveDesktop">
+        <text>Indiquez l'emplacement et le nom</text>
+        <textBox refId="Nomdupapierpeint">
+          <label>Nom du papier peint : </label>
+        </textBox>
+        <text>Exemple : avec un chemin local : C:\Windows\Logo.bmp</text>
+        <text>Exemple : avec un chemin UNC : \\Serveur\Partage\Logo.bmp</text>
+        <text>  </text>
+        <dropdownList refId="Styledupapierpeint">Style du papier peint : </dropdownList>
+      </presentation>
+      <presentation id="NautoriserquelespapierspeintsBMP" />
+      
+<!--Active Directory-->
+      <presentation id="MasquerledossierActiveDirectory" />
+      <presentation id="TaillemaximaledesrecherchesdansActiveDirectory">
+        <decimalTextBox refId="Nombredobjetsrenvoyes" defaultValue="10000" spinStep="100">Nombre d'objets renvoyés : </decimalTextBox>
+      </presentation>
+      <presentation id="ActiverlefiltragedanslaboitededialogueRechercher" />
+      
+<!--Menu Démarrer et Barre des tâches-->
+      <presentation id="AfficherleMenuDemarrerenmodeclassique" />
+      <presentation id="SupprimerlasectionsuperieuredumenuDemarrer">
+        <text>Supprime les dossiers de la section supérieure du menu Démarrer</text>
+      </presentation>
+      <presentation id="SupprimerWindowsUpdate" />
+      <presentation id="SupprimerleselementsduprofilAllUsers" />
+      <presentation id="SupprimerlemenuDocuments" />
+      <presentation id="SupprimerliconeMesDocumentsdumenuDemarrer" />
+      <presentation id="DesactiverlesprogrammesdumenuParametres" />
+      <presentation id="SupprimerlesConnexionsreseauetAccesadistance" />
+      <presentation id="SupprimerlemenuFavoris">
+        <text>Favoris apparaît toujours dans l'explorateur et Internet Explorer</text>
+      </presentation>
+      <presentation id="SupprimerlemenuRechercher">
+        <text>Voir également : Supprimer le bouton rechercher dans Composants Windows / Explorateur</text>
+      </presentation>
+      <presentation id="SupprimerlemenuAide" />
+      <presentation id="SupprimerlemenuExecuter" />
+      <presentation id="AjouterlemenuFermerlasessionutilisateur" />
+      <presentation id="Desactiverleglisserdeplacerdesmenuscontextuels" />
+      <presentation id="Empecherlamodificationdesparametresdelabarredestaches" />
+      <presentation id="Desactiverlesmenuscontextuelspourlabarredestaches" />
+      <presentation id="GriserlesraccourcisdesprogrammesWindowsInstaller">
+        <text>Laisse en grisé les raccourcis vers les programmes partiellement installés</text>
+      </presentation>
+      
+<!--Liens divers pour W7-->
+      <presentation id="ActiverlelienRecherchersurInternetdanslaboitederecherchedumenuDemarrer" />
+      <presentation id="Nepasafficherdelienversledossierdetelechargement" />
+      <presentation id="NepasafficherdelienversGroupeResidentiel" />
+      <presentation id="NepasafficherdelienverslenregistrementTV" />
+      <presentation id="Nepasafficherlelienverslarechercheetendue" />
+      <presentation id="Nepasafficherdelienverslabibliothequevideos" />
+      <presentation id="Nepasepinglerdeliensdanslesmenusflottants" />
+      <presentation id="Nepasepinglerdeliensdanslabarredestaches" />
+      <presentation id="Nepasafficherdeliensversdesfichiersdistants" />
+      <presentation id="Nepasepinglerdeprogrammesdanslabarredestaches" />
+      <presentation id="Nepaspromouvoirderaccourcisdanslazonedenotification" />
+      <presentation id="Nepasafficherlesbullesdavertissements" />
+      <presentation id="Nepasaffichercentremaintenance" />
+      
+<!--Fonctionnalités Menu Démarrer et barre des tâches spécifiques W7-->
+      <presentation id="ForcerlaffichagedumenuExecuter" />
+      <presentation id="Effacerlalistedesprogrammesrecentsalapremiereconnexion" />
+      <presentation id="Nepasrechercherdecommunications" />
+      <presentation id="Nepasrechercherdefichiersdanslaboitederecherche" />
+      <presentation id="Nepasrechercherdeprogrammesdanslaboitederecherche" />
+      <presentation id="Nepasafficherledossierdesjeuxpersonnels" />
+      <presentation id="Nepasafficherdelienversledossierdestockagedelutilisateur" />
+      <presentation id="Empecherleschangementsdeproprietesdelabarredestaches" />
+      <presentation id="Nepasajouterousupprimerdoutilsalabarredestaches" />
+      <presentation id="Nepasdeplacerlabarredestaches" />
+      <presentation id="Nepasrearrangerlabarredestaches" />
+      <presentation id="Nepasredimensionnerlabarredestaches" />
+      <presentation id="NepasafficherleCentredePrevention" />
+      <presentation id="Nepasafficherlajaugedelabatterie" />
+      <presentation id="Nepasafficherliconereseau" />
+      <presentation id="Nepasafficherlevolume" />
+      <presentation id="Nepasafficherlesbullesdenotification" />
+      <presentation id="AfficherSystemTray" />
+      
+<!--Personnaliser le volet droit du menu démarrer de W7-->
+      <presentation id="NepasafficherdelienversDocuments" />
+      <presentation id="NepasafficherdelienversImages" />
+      <presentation id="NepasafficherdelienversMusique" />
+      <presentation id="NepasafficherdelienversJeux" />
+      <presentation id="NepasafficherdelienversVideos" />
+      <presentation id="Nepasafficherdelienverslesfichiersdelutilisateur">
+        <text>Evite que l'utilisateur ait un accès à la racine de son %HOMESHARE%</text>
+      </presentation>
+      <presentation id="Programmespardefaut" />
+      <presentation id="ParametrerleboutondalimentationdeW7">
+        <dropdownList refId="Actionprincipaleduboutondalimentation">Action principale du bouton d'alimentation :</dropdownList>
+      </presentation>
+
+<!--Fonctionnalités spécifiques W8.1 Entreprise et W10Edu-->      
+      <presentation id="LockedStartLayout">
+        <textBox refId="LockedStartLayout_Name">
+          <label>Fichier de disposition de l'écran d'accueil</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ForceStartSize">
+        <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Choisissez un des formats suivants</dropdownList>
+      </presentation>
+      
+<!--Panneau de configuration-->
+      <presentation id="DesactiverlePanneaudeconfiguration" />
+      <presentation id="Masquerlesapplicationsspecifiees">
+        <listBox refId="Listedesapplicationsnonautorisees">Liste des applications non autorisées : </listBox>
+        <text>Pour créer une liste des applications du Panneau de configuration non autorisées, cliquez sur Afficher,</text>
+        <text>puis Ajouter, et entrez le nom de fichier du Panneau de configuration (extension : .cpl)</text>
+        <text>ou le nom affiché sous cet élément dans le Panneau de configuration.</text>
+        <text>(par exemple : desk.cpl, powercfg.cpl, Imprimantes)</text>
+      </presentation>
+      <presentation id="Nafficherquelesapplicationsspecifiees">
+        <listBox refId="Listedesapplicationsautorisees">Liste des applications autorisées</listBox>
+        <text>Pour créer une liste des applications du Panneau de configuration autorisées, cliquez sur Afficher,</text>
+        <text>puis Ajouter, et entrez le nom canonique du contrôle du Panneau de configuration :</text>
+        <text>fichiers d'extension .cpl pour XP ou Microsoft.english_name pour W7</text>
+        <text>par exemple : desk.cpl, et Microsoft.display. Voir l'aide pour plus de précisions.</text>
+      </presentation>
+      <presentation id="Forcerlestyleclassique" />
+      
+<!--Affichage-->
+      <presentation id="DesactiverAffichage" />
+      <presentation id="MasquerlongletArriereplan">
+        <text>Empêche l'utilisateur de modifier les icônes du Bureau.</text>
+      </presentation>
+      <presentation id="Empecherlechangementdepapierpeint" />
+      <presentation id="MasquerlongletApparence" />
+      <presentation id="MasquerlongletConfiguration" />
+      <presentation id="MasquerlongletEcrandeveille" />
+      <presentation id="Activerlecrandeveille" />
+      <presentation id="Nomdufichierexecutabledelecrandeveille">
+        <textBox refId="Nomdelexecutable">
+          <label>Nom de l'exécutable : </label>
+        </textBox>
+      </presentation>
+      <presentation id="Delaidactivationdelecrandeveille">
+        <text>Delai d'activation en secondes : </text>
+        <text> </text>
+        <decimalTextBox refId="Delaidactivationensecondes" defaultValue="900" spinStep="60">Secondes :</decimalTextBox>
+      </presentation>
+      <presentation id="Ecrandeveilleprotegeparmotdepasse" />
+      
+<!--Thèmes sous W7-->
+      <presentation id="FichierdeTheme">
+        <text>Chemin du fichier de thème à utiliser pour la première connexion</text>
+        <textBox refId="Nempechepasensuitelutilisateurdelemodifier">
+          <label>N'empêche pas ensuite l'utilisateur de le modifier :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Pointeursdesouris">
+        <text>Empêche l'utilisateur de modifier les pointeurs de souris</text>
+      </presentation>
+      <presentation id="Themessonores">
+        <text>Empêche l'utilisateur de modifier les thèmes sonores</text>
+      </presentation>
+      
+<!--Imprimantes-->
+      <presentation id="Desactiverlasuppressiondimprimantes" />
+      <presentation id="Desactiverlajoutdimprimantes" />
+      <presentation id="Rechercherlesimprimantessurlereseau">
+        <text>Désactivez cette option pour supprimer la page de parcours d'imprimante réseau</text>
+        <text>à partir de l'Assistant Ajout d'imprimante. Utilisez cette stratégie pour empêcher les utilisateurs</text>
+        <text>de parcourir le réseau pour trouver les imprimantes. En supprimant l'option de parcours</text>
+        <text>les utilisateurs sont encouragés à trouver les imprimantes dans Active Directory si</text>
+        <text>disponible.</text>
+      </presentation>
+      <presentation id="CheminActiveDirectorypardefautpourlarecherchedimprimantes">
+        <text>Entrez un chemin Active Directory par défaut à partir duquel les utilisateurs</text>
+        <text>débuteront leur recherche d'imprimantes. Ce paramètre s'applique à la boîte de</text>
+        <text>dialogue de la recherche lorsqu'elle démarre à partir de l'Assistant Ajout d'imprimante.</text>
+        <text>Par exemple : Pour débuter la recherche à partir de domaine1.monentreprise.com, entrez le chemin</text>
+        <text>tel quel LDA%HOMESHARE%//DC=Domaine1,DC=MonEntreprise,DC=com.</text>
+        <textBox refId="CheminActiveDirectorypardefaut">
+          <label>=Chemin Active Directory par défaut</label>
+        </textBox>
+      </presentation>
+      <presentation id="ParcourirunsiteWebcommunpourrechercherlesimprimantes">
+        <text>Activez cette option pour ajouter un bouton Parcourir pour les imprimantes Internet </text>
+        <text>dans l'Assistant Ajout d'imprimante. Utilisez cette stratégie pour permettre aux utilisateurs de parcourir </text>
+        <text>l'intranet de la société pour rechercher les imprimantes. Par exemple, vous pouvez </text>
+        <text>spécifier une URL telle que : http://www.société.fr/imprimantes. </text>
+        <text>Pour activer cette option, la boîte de dialogue ci-dessous ne doit pas être vide.</text>
+        <text> </text>
+        <textBox refId="URLdelapagedinstallationdesimprimantes">
+          <label>URL de la page d'installation des imprimantes : </label>
+        </textBox>
+      </presentation>
+      <presentation id="Restrictionssurlepointagedesserveursdimpression">
+        <checkBox refId="Lesutilisateursnepeuventpointeretimprimerquesurcesserveurs">Les utilisateurs ne peuvent pointer et imprimer que sur ces serveurs :</checkBox>
+        <textBox refId="Entrerlesnomsdeserveursdimpressionapprouvesseparespar">
+          <label>Entrer les noms de serveurs d'impression approuvés, séparés par ;</label>
+        </textBox>
+        <text> </text>
+        <checkBox refId="Lesutilisateursnepeuventpointeretimprimerquesurdesserveursdudomaine">Les utilisateurs ne peuvent pointer et imprimer que sur des serveurs du domaine:</checkBox>
+        <text> </text>
+        <dropdownList refId="Lorsdelinstallationdespilotespourunenouvelleimprimante" defaultItem="1">Lors de l'installation des pilotes pour une nouvelle imprimante : </dropdownList>
+        <text> </text>
+        <dropdownList refId="Lorsdelamiseajourdespilotespouruneimprimanteexistante" defaultItem="2">Lors de la mise à jour  des pilotes pour une imprimante existante: </dropdownList>
+      </presentation>
+      
+<!--Ajout Suppression de programmes-->
+      <presentation id="DesactiverAjoutSuppressiondeprogrammes" />
+      <presentation id="MasquerlapageModifierSupprimerdesprogrammes" />
+      <presentation id="MasquerlapageAjouterdenouveauxprogrammes" />
+      <presentation id="MasquerlapageAjouterSupprimerdescomposantsWindows" />
+      <presentation id="MasquerloptionAjouterunprogrammeapartirdunCDROMoudunedisquette" />
+      <presentation id="MasquerloptionAjouterdesprogrammesapartirdeMicrosoft" />
+      <presentation id="MasquerloptionAjouterdesprogrammesapartirdevotrereseau" />
+      <presentation id="EmpecherlesutilisateursdutiliserAjoutSuppressiondeprogrammespourconfigurerlesservicesinstalles" />
+      <presentation id="Desactiverlesinformationsdepriseencharge" />
+      <presentation id="SpecifielacategoriepardefautpourAjouterdenouveauxprogrammes">
+        <textBox refId="Categorie">
+          <label>Categorie : </label>
+        </textBox>
+      </presentation>
+      
+<!--Sons envahissants-->
+      <presentation id="DesactiverlesevenementssonoresWindows">
+        <text>la valeur no désactive les évènements sonores de Windows, au démarrage, à l'arrêt,...</text>
+        <textBox refId="lavaleuryeslesreactive">
+          <label>la valeur yes les réactive.</label>
+        </textBox>
+      </presentation>
+      <presentation id="Desactiverlesbipssonoresdusysteme">
+        <text>la valeur no désactive les bips du système</text>
+        <textBox refId="lavaleuryeslesreactive">
+          <label>la valeur yes les réactive.</label>
+        </textBox>
+      </presentation>
+      
+<!--Système-->
+<!--Ouverture Fermeture de session-->
+      <presentation id="Connecterlerepertoiredebasealaracinedupartage">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="Desactiverlegestionnairedetaches" />
+      <presentation id="Desactiverleverrouillagedelordinateur" />
+      <presentation id="Desactiverlamodificationdumotdepasse" />
+      <presentation id="DesactiverDeconnexion" />
+      <presentation id="Executeralaconnexion">
+        <listBox refId="Programmesaexecuteralaconnexion">Programmes à exécuter à la connexion</listBox>
+        <text> </text>
+        <text>Saisissez comme nom de valeur le nom de l'application</text>
+        <text>Saisissez comme valeur le chemin exact avec le nom de l'exécutable</text>
+        <text> </text>
+        <text>Exemple : </text>
+        <text>nom de valeur : ConsoleUtilisateurs</text>
+        <text>valeur : J:\Ressource\consoleutilisateurs.exe</text>
+      </presentation>
+      <presentation id="Nepasafficherlecrandebienvenue" />
+      <presentation id="Executerlesscriptsdouverturedesessionsimultanement">
+        <text>Activer obligatoirement</text>
+      </presentation>
+      <presentation id="Masquerlesinstructionspourlesscripts" />
+      <presentation id="Afficherlesscriptsdouverturedesession" />
+      <presentation id="Afficherlesscriptsdefermeturedesession" />
+      <presentation id="Limiterlatailleduprofil">
+        <textBox refId="Messagepersonnalise">
+          <label>Message personnalise</label>
+        </textBox>
+        <decimalTextBox refId="Taillemaximumduprofil" defaultValue="30000" spinStep="100">Taille maximum du profil</decimalTextBox>
+        <checkBox refId="Inclureleregistredanslalistedesfichiers">Inclure le registre dans la liste des fichiers</checkBox>
+        <checkBox refId="Avertirlutilisateurquandlatailleestdepassee">Avertir l'utilisateur quand la taille est dépassée</checkBox>
+        <decimalTextBox refId="Effectuerunrappeltouteslesnminutes" defaultValue="15" spinStep="5">Effectuer un rappel toutes les n minutes : </decimalTextBox>
+      </presentation>
+      <presentation id="Excluredesdossiersdanslesprofilsitinerants">
+        <textBox refId="Empecherlesdossierssuivantsdecirculeravecleprofil">
+          <label>Empêcher les dossiers suivants de circuler avec le profil</label>
+        </textBox>
+        <text>Par défaut, les dossiers Historique, Paramètres locaux, Temp, et Temporary Internet Files</text>
+        <text>sont exclus du profil itinérant de l'utilisateur.</text>
+        <text>Si vous activez ce paramètre, vous pouvez exclure des dossiers supplémentaires.</text>
+        <text>Vous pouvez entrer les noms de plusieurs dossiers, séparés par des points-virgules,</text>
+        <text>tous relatifs à la racine du profil de l'utilisateur</text>
+      </presentation>
+      <presentation id="Desactiverlarecherchedesimprimantesetdossierspartages" />
+      <presentation id="Forcerleclavierfrancaisalaconnexion" />
+      <presentation id="Pavenumeriqueetmajuscules">
+        <dropdownList refId="Activesalaconnexion" defaultItem="1">Activé(s) à la connexion : </dropdownList>
+      </presentation>
+      <presentation id="Activerlesraccourcisverslesoptionsdaccessibilite">
+        <text>Cochez 'Désactivé' pour empêcher les utilisateurs</text>
+        <text>d'accéder à ces options en appuyant 5 fois sur la touche MAJ.</text>
+        <text>Assurez-vous qu'ils ne peuvent pas accéder aux options d'accessibilité</text>
+        <text>en passant également par le Panneau de configuration.</text>
+        <text>Il faut ajouter access.cpl dans la liste des applications masquées.</text>
+      </presentation>
+      
+<!--Restrictions-->
+      <presentation id="Signaturesducodedespilotesdeperipheriques">
+        <dropdownList refId="LorsqueWindowsdetecteunfichierpilotesanssignaturenumerique" noSort="true" defaultItem="1">Lorsque Windows detecte un fichier pilote sans signature numerique</dropdownList>
+      </presentation>
+      <presentation id="Desactiverlinvitedecommandes">
+        <dropdownList refId="Desactiveregalementletraitementdesscripts" noSort="true" defaultItem="1">Desactiver egalement le traitement des scripts ?</dropdownList>
+      </presentation>
+      <presentation id="Desactiverlesoutilsdeditionduregistreregeditetregedt32">
+        <dropdownList refId="Selectionneruneoption" noSort="true">Sélectionner une option </dropdownList>
+        <text> </text>
+        <text>Attention, la stratégie   Autoriser le mode silencieux  </text>
+        <text>ne fonctionne que pour Windows Xp SP2 et W2000</text>
+        <text>Pour Windows Xp SP1, elle est équivalente à ''Désactiver complètement''</text>
+      </presentation>
+      <presentation id="ExecuterseulementlesapplicationsWindowsautorisees">
+        <listBox refId="Listedesapplicationsautorisees">Liste des applications autorisées :</listBox>
+        <text> </text>
+        <text>Pour créer une liste d'applications autorisées, appuyez sur Montrer,</text>
+        <text>puis Ajouter et entrez le nom de l'exécutable de l'application</text>
+        <text>(par exemple : Winword.exe, Poledit.exe, Powerpnt.exe).</text>
+      </presentation>
+      <presentation id="NepasexecuterlesapplicationsWindowsspecifiees">
+        <listBox refId="Listedesapplicationsinterdites">Liste des applications interdites :</listBox>
+        <text> </text>
+        <text>Pour créer une page des applications non autorisées, cliquez sur Afficher,</text>
+        <text>puis Ajouter et entrez le nom de l'exécutable de l'application</text>
+        <text>(par exemple : Winword.exe, Poledit.exe, Powerpnt.exe).</text>
+      </presentation>
+      <presentation id="Desactiverlalectureautomatique">
+        <dropdownList refId="Desactiverlalectureautomatiquedes">Désactiver la lecture automatique des :</dropdownList>
+      </presentation>
+      
+<!--Réseau-->
+<!--Fichiers hors connexion-->
+      <presentation id="Desactiverlaconfigurationutilisateurdesfichiershorsconnexion">
+        <text>Cette stratégie supprime l'onglet Fichiers hors connexion</text>
+        <text>de la boîte de dialogue Options des dossiers.</text>
+        <text>Elle supprime également l'élément Paramètres du menu contextuel</text>
+        <text>Fichiers hors connexion et désactive le bouton Paramètres de la boîte</text>
+        <text>de dialogue d'état des fichiers hors connexion</text>
+      </presentation>
+      <presentation id="Synchroniserlesfichiershorsconnexionavantdeterminerlasession">
+        <text>Détermine si les fichiers hors connexion sont complètement</text>
+        <text>synchronisés quand les utilisateurs se déconnectent.</text>
+        <text>Cette stratégie désactive également l'option Synchroniser</text>
+        <text>tous les fichiers hors connexion avant de terminer la session</text>
+        <text>de l'onglet Fichiers hors connexion. Ceci empêche les utilisateurs</text>
+        <text>d'essayer de modifier l'option alors qu'une stratégie en assure le contrôle.</text>
+      </presentation>
+      <presentation id="Actionaladeconnexionduserveur">
+        <text>Spécifie comment le système doit répondre</text>
+        <text>lorsque le serveur devient indisponible</text>
+        <text> </text>
+        <dropdownList refId="Action">Action : </dropdownList>
+      </presentation>
+      <presentation id="DesactiverRendredisponiblehorsconnexion" />
+      <presentation id="DesactiverledossierFichiershorsconnexion" />
+      <presentation id="Tailleducachepardefaut">
+        <text>La valeur entrée est [ pourcentage du disque utilisé x 10 000 ].</text>
+        <text>Par exemple, pour indiquer 12,53%, entrez 1253.</text>
+        <text> </text>
+        <decimalTextBox refId="Tailleducachepardefaut" defaultValue="1000" spinStep="100">Taille du cache par défaut : </decimalTextBox>
+      </presentation>
+      <presentation id="Desactiverlesbullesderappel" />
+      <presentation id="Supprimerlescopieslocalesdesfichiershorsconnexion">
+        <text>Provoque la suppression de la copie locale de tout fichier hors connexion</text>
+        <text>accédé par l'utilisateur lorsque celui-ci ferme sa session sur l'ordinateur.</text>
+        <text> </text>
+        <checkBox refId="Supprimeruniquementlesversionshorsconnexiontemporaires">Supprimer uniquement les versions hors connexion temporaires.</checkBox>
+      </presentation>
+      
+<!--Composants Windows-->
+<!--Explorateur Windows-->
+      <presentation id="Activerlenvironnementclassique" />
+      <presentation id="Masquerlesextensionsdesfichiers" />
+      <presentation id="Masquerlesfichiersetdossierscaches" />
+      <presentation id="Masquerlesfichiersprotegesdusystemedexploitation" />
+      <presentation id="Nepasafficherlecontenudesdossierssysteme" />
+      <presentation id="SupprimerlelementOptionsdumenuOutils">
+        <text>Supprime  Options  dans Internet Explorer</text>
+        <text>et 'Options des dossiers' dans 'Outils' de l'explorateur</text>
+      </presentation>
+      <presentation id="SupprimerlemenuFichierdanslexplorateur" />
+      <presentation id="SupprimerConnecterdeconnecterunlecteurreseau" />
+      <presentation id="SupprimerleboutonRechercherdanslexplorateur" />
+      <presentation id="Assistantderechercheclassique" />
+      <presentation id="Desactiverlesmenuscontextuelsleclicdroit">
+        <text>Cocher desactive pour laisser le clic droit !! (B2I ..)</text>
+      </presentation>
+      <presentation id="Nautoriserquelesextensionsdelenvironnementapprouvees" />
+      <presentation id="Desactiverlesuividesraccourcis">
+        <text>Cocher  Active  obligatoirement</text>
+      </presentation>
+      <presentation id="Masquerleslecteursspecifies">
+        <dropdownList refId="Choisissezlunedescombinaisonssuivantes" noSort="true">Choisissez l'une des combinaisons suivantes : </dropdownList>
+        <text>Vous pouvez fabriquer votre propre combinaison</text>
+        <text>en éditant le fichier ADM et en affectant des nombres</text>
+        <text>aux lettres des lecteurs : A--&gt;2^0 ; B--&gt;2^1 ; C--&gt;2^2 etc..</text>
+        <text>Exemple : lecteurs A, B et C : 2^0 + 2^1 + 2^2 = 7</text>
+        <text>ou en utilisant MASKLEC.EXE</text>
+      </presentation>
+      <presentation id="Empecherlaccesauxlecteursspecifies">
+        <dropdownList refId="Choisissezlunedescombinaisonssuivantes" noSort="true">Choisissez l'une des combinaisons suivantes : </dropdownList>
+      </presentation>
+      <presentation id="MasquerlongletliealaSecurite" />
+      <presentation id="MasquerlongletMateriel" />
+      <presentation id="Desactiverlamodificationdesparametresdanimation" />
+      <presentation id="Desactiverlesoulignementdesraccourcisclavier" />
+      <presentation id="DesactiverlongletDFS" />
+      <presentation id="NepasafficherOrdinateursprochedumiendansFavorisreseau" />
+      <presentation id="NepasafficherToutlereseaudansFavorisreseau" />
+      <presentation id="Nombremaximaldedocumentsrecents">
+        <decimalTextBox refId="Nombremaximal" defaultValue="15">Nombre maximal : </decimalTextBox>
+      </presentation>
+      <presentation id="DesactiverloptionInstallerentantque" />
+      <presentation id="Demanderdesinformationsdidentificationpourdesinstallationsapartirdureseau" />
+      <presentation id="Desactiverlamiseencachedesminiatures">
+        <text>Cocher Activé obligatoirement</text>
+      </presentation>
+      <presentation id="AM_SetModRiskInclusion">
+        <textBox refId="AM_InstructModRiskInclusionList">
+          <label>Indiquez les extensions à risque modéré (par exemple : .doc ;.pdf ;.exe).</label>
+        </textBox>
+      </presentation>
+
+<!--Disques amovibles sous W7-->
+      <presentation id="EmpecherlaccesatoutdisqueamovibleUSBCDDVDetc" />
+      <presentation id="EmpecherlalecturedeCDetDVD" />
+      <presentation id="EmpecherlagravuredeCDetDVD" />
+      <presentation id="Empechelaccesauxdisquesdestockageamovibles" />
+      <presentation id="EmpechelaccesauxlecteursdedisquettesmemeUSB" />
+      <presentation id="Empechelaccesauxlecteursmultimediatelephonesmobilesetc" />
+      
+<!--Nouveaux composants Windows 7-->      
+<!--Gadgets-->
+      <presentation id="Desactivertouslesgadgets" />
+      <presentation id="Autoriserlesgaleriesdegadgetsalternatives" />
+      <presentation id="Restreindrelinstallationdegadgetsnonsignes" />
+      <presentation id="Desactiverlinstallationdegadgetsmemesignes" />
+      
+<!--Miniatures-->
+      <presentation id="Desactiverlaffichagedesminiatures" />
+      <presentation id="Desactiverlaffichagedesminiaturesdanslesdossiersreseau" />
+      
+<!--Explorateur Windows 7-->
+      <presentation id="DesactiverleboutonChercherencoresurInternetdanslexplorateur" />
+      <presentation id="Desactiverlessuggestionsdelaboitederecherche" />
+      <presentation id="Desactiverloutildecapturedecran" />
+      <presentation id="Desactiverlesfonctionnalitesdesbibliotheques" />
+      <presentation id="Montrerarborescence" />
+      <presentation id="DevelopperDossierCourant" />
+      
+<!--Diaporamas-->
+      <presentation id="Desactiverlesdiaporamas" />
+      
+    
+<!--Enregisteur de sons-->
+      <presentation id="Activerlenregisteurdesons" />
+      
+<!--Options régionales et langues sous W7-->
+      <presentation id="Localisation">
+        <text>Empêche l'utilisateur de changer la localisation géographique</text>
+      </presentation>
+      <presentation id="Langue">
+        <text>Empêche l'utilisateur de changer la langue en cours</text>
+      </presentation>
+      <presentation id="FormatsRegionaux">
+        <text>Empêche l'utilisateur de changer les formats regionaux</text>
+      </presentation>
+      <presentation id="SeparateurDecimal">
+        <dropdownList refId="SeparateurSelect" noSort="true" defaultItem="0">Imposer un séparateur décimal :</dropdownList>
+      </presentation>
+      
+<!--Centre des programmes et fonctionnalités sous W7-->
+      <presentation id="DesactiverlaccesauCentredesProgrammes" />
+      <presentation id="EmpecherlajoutouleretraitdefonctionnalitesWindows" />
+      
+<!--Centre réseaux et partages sous W7-->
+      <presentation id="Desactiverlassistantdeconnexion">
+        <text>Empêche l'utilisateur de d'acceder à l'assitant de connexion</text>
+        <text>Windows Connect Now et de changer de type de connexion</text>
+        <text>ou de point d'accès WIFI</text>
+      </presentation>
+      
+<!--Centre de contrôle des performances de W7 -->
+      <presentation id="Accederaucentredecontroledesperformances" />
+      <presentation id="Accederauxsolutionsducentredecontroledesperformances" />
+      <presentation id="Cacherlespagesdepropriete" />
+             
+<!--Planificateur de tâches-->
+      <presentation id="Empecherlexecutionetlarretdestaches" />
+      <presentation id="Desactiverleglisserdeplacer" />
+      <presentation id="Desactiverlacreationdenouvellestaches" />
+      <presentation id="Desactiverlasuppressiondetaches" />
+      <presentation id="DesactiverlemenuAvance" />
+      <presentation id="Interdireleparcours" />
+      
+<!--Windows Installer-->
+      <presentation id="Toujoursinstalleravecdesdroitseleves">
+        <checkBox refId="Cocherpouractiver">Cocher pour activer </checkBox>
+        <text>Important : cette stratégie apparaît également au niveau des utilisateurs.</text>
+        <text>Pour qu'elle soit effective, elle doit être activée dans les deux niveaux.</text>
+      </presentation>
+      <presentation id="Ordrederecherche">
+        <textBox refId="Ordrederecherche">
+          <label>Ordre de recherche : </label>
+        </textBox>
+        <text>Ordre de recherche des trois types de sources.</text>
+        <text>n = réseau, m = média (CD), u = URL</text>
+        <text>Ne mentionnez pas les lettres du type de source à ne pas parcourir.</text>
+        <text>Quelques exemples valides sont : nmu, n, nu, mn</text>
+      </presentation>
+      <presentation id="Desactiverlannulation">
+        <checkBox refId="Cocherpouractiver">Cocher pour activer </checkBox>
+        <text> </text>
+        <text>Cette stratégie peut être activée pour l'utilisateur ou l'ordinateur</text>
+      </presentation>
+      <presentation id="Desactiverlasourcedemediapourtouteslesinstallations">
+        <checkBox refId="Cocherpouractiver">Cocher pour activer </checkBox>
+        <text>Empêche les utilisateurs d'installer des programmes à partir de médias amovibles.</text>
+      </presentation>
+      
+<!--Internet Explorer-->
+      <presentation id="Activerleproxymanuellementdesactiverloptionautomatique">
+        <textBox refId="Protocolesadressesetports">
+          <label> Protocoles,adresses et ports :</label>
+        </textBox>
+        <text>Pour utiliser les mêmes paramètres pour tous les protocoles,</text>
+        <text>ne specifiez que l'adresse et le port séparés par deux points.</text>
+        <text>Exemple : 10.255.X.(PFS-2):3128</text>
+        <text> </text>
+        <textBox refId="Nepasutiliserleproxypourlesadressescommencantpar">
+          <label>Ne pas utiliser le proxy pour les adresses commençant par :</label>
+        </textBox>
+        <text>Exemple : 10.*;&lt;local&gt; pour ne pas passer par</text>
+        <text>le proxy pour les adresses commençant par 10. et</text>
+        <text>les adresses locales (même masque)</text>
+      </presentation>
+      <presentation id="Activerleproxyautomatiquementdesactiverloptionmanuelle">
+        <textBox refId="Saisissezladressedevotreproxysuivieducheminduscript">
+          <label>Saisissez l'adresse de votre proxy suivie du chemin du script :</label>
+        </textBox>
+        <text>Exemple : http://10.255.X.(PFS-2)/cgi-bin/wpad.pac</text>
+      </presentation>
+      <presentation id="Verifiersilexisteuneversionplusrecentedespagesenregistrees">
+        <dropdownList refId="Typedemiseajour" noSort="true" defaultItem="2">Type de mise à jour : </dropdownList>
+        <text>IE6 : Outils /Options Internet /Onglet Général /Fichiers Internet temporaires /Paramètres</text>
+        <text> </text>
+        <text>IE7 : Outils /Options Internet /Onglet Général /Historique de navigation /Paramètres</text>
+        <text> </text>
+        <text>Si vous utilisez des scripts .pac de découverte automatique du proxy, choisir JAMAIS. </text>
+        <text>Pour BCDI et l'ENT choisir A CHAQUE FOIS. </text>
+      </presentation>
+      <presentation id="ViderledossierTemporaryInternetFilesaladeconnexion">
+        <text>Onglet Avancées (au bas de la page)</text>
+      </presentation>
+      <presentation id="Dossierdenregistrementpardefaut">
+        <textBox refId="Dossierpardefaut">
+          <label>Dossier d'enregistrement par défaut</label>
+          <defaultValue>%HOMESHARE%\Travail\Téléchargements</defaultValue>
+        </textBox>
+      </presentation>
+     
+      <presentation id="Dossierdetelechargementpardefaut">
+        <textBox refId="Dossiertelechargementpardefaut">
+          <label>Dossier de téléchargement par défaut</label>
+          <defaultValue>%HOMESHARE%\Travail\Téléchargements</defaultValue>
+        </textBox>
+      </presentation>
+      
+      <presentation id="Intituledubandeau">
+        <textBox refId="Intitule">
+          <label>Intitule</label>
+        </textBox>
+      </presentation>
+      <presentation id="PagesdaccueiletderecherchepourIE6">
+        <textBox refId="Entrezladressedelapagedaccueil">
+          <label>Entrez l'adresse de la page d'accueil</label>
+        </textBox>
+        <textBox refId="Entrezladressedelapagederecherche">
+          <label>Entrez l'adresse de la page de recherche</label>
+        </textBox>
+      </presentation>
+      <presentation id="Nepasdemanderdeconfirmationpourexecuterdesprogrammesnonsignesnumeriquement">
+        <text>Correspond à l'onglet Avancé / Sécurité</text>
+      </presentation>
+      <presentation id="Desactiverlemenucontextuelclicdroitdanslespagesvisitees" />
+      <presentation id="Desactiverlamemorisationdesmotsdepasse" />
+      <presentation id="MasquerlongletGeneral" />
+      <presentation id="MasquerlongletSecurite" />
+      <presentation id="MasquerlongletConfidentialite" />
+      <presentation id="MasquerlongletContenu" />
+      <presentation id="MasquerlongletConnexions" />
+      <presentation id="MasquerlongletProgrammes" />
+      <presentation id="MasquerlongletAvance" />
+      <presentation id="DesactiverDetectionautoParametresConnexion" />
+      <presentation id="Autresparametres">
+        <text>Pour paramétrer plus finement Internet Explorer,</text>
+        <text>vous pouvez utliser le modèle d'administration inetres.admx</text>
+        <text>Le paramétrage de cette stratégie n'a aucun effet ...</text>
+        <text>Les GPO initiales intègrent des paramétrages pour IE7 et IE8</text>
+        <text>uniquement accessibles si inetres est ajouté.</text>
+      </presentation>
+      
+<!--Applications de courrier-->
+      <presentation id="Chemindesdossiersdecourrier">
+        <textBox refId="Chemindesdossiers">
+          <label>Chemin des dossiers : </label>
+        </textBox>
+      </presentation>
+      <presentation id="DesactiverlaccesauxgroupesdeNewsdansWindowsMail" />
+      <presentation id="DesactiverlaccesaWindowsMail" />
+      
+<!--Modules MAGRET-->
+<!--Fonctionnalités Magret Utilisateurs-->
+      <presentation id="ActiverleclientMagretUtilisateur">
+        <text>Cocher obligatoirement pour activer les fonctionnalités utilisateurs de Magret</text>
+        <textBox refId="Cheminetnomduprogramme">
+          <label>Chemin et nom du programme :</label>
+          <defaultValue>%WINDIR%\Magret\MagretClientUtilisateur.exe</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Tracerlesapplications">
+        <textBox refId="Intervalledutestenmn">
+          <label>Intervalle d'enregistrement en mn : </label>
+          <defaultValue>1</defaultValue>
+        </textBox>
+        <text>La valeur 0 désactive le traçage des applications</text>
+        <text> </text>
+        <textBox refId="Destinatairedesalertesdesapplicationsinterdites">
+          <label>Destinataire des alertes des applications interdites :</label>
+          <defaultValue>ADMINSTA</defaultValue>
+        </textBox>
+        <text>ADMINSTA est le destinataire par défaut.</text>
+        <text>Saisir /SANSALERTE si vous ne voulez pas envoyer d'alerte.</text>
+      </presentation>
+      <presentation id="Tracerlesconnexions">
+        <text>Permet de tracer les connexions et les déconnexions des utilisateurs</text>
+        <text>à quelle heure et sur quelle machine</text>
+      </presentation>
+      <presentation id="Activerlecontroledelatailledelespaceutilisateur">
+        <textBox refId="Taillemaximumautoriseeenkilooctets">
+          <label>Taille maximum autorisée (en kilo octets) :</label>
+          <defaultValue>500000</defaultValue>
+        </textBox>
+        <textBox refId="SaisirMaxtaillefichier">
+          <label>Saisir la taille maximale d'un fichier en ko, ou directement xxx Mo ou yyy Go pour alerte :</label>
+          <defaultValue>1 Go</defaultValue>
+        </textBox>
+        <checkBox refId="Controledelapresencedefichiers">Controle de la présence de fichiers </checkBox>
+        <textBox refId="ListedesextensionsXXXsepareespardeuxpoints">
+          <label>Liste des extensions (*.XXX séparées par deux points) :</label>
+          <defaultValue>*.EXE</defaultValue>
+        </textBox>
+        <textBox refId="SaisirFichiersExclus">
+          <label>Saisir les fichiers exclus de la surveillance séparés par deux points :</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="Destinatairedesalertes">
+          <label>Destinataire des alertes :</label>
+          <defaultValue>ADMINSTA</defaultValue>
+        </textBox>
+        <text>ADMINSTA est le destinataire par défaut.</text>
+        <text>Les alertes peuvent également être envoyées dans la boîte aux lettres </text>
+        <text>d'un professeur en saisissant son nom de connexion.</text>
+        <text>Saisir /SANSALERTE si vous ne voulez pas envoyer d'alerte.</text>
+      </presentation>
+      <presentation id="Messagerieinterne">
+        <textBox refId="Saisirlecheminetlenomduprogrammedemessagerieinterne">
+          <label>Saisir le chemin et le nom du programme de messagerie interne :</label>
+          <defaultValue>J:\Ressource\Messagerie.exe</defaultValue>
+        </textBox>
+        <textBox refId="Testerlapresencedemessagesalouverturedesession">
+          <label>Tester la présence de messages à l'ouverture de session</label>
+          <defaultValue>Oui</defaultValue>
+        </textBox>
+        <text>Remarque :</text>
+        <text>Vous pouvez diffuser un message d'avertissement à tous les utilisateurs</text>
+        <text>en créant dans C:\Magret\Commun\Messagerie un fichier InfoConnex.txt.</text>
+        <text>Ce message est affiché à chaque ouverture de session</text>
+        <text>tant que l'utilisateur ne confirme pas sa lecture.</text>
+        <text> </text>
+        <textBox refId="Saisirlataillemaximaledesfichiersjointsenko">
+          <label>Saisir la taille maximale des fichiers joints (en ko) :</label>
+          <defaultValue>5000</defaultValue>
+        </textBox>
+        <textBox refId="Messagederappel">
+          <label>Message de rappel :</label>
+          <defaultValue>"Pensez à détruire les messages inutiles !"</defaultValue>
+        </textBox>
+        <dropdownList refId="Frequencedurappel" defaultItem="4">Fréquence du rappel :</dropdownList>
+      </presentation>
+      <presentation id="Empecherlesconnexionsmultiples">
+        <text>Permet d'empêcher un utilisateur de se connecter</text>
+        <text>simultanément sur plusieurs stations</text>
+        <dropdownList refId="Modeinterdictionconnexionmultiple" defaultItem="0">Mode d'empêchement :</dropdownList>
+      </presentation>
+      
+      <presentation id="Fermerlasessionencasdinactivite">
+        <textBox refId="Delaidinactiviteavantfermeturesessionenmn">
+          <label>Délai d'inactivité avant fermeture de session(en mn) : </label>
+          <defaultValue>0</defaultValue>
+        </textBox>
+        <text>La valeur 0 désactive le fermeture de session automatique pour inactivité</text>
+        <text>Attention : clients magret utilisateur en version 8.507 mini</text>
+      </presentation>
+      
+      <presentation id="ActiverLogsdimpressions">
+        <textBox refId="MaxPages">
+          <label>Indiquez le nombre maximal de pages imprimées avant alerte : </label>
+          <defaultValue>500</defaultValue>
+        </textBox>
+        <textBox refId="MaxPagesDoc">
+          <label>Indiquez le nombre maximal de pages d'un document imprimé avant alerte : </label>
+          <defaultValue>100</defaultValue>
+        </textBox>
+        <text>La valeur 0 désactive les maxima de pages</text>
+        <textBox refId="ExcludedPrinters">
+          <label>Indiquez les noms exacts des imprimantes à exclure du contrôle (ex photocopieur de la salle des profs), séparées par 2points (:)  </label>
+         </textBox>
+        <text>Voir fenêtre d'aide pour plus de précisions.</text>
+      </presentation>      
+     
+      <presentation id="Controledesapplicationsautorisees" />
+      <presentation id="DesactiverlutilisationdesclesUSB" />
+      <presentation id="Affectationderoutes">
+        <text>Donner les routes sous la forme :</text>
+        <text>&lt;@réseau_zone&gt;,&lt;masque&gt;,&lt;@ip_pfs_lan_péda&gt;</text>
+        <textBox refId="ExempleZMI">
+          <label>ZMI : 192.168.220.0,255.255.255.192,10.255.x.y</label>
+        </textBox>
+        <textBox refId="ExempleDMZ">
+          <label>DMZ : 192.168.222.0,255.255.255.192,10.255.x.y</label>
+        </textBox>
+        <textBox refId="AutreZone">
+          <label>à adapter selon architecture</label>
+        </textBox>
+        <text>Pour supprimer une route, n'indiquer que l'adresse du réseau</text>
+        <text>Exemple : 192.168.220.0</text>
+      </presentation>
+      <presentation id="Detectercleusboubliee" />
+      
+<!--Magic user-->
+      <presentation id="Listedesapplicationsautorisees">
+        <listBox refId="Applicationsaexecuteravecdesdroitsetendus">Applications à exécuter avec des droits étendus :</listBox>
+        <text> </text>
+        <text>Saisissez comme nom de valeur le nom de l'application</text>
+        <text>Saisissez comme valeur le chemin exact avec le nom de l'exécutable</text>
+        <text> </text>
+        <text>Exemple : </text>
+        <text>nom de valeur : Word97</text>
+        <text>valeur : C:\Program files\Microsoft Office\Office\winword.exe</text>
+      </presentation>
+      
+<!--Console Utilisateurs-->
+      <presentation id="MasquerlesiconesdegestiondelIntraWeb" />
+      <presentation id="Masquerlesiconesdegestiondesaccesalinternet" />
+      <presentation id="MasquerlesiconesdegestionEcrannoir" />
+      <presentation id="Masquerlesiconesdegestiondesrestrictionsdapplications" />
+      <presentation id="RajouterdesitemsdansOutils">
+        <listBox refId="Listedesitemssupplementaires">Liste des items supplémentaires :</listBox>
+        <text> </text>
+        <text>Saisissez comme nom de valeur le nom de l'application ou du document</text>
+        <text>Saisissez comme valeur le chemin exact avec le nom de l'exécutable ou du fichier </text>
+        <text> </text>
+        <text>Exemple : </text>
+        <text>nom de valeur : Bloc-notes</text>
+        <text>valeur : C:\Windows\notepad.exe</text>
+      </presentation>
+      <presentation id="Masquerlongletdechangementdemotdepasse">
+        <text>Masque l'onglet de changement de mot de passe</text>
+        <text>dans la partie 'mon compte' de la console utilisateur</text>
+      </presentation>
+      <presentation id="MasquerlesiconesdaccesalIntraWeb" />
+      <presentation id="RajouterdesitemsdansOutils_1">
+        <listBox refId="Listedesitemssupplementaires">Liste des items supplémentaires :</listBox>
+        <text> </text>
+        <text>Saisissez comme nom de valeur le nom de l'application ou du document</text>
+        <text>Saisissez comme valeur le chemin exact avec le nom de l'exécutable ou du fichier </text>
+        <text> </text>
+        <text>Exemple : </text>
+        <text>nom de valeur : Bloc-notes</text>
+        <text>valeur : C:\Windows\notepad.exe</text>
+      </presentation>
+      
+<!--Applications diverses-->
+<!--ENT et Internet Explorer-->
+      <presentation id="ParametragedIEpourlENTParametresduproxyHTTP">
+        <text>1-Coche 'Ignorer la gestion automatique des cookies' dans Confidentialité / Avancé</text>
+        <text>  et coche 'Toujours autoriser les cookies de la session'</text>
+        <text></text>
+        <text>2-Coche 'Utiliser HTTP 1.1' dans Avancés / Parametres HTTP 1.1</text>
+        <text>  et 'Utiliser HTTP 1.1 avec une connexion par proxy' </text>
+        <text></text>
+      </presentation>
+      <presentation id="ParametragedIEpourlENTPersonnalisationduniveau">
+        <text> Coche 'Connexion automatique avec le nom d'utilisateur et le mot de passe'</text>
+        <text> dans Sécurité / Internet / Personnaliser le niveau</text>
+        <text></text>
+      </presentation>
+      <presentation id="AutoriserlecontenuactifasexecuterdanslesfichiersdelazoneOrdinateurlocal">
+        <text>Cette stratégie n'est valable qu'à partir de IE6</text>
+      </presentation>
+     
+<!--Google Earth-->
+      <presentation id="CheminsducacheetdesfichiersKML">
+        <textBox refId="Cheminducache">
+          <label>Chemin du cache</label>
+        </textBox>
+        <textBox refId="ChemindesfichiersKML">
+          <label>Chemin des fichiers KML</label>
+        </textBox>
+        <textBox refId="CheminpardefautdesfichiersKML">
+          <label>Chemin par défaut des fichiers KML</label>
+        </textBox>
+        <text>On peut envisager de rediriger tous les fichiers temporaires</text>
+        <text>dans un dossier unique sur le serveur.</text>
+        <text>Il faudra alors que tous les utilisateurs aient le droit de modification dans ce dossier.</text>
+      </presentation>
+      
+<!--Frontmotion Firefox Community Edition-->
+      <presentation id="Configurationgenerale">
+        <textBox refId="Pagedaccueil">
+          <label>Page d'accueil</label>
+        </textBox>
+      </presentation>
+      <presentation id="UtiliserleparametragedInternetExplorer">
+        <text>Désactiver de préférence pour un meilleur fonctionnement des stratégies suivantes.</text>
+      </presentation>
+      <presentation id="Redimensionnementautomatiquedesimages" />
+      <presentation id="DesactiverTestdeNavigateurpardefaut" />
+      <presentation id="DossierdetelechargementpardefautFF">
+        <dropdownList refId="Choisirlaselectionmanuelledepreference">Choisir la sélection manuelle de préférence</dropdownList>
+        <text>Sélection manuelle, indiquez le chemin de téléchargement par défaut</text>
+        <text>P:\Téléchargements sous MAGRET V7 et V8</text>
+        <textBox refId="PTravailsousMAGRETV6">
+          <label>P:\Travail sous MAGRET V6</label>
+        </textBox>
+      </presentation>
+      <presentation id="Miseajourdunavigateur">
+        <text>Désactiver obligatoirement</text>
+      </presentation>
+      <presentation id="Autresparametres_1">
+        <text>Pour paramétrer plus finement Firefox,</text>
+        <text>vous devez utiliser un fichier mozilla.cfg</text>
+        <text>voir documentation MAGRET-ENT.</text>
+        <text>Le paramétrage de cette stratégie n'a aucun effet ...</text>
+      </presentation>
+      <presentation id="Parametragesduproxy">
+        <text>Configuration du Proxy</text>
+        <dropdownList refId="ChoisirConfigurationmanuelle">Choisir Configuration manuelle</dropdownList>
+        <textBox refId="AutomaticProxyConfigurationURL">
+          <label>Automatic Proxy Configuration URL</label>
+        </textBox>
+        <textBox refId="ManualSetting-HTTPProxy">
+          <label>Manual Setting - HTTP Proxy</label>
+        </textBox>
+        <decimalTextBox refId="HTTPProxyPort" defaultValue="3128">HTTP Proxy Port</decimalTextBox>
+        <textBox refId="ManualSetting-SSLProxy">
+          <label>Manual Setting - SSL Proxy</label>
+        </textBox>
+        <decimalTextBox refId="SSLProxyPort" defaultValue="3128">SSL Proxy Port</decimalTextBox>
+        <textBox refId="ManualSetting-FTPProxy">
+          <label>Manual Setting - FTP Proxy</label>
+        </textBox>
+        <decimalTextBox refId="FTPProxyPort" defaultValue="3128">FTP Proxy Port</decimalTextBox>
+        <textBox refId="ManualSetting-GopherProxy">
+          <label>Manual Setting - Gopher Proxy</label>
+        </textBox>
+        <decimalTextBox refId="GopherProxyPort" defaultValue="3128">Gopher Proxy Port</decimalTextBox>
+        <textBox refId="ManualSetting-SOCKSHost">
+          <label>Manual Setting - SOCKS Host</label>
+        </textBox>
+        <decimalTextBox refId="SOCKSHostPort" defaultValue="3128">SOCKS Host Port</decimalTextBox>
+        <decimalTextBox refId="SOCKSVersion4or5" defaultValue="4">SOCKS Version (4 or 5)</decimalTextBox>
+        <text>Ne pas utiliser de proxy pour les adresses locales</text>
+        <textBox refId="Valeursaseparerparvirguleetespace">
+          <label>Valeurs à séparer par virgule et espace</label>
+        </textBox>
+      </presentation>
+      
+<!--Liste fournisseurs de moteurs de rechercher pour IE7-->
+      <presentation id="ListeFournisseurs">
+        <checkBox refId="ProviderGoogle">Google</checkBox>
+        <checkBox refId="ProviderLycos">Lycos</checkBox>
+        <checkBox refId="ProviderAOL">AOL</checkBox>
+        <checkBox refId="ProviderLiveSearch">Windows Live Search</checkBox>
+        <checkBox refId="ProviderMicrosoft">Microsoft</checkBox>
+        <checkBox refId="ProviderWikipedia">Wikipedia</checkBox>
+        <checkBox refId="ProviderBING">Bing</checkBox>
+        <checkBox refId="ProviderExalead">Exalead</checkBox>
+        <checkBox refId="ProviderEcosia">Ecosia</checkBox>
+        <dropdownList refId="RechercheParDefaut">Fournisseur de recherche par défaut</dropdownList>
+      </presentation>
+      
+<!--Paramétrages pour Audacity-->     
+      <presentation id="CodecMP3">
+        <textBox refId="ChemindelalibrairieLAME_ENC">
+          <label>Chemin de la librairie LAME_ENC : </label>
+          <defaultValue>%Program_32%\Audacity\Plug-Ins\lame_enc.dll</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="LangueInterface">
+        <textBox refId="Langueutiliseeparl_interface">
+          <label>Langue utilisée par l'interface : </label>
+          <defaultValue>fr</defaultValue>
+        </textBox>
+      </presentation>
+      
+      
+</presentationTable>
+</resources>
+</policyDefinitionResources>

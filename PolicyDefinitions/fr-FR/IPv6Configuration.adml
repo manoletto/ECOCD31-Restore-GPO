@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>type the full name here</displayName>
+  <description>type the description here</description>
+  <resources>
+    <stringTable>
+      <string id="EnableIPv6">Activer tous les composants IPv6 (par défaut)</string>
+      <string id="DisableIPv6">Désactiver tous les composants IPv6</string>
+      <string id="Disable6to4">Désactiver 6to4</string>
+      <string id="DisableISATAP">Désactiver ISATAP</string>
+      <string id="DisableTeredo">Désactiver Teredo</string>
+      <string id="DisableTeredo6to4">Désactiver Teredo et 6to4</string>
+      <string id="DisableTunnelIPv6">Désactiver toutes les interfaces tunnel</string>
+      <string id="DisableNativeIPv6">Désactiver toutes les interfaces LAN et PPP</string>
+      <string id="DisableInterfacesIPv6">Désactiver toutes les interfaces LAN, PPP et tunnel</string>
+      <string id="PreferIPv4">Préférer IPv4 à IPv6</string>
+      <string id="ConfigureIPv6_TitleText">IPv6 Configuration</string>
+      <string id="ConfigureIPv6_Explain">Cette Stratégie configure IPv6 sur les interfaces réseau.  Par défaut, Windows Vista, 7, 8, 10, 2008, 2012 et 2016 activent et utilisent IPv6 en protocole par défaut.
+
+En activant cette stratégie, vous pouvez spécifier comment Windows utilise IPv6. Pour complètement désactiver IPv6, sélectionner "Désactiver tous les composants IPv6". Les autres paramètres désactivent IPv6 sur des interfaces spécifiques.
+
+Note : Vous ne pouvez pas désactiver IPv6 sur l'adaptateur loopback.
+
+Si vous désactivez cette stratégie, IPv6 sera complètement activée sur cet ordinateur.
+
+Si vous ne configurez pas cette stratégie, l'ordinateur continuera dans sa configuration actuelle.
+
+Voir http://support.microsoft.com/default.aspx/kb/929852 pour plus d'informations.</string>
+      <string id="ConfigureIPv6">IPv6 Configuration</string>
+      <string id="SUPPORTED_VISTA">Au minimum Windows Vista</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DisabledComponents">
+        <dropdownList refId="ConfigureIPv6" noSort="true">IPv6 Configuration</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
