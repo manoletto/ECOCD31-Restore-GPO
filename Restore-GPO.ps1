@@ -220,7 +220,7 @@ if ( $DoPatchValues ) {
 	Write-Host ">> Personnalisation des valeurs du site ..."
 
 	while ( $DomainEtab -cnotmatch "^COL-\d{7}[A-Z]\d{2}$" ) {
-		$DomainEtab = Read-Host -Prompt "  - Quelle est le domaine (AD sans .local) de l'établissement (ex : COL-0311850T01) "
+		$DomainEtab = Read-Host -Prompt "  - Quelle est le domaine (AD sans .local) de l'établissement (ex : $Domaine) "
 	}
 	while ( $URLEtab -notmatch "^http[s]?://" ) {
 		$URLEtab = Read-Host -Prompt "  - Quelle est l'adresse du site de l'établissement (ex : https:// ...) "
