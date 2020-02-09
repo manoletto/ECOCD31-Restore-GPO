@@ -20,7 +20,8 @@ Par défaut, ces étapes sont, dans l'ordre indiqué ci-dessus, toutes exécuté
 Avec les paramètres, chacune d'elles peut être désactivée.
 
 Pour plus d'informations, exécuter :
-    **Get-Help Restore-GPO.ps1 -full**
+
+	**Get-Help Restore-GPO.ps1 -full**
 
 Le dossier '**Backup**' contient les sauvegardes horodatées, le dossier
 '**Referentiel**' contient les stratégies de référence.
