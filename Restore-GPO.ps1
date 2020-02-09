@@ -122,7 +122,7 @@ $rootPath = (Split-Path $script:MyInvocation.MyCommand.Path)+"\"
 # col-RNE0X.local
 $DomaineDNS = (Get-WmiObject Win32_ComputerSystem).Domain
 # col-RNE0X
-$Domaine = [regex]::match($DomaineDNS,'([^.]+)').Groups[1].Value
+$Domaine = ([regex]::match($DomaineDNS,'([^.]+)').Groups[1].Value).ToUpper()
 
 
 # --------------------------------------------------------------------------------------------
