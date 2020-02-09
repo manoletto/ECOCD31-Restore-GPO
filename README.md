@@ -17,7 +17,11 @@ Si des modifications sont effectuées dans l'établissement, elles peuvent
 le paramètre **-MakeCurrentAsRef**.
 
 Par défaut, ces étapes sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
-Avec les paramètres, chacune d'elles peut être désactivée.
+Avec les paramètres, chacune d'elles peut être désactivée. En utilisant la
+combinaison suivante :
+
+	Restore-GPO.ps1 -DomainEtab COL-031XXXXX01 -URLEtab https://.../ -IPProxy A.B.C.D -DisableMakeCurrentAsRef
+le déploiement peut être automatisé.
 
 Pour plus d'informations, exécuter :
 
@@ -26,3 +30,61 @@ Pour plus d'informations, exécuter :
 Le dossier '**Backup**' contient les sauvegardes horodatées, le dossier
 '**Referentiel**' contient les stratégies de référence.
 Le dossier '**PolicyDefinitions**' contient les modèles de stratégies.
+
+
+**Paramètres**
+------------------------------------------------------------------------------------------------------
+
+**-DomainEtab**<br><br>
+Le domaine du collège sans le .local (COL-RNE0X).
+
+	-DomainEtab COL-031XXXXX01
+
+**-URLEtab**<br><br>
+L'adresse du site web du collège.
+
+	-URLEtab https://.../
+
+**-IPProxy**<br><br>
+L'adresse IPv4 du Proxy Web.
+
+	-IPProxy A.B.C.D
+
+**-BackupOnlyUser**<br><br>
+Switch pour ne sauvegarder que les stratégies utilisateur.<br>
+Inactif si **-DisableBackupCurrentGPO** est utilisé.
+
+**-BackupOnlyMachine**<br><br>
+Switch pour ne sauvegarder que les stratégies machine.<br>
+Inactif si **-DisableBackupCurrentGPO** est utilisé.
+
+**-DisableDeploySchema**<br><br>
+Switch pour désactiver le traitement de la mise-à-jour
+des fichiers modèles de stratégies.
+
+**-DisableBackupCurrentGPO**<br><br>
+Switch pour désactiver la sauvegarde des stratégies du collège.
+
+**-DisableRestoreRefGPO**<br><br>
+Switch pour désactiver la restauration des stratégies de référence.
+
+**-DisablePatchValues**<br><br>
+Switch pour désactiver le questionnaire et la modification
+des valeurs propres au collège.
+
+**-DisableMakeCurrentAsRef**<br><br>
+Switch pour désactiver le traitement qui propose le remplacement
+des stratégies de référence par les stratégies du collège.
+
+**-MakeCurrentAsRef**<br><br>
+Switch qui désactive tous les traitements sauf le remplacement
+des stratégies de référence par les stratégies du collège.<br>
+Equivalent à utiliser tous les paramètres
+de désactivation sauf **-DisableMakeCurrentAsRef**.
+
+
+**Notes**
+------------------------------------------------------------------------------------------------------
+
+Avec l'idée de faciliter le déploiement des stratégies de groupe, tout en apportant
+un mécanisme simple de sauvegarde, ce projet est ouvert et toutes suggestions est la bienvenue.

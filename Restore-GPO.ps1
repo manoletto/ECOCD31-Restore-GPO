@@ -15,7 +15,10 @@ Si des modifications sont effectuées dans l'établissement, elles peuvent
 le paramètre **-MakeCurrentAsRef**.
 
 Par défaut, ces étapes sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
-Avec les paramètres, chacune d'elles peut être désactivée.
+Avec les paramètres, chacune d'elles peut être désactivée. En utilisant la
+combinaison suivante :
+Restore-GPO.ps1 -DomainEtab COL-031XXXXX01 -URLEtab https://.../ -IPProxy A.B.C.D -DisableMakeCurrentAsRef
+le déploiement peut être automatisé.
 
 Pour plus d'informations, exécuter :
 Get-Help Restore-GPO.ps1 -full
@@ -24,38 +27,47 @@ Le dossier 'Backup' contient les sauvegardes horodatées, le dossier
 'Referentiel' contient les stratégies de référence.
 Le dossier 'PolicyDefinitions' contient les modèles de stratégies.
 
+Le déploiment de la configuration des scripts de démarrage - arrêt machine et
+ouverture - fermeture de session utilisateur peut se faire en configurant
+les scripts sur un collège équipé des stratégies de référence, avec les
+outils microsoft. En remplaçant ensuite les stratégies de référence, ces
+dernières ainsi que les fichiers liés peuvent être propagées pour mettre à jour
+la configuration des scripts dans les autres collèges.
+
 
 .PARAMETER DomainEtab
-Le domaine du collège (COL-RNE0X).
+Le domaine du collège sans le .local (COL-RNE0X).
 .PARAMETER URLEtab
-L'adresse du site web CD31 du collège.
+L'adresse du site web du collège.
 .PARAMETER IPProxy
-L'adresse IPv4 du Proxy Web EOLE.
+L'adresse IPv4 du Proxy Web.
 
 .PARAMETER BackupOnlyUser
 Switch pour ne sauvegarder que les stratégies utilisateur.
-Inactif si DisableBackupCurrentGPO est utilisé.
+Inactif si -DisableBackupCurrentGPO est utilisé.
 .PARAMETER BackupOnlyMachine
 Switch pour ne sauvegarder que les stratégies machine.
-Inactif si DisableBackupCurrentGPO est utilisé.
+Inactif si -DisableBackupCurrentGPO est utilisé.
 
 .PARAMETER DisableDeploySchema
-Switch pour désactiver le traitement de la mise-à-jour du schéma.
+Switch pour désactiver le traitement de la mise-à-jour
+des fichiers modèles de stratégies.
 .PARAMETER DisableBackupCurrentGPO
-Switch pour désactiver la sauvegarde des stratégies du site.
+Switch pour désactiver la sauvegarde des stratégies du collège.
 .PARAMETER DisableRestoreRefGPO
 Switch pour désactiver la restauration des stratégies de référence.
 .PARAMETER DisablePatchValues
-Switch pour désactiver le questionnaire et la modification des valeurs.
+Switch pour désactiver le questionnaire et la modification
+des valeurs propres au collège.
 .PARAMETER DisableMakeCurrentAsRef
-Switch pour désactiver le traitement en fin de sequence
-qui propose le remplacement du référentiel par les stratégies
-courantes.
+Switch pour désactiver le traitement qui propose le remplacement
+des stratégies de référence par les stratégies du collège.
 
 .PARAMETER MakeCurrentAsRef
-Switch qui désactive tout les autres traitements et fait des stragégies
-courantes le nouveau référentiel. Equivalent à utiliser tous les paramètres
-de d"sactivation sauf DisableMakeCurrentAsRef.
+Switch qui désactive tous les traitements sauf le remplacement
+des stratégies de référence par les stratégies du collège.
+Equivalent à utiliser tous les paramètres
+de désactivation sauf -DisableMakeCurrentAsRef.
 
 
 .NOTES
@@ -69,16 +81,19 @@ Paramètres :
 Les paramètres communs ne sont pas pris en charge par ce script.
 
 TODO :
-- Patcher "Default Domain Controllers Policy" pour interdire l'ouverture d'unse session locale
-pour Adminsta; G_Modele; G_Profs; G_Eleves; G_Pad.
-- Ajouter la configuration des scripts de démarrage, arrêt machine
-et ouverture et fermeture de session utilisateur.
+- Patcher "Default Domain Controllers Policy" pour interdire l'ouverture
+d'une session locale pour Adminsta; G_Modele; G_Profs; G_Eleves; G_Pad.
+
+
+.LINK
+    https://github.com/manoletto/ECOCD31-Restore-GPO
+
 
 .INPUTS
-Aucun. Ce script ne gère aucun objet reçus en entrée.
+Ce script ne gère aucun objet reçus en entrée.
 
 .OUTPUTS
-Aucun. Ce script ne génère aucun objet en sortie.
+Ce script ne génère aucun objet en sortie.
 #>
 
 
@@ -272,7 +287,6 @@ if ( $DoPatchValues ) {
 	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Policies\Microsoft\Windows\NetworkIsolation" -ValueName "DomainProxies" -Type String -value ($IPProxy + ":3128")
 
 
-
 	# >>> Utilisateurs <<<
 	Write-Host "  - Utilisateurs"
 	Write-Host "    - Stratégies"
@@ -339,9 +353,9 @@ if ( $DoPatchValues ) {
 }
 
 
-# Current as Ref
+# Remplacement des stratégies de référence par les stratégies du collège
 if ( $DoMakeCurrentAsRef ) {
-	Write-Host ">> Positionnement des stratégies courantes en tant que référentiel ..."
+	Write-Host ">> Remplacement des stratégies de référence par les stratégies du collège ..."
 	$rep = Read-Host -Prompt "  - Êtes-vous sûr de vouloir continuer (O/N) "
 	if ( $rep -match "^o$" ) {
 		$TimeStamp = ( Get-Date -format "yyyyMMddHHmmss" )
@@ -349,18 +363,17 @@ if ( $DoMakeCurrentAsRef ) {
 		Write-Host "  - Création des répertoires temporaires ..."
 		$tmp = New-Item -ItemType directory -path "$BackupPath\Utilisateurs" -force
 		$tmp = New-Item -ItemType directory -path "$BackupPath\Matériel" -force
-		Write-Host "  - Sauvegarde des stratégies utilisateurs ..."
+		Write-Host "  - Sauvegarde des stratégies utilisateurs du collège ..."
 		$tmp = Backup-Gpo -Name "Utilisateurs" -Path "$BackupPath\Utilisateurs" -Comment ("Sauvegarde GPO Utilisateur " + $Domaine + " " + $TimeStamp)
-		Write-Host "  - Sauvegarde des stratégies ordinateurs ..."
+		Write-Host "  - Sauvegarde des stratégies ordinateurs du collège ..."
 		$tmp = Backup-Gpo -Name "Matériel" -Path "$BackupPath\Matériel" -Comment ("Sauvegarde GPO Matériel " + $Domaine + " " + $TimeStamp)
-		Write-Host "  - Remplacement du référentiel par les stratégies courantes :"
-		Write-Host "  - Suppression du référentiel utilisateur ..."
+		Write-Host "  - Suppression des stratégies de référence utilisateur ..."
 		$tmp = Remove-Item -path "$rootPath\Referentiel\Utilisateurs" -Recurse -Force
-		Write-Host "  - Suppression du référentiel ordinateur ..."
+		Write-Host "  - Suppression des stratégies de référence ordinateur ..."
 		$tmp = Remove-Item -path "$rootPath\Referentiel\Matériel" -Recurse -Force
-		Write-Host "  - Déplacement des stratégies utilisateurs dans le référentiel ..."
+		Write-Host "  - Déplacement des stratégies utilisateurs du collège dans le référentiel ..."
 		$tmp = Move-Item -Path "$BackupPath\Utilisateurs" -Destination "$rootPath\Referentiel\Utilisateurs"
-		Write-Host "  - Déplacement des stratégies ordinateurs dans le référentiel ..."
+		Write-Host "  - Déplacement des stratégies ordinateurs du collège dans le référentiel ..."
 		$tmp = Move-Item -Path "$BackupPath\Matériel" -Destination "$rootPath\Referentiel\Matériel"
 		Write-Host "  - Suppression des répertoires temporaires ..."
 		$tmp = Remove-Item -path "$BackupPath" -Recurse -Force
