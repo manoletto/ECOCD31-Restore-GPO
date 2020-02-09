@@ -106,4 +106,4 @@ de désactivation **-Disable...** sauf **-DisableMakeCurrentAsRef**.
 ------------------------------------------------------------------------------------------------------
 
 Avec l'idée de faciliter le déploiement des stratégies de groupe, tout en apportant
-un mécanisme simple de sauvegarde, ce projet est ouvert et toutes suggestions est la bienvenue.
+un mécanisme simple de sauvegarde, ce projet est ouvert et toute suggestion est la bienvenue.
