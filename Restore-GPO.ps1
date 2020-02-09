@@ -43,15 +43,14 @@ L'adresse du site web du collège.
 L'adresse IPv4 du Proxy Web.
 
 .PARAMETER BackupOnlyUser
-Switch pour ne sauvegarder que les stratégies utilisateur.
+Switch pour ne sauvegarder que les stratégies utilisateur du collège.
 Inactif si -DisableBackupCurrentGPO est utilisé.
 .PARAMETER BackupOnlyMachine
-Switch pour ne sauvegarder que les stratégies machine.
+Switch pour ne sauvegarder que les stratégies machine du collège.
 Inactif si -DisableBackupCurrentGPO est utilisé.
 
 .PARAMETER DisableDeploySchema
-Switch pour désactiver le traitement de la mise-à-jour
-des fichiers modèles de stratégies.
+Switch pour désactiver la mise-à-jour des fichiers modèles de stratégies.
 .PARAMETER DisableBackupCurrentGPO
 Switch pour désactiver la sauvegarde des stratégies du collège.
 .PARAMETER DisableRestoreRefGPO
@@ -60,14 +59,13 @@ Switch pour désactiver la restauration des stratégies de référence.
 Switch pour désactiver le questionnaire et la modification
 des valeurs propres au collège.
 .PARAMETER DisableMakeCurrentAsRef
-Switch pour désactiver le traitement qui propose le remplacement
-des stratégies de référence par les stratégies du collège.
+Switch pour désactiver le remplacement des stratégies de référence par les stratégies du collège.
 
 .PARAMETER MakeCurrentAsRef
 Switch qui désactive tous les traitements sauf le remplacement
 des stratégies de référence par les stratégies du collège.
 Equivalent à utiliser tous les paramètres
-de désactivation sauf -DisableMakeCurrentAsRef.
+de désactivation -Disable... sauf -DisableMakeCurrentAsRef.
 
 
 .NOTES

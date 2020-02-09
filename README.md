@@ -51,16 +51,15 @@ L'adresse IPv4 du Proxy Web.
 	-IPProxy A.B.C.D
 
 **-BackupOnlyUser**<br><br>
-Switch pour ne sauvegarder que les stratégies utilisateur.<br>
+Switch pour ne sauvegarder que les stratégies utilisateur du collège.<br>
 Inactif si **-DisableBackupCurrentGPO** est utilisé.
 
 **-BackupOnlyMachine**<br><br>
-Switch pour ne sauvegarder que les stratégies machine.<br>
+Switch pour ne sauvegarder que les stratégies machine du collège.<br>
 Inactif si **-DisableBackupCurrentGPO** est utilisé.
 
 **-DisableDeploySchema**<br><br>
-Switch pour désactiver le traitement de la mise-à-jour
-des fichiers modèles de stratégies.
+Switch pour désactiver la mise-à-jour des fichiers modèles de stratégies.
 
 **-DisableBackupCurrentGPO**<br><br>
 Switch pour désactiver la sauvegarde des stratégies du collège.
@@ -69,18 +68,16 @@ Switch pour désactiver la sauvegarde des stratégies du collège.
 Switch pour désactiver la restauration des stratégies de référence.
 
 **-DisablePatchValues**<br><br>
-Switch pour désactiver le questionnaire et la modification
-des valeurs propres au collège.
+Switch pour désactiver le questionnaire et la modification des valeurs propres au collège.
 
 **-DisableMakeCurrentAsRef**<br><br>
-Switch pour désactiver le traitement qui propose le remplacement
-des stratégies de référence par les stratégies du collège.
+Switch pour désactiver le remplacement des stratégies de référence par les stratégies du collège.
 
 **-MakeCurrentAsRef**<br><br>
 Switch qui désactive tous les traitements sauf le remplacement
 des stratégies de référence par les stratégies du collège.<br>
 Equivalent à utiliser tous les paramètres
-de désactivation sauf **-DisableMakeCurrentAsRef**.
+de désactivation **-Disable...** sauf **-DisableMakeCurrentAsRef**.
 
 
 **Notes**
