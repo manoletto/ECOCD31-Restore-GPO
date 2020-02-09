@@ -36,7 +36,7 @@ Le dossier '**PolicyDefinitions**' contient les modèles de stratégies.
 ------------------------------------------------------------------------------------------------------
 
 **-DomainEtab**<br><br>
-Le domaine du collège sans le .local (COL-RNE0X).
+Le domaine du collège sans le .local.
 
 	-DomainEtab COL-031XXXXX01
 
