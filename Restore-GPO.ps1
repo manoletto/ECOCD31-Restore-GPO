@@ -313,28 +313,36 @@ if ( $DoPatchValues ) {
 	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Microsoft\Internet Explorer\Main" -ValueName "Start Page" -Type String -value $URLEtab
 
 	# - Magret, Front Motion Firefox
-	Write-Host "      - Modèles > Magret > 10. Applications diverses > 10.3 FrontMotionFirefox Community Edition V3.05 > 10.3.1 Configuration navigateur"
+	# !! Incompatible avec Firefox ESR 68
+	#Write-Host "      - Modèles > Magret > 10. Applications diverses > 10.3 FrontMotionFirefox Community Edition V3.05 > 10.3.1 Configuration navigateur"
+	#Write-Host "         @ Page d'accueil du collège : $URLEtab"
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "Homepage" -Type String -value $URLEtab
+	#Write-Host "      - Modèles > Magret > 10. Applications diverses > 10.3 FrontMotionFirefox Community Edition V3.05 > 10.3.2 Configuration du proxy"
+	#Write-Host "         @ Configuration manuelle : activée"
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ProxyType" -Type DWord -value 1
+	#Write-Host ("         @ Adresse IP:Port du proxy FTP, Gopher, HTTP, SOCKS, SSL : " + $IPProxy + ":3128")
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualFTP" -Type String -value $IPProxy
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualGopher" -Type String -value $IPProxy
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualHTTP" -Type String -value $IPProxy
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualSOCKS" -Type String -value $IPProxy
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualSSL" -Type String -value $IPProxy
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualFTPPort" -Type DWord -value 3128
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualGopherPort" -Type DWord -value 3128
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualHTTPPort" -Type DWord -value 3128
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualSOCKSPort" -Type DWord -value 3128
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualSSLPort" -Type DWord -value 3128
+	#Write-Host "         @ Exception du proxy : 10.*;<local>;$IPPronote"
+	#$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ProxyExceptions" -Type String -value "10.*;<local>;$IPPronote"
+
+	Write-Host "      - Modèles > Mozilla > Firefox"
 	Write-Host "         @ Page d'accueil du collège : $URLEtab"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "Homepage" -Type String -value $URLEtab
 	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "Locked" -Type DWord -value 1
 	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "StartPage" -Type String -value "homepage"
 	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "URL" -Type String -value $URLEtab
-	Write-Host "      - Modèles > Magret > 10. Applications diverses > 10.3 FrontMotionFirefox Community Edition V3.05 > 10.3.2 Configuration du proxy"
-	Write-Host "         @ Configuration manuelle : activée"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ProxyType" -Type DWord -value 1
-	Write-Host ("         @ Adresse IP:Port du proxy FTP, Gopher, HTTP, SOCKS, SSL : " + $IPProxy + ":3128")
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualFTP" -Type String -value $IPProxy
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualGopher" -Type String -value $IPProxy
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualHTTP" -Type String -value $IPProxy
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualSOCKS" -Type String -value $IPProxy
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualSSL" -Type String -value $IPProxy
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualFTPPort" -Type DWord -value 3128
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualGopherPort" -Type DWord -value 3128
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualHTTPPort" -Type DWord -value 3128
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualSOCKSPort" -Type DWord -value 3128
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ManualSSLPort" -Type DWord -value 3128
-	Write-Host "         @ Exception du proxy : 10.*;<local>;$IPPronote"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox" -ValueName "ProxyExceptions" -Type String -value "10.*;<local>;$IPPronote"
+	Write-Host "         @ Paramètres du proxy"
+	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Mode" -Type String -value "system"
+	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Passthrough" -Type String -value "10.0.0.0/8, $IPPronote"
+
 
 	# - Google Chrome
 	Write-Host "      - Modèles > Google"
