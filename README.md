@@ -31,6 +31,7 @@ Le dossier '**Backup**' contient les sauvegardes horodatées, le dossier
 '**Referentiel**' contient les stratégies de référence.
 Le dossier '**PolicyDefinitions**' contient les modèles de stratégies.
 
+<br>
 
 **Paramètres**
 ------------------------------------------------------------------------------------------------------
@@ -40,38 +41,58 @@ Le domaine du collège sans le .local.
 
 	-DomainEtab COL-031XXXXX01
 
+<br>
+
 **-URLEtab**<br><br>
 L'adresse du site web du collège.
 
 	-URLEtab https://.../
+
+<br>
 
 **-IPProxy**<br><br>
 L'adresse IPv4 du Proxy Web.
 
 	-IPProxy A.B.C.D
 
+<br>
+
 **-BackupOnlyUser**<br><br>
 Switch pour ne sauvegarder que les stratégies utilisateur du collège.<br>
 Inactif si **-DisableBackupCurrentGPO** est utilisé.
+
+<br>
 
 **-BackupOnlyMachine**<br><br>
 Switch pour ne sauvegarder que les stratégies machine du collège.<br>
 Inactif si **-DisableBackupCurrentGPO** est utilisé.
 
+<br>
+
 **-DisableDeploySchema**<br><br>
 Switch pour désactiver la mise-à-jour des fichiers modèles de stratégies.
+
+<br>
 
 **-DisableBackupCurrentGPO**<br><br>
 Switch pour désactiver la sauvegarde des stratégies du collège.
 
+<br>
+
 **-DisableRestoreRefGPO**<br><br>
 Switch pour désactiver la restauration des stratégies de référence.
+
+<br>
 
 **-DisablePatchValues**<br><br>
 Switch pour désactiver le questionnaire et la modification des valeurs propres au collège.
 
+<br>
+
 **-DisableMakeCurrentAsRef**<br><br>
 Switch pour désactiver le remplacement des stratégies de référence par les stratégies du collège.
+
+<br>
 
 **-MakeCurrentAsRef**<br><br>
 Switch qui désactive tous les traitements sauf le remplacement
@@ -79,6 +100,7 @@ des stratégies de référence par les stratégies du collège.<br>
 Equivalent à utiliser tous les paramètres
 de désactivation **-Disable...** sauf **-DisableMakeCurrentAsRef**.
 
+<br>
 
 **Notes**
 ------------------------------------------------------------------------------------------------------
