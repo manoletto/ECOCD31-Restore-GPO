@@ -1,7 +1,7 @@
-<!--MAGRET : Modèle Magret-Ordinateur-1805.admx (DANE - G. Picou, JP. Gau, T. Chassain - mai 2018)-->
+<!--MAGRET : Modèle Magret-Ordinateur-18052.admx (DSI - G. Picou, JP. Gau, T. Chassain - janvier 2020)-->
 <policyDefinitions revision="1.0" schemaVersion="1.0">
   <policyNamespaces>
-    <target prefix="magreto-1805" namespace="Microsoft.Policies.Magreto-1805" />
+    <target prefix="magreto-18052" namespace="Microsoft.Policies.Magreto-18052" />
     <using prefix="windows" namespace="Microsoft.Policies.Windows" />
   </policyNamespaces>
   <resources minRequiredRevision="1.0" />
@@ -253,7 +253,7 @@
       <parentCategory ref="InitialisationSysteme" />
       <supportedOn ref="SUPPORTED_WindowsXP" />
     </policy>
-    <policy name="DemarrageRapide" class="Machine" displayName="$(string.mag_126)" explainText="$(string.DemarrageRapide)" key="System\CurrentControlSet\Control\Session Manager\Power" valueName="HiberbootEnabled">
+    <policy name="DemarrageRapide" class="Machine" displayName="$(string.mag_126)" explainText="$(string.DemarrageRapide)" presentation="$(presentation.DemarrageRapide)" key="System\CurrentControlSet\Control\Session Manager\Power" valueName="HiberbootEnabled">
         <parentCategory ref="InitialisationSysteme" />
         <supportedOn ref="windows:SUPPORTED_Windows8" />
         <enabledValue>
@@ -263,9 +263,19 @@
             <decimal value="0" />
         </disabledValue>
     </policy>
-    <policy name="Hibernation" class="Machine" displayName="$(string.mag_127)" explainText="$(string.Hibernation)" key="System\CurrentControlSet\Control\Power" valueName="HibernateEnabled">
+    <policy name="Hibernation" class="Machine" displayName="$(string.mag_127)" explainText="$(string.Hibernation)" presentation="$(presentation.Hibernation)" key="System\CurrentControlSet\Control\Power" valueName="HibernateEnabled">
         <parentCategory ref="InitialisationSysteme" />
         <supportedOn ref="windows:SUPPORTED_Windows7" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+    </policy>
+    <policy name="DossiersSpeciauxRoamingW10" class="Machine" displayName="$(string.mag_128)" explainText="$(string.RoamingW10)" presentation="$(presentation.DossiersSpeciauxRoamingW10)" key="Software\Microsoft\Windows\CurrentVersion\Explorer" valueName="SpecialRoamingOverrideAllowed">
+        <parentCategory ref="InitialisationSysteme" />
+        <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
         <enabledValue>
             <decimal value="1" />
         </enabledValue>
