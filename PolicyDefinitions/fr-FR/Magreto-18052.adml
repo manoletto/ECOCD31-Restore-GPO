@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--MAGRET : Modèle Magret-Ordinateur-1805.admx (DANE - G. Picou, JP. Gau, T. Chassain - mai 2018)-->
+<!--MAGRET : Modèle Magret-Ordinateur-18052.adml (DSI - G. Picou, JP. Gau, T. Chassain - janvier 2020)-->
 <policyDefinitionResources revision="1.0" schemaVersion="1.0">
   <displayName></displayName>
   <description></description>
   <resources>
     <stringTable>
-      <string id="mag_0">Magret-Ordinateurs 1805</string>
+      <string id="mag_0">Magret-Ordinateurs 18052</string>
       <string id="mag_100">1. Initialisation Système</string>
               <string id="mag_101">Messages d'état de Démarrage / Arrêt détaillés ou normaux</string>
               <string id="mag_102">Désactiver les sons de démarrage sous W7</string>
@@ -34,6 +33,7 @@
               <string id="mag_125">Activer la mise à jour automatique de Java</string>
               <string id="mag_126">Démarrage rapide sous W8.1 et W10</string>
               <string id="mag_127">Hibernation ou mise en veille prolongée</string>
+              <string id="mag_128">Activer les dossiers spéciaux pour les profils itinérants sous W10</string>
                                 
       <string id="mag_200">2. Ouverture de session et Profil itinérant</string>
               <string id="mag_201">Ne pas afficher l'écran de bienvenue à l'ouverture de session</string>
@@ -350,6 +350,8 @@ Ces dysfonctionnements disparaissent lorsqu'il est paramétré avec un démarrag
 Si vous activez ou ne configurez pas ce paramètre, Cortana sera autorisée sur l’appareil. Si vous désactivez ce paramètre, Cortana sera désactivée. 
 Lorsque Cortana est désactivée, les utilisateurs sont toujours en mesure d’utiliser la recherche sur l’appareil.</string>
 
+<string id="RoamingW10">Ce paramètre de stratégie spécifie si les dossiers spéciaux pour les profils itinérants sous W10 sont autorisés.
+L'activation de ce paramètre est sensée améliorer le fonctionnement du menu démarrer sous W10.</string>
 </stringTable>
 
 <presentationTable>
@@ -470,7 +472,9 @@ Lorsque Cortana est désactivée, les utilisateurs sont toujours en mesure d’u
       <presentation id="Hibernation">
       <text>Désactivation conseillée.</text>
       </presentation>
-      
+      <presentation id="DossiersSpeciauxRoamingW10">
+      <text>Activation conseillée.</text>
+      </presentation>
       
 <!--Ouverture de session et Profil itinérant-->
       <presentation id="Ecranbienvenue" />
