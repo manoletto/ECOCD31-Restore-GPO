@@ -2693,6 +2693,13 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
+    <policy name="browser_newtab_url" class="Both" displayName="$(string.browser_newtab_url)" explainText="$(string.Preferences_String_Explain)" key="Software\Policies\Mozilla\Firefox\Preferences" valueName="browser.newtab.url">
+      <parentCategory ref="Preferences"/>
+      <supportedOn ref="SUPPORTED_FF68"/>
+       <elements >
+        <text id="Preferences_String" valueName="browser.newtab.url" required="true" expandable="true"/>
+      </elements>
+    </policy>
     <policy name="browser_places_importBookmarksHTML" class="Both" displayName="$(string.browser_places_importBookmarksHTML)" explainText="$(string.Preferences_Boolean_Explain)" key="Software\Policies\Mozilla\Firefox\Preferences" valueName="browser.places.importBookmarksHTML">
       <parentCategory ref="Preferences"/>
       <supportedOn ref="SUPPORTED_FF70"/>

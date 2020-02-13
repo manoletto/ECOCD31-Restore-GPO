@@ -604,6 +604,7 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       <string id="browser_bookmarks_restore_default_bookmarks">browser.bookmarks.restore_default_bookmarks</string>
       <string id="browser_cache_disk_enable">browser.cache.disk.enable</string>
       <string id="browser_fixup_dns_first_for_single_words">browser.fixup.dns_first_for_single_words</string>
+      <string id="browser_newtab_url">browser.newtab.url</string>
       <string id="browser_places_importBookmarksHTML">browser.places.importBookmarksHTML</string>
       <string id="browser_safebrowsing_phishing_enabled">browser.safebrowsing.phishing.enabled</string>
       <string id="browser_safebrowsing_malware_enabled">browser.safebrowsing.malware.enabled</string>
