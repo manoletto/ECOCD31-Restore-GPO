@@ -2693,10 +2693,10 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="browser_newtab_url" class="Both" displayName="$(string.browser_newtab_url)" explainText="$(string.Preferences_String_Explain)" key="Software\Policies\Mozilla\Firefox\Preferences" valueName="browser.newtab.url">
+    <policy name="browser_newtab_url" class="Both" displayName="$(string.browser_newtab_url)" explainText="$(string.Preferences_String_Explain)" key="Software\Policies\Mozilla\Firefox\Preferences" presentation="$(presentation.Preferences_String)">
       <parentCategory ref="Preferences"/>
       <supportedOn ref="SUPPORTED_FF68"/>
-       <elements >
+       <elements>
         <text id="Preferences_String" valueName="browser.newtab.url" required="true" expandable="true"/>
       </elements>
     </policy>
