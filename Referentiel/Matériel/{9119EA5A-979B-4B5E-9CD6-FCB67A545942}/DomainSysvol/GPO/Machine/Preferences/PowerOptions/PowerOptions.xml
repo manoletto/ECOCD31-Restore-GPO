@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PowerOptions clsid="{7B0F9381-C3B8-4525-8167-87349B671D94}">
+	<GlobalPowerOptionsV2 clsid="{2B130A62-fc14-4572-91C3-5435C6A0C3FC}" name="Gestion de l’alimentation (au minimum Windows 7)" image="2" changed="2019-12-10 14:36:33" uid="{474EFB92-7688-4CEF-A466-B6FA280CB443}" disabled="0" userContext="0" removePolicy="0">
+		<Filters>
+			<FilterCollection hidden="1" bool="AND" not="0">
+				<FilterOs hidden="1" not="1" bool="AND" class="NT" version="XP" type="NE" edition="NE" sp="NE"/>
+				<FilterOs hidden="1" not="1" bool="AND" class="NT" version="2K3" type="NE" edition="NE" sp="NE"/>
+				<FilterOs hidden="1" not="1" bool="AND" class="NT" version="2K3R2" type="NE" edition="NE" sp="NE"/>
+			</FilterCollection>
+		</Filters>
+		<Properties action="U" nameGuid="{381B4222-F694-41F0-9685-FF5BB260DF2E}" default="0" sleepAfterAC="65" sleepAfterDC="65" allowHybridSleepAC="OFF" allowHybridSleepDC="OFF" displayOffAC="65" displayOffDC="65"/>
+	</GlobalPowerOptionsV2>
+</PowerOptions>
