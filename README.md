@@ -23,9 +23,9 @@ combinaison suivante :
 	Restore-GPO.ps1 -DomainEtab COL-031XXXXX01 -URLEtab https://.../ -IPProxy A.B.C.D -DisableMakeCurrentAsRef
 le déploiement peut être automatisé.
 
-Pour plus d'informations, exécuter :
+Pour plus d'informations, dans le dossier **ECOCD31-Restore-GPO** exécuter :
 
-	Get-Help Restore-GPO.ps1 -full
+	Get-Help .\Restore-GPO.ps1 -full
 
 Le dossier '**Backup**' contient les sauvegardes horodatées, le dossier
 '**Referentiel**' contient les stratégies de référence.
