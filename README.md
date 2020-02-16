@@ -20,7 +20,7 @@ Par défaut, ces étapes sont, dans l'ordre indiqué ci-dessus, toutes exécuté
 Avec les paramètres, chacune d'elles peut être désactivée. En utilisant la
 combinaison suivante :
 
-	Restore-GPO.ps1 -DomainEtab COL-031XXXXX01 -URLEtab https://.../ -IPProxy A.B.C.D -DisableMakeCurrentAsRef
+	Restore-GPO.ps1 -URLEtab https://.../ -DisableMakeCurrentAsRef
 le déploiement peut être automatisé.
 
 Pour plus d'informations, dans le dossier **ECOCD31-Restore-GPO** exécuter :
@@ -30,30 +30,17 @@ Pour plus d'informations, dans le dossier **ECOCD31-Restore-GPO** exécuter :
 Le dossier '**Backup**' contient les sauvegardes horodatées, le dossier
 '**Referentiel**' contient les stratégies de référence.
 Le dossier '**PolicyDefinitions**' contient les modèles de stratégies.
+Le dossier '**Logs**' contient les journaux des traitements.
 
 <br>
 
 **Paramètres**
 ------------------------------------------------------------------------------------------------------
 
-**-DomainEtab**<br><br>
-Le domaine du collège sans le .local.
-
-	-DomainEtab COL-031XXXXX01
-
-<br>
-
 **-URLEtab**<br><br>
 L'adresse du site web du collège.
 
 	-URLEtab https://.../
-
-<br>
-
-**-IPProxy**<br><br>
-L'adresse IPv4 du Proxy Web.
-
-	-IPProxy A.B.C.D
 
 <br>
 

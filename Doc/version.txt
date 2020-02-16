@@ -1,0 +1,17 @@
+
+CD31 - Econocom
+
+Outil de déploiement des stratégies de groupe CD31
+------------------------------------------------------------------------------------------------------
+
+Versions :
+
+v1.1 - 16/02/2020 - Emmanuel Fournier
+- Utilisation de la détection automatique du domaine et de l'adresse IP du serveur.
+- Contrôle validité de l'adresse IP et du nom du serveur. Le script doit être exécuté sur le Serveur01 !
+- Ajout du journal horodaté du traitement du script.
+
+v1.0 - 09/02/2020 - Emmanuel Fournier
+Version initiale.
+
+---
