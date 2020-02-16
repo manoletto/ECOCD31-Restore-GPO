@@ -159,8 +159,8 @@ $LogFile = $rootPath + "Logs\" + $CurrentScriptName + "_" + $Domaine + "_" + $Ti
 
 # Affichage intro
 Clear-Host
-Audit "`r`nTraitement des GPOs v$RGPOVersion`r`n"
-Audit "------------------------------------------------------------------------`r`n"
+Audit "Traitement des GPOs v$RGPOVersion"
+Audit "------------------------------------------------------------------------"
 
 
 WOEnv
