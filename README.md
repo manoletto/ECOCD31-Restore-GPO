@@ -37,6 +37,8 @@ Le dossier '**Logs**' contient les journaux des traitements.
 **Paramètres**
 ------------------------------------------------------------------------------------------------------
 
+<br>
+
 **-URLEtab**<br><br>
 L'adresse du site web du collège.
 
