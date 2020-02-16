@@ -92,5 +92,7 @@ de désactivation **-Disable...** sauf **-DisableMakeCurrentAsRef**.
 **Notes**
 ------------------------------------------------------------------------------------------------------
 
+Pour connaître les évolutions, lire le fichier [Doc/version.txt](./Doc/version.txt)
+
 Avec l'idée de faciliter le déploiement des stratégies de groupe, tout en apportant
 un mécanisme simple de sauvegarde, ce projet est ouvert et toute suggestion est la bienvenue.
