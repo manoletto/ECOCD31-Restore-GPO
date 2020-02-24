@@ -249,7 +249,7 @@ if ( $DoPatchValues ) {
 	}
 
 	# Extraction du RNE depuis le domaine
-	$tmp = $DomainEtab -cmatch "^COL-(\d{7}[A-Z])\d{2}$"
+	$tmp = $Domaine -cmatch "^COL-(\d{7}[A-Z])\d{2}$"
 	$RNEEtab = $Matches.1
 	Audit "  - RNE de l'établissement : $RNEEtab"
 
@@ -296,8 +296,8 @@ if ( $DoPatchValues ) {
 	Audit "      - Modèles > Magret > 7. Application MAGRET > 7.1 Paramètres du serveur MAGRET"
 	Audit "         @ IP du serveur MAGRET : $IPServeur"
 	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "IPServeurMagret" -Type String -value $IPServeur
-	Audit "         @ Nom du domaine MAGRET : $DomainEtab"
-	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "DomaineMagret" -Type String -value $DomainEtab
+	Audit "         @ Nom du domaine MAGRET : $Domaine"
+	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "DomaineMagret" -Type String -value $Domaine
 	Audit "         @ Nom du serveur MAGRET : \\SERVEUR01"
 	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "ServeurMagret" -Type String -value "\\SERVEUR01"
 	# - Magret, Proxy
