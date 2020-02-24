@@ -7,7 +7,6 @@ Fouilli de fonctions.
 
 .AUTEUR
 Emmanuel Fournier
-
 mailto:emmanuel.fournier@econocom.com
 
 .PREREQUIS
