@@ -173,7 +173,7 @@ if ( $Hostname -ne "SERVEUR01" ) {
 
 
 # Erreur lecture adresse IP
-if ( $IPServeur -notmatch "^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$" ) {
+if ( $IPserver -notmatch "^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$" ) {
 	Audit "Impossible de lire l'adresse IP de cette machine !" "ERROR" 2
 }
 
@@ -266,8 +266,8 @@ if ( $DoPatchValues ) {
 	}
 
 	# Construction adresse IP Serveur01 depuis l'adresse du proxy
-	Audit "  - Adresse IP Serveur01 : $IPServeur"
-	$octs = $IPServeur -split "\."
+	Audit "  - Adresse IP Serveur01 : $IPserver"
+	$octs = $IPserver -split "\."
 	$prefixIP = $octs[0] + "." + $octs[1] + "." + $octs[2] + "."
 	$IPRouteur = $prefixIP + ([int]$octs[3] + 1)
 	Audit "  - Adresse IP PFS : $IPRouteur"
@@ -294,8 +294,8 @@ if ( $DoPatchValues ) {
 
 	# - Magret, Serveur3
 	Audit "      - Modèles > Magret > 7. Application MAGRET > 7.1 Paramètres du serveur MAGRET"
-	Audit "         @ IP du serveur MAGRET : $IPServeur"
-	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "IPServeurMagret" -Type String -value $IPServeur
+	Audit "         @ IP du serveur MAGRET : $IPserver"
+	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "IPServeurMagret" -Type String -value $IPserver
 	Audit "         @ Nom du domaine MAGRET : $Domaine"
 	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "DomaineMagret" -Type String -value $Domaine
 	Audit "         @ Nom du serveur MAGRET : \\SERVEUR01"
@@ -385,6 +385,6 @@ if ( $DoMakeCurrentAsRef ) {
 	}
 }
 
-
+Write-Output ""
 Audit "Traitement terminé !"
 Audit "------------------------------------------------------------------------`r`n"

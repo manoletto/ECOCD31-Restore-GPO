@@ -383,5 +383,7 @@ $DomaineDNS = (Get-WmiObject Win32_ComputerSystem).Domain
 $Domaine = ([regex]::match($DomaineDNS,'([^.]+)').Groups[1].Value).ToUpper()
 # Hostname without domain
 $Hostname = $env:COMPUTERNAME
-# IP Address computer
-$IPServeur = (Get-WMIObject -class "Win32_NetworkAdapterConfiguration" -computername $Hostname -ErrorAction SilentlyContinue | Where{$_.IpEnabled -Match "True"}).IPAddress
+# IP Addresses of current computer, could be multiples addresses !
+$IPsServer = (Get-WMIObject -class "Win32_NetworkAdapterConfiguration" -computername $Hostname -ErrorAction SilentlyContinue | Where{$_.IpEnabled -Match "True"}).IPAddress
+# IP address of current computer read from DNS (principal address)
+$IPserver = (Resolve-DnsName -Name ($Hostname + "." + $DomaineDNS) -DnsOnly).IPAddress
