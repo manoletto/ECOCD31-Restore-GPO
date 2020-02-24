@@ -382,6 +382,8 @@ if ( $DoMakeCurrentAsRef ) {
 		$tmp = Move-Item -Path "$BackupPath\Matériel" -Destination "$rootPath\Referentiel\Matériel"
 		Audit "  - Suppression des répertoires temporaires ..."
 		$tmp = Remove-Item -path "$BackupPath" -Recurse -Force
+	}else{
+		Audit "  - Opération annulée par l'utilisateur." "LOG"
 	}
 }
 
