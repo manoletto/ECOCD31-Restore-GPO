@@ -101,15 +101,15 @@ Ce script ne génère aucun objet en sortie.
 
 [CmdletBinding()]
 param(
-    [Parameter(Position=1,Mandatory=$False)] [string]$URLEtab,
-    [Parameter(Position=3,Mandatory=$False)] [switch]$BackupOnlyUser,
-    [Parameter(Position=4,Mandatory=$False)] [switch]$BackupOnlyMachine,
-    [Parameter(Position=5,Mandatory=$False)] [switch]$DisableDeploySchema,
-    [Parameter(Position=6,Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
-    [Parameter(Position=7,Mandatory=$False)] [switch]$DisableRestoreRefGPO,
-    [Parameter(Position=8,Mandatory=$False)] [switch]$DisablePatchValues,
+	[Parameter(Position=1,Mandatory=$False)] [string]$URLEtab,
+	[Parameter(Position=3,Mandatory=$False)] [switch]$BackupOnlyUser,
+	[Parameter(Position=4,Mandatory=$False)] [switch]$BackupOnlyMachine,
+	[Parameter(Position=5,Mandatory=$False)] [switch]$DisableDeploySchema,
+	[Parameter(Position=6,Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
+	[Parameter(Position=7,Mandatory=$False)] [switch]$DisableRestoreRefGPO,
+	[Parameter(Position=8,Mandatory=$False)] [switch]$DisablePatchValues,
 	[Parameter(Position=9,Mandatory=$False)] [switch]$DisableMakeCurrentAsRef,
-    [Parameter(Position=10,Mandatory=$False)] [switch]$MakeCurrentAsRef
+	[Parameter(Position=10,Mandatory=$False)] [switch]$MakeCurrentAsRef
 )
 
 
