@@ -386,5 +386,5 @@ if ( $DoMakeCurrentAsRef ) {
 }
 
 
-Audit "`r`nTraitement terminé !`r`n"
+Audit "Traitement terminé !"
 Audit "------------------------------------------------------------------------`r`n"
