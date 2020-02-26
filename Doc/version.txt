@@ -6,6 +6,10 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
+v1.2 - 26/02/2020 - Emmanuel Fournier
+- Mise-à-jour du référentiel avec le patch du registre pour l'application universelle Photo
+dans l'objet Matériel.
+
 v1.1 - 16/02/2020 - Emmanuel Fournier
 - Utilisation de la détection automatique du domaine et de l'adresse IP du serveur.
 - Contrôle validité de l'adresse IP et du nom du serveur. Le script doit être exécuté sur le Serveur01 !
