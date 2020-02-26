@@ -1,0 +1,5 @@
+/Backups
+/.*
+!/.gitignore
+/Logs/*
+!/Logs/.*
