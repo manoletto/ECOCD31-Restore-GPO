@@ -14,7 +14,7 @@ SET NotepadPPInstall=npp.7.8.4.Installer.x64.exe
 SET GitInstall=Git-2.25.0-64-bit.exe
 
 REM Chemin du depot
-SET DepotPath=D:\Sources SRV01
+SET DepotPath="D:\Sources SRV01"
 
 REM Installation Notepad++
 IF EXIST Tools\%NotepadPPInstall% (
@@ -38,7 +38,7 @@ IF EXIST Tools\%GitInstall% (
 		ECHO Desinstallation Git ...
 		START "Desinstallation Git ..." /WAIT "%programfiles%\Git\unins000.exe" /VERYSILENT /NORESTART
 	)
-	ECHO Installation Git ...
+	ECHO Installation Git, veuillez patienter ...
 	START "Installation Git, veuillez patienter ..." /WAIT Tools\%GitInstall% /VERYSILENT /NORESTART /LOADINF="Tools\git.cfg"
 ) ELSE (
 	ECHO Le programme Tools\%GitInstall% est introuvable !
