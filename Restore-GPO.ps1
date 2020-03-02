@@ -68,7 +68,8 @@ de désactivation -Disable... sauf -DisableMakeCurrentAsRef.
 .NOTES
 
 Version :
-v1.2 - 26/02/2020 - Emmanuel Fournier
+Voir le fichier Doc/version.txt
+Emmanuel Fournier
 mailto:emmanuel.fournier@econocom.com
 
 Paramètres :
@@ -114,7 +115,7 @@ param(
 
 
 # Version
-$RGPOVersion = "1.2"
+$RGPOVersion = "1.3"
 
 
 $ErrorActionPreference = 'Continue'
