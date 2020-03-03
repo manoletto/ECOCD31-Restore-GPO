@@ -6,9 +6,10 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
-v1.3 - 02/03/2020 - Emmanuel Fournier
+v1.3 - 03/03/2020 - Emmanuel Fournier
 - Ajout du kit d'installation,
 - Activation du paramètre de conservation des profils mise en cache sur les postes clients.
+- Désactivation des mises-à-jour d'Adobe Reader (service désactivé et menu UI désactivé).
 
 v1.2 - 26/02/2020 - Emmanuel Fournier
 - Mise-à-jour du référentiel avec le patch du registre pour l'application universelle Photo
