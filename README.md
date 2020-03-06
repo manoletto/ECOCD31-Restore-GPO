@@ -46,6 +46,12 @@ L'adresse du site web du collège.
 
 <br>
 
+**-VersionRef**<br><br>
+Switch pour utiliser un autre référentiel que le dernier.<br>
+Inactif si **-DisableRestoreRefGPO** est utilisé.
+
+<br>
+
 **-BackupOnlyUser**<br><br>
 Switch pour ne sauvegarder que les stratégies utilisateur du collège.<br>
 Inactif si **-DisableBackupCurrentGPO** est utilisé.

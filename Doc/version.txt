@@ -6,6 +6,9 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
+v1.4 - 06/03/2020 - Emmanuel Fournier
+- Ajout de la prise en compte de versions différentes du référentiel de stratégie de groupe.
+
 v1.3 - 03/03/2020 - Emmanuel Fournier
 - Ajout du kit d'installation,
 - Activation du paramètre de conservation des profils mise en cache sur les postes clients.

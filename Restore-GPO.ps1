@@ -39,6 +39,9 @@ la configuration des scripts dans les autres collèges.
 .PARAMETER URLEtab
 L'adresse du site web du collège.
 
+.PARAMETER VersionRef
+Switch pour utiliser un autre référentiel que le dernier.
+
 .PARAMETER BackupOnlyUser
 Switch pour ne sauvegarder que les stratégies utilisateur du collège.
 Inactif si -DisableBackupCurrentGPO est utilisé.
@@ -101,21 +104,22 @@ Ce script ne génère aucun objet en sortie.
 
 [CmdletBinding()]
 param(
-	[Parameter(Position=1,Mandatory=$False)] [string]$URLEtab,
-	[Parameter(Position=3,Mandatory=$False)] [switch]$BackupOnlyUser,
-	[Parameter(Position=4,Mandatory=$False)] [switch]$BackupOnlyMachine,
-	[Parameter(Position=5,Mandatory=$False)] [switch]$DisableDeploySchema,
-	[Parameter(Position=6,Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
-	[Parameter(Position=7,Mandatory=$False)] [switch]$DisableRestoreRefGPO,
-	[Parameter(Position=8,Mandatory=$False)] [switch]$DisablePatchValues,
-	[Parameter(Position=9,Mandatory=$False)] [switch]$DisableMakeCurrentAsRef,
-	[Parameter(Position=10,Mandatory=$False)] [switch]$MakeCurrentAsRef
+	[Parameter(Mandatory=$False)] [string]$URLEtab,
+	[Parameter(Mandatory=$False)] [string]$VersionRef,
+	[Parameter(Mandatory=$False)] [switch]$BackupOnlyUser,
+	[Parameter(Mandatory=$False)] [switch]$BackupOnlyMachine,
+	[Parameter(Mandatory=$False)] [switch]$DisableDeploySchema,
+	[Parameter(Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
+	[Parameter(Mandatory=$False)] [switch]$DisableRestoreRefGPO,
+	[Parameter(Mandatory=$False)] [switch]$DisablePatchValues,
+	[Parameter(Mandatory=$False)] [switch]$DisableMakeCurrentAsRef,
+	[Parameter(Mandatory=$False)] [switch]$MakeCurrentAsRef
 )
 
 
 
 # Version
-$RGPOVersion = "1.3"
+$RGPOVersion = "1.4"
 
 
 $ErrorActionPreference = 'Continue'
@@ -231,11 +235,13 @@ if ( $DoBackupCurrentGPO ) {
 
 # Importation des nouveaux paramètres dans les GPO (les anciens contenus seront écrasés !)
 if ( $DoRestoreRefGPO ) {
+
+
 	Audit ">> Activation des stratégies de référence ..."
 	Audit "  - Importation des stratégies utilisateurs ..."
-	$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\Utilisateurs" -CreateIfNeeded
+	$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\Last\Utilisateurs" -CreateIfNeeded
 	Audit "  - Importation des stratégies ordinateurs ..."
-	$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\Matériel" -CreateIfNeeded
+	$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\Last\Matériel" -CreateIfNeeded
 }
 
 
@@ -373,13 +379,13 @@ if ( $DoMakeCurrentAsRef ) {
 		Audit "  - Sauvegarde des stratégies ordinateurs du collège ..."
 		$tmp = Backup-Gpo -Name "Matériel" -Path "$BackupPath\Matériel" -Comment ("Sauvegarde GPO Matériel " + $Domaine + " " + $TimeStamp)
 		Audit "  - Suppression des stratégies de référence utilisateur ..."
-		$tmp = Remove-Item -path "$rootPath\Referentiel\Utilisateurs" -Recurse -Force
+		$tmp = Remove-Item -path "$rootPath\Referentiel\Last\Utilisateurs" -Recurse -Force
 		Audit "  - Suppression des stratégies de référence ordinateur ..."
-		$tmp = Remove-Item -path "$rootPath\Referentiel\Matériel" -Recurse -Force
+		$tmp = Remove-Item -path "$rootPath\Referentiel\Last\Matériel" -Recurse -Force
 		Audit "  - Déplacement des stratégies utilisateurs du collège dans le référentiel ..."
-		$tmp = Move-Item -Path "$BackupPath\Utilisateurs" -Destination "$rootPath\Referentiel\Utilisateurs"
+		$tmp = Move-Item -Path "$BackupPath\Utilisateurs" -Destination "$rootPath\Referentiel\Last\Utilisateurs"
 		Audit "  - Déplacement des stratégies ordinateurs du collège dans le référentiel ..."
-		$tmp = Move-Item -Path "$BackupPath\Matériel" -Destination "$rootPath\Referentiel\Matériel"
+		$tmp = Move-Item -Path "$BackupPath\Matériel" -Destination "$rootPath\Referentiel\Last\Matériel"
 		Audit "  - Suppression des répertoires temporaires ..."
 		$tmp = Remove-Item -path "$BackupPath" -Recurse -Force
 	}else{
