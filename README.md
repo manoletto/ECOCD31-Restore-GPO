@@ -16,11 +16,12 @@ Si des modifications sont effectuées dans l'établissement, elles peuvent
 être sauvegardées et/ou devenir les stratégies de référence en utilisant
 le paramètre **-MakeCurrentAsRef**.
 
-Par défaut, ces étapes sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
-Avec les paramètres, chacune d'elles peut être désactivée. En utilisant la
-combinaison suivante :
+Par défaut, ces étapes, sauf le remplacement des stratégies de référence,
+sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
+Avec les paramètres de commande, chacune d'elles peut être activé ou
+désactivée. En utilisant la combinaison suivante :
 
-	Restore-GPO.ps1 -URLEtab https://.../ -DisableMakeCurrentAsRef
+	Restore-GPO.ps1 -URLEtab https://.../
 le déploiement peut être automatisé.
 
 Pour plus d'informations, dans le dossier **ECOCD31-Restore-GPO** exécuter :
@@ -80,20 +81,14 @@ Switch pour désactiver la restauration des stratégies de référence.
 <br>
 
 **-DisablePatchValues**<br><br>
-Switch pour désactiver le questionnaire et la modification des valeurs propres au collège.
-
-<br>
-
-**-DisableMakeCurrentAsRef**<br><br>
-Switch pour désactiver le remplacement des stratégies de référence par les stratégies du collège.
+Switch pour désactiver le questionnaire et la modification
+des valeurs propres au collège.
 
 <br>
 
 **-MakeCurrentAsRef**<br><br>
-Switch qui désactive tous les traitements sauf le remplacement
-des stratégies de référence par les stratégies du collège.<br>
-Equivalent à utiliser tous les paramètres
-de désactivation **-Disable...** sauf **-DisableMakeCurrentAsRef**.
+Switch qui désactive tous les traitements et effectue le remplacement
+des stratégies de référence par les stratégies du collège.
 
 <br>
 

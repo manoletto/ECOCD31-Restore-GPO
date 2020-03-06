@@ -14,10 +14,11 @@ Si des modifications sont effectuées dans l'établissement, elles peuvent
 être sauvegardées et/ou devenir les stratégies de référence en utilisant
 le paramètre **-MakeCurrentAsRef**.
 
-Par défaut, ces étapes sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
-Avec les paramètres, chacune d'elles peut être désactivée. En utilisant la
-combinaison suivante :
-Restore-GPO.ps1 -URLEtab https://.../ -DisableMakeCurrentAsRef
+Par défaut, ces étapes, sauf le remplacement des stratégies de référence,
+sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
+Avec les paramètres de commande, chacune d'elles peut être activée ou
+désactivée. En utilisant la combinaison suivante :
+Restore-GPO.ps1 -URLEtab https://.../
 le déploiement peut être automatisé.
 
 Pour plus d'informations, dans le dossier ECOCD31-Restore-GPO exécuter :
@@ -56,16 +57,11 @@ Switch pour désactiver la sauvegarde des stratégies du collège.
 .PARAMETER DisableRestoreRefGPO
 Switch pour désactiver la restauration des stratégies de référence.
 .PARAMETER DisablePatchValues
-Switch pour désactiver le questionnaire et la modification
-des valeurs propres au collège.
-.PARAMETER DisableMakeCurrentAsRef
-Switch pour désactiver le remplacement des stratégies de référence par les stratégies du collège.
+Switch pour désactiver le questionnaire et la modification des valeurs propres au collège.
 
 .PARAMETER MakeCurrentAsRef
-Switch qui désactive tous les traitements sauf le remplacement
+Switch qui désactive tous les traitements et effectue le remplacement
 des stratégies de référence par les stratégies du collège.
-Equivalent à utiliser tous les paramètres
-de désactivation -Disable... sauf -DisableMakeCurrentAsRef.
 
 
 .NOTES
@@ -112,7 +108,6 @@ param(
 	[Parameter(Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
 	[Parameter(Mandatory=$False)] [switch]$DisableRestoreRefGPO,
 	[Parameter(Mandatory=$False)] [switch]$DisablePatchValues,
-	[Parameter(Mandatory=$False)] [switch]$DisableMakeCurrentAsRef,
 	[Parameter(Mandatory=$False)] [switch]$MakeCurrentAsRef
 )
 
