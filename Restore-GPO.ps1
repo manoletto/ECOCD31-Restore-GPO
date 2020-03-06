@@ -235,7 +235,7 @@ if ( $DoBackupCurrentGPO ) {
 
 # Importation des nouveaux paramètres dans les GPO (les anciens contenus seront écrasés !)
 if ( $DoRestoreRefGPO ) {
-
+	
 
 	Audit ">> Activation des stratégies de référence ..."
 	Audit "  - Importation des stratégies utilisateurs ..."
