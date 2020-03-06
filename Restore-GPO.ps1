@@ -235,13 +235,22 @@ if ( $DoBackupCurrentGPO ) {
 
 # Importation des nouveaux paramètres dans les GPO (les anciens contenus seront écrasés !)
 if ( $DoRestoreRefGPO ) {
-	
-
 	Audit ">> Activation des stratégies de référence ..."
-	Audit "  - Importation des stratégies utilisateurs ..."
-	$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\Last\Utilisateurs" -CreateIfNeeded
-	Audit "  - Importation des stratégies ordinateurs ..."
-	$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\Last\Matériel" -CreateIfNeeded
+	if ( $VersionRef -ne "" ) {
+		if ( ( Test-Path "$rootPath\Referentiel\$VersionRef\Utilisateurs" ) -ne $true ) {
+			Audit "La version $VersionRef est introuvable !"
+		}else{
+			Audit "  - Importation des stratégies utilisateurs ..."
+			$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\$VersionRef\Utilisateurs" -CreateIfNeeded
+			Audit "  - Importation des stratégies ordinateurs ..."
+			$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\$VersionRef\Matériel" -CreateIfNeeded
+		}
+	}else{
+		Audit "  - Importation des stratégies utilisateurs ..."
+		$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\Last\Utilisateurs" -CreateIfNeeded
+		Audit "  - Importation des stratégies ordinateurs ..."
+		$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\Last\Matériel" -CreateIfNeeded
+	}
 }
 
 
