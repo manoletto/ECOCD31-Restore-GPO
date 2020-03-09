@@ -119,7 +119,7 @@ param(
 	[Parameter(Position=7,Mandatory=$False)] [switch]$DisableRestoreRefGPO,
 	[Parameter(Position=8,Mandatory=$False)] [switch]$DisablePatchValues,
 	[Parameter(Position=9,Mandatory=$False)] [switch]$MakeCurrentAsRef,
-	[Parameter(Position=10,Mandatory=$False)] [string]$MakeCurrentAsRefVersion,
+	[Parameter(Position=10,Mandatory=$False)] [string]$MakeCurrentAsRefVersion
 )
 
 
