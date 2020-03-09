@@ -108,7 +108,6 @@ Ce script ne génère aucun objet en sortie.
 # Init
 # --------------------------------------------------------------------------------------------
 
-[CmdletBinding()]
 param(
 	[Parameter(Position=1,Mandatory=$False)] [string]$URLEtab,
 	[Parameter(Position=2,Mandatory=$False)] [string]$RestoreRefGPOVersion,
