@@ -192,7 +192,7 @@ $DoDeploySchema = $ForceDisableDeploySchema -eq $False -and $DisableDeploySchema
 $DoBackupCurrentGPO = $ForceDisableBackupCurrentGPO -eq $False -and $DisableBackupCurrentGPO -eq $False -and $MakeCurrentAsRef -eq $False
 $DoRestoreRefGPO = $ForceDisableRestoreRefGPO -eq $False -and $DisableRestoreRefGPO -eq $False -and $MakeCurrentAsRef -eq $False
 $DoPatchValues = $ForceDisablePatchValues -eq $False -and $DisablePatchValues -eq $False -and $MakeCurrentAsRef -eq $False
-$DoMakeCurrentAsRef = $ForceDisableMakeCurrentAsRef -eq $False -and $DisableMakeCurrentAsRef -eq $False
+$DoMakeCurrentAsRef = $ForceDisableMakeCurrentAsRef -eq $False -and $MakeCurrentAsRef -eq $True
 # Aucun traitement actif : fin du script !
 if ( $DoDeploySchema -eq $False -and $DoBackupCurrentGPO -eq $False -and $DoRestoreRefGPO -eq $False -and $DoPatchValues -eq $False -and $DoMakeCurrentAsRef -eq $False ) {
 	Audit "Aucun traitement n'est activé ... !?" "WARNING" 3
