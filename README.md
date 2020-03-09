@@ -57,8 +57,10 @@ L'adresse du site web du collège.
 
 **-RestoreRefGPOVersion**<br><br>
 Lors de l'activation des stratégies de référence, ce paramètre permet d'indiquer la version à utiliser.<br>
-Par défaut, la dernière version est utilisée.
+Par défaut, la dernière version est utilisée.<br>
 Inactif si **-DisableRestoreRefGPO** est utilisé.
+
+	-RestoreRefGPOVersion v1
 
 <br>
 
@@ -103,8 +105,10 @@ des stratégies de référence par les stratégies du collège.
 
 **-MakeCurrentAsRefVersion**<br><br>
 Lors du remplacement des stratégies de référence par celles du collège, ce paramètre permet d'indiquer la version à remplacer.<br>
-Par défaut, la dernière version est remplacée.
+Par défaut, la dernière version est remplacée.<br>
 Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
+
+	-MakeCurrentAsRefVersion v4
 
 <br>
 
