@@ -18,8 +18,9 @@ la "dernière" version est utilisée par défaut. Sauf à utiliser respectivemen
 Chaque version est stockée dans un sous-dossier du dossier 'Referentiel'.
 Les noms de version 'v1' et 'Last' sont réservés.
 
-Si des modifications sont effectuées dans l'établissement, elles peuvent
-devenir les stratégies de référence en utilisant le paramètre -MakeCurrentAsRef.
+Si des modifications sont effectuées sur les stratégies 'Matériel' et 'Utilisateurs' dans
+l'établissement, elles peuvent devenir les stratégies de référence en utilisant
+le paramètre -MakeCurrentAsRef.
 
 Par défaut, ces étapes, sauf le remplacement des stratégies de référence,
 sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
