@@ -110,16 +110,16 @@ Ce script ne génère aucun objet en sortie.
 
 [CmdletBinding()]
 param(
-	[Parameter(Mandatory=$False)] [string]$URLEtab,
-	[Parameter(Mandatory=$False)] [string]$RestoreRefGPOVersion,
-	[Parameter(Mandatory=$False)] [switch]$BackupOnlyUser,
-	[Parameter(Mandatory=$False)] [switch]$BackupOnlyMachine,
-	[Parameter(Mandatory=$False)] [switch]$DisableDeploySchema,
-	[Parameter(Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
-	[Parameter(Mandatory=$False)] [switch]$DisableRestoreRefGPO,
-	[Parameter(Mandatory=$False)] [switch]$DisablePatchValues,
-	[Parameter(Mandatory=$False)] [switch]$MakeCurrentAsRef,
-	[Parameter(Mandatory=$False)] [string]$MakeCurrentAsRefVersion,
+	[Parameter(Position=1,Mandatory=$False)] [string]$URLEtab,
+	[Parameter(Position=2,Mandatory=$False)] [string]$RestoreRefGPOVersion,
+	[Parameter(Position=3,Mandatory=$False)] [switch]$BackupOnlyUser,
+	[Parameter(Position=4,Mandatory=$False)] [switch]$BackupOnlyMachine,
+	[Parameter(Position=5,Mandatory=$False)] [switch]$DisableDeploySchema,
+	[Parameter(Position=6,Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
+	[Parameter(Position=7,Mandatory=$False)] [switch]$DisableRestoreRefGPO,
+	[Parameter(Position=8,Mandatory=$False)] [switch]$DisablePatchValues,
+	[Parameter(Position=9,Mandatory=$False)] [switch]$MakeCurrentAsRef,
+	[Parameter(Position=10,Mandatory=$False)] [string]$MakeCurrentAsRefVersion,
 )
 
 
