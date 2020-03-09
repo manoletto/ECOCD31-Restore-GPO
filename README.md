@@ -3,14 +3,22 @@
 **ECOCD31-Restore-GPO**
 ------------------------------------------------------------------------------------------------------
 
-*Outil de déploiement des stratégies de groupe CD31.*
+*Outil de déploiement des stratégies de groupe 'Matériel' et 'Utilisateurs' CD31.*
 
 Accompagné des fichiers modèles de stratégies et des stratégies de groupe
-de référence, le script **Restore-GPO.ps1** met-à-jour les modèles de stratégies,
-sauvegarde les stratégies du collège et les remplace par les stratégies
-de référence. Il permet aussi de modifier les valeurs propres au collège.
-Enfin, il permet de remplacer les stratégies de référence par les stratégies
-du collège, permettant ainsi de les restaurer rapidement.
+de référence 'Matériel' et 'Utilisateurs', le script **Restore-GPO.ps1**
+met-à-jour les modèles de stratégies, sauvegarde les stratégies 'Matériel' et
+'Utilisateurs' du collège et les remplace par les stratégies de référence. Il permet
+aussi de modifier les valeurs propres au collège.
+Enfin, il permet de remplacer les stratégies de référence 'Matériel' et 'Utilisateurs'
+par les stratégies 'Matériel' et 'Utilisateurs' du collège, permettant ainsi de les restaurer rapidement.
+
+Différentes versions des stratégies de référence peuvent être utilisées. Lors de l'activation
+des stratégies de référence et du remplacement des stratégies de référence par celles du collège,
+la "dernière" version est utilisée par défaut. Sauf à utiliser respectivement les paramètres
+**-RestoreRefGPOVersion** et **-MakeCurrentAsRefVersion**.
+Chaque version est stockée dans un sous-dossier du dossier '**Referentiel**'.
+Les noms de version '**v1**' et '**Last**' sont réservés.
 
 Si des modifications sont effectuées dans l'établissement, elles peuvent
 être sauvegardées et/ou devenir les stratégies de référence en utilisant
@@ -18,8 +26,9 @@ le paramètre **-MakeCurrentAsRef**.
 
 Par défaut, ces étapes, sauf le remplacement des stratégies de référence,
 sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
-Avec les paramètres de commande, chacune d'elles peut être activé ou
-désactivée. En utilisant la combinaison suivante :
+Avec les paramètres de commande, chacune d'elles peut être désactivée.
+
+En utilisant la combinaison suivante :
 
 	Restore-GPO.ps1 -URLEtab https://.../
 le déploiement peut être automatisé.
@@ -47,8 +56,9 @@ L'adresse du site web du collège.
 
 <br>
 
-**-VersionRef**<br><br>
-Switch pour utiliser un autre référentiel que le dernier.<br>
+**-RestoreRefGPOVersion**<br><br>
+Lors de l'activation des stratégies de référence, ce paramètre permet d'indiquer la version à utiliser.<br>
+Par défaut, la dernière version est utilisée.
 Inactif si **-DisableRestoreRefGPO** est utilisé.
 
 <br>
@@ -76,7 +86,7 @@ Switch pour désactiver la sauvegarde des stratégies du collège.
 <br>
 
 **-DisableRestoreRefGPO**<br><br>
-Switch pour désactiver la restauration des stratégies de référence.
+Switch pour désactiver l'activation des stratégies de référence.
 
 <br>
 
@@ -89,6 +99,13 @@ des valeurs propres au collège.
 **-MakeCurrentAsRef**<br><br>
 Switch qui désactive tous les traitements et effectue le remplacement
 des stratégies de référence par les stratégies du collège.
+
+<br>
+
+**-MakeCurrentAsRefVersion**<br><br>
+Lors du remplacement des stratégies de référence par celles du collège, ce paramètre permet d'indiquer la version à remplacer.<br>
+Par défaut, la dernière version est remplacée.
+Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
 
 <br>
 

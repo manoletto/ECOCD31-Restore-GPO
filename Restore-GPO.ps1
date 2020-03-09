@@ -1,47 +1,51 @@
 ﻿<#
 .SYNOPSIS
-Outil de déploiement des stratégies de groupe CD31
+Outil de déploiement des stratégies de groupe 'Matériel' et 'Utilisateurs' CD31
 
 .DESCRIPTION
 Accompagné des fichiers modèles de stratégies et des stratégies de groupe
-de référence, le script Restore-GPO.ps1 met-à-jour les modèles de stratégies,
-sauvegarde les stratégies du collège et les remplace par les stratégies
-de référence. Il permet aussi de modifier les valeurs propres au collège.
-Enfin, il permet de remplacer les stratégies de référence par les stratégies
-du collège, permettant ainsi de les restaurer rapidement.
+de référence 'Matériel' et 'Utilisateurs', le script Restore-GPO.ps1
+met-à-jour les modèles de stratégies, sauvegarde les stratégies 'Matériel' et
+'Utilisateurs' du collège et les remplace par les stratégies de référence. Il permet
+aussi de modifier les valeurs propres au collège.
+Enfin, il permet de remplacer les stratégies de référence 'Matériel' et 'Utilisateurs'
+par les stratégies 'Matériel' et 'Utilisateurs' du collège, permettant ainsi de les restaurer rapidement.
+
+Différentes versions des stratégies de référence peuvent être utilisées. Lors de l'activation
+des stratégies de référence et du remplacement des stratégies de référence par celles du collège,
+la "dernière" version est utilisée par défaut. Sauf à utiliser respectivement les paramètres
+-RestoreRefGPOVersion et -MakeCurrentAsRefVersion.
+Chaque version est stockée dans un sous-dossier du dossier 'Referentiel'.
+Les noms de version 'v1' et 'Last' sont réservés.
 
 Si des modifications sont effectuées dans l'établissement, elles peuvent
 être sauvegardées et/ou devenir les stratégies de référence en utilisant
-le paramètre **-MakeCurrentAsRef**.
+le paramètre -MakeCurrentAsRef.
 
 Par défaut, ces étapes, sauf le remplacement des stratégies de référence,
 sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
-Avec les paramètres de commande, chacune d'elles peut être activée ou
-désactivée. En utilisant la combinaison suivante :
-Restore-GPO.ps1 -URLEtab https://.../
+Avec les paramètres de commande, chacune d'elles peut être désactivée.
+
+En utilisant la combinaison suivante :
+	Restore-GPO.ps1 -URLEtab https://.../
 le déploiement peut être automatisé.
 
 Pour plus d'informations, dans le dossier ECOCD31-Restore-GPO exécuter :
-Get-Help .\Restore-GPO.ps1 -full
+	Get-Help .\Restore-GPO.ps1 -full
 
 Le dossier 'Backup' contient les sauvegardes horodatées, le dossier
 'Referentiel' contient les stratégies de référence.
 Le dossier 'PolicyDefinitions' contient les modèles de stratégies.
 Le dossier 'Logs' contient les journaux des traitements.
 
-Le déploiment de la configuration des scripts de démarrage - arrêt machine et
-ouverture - fermeture de session utilisateur peut se faire en configurant
-les scripts sur un collège équipé des stratégies de référence, avec les
-outils microsoft. En remplaçant ensuite les stratégies de référence, ces
-dernières ainsi que les fichiers liés peuvent être propagées pour mettre à jour
-la configuration des scripts dans les autres collèges.
-
 
 .PARAMETER URLEtab
 L'adresse du site web du collège.
 
-.PARAMETER VersionRef
-Switch pour utiliser un autre référentiel que le dernier.
+.PARAMETER RestoreRefGPOVersion
+Lors de l'activation des stratégies de référence, ce paramètre permet d'indiquer la version à utiliser.
+Par défaut, la dernière version est utilisée.
+Inactif si -DisableRestoreRefGPO est utilisé.
 
 .PARAMETER BackupOnlyUser
 Switch pour ne sauvegarder que les stratégies utilisateur du collège.
@@ -62,6 +66,12 @@ Switch pour désactiver le questionnaire et la modification des valeurs propres 
 .PARAMETER MakeCurrentAsRef
 Switch qui désactive tous les traitements et effectue le remplacement
 des stratégies de référence par les stratégies du collège.
+
+.PARAMETER MakeCurrentAsRefVersion
+Lors du remplacement des stratégies de référence par celles du collège,
+ce paramètre permet d'indiquer la version à remplacer.
+Par défaut, la dernière version est remplacée.
+Inactif si -MakeCurrentAsRef n'est pas utilisé.
 
 
 .NOTES
@@ -101,14 +111,15 @@ Ce script ne génère aucun objet en sortie.
 [CmdletBinding()]
 param(
 	[Parameter(Mandatory=$False)] [string]$URLEtab,
-	[Parameter(Mandatory=$False)] [string]$VersionRef,
+	[Parameter(Mandatory=$False)] [string]$RestoreRefGPOVersion,
 	[Parameter(Mandatory=$False)] [switch]$BackupOnlyUser,
 	[Parameter(Mandatory=$False)] [switch]$BackupOnlyMachine,
 	[Parameter(Mandatory=$False)] [switch]$DisableDeploySchema,
 	[Parameter(Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
 	[Parameter(Mandatory=$False)] [switch]$DisableRestoreRefGPO,
 	[Parameter(Mandatory=$False)] [switch]$DisablePatchValues,
-	[Parameter(Mandatory=$False)] [switch]$MakeCurrentAsRef
+	[Parameter(Mandatory=$False)] [switch]$MakeCurrentAsRef,
+	[Parameter(Mandatory=$False)] [string]$MakeCurrentAsRefVersion,
 )
 
 
@@ -231,19 +242,19 @@ if ( $DoBackupCurrentGPO ) {
 # Importation des nouveaux paramètres dans les GPO (les anciens contenus seront écrasés !)
 if ( $DoRestoreRefGPO ) {
 	Audit ">> Activation des stratégies de référence ..."
-	if ( $VersionRef -ne "" ) {
-		if ( ( Test-Path "$rootPath\Referentiel\$VersionRef\Utilisateurs" ) -ne $true ) {
-			Audit "La version $VersionRef est introuvable !"
+	if ( $RestoreRefGPOVersion -ne "" ) {
+		if ( ( Test-Path "$rootPath\Referentiel\$RestoreRefGPOVersion\Utilisateurs" ) -ne $true ) {
+			Audit "La version $RestoreRefGPOVersion est introuvable !"
 		}else{
-			Audit "  - Importation des stratégies utilisateurs ..."
-			$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\$VersionRef\Utilisateurs" -CreateIfNeeded
-			Audit "  - Importation des stratégies ordinateurs ..."
-			$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\$VersionRef\Matériel" -CreateIfNeeded
+			Audit "  - Importation des stratégies utilisateurs [version $RestoreRefGPOVersion] ..."
+			$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Utilisateurs" -CreateIfNeeded
+			Audit "  - Importation des stratégies ordinateurs [version $RestoreRefGPOVersion] ..."
+			$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Matériel" -CreateIfNeeded
 		}
 	}else{
-		Audit "  - Importation des stratégies utilisateurs ..."
+		Audit "  - Importation des stratégies utilisateurs [version Last] ..."
 		$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\Last\Utilisateurs" -CreateIfNeeded
-		Audit "  - Importation des stratégies ordinateurs ..."
+		Audit "  - Importation des stratégies ordinateurs [version Last] ..."
 		$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\Last\Matériel" -CreateIfNeeded
 	}
 }
@@ -370,7 +381,11 @@ if ( $DoPatchValues ) {
 
 # Remplacement des stratégies de référence par les stratégies du collège
 if ( $DoMakeCurrentAsRef ) {
-	Audit ">> Remplacement des stratégies de référence par les stratégies du collège ..."
+	$replPathComp = "Last"
+	if ( $MakeCurrentAsRefVersion -ne "" ) {
+		$replPathComp = $MakeCurrentAsRefVersion
+	}
+	Audit ">> Remplacement des stratégies de référence [version $replPathComp] par les stratégies du collège ..."
 	$rep = Read-Host -Prompt "  - Êtes-vous sûr de vouloir continuer (O/N) "
 	if ( $rep -match "^o$" ) {
 		$TimeStamp = ( Get-Date -format "yyyyMMddHHmmss" )
@@ -382,14 +397,14 @@ if ( $DoMakeCurrentAsRef ) {
 		$tmp = Backup-Gpo -Name "Utilisateurs" -Path "$BackupPath\Utilisateurs" -Comment ("Sauvegarde GPO Utilisateur " + $Domaine + " " + $TimeStamp)
 		Audit "  - Sauvegarde des stratégies ordinateurs du collège ..."
 		$tmp = Backup-Gpo -Name "Matériel" -Path "$BackupPath\Matériel" -Comment ("Sauvegarde GPO Matériel " + $Domaine + " " + $TimeStamp)
-		Audit "  - Suppression des stratégies de référence utilisateur ..."
-		$tmp = Remove-Item -path "$rootPath\Referentiel\Last\Utilisateurs" -Recurse -Force
-		Audit "  - Suppression des stratégies de référence ordinateur ..."
-		$tmp = Remove-Item -path "$rootPath\Referentiel\Last\Matériel" -Recurse -Force
-		Audit "  - Déplacement des stratégies utilisateurs du collège dans le référentiel ..."
-		$tmp = Move-Item -Path "$BackupPath\Utilisateurs" -Destination "$rootPath\Referentiel\Last\Utilisateurs"
-		Audit "  - Déplacement des stratégies ordinateurs du collège dans le référentiel ..."
-		$tmp = Move-Item -Path "$BackupPath\Matériel" -Destination "$rootPath\Referentiel\Last\Matériel"
+		Audit "  - Suppression des stratégies de référence utilisateur [version $replPathComp] ..."
+		$tmp = Remove-Item -path "$rootPath\Referentiel\$replPathComp\Utilisateurs" -Recurse -Force
+		Audit "  - Suppression des stratégies de référence ordinateur [version $replPathComp] ..."
+		$tmp = Remove-Item -path "$rootPath\Referentiel\$replPathComp\Matériel" -Recurse -Force
+		Audit "  - Déplacement des stratégies utilisateurs du collège dans le référentiel [version $replPathComp] ..."
+		$tmp = Move-Item -Path "$BackupPath\Utilisateurs" -Destination "$rootPath\Referentiel\$replPathComp\Utilisateurs"
+		Audit "  - Déplacement des stratégies ordinateurs du collège dans le référentiel [version $replPathComp] ..."
+		$tmp = Move-Item -Path "$BackupPath\Matériel" -Destination "$rootPath\Referentiel\$replPathComp\Matériel"
 		Audit "  - Suppression des répertoires temporaires ..."
 		$tmp = Remove-Item -path "$BackupPath" -Recurse -Force
 	}else{
