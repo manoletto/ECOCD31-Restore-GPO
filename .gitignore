@@ -4,5 +4,5 @@
 /Logs/*
 !/Logs/.*
 /Referentiel
-!/Referentiel/Last
-!/Referentiel/v1
+!/Referentiel/Last/.*
+!/Referentiel/v1/.*
