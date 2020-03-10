@@ -3,6 +3,8 @@
 !/.gitignore
 /Logs/*
 !/Logs/.*
-/Referentiel
-!/Referentiel/Last/.*
-!/Referentiel/v1/.*
+/Referentiel/*
+!/Referentiel/Last
+!/Referentiel/Last/*
+!/Referentiel/v1
+!/Referentiel/v1/*
