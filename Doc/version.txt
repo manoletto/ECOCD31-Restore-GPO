@@ -10,6 +10,10 @@ v1.4 - 09/03/2020 - Emmanuel Fournier
 - Ajout de la prise en compte de versions différentes du référentiel de stratégie de groupe.
 - Le remplacement des stratégies de référence n'est plus inclu dan le traitement complet,
 il peut être lancé exclusivement avec le parametre MakeCurrentAsRef.
+- Ajout du verrouillage du pavé numérique par les clefs de registre :
+HKEY_USERS\.Default\Control Panel\Keyboard\InitialKeyboardIndicators = 2 (NumLock On)
+HKEY_CURRENT_USER\Control Panel\Keyboard\InitialKeyboardIndicators = 2 (NumLock On)
+Dans les référentiels v1 et Last.
 
 v1.3 - 03/03/2020 - Emmanuel Fournier
 - Ajout du kit d'installation,
