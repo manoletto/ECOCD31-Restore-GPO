@@ -1,4 +1,4 @@
-<img src="https://github.com/manoletto/ECOCD31/blob/master/img/cd31.png" alt="CD31" style="float: left; padding-right: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/manoletto/ECOCD31/blob/master/img/econocom.png" alt="Econocom" style="float: left;"><br style="clear: both;">
+<img src="Img/cd31.png" alt="CD31" style="float: left; padding-right: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;<img src="Img/econocom.png" alt="Econocom" style="float: left;"><br style="clear: both;">
 
 **ECOCD31-Restore-GPO**
 ------------------------------------------------------------------------------------------------------
