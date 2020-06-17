@@ -27,9 +27,9 @@ Par défaut, ces étapes, sauf le remplacement des stratégies de référence,
 sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
 Avec les paramètres de commande, chacune d'elles peut être désactivée.
 
-En utilisant la combinaison suivante :
+En utilisant la commande suivante :
 
-	Restore-GPO.ps1 -URLEtab https://.../
+	Restore-GPO.ps1
 le déploiement peut être automatisé.
 
 Pour plus d'informations, dans le dossier **ECOCD31-Restore-GPO** exécuter :
@@ -49,7 +49,8 @@ Le dossier '**Logs**' contient les journaux des traitements.
 <br>
 
 **-URLEtab**<br><br>
-L'adresse du site web du collège.
+L'adresse du site web du collège est normalement automatiquement définie.
+Ce paramètre permet de choisir une autre URL.
 
 	-URLEtab https://.../
 

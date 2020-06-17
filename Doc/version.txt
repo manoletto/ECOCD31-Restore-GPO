@@ -9,10 +9,11 @@ Versions :
 v1.5 - 17/06/2020 - Emmanuel Fournier
 - Kit d'installation : mise-à-jour version Notepad++ et modification message installation Git.
 - Modification stratégie d'alimentation, veille à 0 et stratégie Magret "7.2 extinction des stations" inactivité à 0.
+- Ajout du fichier de configuration des URLs des collèges pour paramétrage automatique de l'URL.
 
 v1.4 - 09/03/2020 - Emmanuel Fournier
 - Ajout de la prise en compte de versions différentes du référentiel de stratégie de groupe.
-- Le remplacement des stratégies de référence n'est plus inclu dan le traitement complet,
+- Le remplacement des stratégies de référence n'est plus inclus dans le traitement complet,
 il peut être lancé exclusivement avec le parametre MakeCurrentAsRef.
 - Ajout du verrouillage du pavé numérique par les clefs de registre :
 HKEY_USERS\.Default\Control Panel\Keyboard\InitialKeyboardIndicators = 2 (NumLock On)

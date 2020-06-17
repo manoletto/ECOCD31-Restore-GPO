@@ -26,8 +26,8 @@ Par défaut, ces étapes, sauf le remplacement des stratégies de référence,
 sont, dans l'ordre indiqué ci-dessus, toutes exécutées.
 Avec les paramètres de commande, chacune d'elles peut être désactivée.
 
-En utilisant la combinaison suivante :
-	Restore-GPO.ps1 -URLEtab https://.../
+En utilisant la commande suivante :
+	Restore-GPO.ps1
 le déploiement peut être automatisé.
 
 Pour plus d'informations, dans le dossier ECOCD31-Restore-GPO exécuter :
@@ -40,7 +40,8 @@ Le dossier 'Logs' contient les journaux des traitements.
 
 
 .PARAMETER URLEtab
-L'adresse du site web du collège.
+L'adresse du site web du collège est normalement automatiquement définie.
+Ce paramètre permet de choisir une autre URL.
 
 .PARAMETER RestoreRefGPOVersion
 Lors de l'activation des stratégies de référence, ce paramètre permet d'indiquer la version à utiliser.
@@ -110,21 +111,23 @@ Ce script ne génère aucun objet en sortie.
 
 param(
 	[Parameter(Position=1,Mandatory=$False)] [string]$URLEtab,
-	[Parameter(Position=2,Mandatory=$False)] [string]$RestoreRefGPOVersion,
-	[Parameter(Position=3,Mandatory=$False)] [switch]$BackupOnlyUser,
-	[Parameter(Position=4,Mandatory=$False)] [switch]$BackupOnlyMachine,
-	[Parameter(Position=5,Mandatory=$False)] [switch]$DisableDeploySchema,
-	[Parameter(Position=6,Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
-	[Parameter(Position=7,Mandatory=$False)] [switch]$DisableRestoreRefGPO,
-	[Parameter(Position=8,Mandatory=$False)] [switch]$DisablePatchValues,
-	[Parameter(Position=9,Mandatory=$False)] [switch]$MakeCurrentAsRef,
-	[Parameter(Position=10,Mandatory=$False)] [string]$MakeCurrentAsRefVersion
+	[Parameter(Position=2,Mandatory=$False)] [string]$IPPronote,
+	[Parameter(Position=3,Mandatory=$False)] [string]$IPServer01,
+	[Parameter(Position=4,Mandatory=$False)] [string]$RestoreRefGPOVersion,
+	[Parameter(Position=5,Mandatory=$False)] [switch]$BackupOnlyUser,
+	[Parameter(Position=6,Mandatory=$False)] [switch]$BackupOnlyMachine,
+	[Parameter(Position=7,Mandatory=$False)] [switch]$DisableDeploySchema,
+	[Parameter(Position=8,Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
+	[Parameter(Position=9,Mandatory=$False)] [switch]$DisableRestoreRefGPO,
+	[Parameter(Position=10,Mandatory=$False)] [switch]$DisablePatchValues,
+	[Parameter(Position=11,Mandatory=$False)] [switch]$MakeCurrentAsRef,
+	[Parameter(Position=12,Mandatory=$False)] [string]$MakeCurrentAsRefVersion
 )
 
 
 
 # Version
-$RGPOVersion = "1.4"
+$RGPOVersion = "1.5"
 
 
 $ErrorActionPreference = 'Continue'
@@ -182,8 +185,8 @@ if ( $Hostname -ne "SERVEUR01" ) {
 
 
 # Erreur lecture adresse IP
-if ( $IPserver -notmatch "^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$" ) {
-	Audit "Impossible de lire l'adresse IP de cette machine !" "ERROR" 2
+if ( $IPserver01 -ne "" -and $IPserver01 -notmatch "^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$" ) {
+	Audit "L'adresse IP fournie n'est pas correcte !" "ERROR" 2
 }
 
 
@@ -240,20 +243,21 @@ if ( $DoBackupCurrentGPO ) {
 
 # Importation des nouveaux paramètres dans les GPO (les anciens contenus seront écrasés !)
 if ( $DoRestoreRefGPO ) {
-	Audit ">> Activation des stratégies de référence ..."
 	if ( $RestoreRefGPOVersion -ne "" ) {
+		Audit ">> Activation des stratégies de référence [version $RestoreRefGPOVersion] ..."
 		if ( ( Test-Path "$rootPath\Referentiel\$RestoreRefGPOVersion\Utilisateurs" ) -ne $true ) {
 			Audit "La version $RestoreRefGPOVersion est introuvable !"
 		}else{
-			Audit "  - Importation des stratégies utilisateurs [version $RestoreRefGPOVersion] ..."
+			Audit "  - Importation des stratégies utilisateurs ..."
 			$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Utilisateurs" -CreateIfNeeded
-			Audit "  - Importation des stratégies ordinateurs [version $RestoreRefGPOVersion] ..."
+			Audit "  - Importation des stratégies ordinateurs ..."
 			$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Matériel" -CreateIfNeeded
 		}
 	}else{
-		Audit "  - Importation des stratégies utilisateurs [version Last] ..."
+		Audit ">> Activation des stratégies de référence [version Last] ..."
+		Audit "  - Importation des stratégies utilisateurs ..."
 		$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\Last\Utilisateurs" -CreateIfNeeded
-		Audit "  - Importation des stratégies ordinateurs [version Last] ..."
+		Audit "  - Importation des stratégies ordinateurs ..."
 		$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\Last\Matériel" -CreateIfNeeded
 	}
 }
@@ -263,31 +267,54 @@ if ( $DoRestoreRefGPO ) {
 if ( $DoPatchValues ) {
 	Audit ">> Personnalisation des valeurs du site ..."
 
-	# URL du site du collège
-	while ( $URLEtab -notmatch "^http[s]?://" ) {
-		$URLEtab = Read-Host -Prompt "  - Quelle est l'adresse du site web de l'établissement (ex : https:// ...) "
-	}
-
 	# Extraction du RNE depuis le domaine
-	$tmp = $Domaine -cmatch "^COL-(\d{7}[A-Z])\d{2}$"
+	$tmp = $Domaine -cmatch "^COL-(\d{7}[A-Z])(\d{2})$"
 	$RNEEtab = $Matches.1
 	Audit "  - RNE de l'établissement : $RNEEtab"
 
-	# Avec le RNE, ping sur RNE.index-education.net pour récupération de l'@IP Pronote
-	if ( Test-Connection -ComputerName $RNEEtab".index-education.net" -Count 1 -Quiet ) {
-		$IPPronote = (Test-Connection -ComputerName $RNEEtab".index-education.net" -Count 1).IPV4Address.ToString()
-		Audit "  - Adresse IP Pronote : $IPPronote"
-	}else{
-		Audit "  - Aucune adresse IP Pronote relevée pour le nom $RNEEtab.index-education.net !"
-		$IPPronote = ""
-		while ( $IPPronote -notmatch "^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$" ) {
-			$IPPronote = Read-Host -Prompt "  - Quelle est l'adresse IPv4 Pronote (ex : 46.33.154.23) "
-		}
+	# RNE pour la recherche de l'URL
+	$RNEUrl = $RNEEtab
+	if ( $Matches.2 -ne "01" ) {
+		$RNEUrl = $RNEUrl + "_" + [int]$Matches.2
 	}
 
-	# Construction adresse IP Serveur01 depuis l'adresse du proxy
-	Audit "  - Adresse IP Serveur01 : $IPserver"
-	$octs = $IPserver -split "\."
+	# URL du site du collège
+	if ( $URLEtab -eq "" ) {
+		# Lecture du fichier de configuration des URLs
+		$DomainURLs = Import-Csv -Path ( $rootPath + "\Conf\rne_url.csv" ) -Delimiter ";" | Sort-Object Domain
+		# Recherche de l'URL du collège
+		$URLEtab = $DomainURLs | Where-Object ({$_.rne -Match $RNEUrl}) | Select-Object -ExpandProperty url
+		if ( $URLEtab -eq "" ) {
+			Audit ">> Le RNE du collège est introuvable dans le fichier de configuration des URLs !"
+			while ( $URLEtab -notmatch "^http[s]?://" ) {
+				$URLEtab = Read-Host -Prompt "  - Quelle est l'adresse du site web de l'établissement (ex : https:// ...) "
+			}
+		}
+	}
+	Audit "  - Adresse du site web de l'établissement : $URLEtab"
+
+	# Adresse IP Pronote
+	if ( $IPPronote -eq "" ) {
+		# Avec le RNE, ping sur RNE.index-education.net pour récupération de l'@IP Pronote
+		if ( Test-Connection -ComputerName $RNEEtab".index-education.net" -Count 1 -Quiet ) {
+			$IPPronote = (Test-Connection -ComputerName $RNEEtab".index-education.net" -Count 1).IPV4Address.ToString()
+			Audit "  - Adresse IP Pronote : $IPPronote"
+		}else{
+			Audit "  - Aucune adresse IP Pronote relevée pour le nom $RNEEtab.index-education.net !"
+			$IPPronote = ""
+		}
+	}else{
+		Audit "  - Adresse IP Pronote : $IPPronote"
+	}
+
+	# Adresse IP Serveur01
+	if ( $IPServer01 -eq "" ) {
+		$IPServer01 = $IPserver
+	}
+
+	# Construction adresse IP routeur et proxy depuis l'adresse du Serveur01
+	Audit "  - Adresse IP Serveur01 : $IPserver01"
+	$octs = $IPserver01 -split "\."
 	$prefixIP = $octs[0] + "." + $octs[1] + "." + $octs[2] + "."
 	$IPRouteur = $prefixIP + ([int]$octs[3] + 1)
 	Audit "  - Adresse IP PFS : $IPRouteur"
@@ -314,8 +341,8 @@ if ( $DoPatchValues ) {
 
 	# - Magret, Serveur3
 	Audit "      - Modèles > Magret > 7. Application MAGRET > 7.1 Paramètres du serveur MAGRET"
-	Audit "         @ IP du serveur MAGRET : $IPserver"
-	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "IPServeurMagret" -Type String -value $IPserver
+	Audit "         @ IP du serveur MAGRET : $IPserver01"
+	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "IPServeurMagret" -Type String -value $IPserver01
 	Audit "         @ Nom du domaine MAGRET : $Domaine"
 	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "DomaineMagret" -Type String -value $Domaine
 	Audit "         @ Nom du serveur MAGRET : \\SERVEUR01"
@@ -339,12 +366,16 @@ if ( $DoPatchValues ) {
 
 	# - Magret, Internet Explorer
 	Audit "      - Modèles > Magret > 8. Composants Windows > 8.10 Internet Explorer"
-	Audit "         @ Activation du proxy : activée"
 	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyEnable" -Type DWord -value 1
 	Audit ("         @ Adresse IP:Port du proxy : " + $IPProxy + ":3128")
 	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyServer" -Type String -value ($IPProxy + ":3128")
-	Audit "         @ Exception du proxy : 10.*;<local>;$IPPronote"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyOverride" -Type String -value "10.*;<local>;$IPPronote"
+	if ( $IPPronote -ne "" ){
+		Audit "         @ Exception du proxy : 10.*;<local>;$IPPronote"
+		$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyOverride" -Type String -value "10.*;<local>;$IPPronote"
+	}else{
+		Audit "         @ Exception du proxy : 10.*;<local>"
+		$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyOverride" -Type String -value "10.*;<local>"
+	}
 	Audit "         @ Page d'accueil du collège : $URLEtab"
 	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Internet Explorer\Main" -ValueName "Start Page" -Type String -value $URLEtab
 
@@ -361,7 +392,11 @@ if ( $DoPatchValues ) {
 	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "URL" -Type String -value $URLEtab
 	Audit "         @ Paramètres du proxy"
 	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Mode" -Type String -value "system"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Passthrough" -Type String -value "10.0.0.0/8, $IPPronote"
+	if ( $IPPronote -ne "" ){
+		$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Passthrough" -Type String -value "10.0.0.0/8, $IPPronote"
+	}else{
+		$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Passthrough" -Type String -value "10.0.0.0/8"
+	}
 
 	# - Google Chrome
 	Audit "      - Modèles > Google"
@@ -373,8 +408,10 @@ if ( $DoPatchValues ) {
 
 	# - Pronote dans la Default Domain Policy
 	Audit "      - Modèles > Magret > 09. Modules pédagogiques MAGRET > 9.1 Fonctionnalités Magret Utilisateurs"
-	Audit "         @ Affectation de la route pour l'adresse IP Pronote : $IPPronote,255.255.255.255,$IPRouteur"
-	$tmp = Set-GPRegistryValue -Name "Default Domain Policy" -key "HKCU\Software\Policies\Magret\Routes" -ValueName "Route" -Type String -value "$IPPronote,255.255.255.255,$IPRouteur"
+	if ( $IPPronote -ne "" ){
+		Audit "         @ Affectation de la route pour l'adresse IP Pronote : $IPPronote,255.255.255.255,$IPRouteur"
+		$tmp = Set-GPRegistryValue -Name "Default Domain Policy" -key "HKCU\Software\Policies\Magret\Routes" -ValueName "Route" -Type String -value "$IPPronote,255.255.255.255,$IPRouteur"
+	}
 }
 
 
@@ -384,8 +421,8 @@ if ( $DoMakeCurrentAsRef ) {
 	if ( $MakeCurrentAsRefVersion -ne "" ) {
 		$replPathComp = $MakeCurrentAsRefVersion
 	}
-	Audit ">> Remplacement des stratégies de référence [version $replPathComp] par les stratégies du collège ..."
-	$rep = Read-Host -Prompt "  - Êtes-vous sûr de vouloir continuer (O/N) "
+	Audit ">> Remplacement des stratégies de référence [version $replPathComp] par les stratégies en service ..."
+	$rep = Read-Host -Prompt "  - Les stratégies de référence actuelle vont être effacées, êtes-vous sûr de vouloir continuer (O/N) "
 	if ( $rep -match "^o$" ) {
 		$TimeStamp = ( Get-Date -format "yyyyMMddHHmmss" )
 		$BackupPath = $rootPath + "\Backups\_tmp"
