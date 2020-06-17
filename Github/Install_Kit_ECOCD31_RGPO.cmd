@@ -10,7 +10,7 @@ ECHO 1 - Installation des outils
 ECHO.
 
 REM Nom des programmes d'installation
-SET NotepadPPInstall=npp.7.8.4.Installer.x64.exe
+SET NotepadPPInstall=npp.7.8.6.Installer.x64.exe
 SET GitInstall=Git-2.25.0-64-bit.exe
 
 REM Chemin du depot
