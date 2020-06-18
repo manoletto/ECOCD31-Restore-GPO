@@ -285,7 +285,7 @@ if ( $DoPatchValues ) {
 		# Recherche de l'URL du collège
 		$URLEtab = $DomainURLs | Where-Object ({$_.rne -Match $RNEUrl}) | Select-Object -ExpandProperty url
 		if ( $URLEtab -eq "" ) {
-			Audit ">> Le RNE du collège est introuvable dans le fichier de configuration des URLs !"
+			Audit "    Le RNE du collège est introuvable dans le fichier de configuration des URLs !" "WARNING"
 			while ( $URLEtab -notmatch "^http[s]?://" ) {
 				$URLEtab = Read-Host -Prompt "  - Quelle est l'adresse du site web de l'établissement (ex : https:// ...) "
 			}
@@ -309,7 +309,20 @@ if ( $DoPatchValues ) {
 
 	# Adresse IP Serveur01
 	if ( $IPServer01 -eq "" ) {
-		$IPServer01 = $IPserver
+		if ( $IPserver.Count -eq 1 ) {
+			$IPServer01 = $IPserver
+		}else{
+			Audit "  - Ce serveur possède plusieurs adresses IP ..." "WARNING"
+			For ($i=0; $i -lt $IPserver.Count; $i++) {
+				$CurSrvIP = $IPserver[$i]
+				Audit "      [$i] - $CurSrvIP"
+			}
+			$IdxChoosenIP = "NO"
+			while ( $IdxChoosenIP -notmatch "^\d+$" -or !$IPserver[$IdxChoosenIP] ) {
+				$IdxChoosenIP = Read-Host -Prompt "    Veuillez en choisir une par son numéro (0,1, ...) "
+			}
+			$IPServer01 = $IPserver[$IdxChoosenIP]
+		}
 	}
 
 	# Construction adresse IP routeur et proxy depuis l'adresse du Serveur01
