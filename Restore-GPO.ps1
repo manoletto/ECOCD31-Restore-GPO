@@ -48,6 +48,13 @@ Lors de l'activation des stratégies de référence, ce paramètre permet d'indi
 Par défaut, la dernière version est utilisée.
 Inactif si -DisableRestoreRefGPO est utilisé.
 
+.PARAMETER UpdateUserTo
+Ce paramètre permet d'indiquer un nom d'objet GPO différent de "Utilisateurs"
+pour la sauvegarde et pour l'activation des stratégies de référence.
+.PARAMETER UpdateMachineTo
+Ce paramètre permet d'indiquer un nom d'objet GPO différent de "Matériel"
+pour la sauvegarde et pour l'activation des stratégies de référence.
+
 .PARAMETER BackupOnlyUser
 Switch pour ne sauvegarder que les stratégies utilisateur du collège.
 Inactif si -DisableBackupCurrentGPO est utilisé.
@@ -67,6 +74,15 @@ Switch pour désactiver le questionnaire et la modification des valeurs propres 
 .PARAMETER MakeCurrentAsRef
 Switch qui désactive tous les traitements et effectue le remplacement
 des stratégies de référence par les stratégies du collège.
+
+.PARAMETER MakeCurrentAsRefUserWith
+Lors du remplacement des stratégies de référence par celles du collège,
+ce paramètre permet d'indiquer l'objet GPO existant différent de "Utilisateurs"
+à utiliser comme source.
+.PARAMETER MakeCurrentAsRefMachineWith
+Lors du remplacement des stratégies de référence par celles du collège,
+ce paramètre permet d'indiquer l'objet GPO existant différent de "Matériel"
+à utiliser comme source.
 
 .PARAMETER MakeCurrentAsRefVersion
 Lors du remplacement des stratégies de référence par celles du collège,
@@ -114,14 +130,18 @@ param(
 	[Parameter(Position=2,Mandatory=$False)] [string]$IPPronote,
 	[Parameter(Position=3,Mandatory=$False)] [string]$IPServer01,
 	[Parameter(Position=4,Mandatory=$False)] [string]$RestoreRefGPOVersion,
-	[Parameter(Position=5,Mandatory=$False)] [switch]$BackupOnlyUser,
-	[Parameter(Position=6,Mandatory=$False)] [switch]$BackupOnlyMachine,
-	[Parameter(Position=7,Mandatory=$False)] [switch]$DisableDeploySchema,
-	[Parameter(Position=8,Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
-	[Parameter(Position=9,Mandatory=$False)] [switch]$DisableRestoreRefGPO,
-	[Parameter(Position=10,Mandatory=$False)] [switch]$DisablePatchValues,
-	[Parameter(Position=11,Mandatory=$False)] [switch]$MakeCurrentAsRef,
-	[Parameter(Position=12,Mandatory=$False)] [string]$MakeCurrentAsRefVersion
+	[Parameter(Position=5,Mandatory=$False)] [string]$UpdateUserTo,
+	[Parameter(Position=6,Mandatory=$False)] [string]$UpdateMachineTo,
+	[Parameter(Position=7,Mandatory=$False)] [switch]$BackupOnlyUser,
+	[Parameter(Position=8,Mandatory=$False)] [switch]$BackupOnlyMachine,
+	[Parameter(Position=9,Mandatory=$False)] [switch]$DisableDeploySchema,
+	[Parameter(Position=10,Mandatory=$False)] [switch]$DisableBackupCurrentGPO,
+	[Parameter(Position=11,Mandatory=$False)] [switch]$DisableRestoreRefGPO,
+	[Parameter(Position=12,Mandatory=$False)] [switch]$DisablePatchValues,
+	[Parameter(Position=13,Mandatory=$False)] [switch]$MakeCurrentAsRef,
+	[Parameter(Position=14,Mandatory=$False)] [string]$MakeCurrentAsRefUserWith,
+	[Parameter(Position=15,Mandatory=$False)] [string]$MakeCurrentAsRefMachineWith,
+	[Parameter(Position=16,Mandatory=$False)] [string]$MakeCurrentAsRefVersion
 )
 
 
@@ -220,6 +240,18 @@ if ( $DoDeploySchema ) {
 }
 
 
+# Noms des objets GPO à sauvegader
+if ( $UpdateUserTo -eq "" ) {
+	$UserSrcBackupGPOName = "Utilisateurs"
+}else{
+	$UserSrcBackupGPOName = $UpdateUserTo
+}
+if ( $UpdateMachineTo -eq "" ) {
+	$MachineSrcBackupGPOName = "Matériel"
+}else{
+	$MachineSrcBackupGPOName = $UpdateMachineTo
+}
+
 # Sauvegarde des GPO
 if ( $DoBackupCurrentGPO ) {
 	Audit ">> Sauvegarde des stragégies en service ..."
@@ -227,19 +259,39 @@ if ( $DoBackupCurrentGPO ) {
 	$BackupPath = $rootPath + "\Backups\GpoBackups_" + $Domaine + "_" + $TimeStamp
 
 	if ( $BackupOnlyMachine -eq $False -or $BackupOnlyUser -eq $True ) {
-		Audit "  - Création du répertoire pour la sauvegarde utilisateur ..."
-		$tmp = New-Item -ItemType directory -path "$BackupPath\Utilisateurs" -force
-		Audit "  - Sauvegarde des stratégies utilisateurs ..."
-		$tmp = Backup-Gpo -Name "Utilisateurs" -Path "$BackupPath\Utilisateurs" -Comment ("Sauvegarde GPO Utilisateur " + $Domaine + " " + $TimeStamp)
+		if ( Check-GPO "$UserSrcBackupGPOName" ) {
+			Audit "  - Création du répertoire pour la sauvegarde utilisateur ..."
+			$tmp = New-Item -ItemType directory -path "$BackupPath\Utilisateurs" -force
+			Audit "  - Sauvegarde des stratégies utilisateurs ..."
+			$tmp = Backup-Gpo -Name "$UserSrcBackupGPOName" -Path "$BackupPath\Utilisateurs" -Comment ("Sauvegarde GPO '" + $UserSrcBackupGPOName + "' " + $Domaine + " " + $TimeStamp)
+		}else{
+			Audit "  L'objet GPO utilisateurs '$UserSrcBackupGPOName' n'existe pas !" "WARNING"
+		}
 	}
 	if ( $BackupOnlyUser -eq $False -or $BackupOnlyMachine -eq $True ) {
-		Audit "  - Création du répertoire pour la sauvegarde ordinateur ..."
-		$tmp = New-Item -ItemType directory -path "$BackupPath\Matériel" -force
-		Audit "  - Sauvegarde des stratégies ordinateurs ..."
-		$tmp = Backup-Gpo -Name "Matériel" -Path "$BackupPath\Matériel" -Comment ("Sauvegarde GPO Matériel " + $Domaine + " " + $TimeStamp)
+		if ( Check-GPO "$MachineSrcBackupGPOName" ) {
+			Audit "  - Création du répertoire pour la sauvegarde ordinateur ..."
+			$tmp = New-Item -ItemType directory -path "$BackupPath\Matériel" -force
+			Audit "  - Sauvegarde des stratégies ordinateurs ..."
+			$tmp = Backup-Gpo -Name "$MachineSrcBackupGPOName" -Path "$BackupPath\Matériel" -Comment ("Sauvegarde GPO '" + $MachineSrcBackupGPOName + "' " + $Domaine + " " + $TimeStamp)
+		}else{
+			Audit "  L'objet GPO matériel '$MachineSrcBackupGPOName' n'existe pas !" "WARNING"
+		}
 	}
 }
 
+
+# Noms des objets GPO à sauvegader
+if ( $UpdateUserTo -eq "" ) {
+	$UserDestGPOName = "Utilisateurs"
+}else{
+	$UserDestGPOName = $UpdateUserTo
+}
+if ( $UpdateMachineTo -eq "" ) {
+	$MachineDestGPOName = "Matériel"
+}else{
+	$MachineDestGPOName = $UpdateMachineTo
+}
 
 # Importation des nouveaux paramètres dans les GPO (les anciens contenus seront écrasés !)
 if ( $DoRestoreRefGPO ) {
@@ -248,17 +300,17 @@ if ( $DoRestoreRefGPO ) {
 		if ( ( Test-Path "$rootPath\Referentiel\$RestoreRefGPOVersion\Utilisateurs" ) -ne $true ) {
 			Audit "La version $RestoreRefGPOVersion est introuvable !"
 		}else{
-			Audit "  - Importation des stratégies utilisateurs ..."
-			$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Utilisateurs" -CreateIfNeeded
-			Audit "  - Importation des stratégies ordinateurs ..."
-			$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Matériel" -CreateIfNeeded
+			Audit "  - Importation des stratégies utilisateurs dans '$UserDestGPOName' ..."
+			$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "$UserDestGPOName" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Utilisateurs" -CreateIfNeeded
+			Audit "  - Importation des stratégies ordinateurs dans '$MachineDestGPOName' ..."
+			$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "$MachineDestGPOName" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Matériel" -CreateIfNeeded
 		}
 	}else{
 		Audit ">> Activation des stratégies de référence [version Last] ..."
-		Audit "  - Importation des stratégies utilisateurs ..."
-		$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "Utilisateurs" -path "$rootPath\Referentiel\Last\Utilisateurs" -CreateIfNeeded
-		Audit "  - Importation des stratégies ordinateurs ..."
-		$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "Matériel" -path "$rootPath\Referentiel\Last\Matériel" -CreateIfNeeded
+		Audit "  - Importation des stratégies utilisateurs dans '$UserDestGPOName' ..."
+		$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "$UserDestGPOName" -path "$rootPath\Referentiel\Last\Utilisateurs" -CreateIfNeeded
+		Audit "  - Importation des stratégies ordinateurs dans '$MachineDestGPOName' ..."
+		$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "$MachineDestGPOName" -path "$rootPath\Referentiel\Last\Matériel" -CreateIfNeeded
 	}
 }
 
@@ -355,15 +407,15 @@ if ( $DoPatchValues ) {
 	# - Magret, Serveur3
 	Audit "      - Modèles > Magret > 7. Application MAGRET > 7.1 Paramètres du serveur MAGRET"
 	Audit "         @ IP du serveur MAGRET : $IPserver01"
-	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "IPServeurMagret" -Type String -value $IPserver01
+	$tmp = Set-GPRegistryValue -Name "$MachineDestGPOName" -key "HKLM\Software\Magret" -ValueName "IPServeurMagret" -Type String -value $IPserver01
 	Audit "         @ Nom du domaine MAGRET : $Domaine"
-	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "DomaineMagret" -Type String -value $Domaine
+	$tmp = Set-GPRegistryValue -Name "$MachineDestGPOName" -key "HKLM\Software\Magret" -ValueName "DomaineMagret" -Type String -value $Domaine
 	Audit "         @ Nom du serveur MAGRET : \\SERVEUR01"
-	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Magret" -ValueName "ServeurMagret" -Type String -value "\\SERVEUR01"
+	$tmp = Set-GPRegistryValue -Name "$MachineDestGPOName" -key "HKLM\Software\Magret" -ValueName "ServeurMagret" -Type String -value "\\SERVEUR01"
 	# - Magret, Proxy
 	Audit "      - Modèles > Magret > 4. Réseau et Accès distant"
 	Audit ("         @ Serveur proxy pour les applications Window 8.1 et 10 : " + $IPProxy + ":3128")
-	$tmp = Set-GPRegistryValue -Name "Matériel" -key "HKLM\Software\Policies\Microsoft\Windows\NetworkIsolation" -ValueName "DomainProxies" -Type String -value ($IPProxy + ":3128")
+	$tmp = Set-GPRegistryValue -Name "$MachineDestGPOName" -key "HKLM\Software\Policies\Microsoft\Windows\NetworkIsolation" -ValueName "DomainProxies" -Type String -value ($IPProxy + ":3128")
 
 
 	# >>> Utilisateurs <<<
@@ -373,51 +425,51 @@ if ( $DoPatchValues ) {
 	# - Composants Windows, Edge
 	Audit "      - Modèles > Composants Windows > Microsoft Edge"
 	Audit "         @ Page d'accueil du collège : $URLEtab"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Microsoft\MicrosoftEdge\Internet Settings" -ValueName "ProvisionedHomePages" -Type String -value "<$URLEtab>"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Microsoft\MicrosoftEdge\Internet Settings" -ValueName "ConfigureHomeButton" -Type DWord -value 2
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Microsoft\MicrosoftEdge\Internet Settings" -ValueName "HomeButtonURL" -Type String -value "$URLEtab"
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Microsoft\MicrosoftEdge\Internet Settings" -ValueName "ProvisionedHomePages" -Type String -value "<$URLEtab>"
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Microsoft\MicrosoftEdge\Internet Settings" -ValueName "ConfigureHomeButton" -Type DWord -value 2
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Microsoft\MicrosoftEdge\Internet Settings" -ValueName "HomeButtonURL" -Type String -value "$URLEtab"
 
 	# - Magret, Internet Explorer
 	Audit "      - Modèles > Magret > 8. Composants Windows > 8.10 Internet Explorer"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyEnable" -Type DWord -value 1
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyEnable" -Type DWord -value 1
 	Audit ("         @ Adresse IP:Port du proxy : " + $IPProxy + ":3128")
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyServer" -Type String -value ($IPProxy + ":3128")
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyServer" -Type String -value ($IPProxy + ":3128")
 	if ( $IPPronote -ne "" ){
 		Audit "         @ Exception du proxy : 10.*;<local>;$IPPronote"
-		$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyOverride" -Type String -value "10.*;<local>;$IPPronote"
+		$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyOverride" -Type String -value "10.*;<local>;$IPPronote"
 	}else{
 		Audit "         @ Exception du proxy : 10.*;<local>"
-		$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyOverride" -Type String -value "10.*;<local>"
+		$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -ValueName "ProxyOverride" -Type String -value "10.*;<local>"
 	}
 	Audit "         @ Page d'accueil du collège : $URLEtab"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Microsoft\Internet Explorer\Main" -ValueName "Start Page" -Type String -value $URLEtab
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Microsoft\Internet Explorer\Main" -ValueName "Start Page" -Type String -value $URLEtab
 
 	# - Composants Windows, Internet Explorer
 	Audit "      - Modèles > Composants Windows > Internet Explorer"
 	Audit "         @ Désactiver la modification de la page d'accueil : activée"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Microsoft\Internet Explorer\Main" -ValueName "Start Page" -Type String -value $URLEtab
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Microsoft\Internet Explorer\Main" -ValueName "Start Page" -Type String -value $URLEtab
 
 	# - Firefox ESR
 	Audit "      - Modèles > Mozilla > Firefox"
 	Audit "         @ Page d'accueil du collège : $URLEtab"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "Locked" -Type DWord -value 1
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "StartPage" -Type String -value "homepage"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "URL" -Type String -value $URLEtab
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "Locked" -Type DWord -value 1
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "StartPage" -Type String -value "homepage"
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Mozilla\Firefox\Homepage" -ValueName "URL" -Type String -value $URLEtab
 	Audit "         @ Paramètres du proxy"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Mode" -Type String -value "system"
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Mode" -Type String -value "system"
 	if ( $IPPronote -ne "" ){
-		$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Passthrough" -Type String -value "10.0.0.0/8, $IPPronote"
+		$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Passthrough" -Type String -value "10.0.0.0/8, $IPPronote"
 	}else{
-		$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Passthrough" -Type String -value "10.0.0.0/8"
+		$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Mozilla\Firefox\Proxy" -ValueName "Passthrough" -Type String -value "10.0.0.0/8"
 	}
 
 	# - Google Chrome
 	Audit "      - Modèles > Google"
 	Audit ("         @ Adresse IP:Port du proxy : " + $IPProxy + ":3128")
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Google\Chrome" -ValueName "ProxyServer" -Type String -value ($IPProxy + ":3128")
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Google\Chrome" -ValueName "ProxyServer" -Type String -value ($IPProxy + ":3128")
 	Audit "         @ Page d'accueil du collège : $URLEtab"
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Google\Chrome" -ValueName "HomepageLocation" -Type String -value $URLEtab
-	$tmp = Set-GPRegistryValue -Name "Utilisateurs" -key "HKCU\Software\Policies\Google\Chrome\RestoreOnStartupURLs" -ValueName "1" -Type String -value $URLEtab
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Google\Chrome" -ValueName "HomepageLocation" -Type String -value $URLEtab
+	$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Google\Chrome\RestoreOnStartupURLs" -ValueName "1" -Type String -value $URLEtab
 
 	# - Pronote dans la Default Domain Policy
 	Audit "      - Modèles > Magret > 09. Modules pédagogiques MAGRET > 9.1 Fonctionnalités Magret Utilisateurs"
@@ -430,34 +482,85 @@ if ( $DoPatchValues ) {
 
 # Remplacement des stratégies de référence par les stratégies du collège
 if ( $DoMakeCurrentAsRef ) {
-	$replPathComp = "Last"
-	if ( $MakeCurrentAsRefVersion -ne "" ) {
-		$replPathComp = $MakeCurrentAsRefVersion
-	}
-	Audit ">> Remplacement des stratégies de référence [version $replPathComp] par les stratégies en service ..."
-	$rep = Read-Host -Prompt "  - Les stratégies de référence actuelle vont être effacées, êtes-vous sûr de vouloir continuer (O/N) "
-	if ( $rep -match "^o$" ) {
-		$TimeStamp = ( Get-Date -format "yyyyMMddHHmmss" )
-		$BackupPath = $rootPath + "\Backups\_tmp"
-		Audit "  - Création des répertoires temporaires ..."
-		$tmp = New-Item -ItemType directory -path "$BackupPath\Utilisateurs" -force
-		$tmp = New-Item -ItemType directory -path "$BackupPath\Matériel" -force
-		Audit "  - Sauvegarde des stratégies utilisateurs du collège ..."
-		$tmp = Backup-Gpo -Name "Utilisateurs" -Path "$BackupPath\Utilisateurs" -Comment ("Sauvegarde GPO Utilisateur " + $Domaine + " " + $TimeStamp)
-		Audit "  - Sauvegarde des stratégies ordinateurs du collège ..."
-		$tmp = Backup-Gpo -Name "Matériel" -Path "$BackupPath\Matériel" -Comment ("Sauvegarde GPO Matériel " + $Domaine + " " + $TimeStamp)
-		Audit "  - Suppression des stratégies de référence utilisateur [version $replPathComp] ..."
-		$tmp = Remove-Item -path "$rootPath\Referentiel\$replPathComp\Utilisateurs" -Recurse -Force
-		Audit "  - Suppression des stratégies de référence ordinateur [version $replPathComp] ..."
-		$tmp = Remove-Item -path "$rootPath\Referentiel\$replPathComp\Matériel" -Recurse -Force
-		Audit "  - Déplacement des stratégies utilisateurs du collège dans le référentiel [version $replPathComp] ..."
-		$tmp = Move-Item -Path "$BackupPath\Utilisateurs" -Destination "$rootPath\Referentiel\$replPathComp\Utilisateurs"
-		Audit "  - Déplacement des stratégies ordinateurs du collège dans le référentiel [version $replPathComp] ..."
-		$tmp = Move-Item -Path "$BackupPath\Matériel" -Destination "$rootPath\Referentiel\$replPathComp\Matériel"
-		Audit "  - Suppression des répertoires temporaires ..."
-		$tmp = Remove-Item -path "$BackupPath" -Recurse -Force
+
+	if ( $MakeCurrentAsRefUserWith -eq "" ) {
+		$UserSrc4RefGPOName = "Utilisateurs"
 	}else{
-		Audit "  - Opération annulée par l'utilisateur." "LOG"
+		$UserSrc4RefGPOName = $MakeCurrentAsRefUserWith
+	}
+	if ( $MakeCurrentAsRefMachineWith -eq "" ) {
+		$MachineSrc4RefGPOName = "Matériel"
+	}else{
+		$MachineSrc4RefGPOName = $MakeCurrentAsRefMachineWith
+	}
+
+	if ( Check-GPO "$UserSrc4RefGPOName" -and Check-GPO "$MachineSrc4RefGPOName" ) {
+		$replPathComp = "Last"
+		if ( $MakeCurrentAsRefVersion -ne "" ) {
+			$replPathComp = $MakeCurrentAsRefVersion
+		}
+		Audit ">> Remplacement des stratégies de référence [version $replPathComp] par les stratégies en service ..."
+		$rep = Read-Host -Prompt "  - Les stratégies de référence actuelle vont être effacées, êtes-vous sûr de vouloir continuer (O/N) "
+		if ( $rep -match "^o$" ) {
+			$TimeStamp = ( Get-Date -format "yyyyMMddHHmmss" )
+			$BackupPath = $rootPath + "\Backups\_tmp"
+
+			# Create temp folder
+			Audit "  - Création des répertoires temporaires ..."
+			$tmp = New-Item -ItemType directory -path "$BackupPath\Utilisateurs" -force
+			$tmp = New-Item -ItemType directory -path "$BackupPath\Matériel" -force
+
+			# Utilisateurs
+			Audit "  - Sauvegarde des stratégies utilisateurs '$UserSrc4RefGPOName' ..."
+			$tmp = Backup-Gpo -Name "$UserSrc4RefGPOName" -Path "$BackupPath\Utilisateurs" -Comment ("Sauvegarde GPO '" + $UserSrc4RefGPOName + "' " + $Domaine + " " + $TimeStamp)
+
+			# Matériel
+			Audit "  - Sauvegarde des stratégies ordinateurs '$MachineSrc4RefGPOName' ..."
+			$tmp = Backup-Gpo -Name "$MachineSrc4RefGPOName" -Path "$BackupPath\Matériel" -Comment ("Sauvegarde GPO '" + $MachineSrc4RefGPOName + "' " + $Domaine + " " + $TimeStamp)
+
+			# Delete actual ref
+			Audit "  - Suppression des stratégies de référence utilisateur [version $replPathComp] ..."
+			$tmp = Remove-Item -path "$rootPath\Referentiel\$replPathComp\Utilisateurs" -Recurse -Force
+			Audit "  - Suppression des stratégies de référence ordinateur [version $replPathComp] ..."
+			$tmp = Remove-Item -path "$rootPath\Referentiel\$replPathComp\Matériel" -Recurse -Force
+
+			# Replace ref
+			Audit "  - Déplacement des stratégies utilisateurs '$UserSrc4RefGPOName' dans le référentiel [version $replPathComp] ..."
+			$tmp = Move-Item -Path "$BackupPath\Utilisateurs" -Destination "$rootPath\Referentiel\$replPathComp\Utilisateurs"
+			Audit "  - Déplacement des stratégies ordinateurs '$MachineSrc4RefGPOName' dans le référentiel [version $replPathComp] ..."
+			$tmp = Move-Item -Path "$BackupPath\Matériel" -Destination "$rootPath\Referentiel\$replPathComp\Matériel"
+
+			# Change GPO name in manifest.xml
+			Audit "  - Modification du nom des objets dans les manifest.xml ..."
+			$tmp = New-Item -ItemType directory -path "$BackupPath\Utilisateurs" -force
+			$tmp = New-Item -ItemType directory -path "$BackupPath\Matériel" -force
+			# Patch GPO name
+			$filePathToTask = "$rootPath\Referentiel\$replPathComp\Utilisateurs\manifest.xml"
+			[xml]$xml = Get-Content "$filePathToTask"
+			$xml.PreserveWhitespace = $True
+			$xml.Backups.BackupInst.GPODisplayName.'#cdata-section' = "Utilisateurs"
+			$xml.Save("$BackupPath\Utilisateurs\manifest.xml")
+			$tmp = Move-Item -Path "$BackupPath\Utilisateurs\manifest.xml" -Destination "$rootPath\Referentiel\$replPathComp\Utilisateurs\manifest.xml" -Force
+			# Patch GPO name
+			$filePathToTask = "$rootPath\Referentiel\$replPathComp\Matériel\manifest.xml"
+			[xml]$xml = Get-Content "$filePathToTask"
+			$xml.PreserveWhitespace = $True
+			$xml.Backups.BackupInst.GPODisplayName.'#cdata-section' = "Matériel"
+			$xml.Save("$BackupPath\Matériel\manifest.xml")
+			$tmp = Move-Item -Path "$BackupPath\Matériel\manifest.xml" -Destination "$rootPath\Referentiel\$replPathComp\Matériel\manifest.xml" -Force
+
+			# Clean temp folder
+			Audit "  - Suppression des répertoires temporaires ..."
+			$tmp = Remove-Item -path "$BackupPath" -Recurse -Force
+		}else{
+			Audit "  - Opération annulée par l'utilisateur." "LOG"
+		}
+	}else{
+		if ( Check-GPO "$UserSrc4RefGPOName" ) {
+			Audit "  L'objet GPO matériel '$MachineSrc4RefGPOName' n'existe pas !" "WARNING"
+		}else{
+			Audit "  L'objet GPO utilisateurs '$UserSrc4RefGPOName' n'existe pas !" "WARNING"
+		}
 	}
 }
 

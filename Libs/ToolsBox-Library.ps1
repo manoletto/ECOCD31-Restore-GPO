@@ -175,6 +175,17 @@ function Check-ADUserInGroup([string]$user,[string]$group){
 	}
 }
 
+# Teste si un objet GPO est défini ou non
+#
+# @param string $GPOName Le nmo de l'objet GPO
+# @return boolean Retourne $True si l'objet existe, $False autrement.
+function Check-GPO([string]$GPOName){
+	try{
+		return [bool](Get-GPO -Name "$GPOName" -ErrorAction SilentlyContinue)
+	}catch{
+		return $False
+	}
+}
 
 # Retourne un lot de caractères de façon aléatoire
 #

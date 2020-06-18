@@ -65,6 +65,22 @@ Inactif si **-DisableRestoreRefGPO** est utilisé.
 
 <br>
 
+**-UpdateUserTo**<br><br>
+Ce paramètre permet d'indiquer un nom d'objet GPO différent de "Utilisateurs"
+pour la sauvegarde et pour l'activation des stratégies de référence.
+
+	-UpdateUserTo "Utilisateurs CD31"
+
+<br>
+
+**-UpdateMachineTo**<br><br>
+Ce paramètre permet d'indiquer un nom d'objet GPO différent de "Matériel"
+pour la sauvegarde et pour l'activation des stratégies de référence.
+
+	-UpdateMachineTo "Matériel CD31"
+
+<br>
+
 **-BackupOnlyUser**<br><br>
 Switch pour ne sauvegarder que les stratégies utilisateur du collège.<br>
 Inactif si **-DisableBackupCurrentGPO** est utilisé.
@@ -101,6 +117,24 @@ des valeurs propres au collège.
 **-MakeCurrentAsRef**<br><br>
 Switch qui désactive tous les traitements et effectue le remplacement
 des stratégies de référence par les stratégies du collège.
+
+<br>
+
+**-MakeCurrentAsRefUserWith**<br><br>
+Lors du remplacement des stratégies de référence par celles du collège, ce paramètre permet d'indiquer la version à remplacer.<br>
+Par défaut, la dernière version est remplacée.<br>
+Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
+
+	-MakeCurrentAsRefUserWith "Utilisateurs CD31"
+
+<br>
+
+**-MakeCurrentAsRefMachineWith**<br><br>
+Lors du remplacement des stratégies de référence par celles du collège, ce paramètre permet d'indiquer la version à remplacer.<br>
+Par défaut, la dernière version est remplacée.<br>
+Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
+
+	-MakeCurrentAsRefMachineWith "Matériel CD31"
 
 <br>
 
