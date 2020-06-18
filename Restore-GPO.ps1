@@ -77,12 +77,14 @@ des stratégies de référence par les stratégies du collège.
 
 .PARAMETER MakeCurrentAsRefUserWith
 Lors du remplacement des stratégies de référence par celles du collège,
-ce paramètre permet d'indiquer l'objet GPO existant différent de "Utilisateurs"
+ce paramètre permet d'indiquer un objet GPO existant différent de "Utilisateurs",
 à utiliser comme source.
+Inactif si -MakeCurrentAsRef n'est pas utilisé.
 .PARAMETER MakeCurrentAsRefMachineWith
 Lors du remplacement des stratégies de référence par celles du collège,
-ce paramètre permet d'indiquer l'objet GPO existant différent de "Matériel"
+ce paramètre permet d'indiquer un objet GPO existant différent de "Matériel",
 à utiliser comme source.
+Inactif si -MakeCurrentAsRef n'est pas utilisé.
 
 .PARAMETER MakeCurrentAsRefVersion
 Lors du remplacement des stratégies de référence par celles du collège,

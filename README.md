@@ -121,8 +121,9 @@ des stratégies de référence par les stratégies du collège.
 <br>
 
 **-MakeCurrentAsRefUserWith**<br><br>
-Lors du remplacement des stratégies de référence par celles du collège, ce paramètre permet d'indiquer la version à remplacer.<br>
-Par défaut, la dernière version est remplacée.<br>
+Lors du remplacement des stratégies de référence par celles du collège,
+ce paramètre permet d'indiquer un objet GPO existant différent de "Utilisateurs",
+à utiliser comme source.<br>
 Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
 
 	-MakeCurrentAsRefUserWith "Utilisateurs CD31"
@@ -130,8 +131,9 @@ Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
 <br>
 
 **-MakeCurrentAsRefMachineWith**<br><br>
-Lors du remplacement des stratégies de référence par celles du collège, ce paramètre permet d'indiquer la version à remplacer.<br>
-Par défaut, la dernière version est remplacée.<br>
+Lors du remplacement des stratégies de référence par celles du collège,
+ce paramètre permet d'indiquer un objet GPO existant différent de "Matériel",
+à utiliser comme source.<br>
 Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
 
 	-MakeCurrentAsRefMachineWith "Matériel CD31"
