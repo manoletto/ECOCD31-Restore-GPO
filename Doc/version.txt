@@ -13,6 +13,7 @@ v1.5 - 17/06/2020 - Emmanuel Fournier
 - Ajout de paramètres pour l'utilisation d'objets GPO autres que "Utilisateurs" et "Matériel"
 pour la restauration et pour le remplacement des stratégies de référence. Dans tout les cas,
 les noms standard sont conservés dans le référentiel.
+- Ajout du paramètre ShowOnly permettant d'effectuer un traitement à blanc.
 
 v1.4 - 09/03/2020 - Emmanuel Fournier
 - Ajout de la prise en compte de versions différentes du référentiel de stratégie de groupe.
