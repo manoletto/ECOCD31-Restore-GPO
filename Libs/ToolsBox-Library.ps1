@@ -38,15 +38,29 @@ V1.00, 21/09/2019 - Version initiale
 # affiché en mode normal, si Log le message n'est pas affiché mais seulement enregistré dans le log.
 # @param int $ExitCode Le code d'erreur
 function Audit ( [string] $Message, [string] $Level = "INFO", [int] $ExitCode = 0 ) {
+
 	$Stamp = (Get-Date).toString("yyyy/MM/dd HH:mm:ss")
 	$InFileLvl = $Level
 	if($Level -eq "LOG" -or $Level -eq "HOST"){
 		$InFileLvl = "INFO"
 	}
+
+	# Build message line
 	$Line = "$Stamp`:$InFileLvl`:$Message"
-	if((Isset -var "LogFile")){
+
+	# $AuditNoLog : External var used to disable logging
+	$DoLog = $True
+	if((Isset -var "AuditNoLog")){
+		if($AuditNoLog -eq $True){
+			$DoLog = $False
+		}
+	}
+	# $LogFile : External var used to defiune a log file to write all audited messages
+	if((Isset -var "LogFile") -and $DoLog -eq $True){
 		Add-Content $LogFile -Value $Line
 	}
+
+	# Output message
 	switch($Level){
 		"WARNING"{
 			Write-Host -ForegroundColor Yellow -Object $Message
@@ -67,10 +81,13 @@ function Audit ( [string] $Message, [string] $Level = "INFO", [int] $ExitCode = 
 			Write-Output $Message
 		}
 	}
+
+	# Stop processing if error code is given !
 	if($ExitCode -gt 0){
 		Set-Variable -Name 'AAMExitCode' -Value $ExitCode -Scope 1
 		exit $ExitCode
 	}
+
 }
 
 # Test si un object possède une propriété ou non

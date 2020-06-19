@@ -149,6 +149,12 @@ Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
 
 <br>
 
+**-ShowOnly**<br><br>
+Ce paramètre montre le traitement sans effectuer aucune modification.
+Il désactive l'enregistrement dans le journal de traitement.
+
+<br>
+
 **Notes**
 ------------------------------------------------------------------------------------------------------
 
