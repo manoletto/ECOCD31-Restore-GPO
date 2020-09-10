@@ -6,6 +6,10 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
+v1.6 - 10/09/2020 - Emmanuel Fournier
+- Modifications affichage des lecteurs réseaux et désactivation du gestionnaire des tâches
+pour les utilisateurs dans les référentiels v1 et Last.
+
 v1.5 - 17/06/2020 - Emmanuel Fournier
 - Kit d'installation : mise-à-jour version Notepad++ et modification message installation Git.
 - Modification stratégie d'alimentation, veille à 0 et stratégie Magret "7.2 extinction des stations" inactivité à 0.
