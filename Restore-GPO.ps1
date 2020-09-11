@@ -331,7 +331,7 @@ if ( $DoRestoreRefGPO ) {
 			if ( $Show -ne $True ) {
 				$tmp = Import-Gpo -BackupGpoName "Utilisateurs" -TargetName "$UserDestGPOName" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Utilisateurs" -CreateIfNeeded
 			}
-			Audit "  - Importation des stratégiesde référence matériel dans '$MachineDestGPOName' ..."
+			Audit "  - Importation des stratégies de référence matériel dans '$MachineDestGPOName' ..."
 			if ( $Show -ne $True ) {
 				$tmp = Import-Gpo -BackupGpoName "Matériel" -TargetName "$MachineDestGPOName" -path "$rootPath\Referentiel\$RestoreRefGPOVersion\Matériel" -CreateIfNeeded
 			}
