@@ -370,7 +370,7 @@ if ( $DoPatchValues ) {
 		# Lecture du fichier de configuration des URLs
 		$DomainURLs = Import-Csv -Path ( $rootPath + "\Conf\rne_url.csv" ) -Delimiter ";" | Sort-Object Domain
 		# Recherche de l'URL du collège
-		$URLEtab = $DomainURLs | Where-Object ({$_.rne -Match $RNEUrl}) | Select-Object -ExpandProperty url
+		$URLEtab = $DomainURLs | Where-Object ({$_.rne -cmatch "^$RNEUrl$"}) | Select-Object -ExpandProperty url
 		if ( $URLEtab -eq "" ) {
 			Audit "    Le RNE du collège est introuvable dans le fichier de configuration des URLs !" "WARNING"
 			while ( $URLEtab -notmatch "^http[s]?://" ) {
