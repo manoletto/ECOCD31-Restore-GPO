@@ -6,6 +6,9 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
+v1.7 - 22/03/2021 - Emmanuel Fournier
+- Désactivation du centre de synchronisation dans le référentiel Last.
+
 v1.6 - 10/09/2020 - Emmanuel Fournier
 - Modifications affichage des lecteurs réseaux et désactivation du gestionnaire des tâches
 pour les utilisateurs dans les référentiels v1 et Last.
