@@ -126,7 +126,7 @@ ce paramètre permet d'indiquer un objet GPO existant différent de "Utilisateur
 à utiliser comme source.<br>
 Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
 
-	-MakeCurrentAsRefUserWith "Utilisateurs CD31"
+	-MakeCurrentAsRef -MakeCurrentAsRefUserWith "Utilisateurs CD31"
 
 <br>
 
@@ -136,7 +136,7 @@ ce paramètre permet d'indiquer un objet GPO existant différent de "Matériel",
 à utiliser comme source.<br>
 Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
 
-	-MakeCurrentAsRefMachineWith "Matériel CD31"
+	-MakeCurrentAsRef -MakeCurrentAsRefMachineWith "Matériel CD31"
 
 <br>
 
@@ -145,7 +145,7 @@ Lors du remplacement des stratégies de référence par celles du collège, ce p
 Par défaut, la dernière version est remplacée.<br>
 Inactif si **-MakeCurrentAsRef** n'est pas utilisé.
 
-	-MakeCurrentAsRefVersion v4
+	-MakeCurrentAsRef -MakeCurrentAsRefVersion v4
 
 <br>
 

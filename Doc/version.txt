@@ -6,6 +6,19 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
+v1.8 - 06/09/2021 - Emmanuel Fournier
+Suite au passage de l'image Windows Standard en version 20H1,
+- Renforcement de la désactivation de Windows Update :
+	- Matériel / Configuration ordinateur / stratégies / Modèles d'administration / Composants Windows / Windows Update /
+		- Autoriser l'installation immédiate des mises à jour automatiques : Désactivé,
+		- Autoriser le téléchargement automatique des mises à jour sur les connexions limitées : Désactivé,
+		- Autoriser les non-administrateurs à recevoir les notifications de mise à jour : Désactivé,
+		- Ne pas se connecter à des emplacements Internet Windows Update : Activé,
+		- Options d'affichage des notifications de mise à jour : Activé : 2 - désactiver toutes les notifications, y compris les avertissements de redémarrage.
+
+		- Windows Update pour entreprises /
+			- Gérer les versions d'évaluation : Activé : Désactiver les versions d'évaluation.
+
 v1.7 - 22/03/2021 - Emmanuel Fournier
 - Désactivation du centre de synchronisation dans le référentiel Last.
 
