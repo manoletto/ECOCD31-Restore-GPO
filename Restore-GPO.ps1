@@ -154,7 +154,7 @@ param(
 
 
 # Version
-$RGPOVersion = "1.7"
+$RGPOVersion = "1.8"
 
 
 $ErrorActionPreference = 'Continue'
