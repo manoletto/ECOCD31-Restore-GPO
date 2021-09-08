@@ -19,7 +19,7 @@ Suite au passage de l'image Windows Standard en version 20H1,
 		- Windows Update pour entreprises /
 			- Gérer les versions d'évaluation : Activé : Désactiver les versions d'évaluation.
 - Suppression du "Language Pack" français suite à l'usage de Firefox 78.13.0esr version française.
-- Remplacement de Qwant School (RIP) par Qwant Junior comme moteur de recher par défaut dans les différents navigateurs web.
+- Remplacement de Qwant School (RIP) par Qwant Junior comme moteur de recherche par défaut dans les différents navigateurs web.
 
 v1.7 - 22/03/2021 - Emmanuel Fournier
 - Désactivation du centre de synchronisation dans le référentiel Last.
