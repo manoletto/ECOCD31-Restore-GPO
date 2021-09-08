@@ -6,8 +6,8 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
-v1.8 - 06/09/2021 - Emmanuel Fournier
-Suite au passage de l'image Windows Standard en version 20H1,
+v1.8 - 08/09/2021 - Emmanuel Fournier
+Suite au passage de l'image Windows Standard en version 20H2,
 - Renforcement de la désactivation de Windows Update :
 	- Matériel / Configuration ordinateur / stratégies / Modèles d'administration / Composants Windows / Windows Update /
 		- Autoriser l'installation immédiate des mises à jour automatiques : Désactivé,
@@ -15,7 +15,6 @@ Suite au passage de l'image Windows Standard en version 20H1,
 		- Autoriser les non-administrateurs à recevoir les notifications de mise à jour : Désactivé,
 		- Ne pas se connecter à des emplacements Internet Windows Update : Activé,
 		- Options d'affichage des notifications de mise à jour : Activé : 2 - désactiver toutes les notifications, y compris les avertissements de redémarrage.
-
 		- Windows Update pour entreprises /
 			- Gérer les versions d'évaluation : Activé : Désactiver les versions d'évaluation.
 - Suppression du "Language Pack" français suite à l'usage de Firefox 78.13.0esr version française.
