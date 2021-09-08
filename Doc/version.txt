@@ -20,6 +20,8 @@ Suite au passage de l'image Windows Standard en version 20H1,
 			- Gérer les versions d'évaluation : Activé : Désactiver les versions d'évaluation.
 - Suppression du "Language Pack" français suite à l'usage de Firefox 78.13.0esr version française.
 - Remplacement de Qwant School (RIP) par Qwant Junior comme moteur de recherche par défaut dans les différents navigateurs web.
+- Mise à jour des modèles de stratégie de groupe pour Firefox ESR 78.12
+- Mise à jour des modèles de stratégie de groupe pour Edge 93.0.961.38
 
 v1.7 - 22/03/2021 - Emmanuel Fournier
 - Désactivation du centre de synchronisation dans le référentiel Last.
