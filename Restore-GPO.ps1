@@ -474,7 +474,7 @@ if ( $DoPatchValues ) {
 		$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Microsoft\MicrosoftEdge\Internet Settings" -ValueName "HomeButtonURL" -Type String -value "$URLEtab"
 
 		$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Microsoft\Edge" -ValueName "HomepageLocation" -Type String -value "$URLEtab"
-		$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Microsoft\Edge" -ValueName "RestoreOnStartupURLs" -Type String -value "$URLEtab"
+		$tmp = Set-GPRegistryValue -Name "$UserDestGPOName" -key "HKCU\Software\Policies\Microsoft\Edge\RestoreOnStartupURLs" -ValueName "1" -Type String -value "$URLEtab"
 	}
 
 	# - Magret, Internet Explorer
