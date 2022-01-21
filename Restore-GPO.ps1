@@ -39,9 +39,38 @@ Le dossier 'PolicyDefinitions' contient les modèles de stratégies.
 Le dossier 'Logs' contient les journaux des traitements.
 
 
+
+.EXAMPLE
+PS>Restore-GPO.ps1
+Met-à-jour les modèles de stratégies, sauvegarde les stratégies 'Matériel' et
+'Utilisateurs' du collège et les remplace par les stratégies de référence.
+
+.EXAMPLE
+PS>Restore-GPO.ps1 -MakeCurrentAsRef -MakeCurrentAsRefMachineWith "Matériel - Last" -MakeCurrentAsRefUserWith "Utilisateurs - Last" -MakeCurrentAsRefVersion "Last"
+Utilise les objets "Matériel - Last" et "Utilisateurs - Last" définis dans
+les stratégies de groupe du serveur courant pour remplacer les stratégies
+de référence version "Last".
+
+.EXAMPLE
+PS>Restore-GPO.ps1 -MakeCurrentAsRef -MakeCurrentAsRefMachineWith "Matériel - v1" -MakeCurrentAsRefUserWith "Utilisateurs - v1" -MakeCurrentAsRefVersion "v1"
+Utilise les objets "Matériel - v1" et "Utilisateurs - v1" définis dans
+les stratégies de groupe du serveur courant pour remplacer les stratégies
+de référence version "v1".
+
+
+
 .PARAMETER URLEtab
 L'adresse du site web du collège est normalement automatiquement définie.
 Ce paramètre permet de choisir une autre URL.
+
+.PARAMETER IPPronote
+L'adresse IP Pronote est normalement automatiquement détectée.
+Ce paramètre permet de fixer l'adresse IP.
+
+.PARAMETER IPServer01
+L'adresse IP du Serveur01 est normalement automatiquement détectée.
+Si le serveur possède plusieurs adresses, l'utilisateur est invité à en choisir une.
+Ce paramètre permet de fixer l'adresse IP.
 
 .PARAMETER RestoreRefGPOVersion
 Lors de l'activation des stratégies de référence, ce paramètre permet d'indiquer la version à utiliser.
