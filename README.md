@@ -49,10 +49,27 @@ Le dossier '**Logs**' contient les journaux des traitements.
 <br>
 
 **-URLEtab**<br><br>
-L'adresse du site web du collège est normalement automatiquement définie.
+L'adresse du site web du collège est normalement automatiquement définie.<br>
 Ce paramètre permet de choisir une autre URL.
 
 	-URLEtab https://.../
+
+<br>
+
+**-IPPronote**<br><br>
+L'adresse IP Pronote est normalement automatiquement détectée.<br>
+Ce paramètre permet de fixer l'adresse IP.
+
+	-IPPronote A.B.C.D
+
+<br>
+
+**-IPServer01**<br><br>
+L'adresse IP du Serveur01 est normalement automatiquement détectée.<br>
+Si le serveur possède plusieurs adresses, l'utilisateur est invité à en choisir une.<br>
+Ce paramètre permet de fixer l'adresse IP.
+
+	-IPServer01 A.B.C.D
 
 <br>
 
