@@ -1,10 +1,15 @@
-
+﻿
 CD31 - Econocom
 
 Outil de déploiement des stratégies de groupe CD31
 ------------------------------------------------------------------------------------------------------
 
 Versions :
+
+v1.9 - 10/06/2022 - Emmanuel Fournier
+- Désactivation de l'avertissement de sécurité pour les fichiers '.exe' non signé ou signataire inconnu
+afin d'éviter les popups en question à l'ouverture de session, lors du chargement du client Magret
+et de l'ouverture de la console Magret.
 
 v1.8 - 08/09/2021 - Emmanuel Fournier
 Suite au passage de l'image Windows Standard en version 20H2,
