@@ -6,6 +6,10 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
+v2.0 - 07/09/2022 - Emmanuel Fournier
+- Mise-à-jour des templates ADMX pour la nouvelle image Windows 10 21H2, Firefox et Google Chrome.
+- Désactivation de l'affichage "Actualités et champs d'intérêt" dans la barre des tâches.
+
 v1.9 - 10/06/2022 - Emmanuel Fournier
 - Désactivation de l'avertissement de sécurité pour les fichiers '.exe' non signé ou signataire inconnu
 afin d'éviter les popups en question à l'ouverture de session, lors du chargement du client Magret
