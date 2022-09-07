@@ -46,7 +46,7 @@ Remarques :
           L’affichage Web est affecté par les paramètres « Activer l’interface classique » et « Ne pas autoriser l’ouverture des Options des dossiers à partir du bouton Options sous l’onglet Affichage du ruban » dans Configuration utilisateur\Modèles d’administration\Composants Windows\Explorateur Windows, et par le paramètre « Activer Active Desktop » dans Configuration utilisateur\Modèles d’administration\Bureau\Active Desktop.</string>
       <string id="DomainDisplayPrinters_Help">Si vous activez ce paramètre de stratégie, il définit le nombre maximal d’imprimantes (de chaque type) que l’Assistant Ajout d’imprimante affiche sur un ordinateur d’un réseau géré (lorsque l’ordinateur peut atteindre un contrôleur de domaine, par exemple un ordinateur portable faisant partie d’un domaine dans un réseau d’entreprise.)
 
-Si ce paramètre de stratégie est désactivé, la page d’analyse réseau ne s’affiche pas..
+          Si ce paramètre de stratégie est désactivé, la page d’analyse réseau ne s’affiche pas.
 
           Si ce paramètre de stratégie n’est pas configuré, l’Assistant Ajout d’imprimante affiche le nombre par défaut d’imprimantes de chaque type :
           Imprimantes Active Directory : 20
@@ -59,7 +59,7 @@ Si ce paramètre de stratégie est désactivé, la page d’analyse réseau ne s
 
           Si vous ne souhaitez pas afficher les imprimantes d’un certain type, activez cette stratégie et définissez le nombre d’imprimantes à afficher à 0.
 
-          Dans  Windows 10 et versions ultérieures, seules les imprimantes TCP/IP peuvent s’afficher dans l’Assistant. Si vous activez ce paramètre de stratégie, seules les limites relatives aux imprimantes TCP/IP sont applicables. Sur Windows 10 uniquement, si vous désactivez ou ne configurez pas ce paramètre de stratégie, la limite par défaut s’applique.
+          Dans Windows 10 et versions ultérieures, seules les imprimantes TCP/IP peuvent s’afficher dans l’Assistant. Si vous activez ce paramètre de stratégie, seules les limites relatives aux imprimantes TCP/IP sont applicables. Sur Windows 10 uniquement, si vous désactivez ou ne configurez pas ce paramètre de stratégie, la limite par défaut s’applique.
           
           Dans Windows 8 et versions ultérieures, les imprimantes Bluetooth ne s’affichent pas, si bien que leurs limites ne s’appliquent pas à ces versions de Windows.
       </string>
@@ -138,17 +138,17 @@ Remarque : si vous appliquez cette stratégie, les pilotes en mode noyau exista
 
 Si ce paramètre est désactivé, la page d’analyse réseau ne s’affiche pas.
 
-Si ce paramètre n’est pas configuré, l’Assistant Ajout d’imprimante affiche le nombre d’imprimantes par défaut de chaque type :
-Imprimantes TCP/IP : 50
-Imprimantes des services Web : 50
-Imprimantes Bluetooth : 10
-Imprimantes partagées : 50
+Si ce paramètre n’est pas configuré, l’Assistant Ajout d’imprimante affiche le nombre d’imprimantes par défaut de chaque type :
+Imprimantes TCP/IP : 50
+Imprimantes des services Web : 50
+Imprimantes Bluetooth : 10
+Imprimantes partagées : 50
 
 Si vous ne souhaitez pas afficher les imprimantes d’un certain type, activez cette stratégie et définissez le nombre d’imprimantes à afficher à 0.
 
-Dans Windows 10 et versions ultérieures, seules les imprimantes TCP/IP peuvent s’afficher dans l’Assistant. Si vous activez ce paramètre de stratégie, seules les limites relatives aux imprimantes TCP/IP sont applicables. Sur Windows 10 uniquement, si vous désactivez ou ne configurez pas ce paramètre de stratégie, la limite par défaut s’applique.
-          
-Dans Windows 8 et versions ultérieures, les imprimantes Bluetooth ne s’affichent pas, si bien que leurs limites ne s’appliquent pas à ces versions de Windows.</string>
+Dans Windows 10 et versions ultérieures, seules les imprimantes TCP/IP peuvent s’afficher dans l’Assistant. Si vous activez ce paramètre de stratégie, seules les limites relatives aux imprimantes TCP/IP sont applicables. Sur Windows 10 uniquement, si vous désactivez ou ne configurez pas ce paramètre de stratégie, la limite par défaut s’applique.
+
+Dans Windows 8 et versions ultérieures, les imprimantes Bluetooth ne s’affichent pas, si bien que leurs limites ne s’appliquent pas à ces versions de Windows.</string>
       <string id="NonDomainPrinters">Assistant Ajout d’imprimante - Page d’analyse réseau (réseau non géré)</string>
       <string id="PackagePointAndPrintOnly">Utiliser Pointer et imprimer les packages uniquement</string>
       <string id="PackagePointAndPrintOnly_Help">Cette stratégie limite les ordinateurs client à l’utilisation de Pointer et imprimer les packages uniquement.
@@ -278,11 +278,11 @@ Par défaut, la famille de référence (SKU) Windows Édition Intégrale, Profes
 
         Si vous désactivez ou ne configurez pas ce paramètre de stratégie, toutes les extensions d’imprimantes installées pourront être exécutées.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Remplacer le format de sortie Microsoft XPS Document Writer (MXDW) par défaut par le format Microsoft XPS (*.xps) hérité</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) génère des fichiers OpenXPS (*.oxps) par défaut dans Windows 10 et Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) génère des fichiers OpenXPS (*.oxps) par défaut dans Windows 10, Windows 10 et Windows Server 2019.
 
-          Si vous activez ce paramètre de stratégie de groupe, le format de sortie MXDW par défaut est le format Microsoft XPS (*.xps) hérité.
+ Si vous activez ce paramètre de stratégie de groupe, le format de sortie MXDW par défaut est le format Microsoft XPS (*.xps) hérité.
 
-          Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le format de sortie MXDW par défaut est OpenXPS (*.oxps).</string>
+ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le format de sortie MXDW par défaut est OpenXPS (*.oxps).</string>
       <string id="SetDefaultPrinterMRUModeOff">Désactiver la gestion des imprimantes par défaut Windows</string>
       <string id="SetDefaultPrinterMRUModeOff_Help">Cette préférence vous permet de modifier la gestion des imprimantes par défaut.
 
@@ -291,6 +291,34 @@ Si vous activez ce paramètre, Windows ne gère pas l’imprimante par défaut.
 Si vous désactivez ce paramètre, Windows gère l’imprimante par défaut.
 
 Si vous ne configurez pas ce paramètre, la gestion des imprimantes par défaut n’est pas modifiée. </string>
+      <string id="EnableDeviceControl">Activer les Restrictions d’Impression sous Contrôle de Périphérique</string>
+      <string id="EnableDeviceControl_Help">
+          Détermine si les restrictions d’impression de contrôle de périphérique sont appliquées pour l’impression sur cet ordinateur.
+
+          Par défaut, il n’y a aucune restriction à l’impression en fonction du type de connexion ou de la marque/du modèle de l’imprimante.
+
+          Si vous activez ce paramètre, l’ordinateur limite l’impression aux connexions d’imprimantes sur le réseau d’entreprise ou aux imprimantes USB approuvées.
+
+          Si vous désactivez ce paramètre ou ne le configurez pas, l’impression n’est soumise à aucune restriction en fonction du type de connexion ou de la marque/du modèle de l’imprimante.</string>
+        <string id="ApprovedUsbPrintDevices">Liste des périphériques d’impression connectés par USB approuvés</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            Ce paramètre est un composant des restrictions d’impression de pilotage de matériel. Pour utiliser ce paramètre, activez le paramètre d’impression de contrôle de périphérique en activant le paramètre « Activer les restrictions d’impression de contrôle de périphérique ».
+
+Lorsque l’impression du contrôle de périphérique est activée, le système utilise la liste de valeurs VID/PID spécifiée pour déterminer si l’imprimante USB connectée actuelle est approuvée pour l’impression locale.
+
+Tapez toutes les combinaisons VID/PID approuvées (séparées par des virgules) qui correspondent aux modèles d’imprimante USB approuvés. Lorsqu’un utilisateur tente d’imprimer vers une file d’attente d’impression USB, le numéro/PID de l’appareil sera comparé à la liste approuvée.
+        </string>
+        <string id="RestrictDriverInstallationToAdministrators">Limite l’installation du pilote d’impression aux administrateurs</string>
+        <string id="RestrictDriverInstallationToAdministrators_Help">
+Détermine si les utilisateurs qui ne sont pas administrateurs peuvent installer des pilotes d’impression sur cet ordinateur.
+
+Par défaut, les utilisateurs qui ne sont pas administrateurs ne peuvent pas installer de pilotes d’impression sur cet ordinateur.
+
+Si vous activez ce paramètre ou si vous ne le configurez pas, le système limite l’installation des pilotes d’impression aux administrateurs de cet ordinateur.
+
+Si vous désactivez ce paramètre, le système ne limitera pas l’installation des pilotes d’impression sur cet ordinateur.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +378,13 @@ Si vous ne configurez pas ce paramètre, la gestion des imprimantes par défaut 
           <label>Chemin Active Directory par défaut</label>
         </textBox>
         <text>exemple --&gt; LDAP://DC=Domain1,DC=MyCompany,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Spécifiez la liste des périphériques d’imprimante connectés par USB approuvés.</text>
+        <text>La liste est une liste séparée par des virgules de valeurs PID/PID USB. Exemple : 0351/0872, 135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

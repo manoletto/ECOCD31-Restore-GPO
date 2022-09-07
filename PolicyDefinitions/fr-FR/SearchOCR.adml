@@ -89,7 +89,7 @@ Aucune réindexation n’a lieu lorsque vous activez cette stratégie et sélect
         <text>Cyrillique (1251) - Page de codes</text>
           <checkBox refId="Bulgarian" defaultChecked="false">Bulgare</checkBox>
           <checkBox refId="Byelorussian" defaultChecked="false">Bélarusse</checkBox>
-          <checkBox refId="MacedoniaFYRO" defaultChecked="false">Macédonien (Macédoine du Nord)</checkBox>
+          <checkBox refId="MacedoniaFYRO" defaultChecked="false">Macédonien (Ex-Rép. yougoslave de Macédoine)</checkBox>
           <checkBox refId="Russian" defaultChecked="false">Russe</checkBox>
           <checkBox refId="Serbian" defaultChecked="false">Serbe</checkBox>
           <checkBox refId="Ukrainian" defaultChecked="false">Ukrainien</checkBox>

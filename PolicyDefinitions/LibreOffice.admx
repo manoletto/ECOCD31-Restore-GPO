@@ -1,0 +1,2460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 2014 Creator: Thomas Higgins -->
+<policyDefinitions revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <policyNamespaces>
+    <target prefix="LibreOffice" namespace="LibreOffice.Policies.LibreOffice" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <supersededAdm fileName="" />
+  <resources minRequiredRevision="1.0" />
+  <supportedOn>
+    <definitions>
+      <definition name="SupportedLO4_2" displayName="$(string.SupportedLO4_2)" />
+      <definition name="SupportedLO4_3" displayName="$(string.SupportedLO4_3)" />
+      <definition name="SupportedLO4_4" displayName="$(string.SupportedLO4_4)" />
+      <definition name="SupportedLO5_0" displayName="$(string.SupportedLO5_0)" />
+    </definitions>
+  </supportedOn>
+  <categories>
+    <!-- Root -->
+    <category name="CAT_LibreOfficeRoot" displayName="$(string.CAT_LibreOfficeRoot)" />
+    <!--#### CATEGORIES ####-->
+    <!--## LIBREOFFICE ##-->
+    <category name="CAT_LibreOffice" displayName="$(string.CAT_LibreOffice)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_LibreOfficeUserData" displayName="$(string.CAT_LibreOfficeUserData)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficeGeneral" displayName="$(string.CAT_LibreOfficeGeneral)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficeMemory" displayName="$(string.CAT_LibreOfficeMemory)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficeView" displayName="$(string.CAT_LibreOfficeView)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficePrint" displayName="$(string.CAT_LibreOfficePrint)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficePaths" displayName="$(string.CAT_LibreOfficePaths)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficeColors" displayName="$(string.CAT_LibreOfficeColors)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficeFonts" displayName="$(string.CAT_LibreOfficeFonts)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficeSecurity" displayName="$(string.CAT_LibreOfficeSecurity)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficePersonalization" displayName="$(string.CAT_LibreOfficePersonalization)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficeAppearance" displayName="$(string.CAT_LibreOfficeAppearance)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficeAccessibility" displayName="$(string.CAT_LibreOfficeAccessibility)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <category name="CAT_LibreOfficeAdvanced" displayName="$(string.CAT_LibreOfficeAdvanced)">
+      <parentCategory ref="LibreOffice:CAT_LibreOffice" />
+    </category>
+    <!--## LOAD SAVE ##-->
+    <category name="CAT_LoadSave" displayName="$(string.CAT_LoadSave)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_LoadSaveGeneral" displayName="$(string.CAT_LoadSaveGeneral)">
+      <parentCategory ref="LibreOffice:CAT_LoadSave" />
+    </category>
+    <category name="CAT_LoadSaveVBAProperties" displayName="$(string.CAT_LoadSaveVBAProperties)">
+      <parentCategory ref="LibreOffice:CAT_LoadSave" />
+    </category>
+    <category name="CAT_LoadSaveMicrosoftOffice" displayName="$(string.CAT_LoadSaveMicrosoftOffice)">
+      <parentCategory ref="LibreOffice:CAT_LoadSave" />
+    </category>
+    <category name="CAT_LoadSaveHTMLCompatibility" displayName="$(string.CAT_LoadSaveHTMLCompatibility)">
+      <parentCategory ref="LibreOffice:CAT_LoadSave" />
+    </category>
+    <!--## LANGUAGE SETTINGS ##-->
+    <category name="CAT_LanguageSettings" displayName="$(string.CAT_LanguageSettings)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_LanguageSettingsLanguages" displayName="$(string.CAT_LanguageSettingsLanguages)">
+      <parentCategory ref="LibreOffice:CAT_LanguageSettings" />
+    </category>
+    <category name="CAT_LanguageSettingsWritingAids" displayName="$(string.CAT_LanguageSettingsWritingAids)">
+      <parentCategory ref="LibreOffice:CAT_LanguageSettings" />
+    </category>
+    <category name="CAT_LanguageSettingsSentenceChecking" displayName="$(string.CAT_LanguageSettingsSentenceChecking)">
+      <parentCategory ref="LibreOffice:CAT_LanguageSettings" />
+    </category>
+    <!--## LIBREOFFICE WRITER ##-->
+    <category name="CAT_LibreOfficeWriter" displayName="$(string.CAT_LibreOfficeWriter)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_LibreOfficeWriterGeneral" displayName="$(string.CAT_LibreOfficeWriterGeneral)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterView" displayName="$(string.CAT_LibreOfficeWriterView)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterFormattingAids" displayName="$(string.CAT_LibreOfficeWriterFormattingAids)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterGrid" displayName="$(string.CAT_LibreOfficeWriterGrid)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterBasicFonts" displayName="$(string.CAT_LibreOfficeWriterBasicFonts)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterPrint" displayName="$(string.CAT_LibreOfficeWriterPrint)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterTable" displayName="$(string.CAT_LibreOfficeWriterTable)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterChanges" displayName="$(string.CAT_LibreOfficeWriterChanges)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterComparison" displayName="$(string.CAT_LibreOfficeWriterComparison)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterCompatibility" displayName="$(string.CAT_LibreOfficeWriterCompatibility)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterAutoCaption" displayName="$(string.CAT_LibreOfficeWriterAutoCaption)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <category name="CAT_LibreOfficeWriterMailMerge" displayName="$(string.CAT_LibreOfficeWriterMailMerge)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriter" />
+    </category>
+    <!--## LIBREOFFICE WRITER/WEB ##-->
+    <category name="CAT_LibreOfficeWriterWeb" displayName="$(string.CAT_LibreOfficeWriterWeb)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_LibreOfficeWriterWebView" displayName="$(string.CAT_LibreOfficeWriterWebView)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriterWeb" />
+    </category>
+    <category name="CAT_LibreOfficeWriterWebFormattingAids" displayName="$(string.CAT_LibreOfficeWriterWebFormattingAids)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriterWeb" />
+    </category>
+    <category name="CAT_LibreOfficeWriterWebGrid" displayName="$(string.CAT_LibreOfficeWriterWebGrid)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriterWeb" />
+    </category>
+    <category name="CAT_LibreOfficeWriterWebPrint" displayName="$(string.CAT_LibreOfficeWriterWebPrint)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriterWeb" />
+    </category>
+    <category name="CAT_LibreOfficeWriterWebTable" displayName="$(string.CAT_LibreOfficeWriterWebTable)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriterWeb" />
+    </category>
+    <category name="CAT_LibreOfficeWriterWebBackground" displayName="$(string.CAT_LibreOfficeWriterWebBackground)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeWriterWeb" />
+    </category>
+    <!--## LIBREOFFICE CALC ##-->
+    <category name="CAT_LibreOfficeCalc" displayName="$(string.CAT_LibreOfficeCalc)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_LibreOfficeCalcGeneral" displayName="$(string.CAT_LibreOfficeCalcGeneral)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <category name="CAT_LibreOfficeCalcDefaults" displayName="$(string.CAT_LibreOfficeCalcDefaults)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <category name="CAT_LibreOfficeCalcView" displayName="$(string.CAT_LibreOfficeCalcView)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <category name="CAT_LibreOfficeCalcCalculate" displayName="$(string.CAT_LibreOfficeCalcCalculate)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <category name="CAT_LibreOfficeCalcFormula" displayName="$(string.CAT_LibreOfficeCalcFormula)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <category name="CAT_LibreOfficeCalcSortLists" displayName="$(string.CAT_LibreOfficeCalcSortLists)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <category name="CAT_LibreOfficeCalcChanges" displayName="$(string.CAT_LibreOfficeCalcChanges)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <category name="CAT_LibreOfficeCalcCompatibility" displayName="$(string.CAT_LibreOfficeCalcCompatibility)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <category name="CAT_LibreOfficeCalcGrid" displayName="$(string.CAT_LibreOfficeCalcGrid)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <category name="CAT_LibreOfficeCalcPrint" displayName="$(string.CAT_LibreOfficeCalcPrint)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeCalc" />
+    </category>
+    <!--## LIBREOFFICE IMPRESS ##-->
+    <category name="CAT_LibreOfficeImpress" displayName="$(string.CAT_LibreOfficeImpress)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_LibreOfficeImpressGeneral" displayName="$(string.CAT_LibreOfficeImpressGeneral)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeImpress" />
+    </category>
+    <category name="CAT_LibreOfficeImpressView" displayName="$(string.CAT_LibreOfficeImpressView)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeImpress" />
+    </category>
+    <category name="CAT_LibreOfficeImpressGrid" displayName="$(string.CAT_LibreOfficeImpressGrid)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeImpress" />
+    </category>
+    <category name="CAT_LibreOfficeImpressPrint" displayName="$(string.CAT_LibreOfficeImpressPrint)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeImpress" />
+    </category>
+    <!--## LIBREOFFICE BASE ##-->
+    <category name="CAT_LibreOfficeBase" displayName="$(string.CAT_LibreOfficeBase)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_LibreOfficeBaseConnections" displayName="$(string.CAT_LibreOfficeBaseConnections)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeBase" />
+    </category>
+    <category name="CAT_LibreOfficeBaseDatabases" displayName="$(string.CAT_LibreOfficeBaseDatabases)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeBase" />
+    </category>
+    <!--## CHARTS ##-->
+    <category name="CAT_Charts" displayName="$(string.CAT_Charts)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_ChartsDefaultColors" displayName="$(string.CAT_ChartsDefaultColors)">
+      <parentCategory ref="LibreOffice:CAT_Charts" />
+    </category>
+    <!--## INTERNET ##-->
+    <category name="CAT_Internet" displayName="$(string.CAT_Internet)">
+      <parentCategory ref="LibreOffice:CAT_LibreOfficeRoot" />
+    </category>
+    <category name="CAT_InternetProxy" displayName="$(string.CAT_InternetProxy)">
+      <parentCategory ref="LibreOffice:CAT_Internet" />
+    </category>
+  </categories>
+  <policies>
+    <!--### ROOT ###-->
+    <policy name="SetupProductooName" class="Machine" displayName="$(string.SetupProductooName)" explainText="$(string.SetupProductooNameHelp)" presentation="$(presentation.SetupProductooName)" key="Software\policies\LibreOffice\org.openoffice.Setup\Product\ooName">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <text id="SetupProductooNameValue" valueName="Value" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <policy name="OptionsDialogHideLibreOffice" class="Machine" displayName="$(string.OptionsDialogHideLibreOffice)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideLoadSave" class="Machine" displayName="$(string.OptionsDialogHideLoadSave)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\LoadSave/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideLanguageSettings" class="Machine" displayName="$(string.OptionsDialogHideLanguageSettings)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\LanguageSettings/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriter" class="Machine" displayName="$(string.OptionsDialogHideWriter)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterWeb" class="Machine" displayName="$(string.OptionsDialogHideWriterWeb)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\WriterWeb/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideCalc" class="Machine" displayName="$(string.OptionsDialogHideCalc)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideImpress" class="Machine" displayName="$(string.OptionsDialogHideImpress)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Impress/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideBase" class="Machine" displayName="$(string.OptionsDialogHideBase)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Base/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideDraw" class="Machine" displayName="$(string.OptionsDialogHideDraw)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Draw/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideMath" class="Machine" displayName="$(string.OptionsDialogHideMath)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Math/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideCharts" class="Machine" displayName="$(string.OptionsDialogHideCharts)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Charts/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideInternet" class="Machine" displayName="$(string.OptionsDialogHideInternet)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Internet/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeRoot" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--## LIBREOFFICE ##-->
+    <policy name="OptionsDialogHideUserData" class="Machine" displayName="$(string.OptionsDialogHideUserData)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\UserData/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideGeneral" class="Machine" displayName="$(string.OptionsDialogHideGeneral)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\General/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideMemory" class="Machine" displayName="$(string.OptionsDialogHideMemory)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Memory/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideView" class="Machine" displayName="$(string.OptionsDialogHideView)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\View/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHidePrint" class="Machine" displayName="$(string.OptionsDialogHidePrint)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Print/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHidePaths" class="Machine" displayName="$(string.OptionsDialogHidePaths)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Paths/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideColors" class="Machine" displayName="$(string.OptionsDialogHideColors)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Colors/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideFonts" class="Machine" displayName="$(string.OptionsDialogHideFonts)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Fonts/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideSecurity" class="Machine" displayName="$(string.OptionsDialogHideSecurity)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Security/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHidePersonalization" class="Machine" displayName="$(string.OptionsDialogHidePersonalization)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Personalization/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideAppearance" class="Machine" displayName="$(string.OptionsDialogHideAppearance)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Appearance/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideAccessibility" class="Machine" displayName="$(string.OptionsDialogHideAccessibility)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Accessibility/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideAdvanced" class="Machine" displayName="$(string.OptionsDialogHideAdvanced)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\Java/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideBasicIDEOptions" class="Machine" displayName="$(string.OptionsDialogHideBasicIDEOptions)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\BasicIDEOptions/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideOnlineUpdate" class="Machine" displayName="$(string.OptionsDialogHideOnlineUpdate)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\ProductName/#fuse\Pages\OnlineUpdate/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOffice" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--# USER DATA #-->
+    <policy name="UserProfileDatao" class="Machine" displayName="$(string.UserProfileDatao)" explainText="$(string.UserProfileDataoHelp)" presentation="$(presentation.UserProfileDatao)" key="Software\policies\LibreOffice\org.openoffice.UserProfile\Data\o">
+      <parentCategory ref="CAT_LibreOfficeUserData" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <text id="UserProfileDataoValue" valueName="Value" required="true" expandable="true" />
+        <boolean id="UserProfileDataoEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--# GENERAL #-->
+    <!--View-->
+    <policy name="UseOpenGL" class="Machine" displayName="$(string.UseOpenGL)" explainText="$(string.UseOpenGL)" presentation="$(presentation.UseOpenGL)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\VCL\UseOpenGL">
+      <parentCategory ref="CAT_LibreOfficeGeneral" />
+      <supportedOn ref="SupportedLO5_0" />
+      <elements>
+        <boolean id="UseOpenGLValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="UseOpenGLEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="ForceOpenGL" class="Machine" displayName="$(string.ForceOpenGL)" explainText="$(string.ForceOpenGL)" presentation="$(presentation.ForceOpenGL)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\VCL\ForceOpenGL">
+      <parentCategory ref="CAT_LibreOfficeGeneral" />
+      <supportedOn ref="SupportedLO5_0" />
+      <elements>
+        <boolean id="ForceOpenGLValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="ForceOpenGLEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--Help-->
+    <policy name="CommonHelpTip" class="Machine" displayName="$(string.CommonHelpTip)" explainText="$(string.CommonHelpTipHelp)" presentation="$(presentation.CommonHelpTip)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Help\Tip">
+      <parentCategory ref="CAT_LibreOfficeGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonHelpTipValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonHelpTipEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonHelpExtendedTip" class="Machine" displayName="$(string.CommonHelpExtendedTip)" explainText="$(string.CommonHelpExtendedTipHelp)" presentation="$(presentation.CommonHelpExtendedTip)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Help\ExtendedTip">
+      <parentCategory ref="CAT_LibreOfficeGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonHelpExtendedTipValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonHelpExtendedTipEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--Open/Save Dialogs-->
+    <policy name="CommonMiscUseSystemFileDialog" class="Machine" displayName="$(string.CommonMiscUseSystemFileDialog)" explainText="$(string.CommonMiscUseSystemFileDialogHelp)" presentation="$(presentation.CommonMiscUseSystemFileDialog)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Misc\UseSystemFileDialog">
+      <parentCategory ref="CAT_LibreOfficeGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <!-- Yes true / false has to be reversed for this item -->
+        <boolean id="CommonMiscUseSystemFileDialogValue" valueName="Value">
+          <trueValue>
+            <string>false</string>
+          </trueValue>
+          <falseValue>
+            <string>true</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonMiscUseSystemFileDialogEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--Document Status-->
+    <policy name="CommonPrintPrintingModifiesDocument" class="Machine" displayName="$(string.CommonPrintPrintingModifiesDocument)" explainText="$(string.CommonPrintPrintingModifiesDocumentHelp)" presentation="$(presentation.CommonPrintPrintingModifiesDocument)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\PrintingModifiesDocument">
+      <parentCategory ref="CAT_LibreOfficeGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonPrintPrintingModifiesDocumentValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonPrintPrintingModifiesDocumentEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonMiscAlwaysAllowSave" class="Machine" displayName="$(string.CommonMiscAlwaysAllowSave)" explainText="$(string.CommonMiscAlwaysAllowSaveHelp)" presentation="$(presentation.CommonMiscAlwaysAllowSave)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Misc\AlwaysAllowSave">
+      <parentCategory ref="CAT_LibreOfficeGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonMiscAlwaysAllowSaveValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonMiscAlwaysAllowSaveEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--Year (Two Digits)-->
+    <policy name="CommonDateFormatTwoDigitYear" class="Machine" displayName="$(string.CommonDateFormatTwoDigitYear)" explainText="$(string.CommonDateFormatTwoDigitYearHelp)" presentation="$(presentation.CommonDateFormatTwoDigitYear)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\DateFormat\TwoDigitYear">
+      <parentCategory ref="CAT_LibreOfficeGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <decimal id="CommonDateFormatTwoDigitYearValue" valueName="Value" minValue="1800" maxValue="3000" storeAsText="true"></decimal>
+        <boolean id="CommonDateFormatTwoDigitYearEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--Privacy-->
+    <policy name="CommonMiscCollectUsageInformation" class="Machine" displayName="$(string.CommonMiscCollectUsageInformation)" explainText="$(string.CommonMiscCollectUsageInformationHelp)" presentation="$(presentation.CommonMiscCollectUsageInformation)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Misc\CollectUsageInformation">
+      <parentCategory ref="CAT_LibreOfficeGeneral" />
+      <supportedOn ref="SupportedLO4_4" />
+      <elements>
+        <boolean id="CommonMiscCollectUsageInformationValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonMiscCollectUsageInformationEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--# MEMORY #-->
+    <policy name="CommonUndoSteps" class="Machine" displayName="$(string.CommonUndoSteps)" explainText="$(string.CommonUndoStepsHelp)" presentation="$(presentation.CommonUndoSteps)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Undo\Steps">
+      <parentCategory ref="CAT_LibreOfficeMemory" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <decimal id="CommonUndoStepsValue" valueName="Value" minValue="1" maxValue="999" storeAsText="true" />
+        <boolean id="CommonUndoStepsEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--# VIEW #-->
+    <!--# PRINT #-->
+    <!-- Reduce Print Data -->
+    <policy name="CommonPrintOptionPrinter" class="Machine" displayName="$(string.CommonPrintOptionPrinter)" explainText="$(string.CommonPrintOptionPrinterHelp)" presentation="$(presentation.CommonPrintOptionPrinter)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer">
+      <parentCategory ref="CAT_LibreOfficePrint" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonPrintOptionPrinterReduceTransparency" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ReduceTransparency" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <enum id="CommonPrintOptionPrinterReducedTransparencyModeValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ReducedTransparencyMode" valueName="Value">
+          <item displayName="$(string.CommonPrintOptionPrinterReducedTransparencyModeAutomatically)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedTransparencyModeNoTransparency)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="CommonPrintOptionPrinterReduceGradientsValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ReduceGradients" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <enum id="CommonPrintOptionPrinterReducedGradientModeValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ReducedGradientMode" valueName="Value">
+          <item displayName="$(string.CommonPrintOptionPrinterReducedGradientModeGradientStripes)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedGradientModeIntermediateColor)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+        </enum>
+        <decimal id="CommonPrintOptionPrinterReducedGradientStepCountValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ReducedGradientStepCount" valueName="Value" minValue="1" maxValue="256" storeAsText="true" />
+        <boolean id="CommonPrintOptionPrinterReduceBitmapsValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ReduceBitmaps" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonPrintOptionPrinterReducedBitmapIncludesTransparencyValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ReducedBitmapIncludesTransparency" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <enum id="CommonPrintOptionPrinterReducedBitmapModeValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ReducedBitmapMode" valueName="Value">
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapModeHigh)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapModeNormal)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapModeResolution)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+        </enum>
+        <enum id="CommonPrintOptionPrinterReducedBitmapResolutionValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ReducedBitmapResolution" valueName="Value">
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution0)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution1)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution2)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution3)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution4)">
+            <value>
+              <string>4</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution5)">
+            <value>
+              <string>5</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="CommonPrintOptionPrinterConvertToGreyscalesValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\Printer\ConvertToGreyscales" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonPrintOptionFile" class="Machine" displayName="$(string.CommonPrintOptionFile)" explainText="$(string.CommonPrintOptionPrinterHelp)" presentation="$(presentation.CommonPrintOptionPrinter)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File">
+      <parentCategory ref="CAT_LibreOfficePrint" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonPrintOptionPrinterReduceTransparency" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ReduceTransparency" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <enum id="CommonPrintOptionPrinterReducedTransparencyModeValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ReducedTransparencyMode" valueName="Value">
+          <item displayName="$(string.CommonPrintOptionPrinterReducedTransparencyModeAutomatically)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedTransparencyModeNoTransparency)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="CommonPrintOptionPrinterReduceGradientsValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ReduceGradients" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <enum id="CommonPrintOptionPrinterReducedGradientModeValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ReducedGradientMode" valueName="Value">
+          <item displayName="$(string.CommonPrintOptionPrinterReducedGradientModeGradientStripes)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedGradientModeIntermediateColor)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+        </enum>
+        <decimal id="CommonPrintOptionPrinterReducedGradientStepCountValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ReducedGradientStepCount" valueName="Value" minValue="1" maxValue="256" storeAsText="true" />
+        <boolean id="CommonPrintOptionPrinterReduceBitmapsValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ReduceBitmaps" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonPrintOptionPrinterReducedBitmapIncludesTransparencyValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ReducedBitmapIncludesTransparency" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <enum id="CommonPrintOptionPrinterReducedBitmapModeValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ReducedBitmapMode" valueName="Value">
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapModeHigh)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapModeNormal)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapModeResolution)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+        </enum>
+        <enum id="CommonPrintOptionPrinterReducedBitmapResolutionValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ReducedBitmapResolution" valueName="Value">
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution0)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution1)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution2)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution3)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution4)">
+            <value>
+              <string>4</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonPrintOptionPrinterReducedBitmapResolution5)">
+            <value>
+              <string>5</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="CommonPrintOptionPrinterConvertToGreyscalesValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Option\File\ConvertToGreyscales" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!-- Printer Warnings-->
+    <policy name="CommonPrintWarning" class="Machine" displayName="$(string.CommonPrintWarning)" explainText="$(string.CommonPrintWarningHelp)" presentation="$(presentation.CommonPrintWarning)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Warning">
+      <parentCategory ref="CAT_LibreOfficePrint" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonPrintWarningPaperSizeValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Warning\PaperSize" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonPrintWarningPaperOrientationValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Warning\PaperOrientation" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonPrintWarningTransparencyValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Print\Warning\Transparency" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--# PATHS #-->
+    <policy name="PathsPathsGallery" class="Machine" displayName="$(string.PathsPathsGallery)" explainText="$(string.PathsPathsHelp)" presentation="$(presentation.PathsPathsGallery)" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths">
+      <parentCategory ref="CAT_LibreOfficePaths" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <text id="PathsPathsGalleryWritePath" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['Gallery']\WritePath" valueName="Value" required="true"/>
+        <text id="PathsPathsGalleryUserPaths" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['Gallery']\UserPaths" valueName="Value"/>
+      </elements>
+    </policy>
+    <policy name="PathsPathsTemplate" class="Machine" displayName="$(string.PathsPathsTemplate)" explainText="$(string.PathsPathsHelp)" presentation="$(presentation.PathsPathsTemplate)" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths">
+      <parentCategory ref="CAT_LibreOfficePaths" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <text id="PathsPathsTemplateWritePath" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['Template']\WritePath" valueName="Value" required="true"/>
+        <text id="PathsPathsTemplateUserPaths" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['Template']\UserPaths" valueName="Value"/>
+      </elements>
+    </policy>
+    <policy name="PathsPathsDictionary" class="Machine" displayName="$(string.PathsPathsDictionary)" explainText="$(string.PathsPathsHelp)" presentation="$(presentation.PathsPathsDictionary)" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths">
+      <parentCategory ref="CAT_LibreOfficePaths" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <text id="PathsPathsDictionaryWritePath" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['Dictionary']\WritePath" valueName="Value" required="true"/>
+        <text id="PathsPathsDictionaryUserPaths" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['Dictionary']\UserPaths" valueName="Value"/>
+      </elements>
+    </policy>
+    <policy name="PathsPathsAutoText" class="Machine" displayName="$(string.PathsPathsAutoText)" explainText="$(string.PathsPathsHelp)" presentation="$(presentation.PathsPathsAutoText)" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths">
+      <parentCategory ref="CAT_LibreOfficePaths" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <text id="PathsPathsAutoTextWritePath" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['AutoText']\WritePath" valueName="Value" required="true"/>
+        <text id="PathsPathsAutoTextUserPaths" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['AutoText']\UserPaths" valueName="Value"/>
+      </elements>
+    </policy>
+    <policy name="PathsPathsAutoCorrect" class="Machine" displayName="$(string.PathsPathsAutoCorrect)" explainText="$(string.PathsPathsHelp)" presentation="$(presentation.PathsPathsAutoCorrect)" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths">
+      <parentCategory ref="CAT_LibreOfficePaths" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <text id="PathsPathsAutoCorrectWritePath" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['AutoCorrect']\WritePath" valueName="Value" required="true"/>
+        <text id="PathsPathsAutoCorrectUserPaths" key="Software\policies\LibreOffice\org.openoffice.Office.Paths\Paths\NamedPath['AutoCorrect']\UserPaths" valueName="Value"/>
+      </elements>
+    </policy>
+    <!--# SECURITY #-->
+    <policy name="CommonSecurityScriptingMacroSecurityLevel" class="Machine" displayName="$(string.CommonSecurityScriptingMacroSecurityLevel)" explainText="$(string.CommonSecurityScriptingMacroSecurityLevelHelp)" presentation="$(presentation.CommonSecurityScriptingMacroSecurityLevel)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Security\Scripting\MacroSecurityLevel">
+      <parentCategory ref="CAT_LibreOfficeSecurity" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <enum id="CommonSecurityScriptingMacroSecurityLevelValue" valueName="Value">
+          <item displayName="$(string.LibreOfficeCommon_VHigh)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_High)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Medium)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Low)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="CommonSecurityScriptingMacroSecurityLevelEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+	  <policy name="CommonSecurityScriptingSecureURL" class="Machine" displayName="$(string.CommonSecurityScriptingSecureURL)" explainText="$(string.CommonSecurityScriptingSecureURLHelp)" presentation="$(presentation.CommonSecurityScriptingSecureURL)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Security\Scripting\SecureURL">
+      <parentCategory ref="CAT_LibreOfficeSecurity" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <text id="CommonSecurityScriptingSecureURLValue" valueName="Value" required="true" expandable="true" />
+        <boolean id="CommonSecurityScriptingSecureURLEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonSecurityScriptingHyperlinksWithCtrlClick" class="Machine" displayName="$(string.CommonSecurityScriptingHyperlinksWithCtrlClick)" explainText="$(string.CommonSecurityScriptingHyperlinksWithCtrlClickHelp)" presentation="$(presentation.CommonSecurityScriptingHyperlinksWithCtrlClick)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Security\Scripting\HyperlinksWithCtrlClick">
+      <parentCategory ref="CAT_LibreOfficeSecurity" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonSecurityScriptingHyperlinksWithCtrlClickValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSecurityScriptingHyperlinksWithCtrlClickEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonSecurityScriptingWarnCreatePDF" class="Machine" displayName="$(string.CommonSecurityScriptingWarnCreatePDF)" explainText="$(string.CommonSecurityScriptingWarnCreatePDFHelp)" presentation="$(presentation.CommonSecurityScriptingWarnCreatePDF)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Security\Scripting\WarnCreatePDF">
+      <parentCategory ref="CAT_LibreOfficeSecurity" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonSecurityScriptingWarnCreatePDFValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSecurityScriptingWarnCreatePDFEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonSecurityScriptingWarnSignDoc" class="Machine" displayName="$(string.CommonSecurityScriptingWarnSignDoc)" explainText="$(string.CommonSecurityScriptingWarnSignDocHelp)" presentation="$(presentation.CommonSecurityScriptingWarnSignDoc)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Security\Scripting\WarnSignDoc">
+      <parentCategory ref="CAT_LibreOfficeSecurity" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonSecurityScriptingWarnSignDocValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSecurityScriptingWarnSignDocEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonSecurityScriptingWarnSaveOrSendDoc" class="Machine" displayName="$(string.CommonSecurityScriptingWarnSaveOrSendDoc)" explainText="$(string.CommonSecurityScriptingWarnSaveOrSendDocHelp)" presentation="$(presentation.CommonSecurityScriptingWarnSaveOrSendDoc)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Security\Scripting\WarnSaveOrSendDoc">
+      <parentCategory ref="CAT_LibreOfficeSecurity" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonSecurityScriptingWarnSaveOrSendDocValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSecurityScriptingWarnSaveOrSendDocEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="WarnPrintDoc" class="Machine" displayName="$(string.WarnPrintDoc)" explainText="$(string.WarnPrintDocHelp)" presentation="$(presentation.WarnPrintDoc)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Security\Scripting\WarnPrintDoc">
+      <parentCategory ref="CAT_LibreOfficeSecurity" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="WarnPrintDocValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="WarnPrintDocEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="RecommendPasswordProtection" class="Machine" displayName="$(string.RecommendPasswordProtection)" explainText="$(string.RecommendPasswordProtectionHelp)" presentation="$(presentation.RecommendPasswordProtection)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Security\Scripting\RecommendPasswordProtection">
+      <parentCategory ref="CAT_LibreOfficeSecurity" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="RecommendPasswordProtectionValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="RecommendPasswordProtectionEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="RemovePersonalInfoOnSaving" class="Machine" displayName="$(string.RemovePersonalInfoOnSaving)" explainText="$(string.RemovePersonalInfoOnSavingHelp)" presentation="$(presentation.RemovePersonalInfoOnSaving)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Security\Scripting\RemovePersonalInfoOnSaving">
+      <parentCategory ref="CAT_LibreOfficeSecurity" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="RemovePersonalInfoOnSavingValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="RemovePersonalInfoOnSavingEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--# PERSONALIZATION #-->
+    <policy name="Persona" class="Machine" displayName="$(string.Persona)" explainText="$(string.PersonaHelp)" presentation="$(presentation.Persona)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Misc\Persona">
+      <parentCategory ref="CAT_LibreOfficePersonalization" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <enum id="PersonaOp" valueName="Value">
+          <item displayName="$(string.LibreOfficeCommon_True)">
+            <value>
+              <string>default</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_False)">
+            <value>
+              <string>no</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="PersonaEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--# ACCESSIBILITY #-->
+    <policy name="IsAllowAnimatedGraphics" class="Machine" displayName="$(string.IsAllowAnimatedGraphics)" explainText="$(string.IsAllowAnimatedGraphicsHelp)" presentation="$(presentation.IsAllowAnimatedGraphics)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Accessibility\IsAllowAnimatedGraphics">
+      <parentCategory ref="CAT_LibreOfficeAccessibility" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="IsAllowAnimatedGraphicsValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="IsAllowAnimatedGraphicsEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonAccessibilityHighContrast" class="Machine" displayName="$(string.CommonAccessibilityHighContrast)" explainText="$(string.CommonAccessibilityHighContrastHelp)" presentation="$(presentation.CommonAccessibilityHighContrast)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Accessibility">
+      <parentCategory ref="CAT_LibreOfficeAccessibility" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonAccessibilityAutoDetectSystemHCValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Accessibility\AutoDetectSystemHC" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonAccessibilityIsAutomaticFontColorValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Accessibility\IsAutomaticFontColor" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonAccessibilityIsForPagePreviewsValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Accessibility\IsForPagePreviews" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--## LOAD SAVE ##-->
+    <policy name="OptionsDialogHideLoadSaveGeneral" class="Machine" displayName="$(string.OptionsDialogHideLoadSaveGeneral)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\LoadSave/#fuse\Pages\General/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LoadSave" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideLoadSaveVBAProperties" class="Machine" displayName="$(string.OptionsDialogHideLoadSaveVBAProperties)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\LoadSave/#fuse\Pages\VBAProperties/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LoadSave" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideLoadSaveMicrosoftOffice" class="Machine" displayName="$(string.OptionsDialogHideLoadSaveMicrosoftOffice)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\LoadSave/#fuse\Pages\MicrosoftOffice/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LoadSave" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideLoadSaveHTMLCompatibility" class="Machine" displayName="$(string.OptionsDialogHideLoadSaveHTMLCompatibility)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\LoadSave/#fuse\Pages\HTMLCompatibility/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LoadSave" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--# GENERAL #-->
+    <policy name="CommonLoadDocument" class="Machine" displayName="$(string.CommonLoadDocument)" explainText="$(string.CommonLoadDocumentHelp)" presentation="$(presentation.CommonLoadDocument)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Load">
+      <parentCategory ref="CAT_LoadSaveGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="LoadDocumentSettingsValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Load\UserDefinedSettings" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="LoadDocumentSettingsEnforce" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Load\UserDefinedSettings" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+        <boolean id="LoadDocumentPrinterSettingsValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save\Document\LoadPrinter" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="LoadDocumentPrinterSettingsEnforce" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save\Document\LoadPrinter" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonSaveDocument" class="Machine" displayName="$(string.CommonSaveDocument)" explainText="$(string.CommonSaveDocumentHelp)" presentation="$(presentation.CommonSaveDocument)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save">
+      <parentCategory ref="CAT_LoadSaveGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="RecoveryAutoSaveEnabledValue" key="Software\policies\LibreOffice\org.openoffice.Office.Recovery\AutoSave\Enabled" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <decimal id="RecoveryAutoSaveTimeIntervallValue" key="Software\policies\LibreOffice\org.openoffice.Office.Recovery\AutoSave\TimeIntervall" valueName="Value" minValue="1" maxValue="99" storeAsText="true" />
+        <boolean id="RecoveryAutoSaveUserAutoSaveEnabledValue" key="Software\policies\LibreOffice\org.openoffice.Office.Recovery\AutoSave\UserAutoSaveEnabled" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSaveDocumentEditPropertyValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save\Document\EditProperty" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSaveDocumentEditPropertyFinal" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save\Document\EditProperty" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSaveDocumentCreateBackupValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save\Document\CreateBackup" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSaveURLFileSystemValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save\URL\FileSystem" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSaveURLInternetValue" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save\URL\Internet" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonSaveODFDefaultVersion" class="Machine" displayName="$(string.CommonSaveODFDefaultVersion)" explainText="$(string.CommonSaveODFDefaultVersionHelp)" presentation="$(presentation.CommonSaveODFDefaultVersion)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save\ODF\DefaultVersion">
+      <parentCategory ref="CAT_LoadSaveGeneral"/>
+      <supportedOn ref="SupportedLO4_2"/>
+      <elements>
+        <enum id="CommonSaveODFDefaultVersionValue" valueName="Value">
+          <item displayName="$(string.CommonSaveODFDefaultVersion2)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonSaveODFDefaultVersion4)">
+            <value>
+              <string>4</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonSaveODFDefaultVersion8)">
+            <value>
+              <string>8</string>
+            </value>
+          </item>
+          <item displayName="$(string.CommonSaveODFDefaultVersion3)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="CommonSaveODFDefaultVersionEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="CommonSaveDocumentWarnAlienFormat" class="Machine" displayName="$(string.CommonSaveDocumentWarnAlienFormat)" explainText="$(string.CommonSaveDocumentWarnAlienFormatHelp)" presentation="$(presentation.CommonSaveDocumentWarnAlienFormat)" key="Software\policies\LibreOffice\org.openoffice.Office.Common\Save\Document\WarnAlienFormat">
+      <parentCategory ref="CAT_LoadSaveGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CommonSaveDocumentWarnAlienFormatValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CommonSaveDocumentWarnAlienFormatEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="Text_FileDefaultSaveType" class="Machine" displayName="$(string.Text_FileDefaultSaveType)" explainText="$(string.Text_FileDefaultSaveTypeHelp)" presentation="$(presentation.Text_FileDefaultSaveType)" key="Software\policies\LibreOffice\org.openoffice.Setup\Office\Factories\org.openoffice.Setup:Factory['com.sun.star.text.TextDocument']\ooSetupFactoryDefaultFilter">
+      <parentCategory ref="CAT_LoadSaveGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <enum id="Text_FileDefaultSaveTypeOp" valueName="Value">
+          <item displayName="$(string.Text_FileDefaultSaveType_WR8T)">
+            <value>
+              <string>writer8_template</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_WR8)">
+            <value>
+              <string>writer8</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_DOCT)">
+            <value>
+              <string>MS Word 97 Vorlage</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_TXT)">
+            <value>
+              <string>Text</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_OOX)">
+            <value>
+              <string>Office Open XML Text</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_ODT)">
+            <value>
+              <string>OpenDocument Text Flat XML</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_UOF)">
+            <value>
+              <string>UOF text</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_DOC)">
+            <value>
+              <string>MS Word 97</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_DOCX)">
+            <value>
+              <string>MS Word 2007 XML</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_HTML)">
+            <value>
+              <string>HTML (StarWriter)</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_MSX)">
+            <value>
+              <string>MS Word 2003 XML</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_TXC)">
+            <value>
+              <string>Text (encoded)</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_RTF)">
+            <value>
+              <string>Rich Text Format</string>
+            </value>
+          </item>
+          <item displayName="$(string.Text_FileDefaultSaveType_DCB)">
+            <value>
+              <string>DocBook File</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="Text_FileDefaultSaveTypeEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="Spreadsheet_FileDefaultSaveType" class="Machine" displayName="$(string.Spreadsheet_FileDefaultSaveType)" explainText="$(string.Spreadsheet_FileDefaultSaveTypeHelp)" presentation="$(presentation.Spreadsheet_FileDefaultSaveType)" key="Software\policies\LibreOffice\org.openoffice.Setup\Office\Factories\org.openoffice.Setup:Factory['com.sun.star.sheet.SpreadsheetDocument']\ooSetupFactoryDefaultFilter">
+      <parentCategory ref="CAT_LoadSaveGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <enum id="Spreadsheet_FileDefaultSaveTypeOp" valueName="Value">
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_ODFT)">
+            <value>
+              <string>calc8_template</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_ODF)">
+            <value>
+              <string>calc8</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_OOX)">
+            <value>
+              <string>Calc Office Open XML</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_CSV)">
+            <value>
+              <string>Text - txt - csv (StarCalc)</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_SYLK)">
+            <value>
+              <string>SYLK</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_UOF)">
+            <value>
+              <string>UOF spreadsheet</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_ODFX)">
+            <value>
+              <string>OpenDocument Spreadsheet Flat XML</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_XLSX2K3)">
+            <value>
+              <string>MS Excel 2003 XML</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_DBS)">
+            <value>
+              <string>dBase</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_XLST)">
+            <value>
+              <string>MS Excel 97 Vorlage/Template</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_XLS)">
+            <value>
+              <string>MS Excel 97</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_HTML)">
+            <value>
+              <string>HTML (StarCalc)</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_DIF)">
+            <value>
+              <string>DIF</string>
+            </value>
+          </item>
+          <item displayName="$(string.Spreadsheet_FileDefaultSaveType_XLSX)">
+            <value>
+              <string>Calc MS Excel 2007 XML</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="Spreadsheet_FileDefaultSaveTypeEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <policy name="Presentation_FileDefaultSaveType" class="Machine" displayName="$(string.Presentation_FileDefaultSaveType)" explainText="$(string.Presentation_FileDefaultSaveTypeHelp)" presentation="$(presentation.Presentation_FileDefaultSaveType)" key="Software\policies\LibreOffice\org.openoffice.Setup\Office\Factories\org.openoffice.Setup:Factory['com.sun.star.presentation.PresentationDocument']\ooSetupFactoryDefaultFilter">
+      <parentCategory ref="CAT_LoadSaveGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <enum id="Presentation_FileDefaultSaveTypeOp" valueName="Value">
+          <item displayName="$(string.Presentation_FileDefaultSaveType_ODFT)">
+            <value>
+              <string>impress8_template</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_ODFD)">
+            <value>
+              <string>impress8_draw</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_OOX)">
+            <value>
+              <string>Impress Office Open XML</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_UOF)">
+            <value>
+              <string>UOF presentation</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_PPTXT)">
+            <value>
+              <string>Impress MS PowerPoint 2007 XML Template</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_PPTT)">
+            <value>
+              <string>MS PowerPoint 97 Vorlage</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_PPTA)">
+            <value>
+              <string>MS PowerPoint 97 AutoPlay</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_ODFP)">
+            <value>
+              <string>impress8</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_OOXA)">
+            <value>
+              <string>Impress Office Open XML AutoPlay</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_OOXT)">
+            <value>
+              <string>Impress Office Open XML Template</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_ODFXP)">
+            <value>
+              <string>OpenDocument Presentation Flat XML</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_PPT)">
+            <value>
+              <string>MS PowerPoint 97</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_PPTXA)">
+            <value>
+              <string>Impress MS PowerPoint 2007 XML AutoPlay</string>
+            </value>
+          </item>
+          <item displayName="$(string.Presentation_FileDefaultSaveType_PPTX)">
+            <value>
+              <string>Impress MS PowerPoint 2007 XML</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="Presentation_FileDefaultSaveTypeEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--## LANGUAGE SETTINGS ##-->
+    <policy name="OptionsDialogHideLanguageSettingsLanguages" class="Machine" displayName="$(string.OptionsDialogHideLanguageSettingsLanguages)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\LanguageSettings/#fuse\Pages\Languages/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LanguageSettings" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideLanguageSettingsWritingAids" class="Machine" displayName="$(string.OptionsDialogHideLanguageSettingsWritingAids)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\LanguageSettings/#fuse\Pages\WritingAids/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LanguageSettings" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--# ENGLISH SENTENCE CHECKING #-->
+    <!-- Note: For some reason I cannot set the grammer settings. Feel free to help with this! - Thomas -->
+    <!-- 
+    <policy name="Lightproof_enLeavesengrammar" class="Machine" displayName="$(string.Lightproof_enLeavesengrammar)" explainText="$(string.Lightproof_enLeavesengrammarHelp)" presentation="$(presentation.Lightproof_enLeavesengrammar)" key="Software\policies\LibreOffice\org.openoffice.Lightproof_en\Leaves\en">
+      <parentCategory ref="CAT_LanguageSettingsSentenceChecking" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="Lightproof_enLeavesencapValue" key="Software\policies\LibreOffice\org.openoffice.Lightproof_en\Leaves\en\cap" valueName="Value">
+          <trueValue>
+            <string>1</string>
+          </trueValue>
+          <falseValue>
+            <string>0</string>
+          </falseValue>
+        </boolean>
+        <boolean id="Lightproof_enLeavesendupValue" key="Software\policies\LibreOffice\org.openoffice.Lightproof_en\Leaves\en\dup" valueName="Value">
+          <trueValue>
+            <string>1</string>
+          </trueValue>
+          <falseValue>
+            <string>0</string>
+          </falseValue>
+        </boolean>
+        <boolean id="Lightproof_enLeavesenellipsisValue" key="Software\policies\LibreOffice\org.openoffice.Lightproof_en\Leaves\en\ellipsis" valueName="Value">
+          <trueValue>
+            <string>1</string>
+          </trueValue>
+          <falseValue>
+            <string>0</string>
+          </falseValue>
+        </boolean>
+        <boolean id="Lightproof_enLeavesengrammarValue" key="Software\policies\LibreOffice\org.openoffice.Lightproof_en\Leaves\en\grammar" valueName="Value">
+          <trueValue>
+            <string>1</string>
+          </trueValue>
+          <falseValue>
+            <string>0</string>
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy> -->
+    <!--## LIBREOFFICE WRITER ##-->
+    <policy name="OptionsDialogHideWriterGeneral" class="Machine" displayName="$(string.OptionsDialogHideWriterGeneral)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\General/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterView" class="Machine" displayName="$(string.OptionsDialogHideWriterView)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\View/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterFormattingAids" class="Machine" displayName="$(string.OptionsDialogHideWriterFormattingAids)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\FormattingAids/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterGrid" class="Machine" displayName="$(string.OptionsDialogHideWriterGrid)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\Grid/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterBasicFontsWestern" class="Machine" displayName="$(string.OptionsDialogHideWriterBasicFontsWestern)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\BasicFontsWestern/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterPrint" class="Machine" displayName="$(string.OptionsDialogHideWriterPrint)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\Print/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterTable" class="Machine" displayName="$(string.OptionsDialogHideWriterTable)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\Table/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterChanges" class="Machine" displayName="$(string.OptionsDialogHideWriterChanges)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\Changes/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterComparison" class="Machine" displayName="$(string.OptionsDialogHideWriterComparison)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\Comparison/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterCompatibility" class="Machine" displayName="$(string.OptionsDialogHideWriterCompatibility)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\Compatibility/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterAutoCaption" class="Machine" displayName="$(string.OptionsDialogHideWriterAutoCaption)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\AutoCaption/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterMailMerge" class="Machine" displayName="$(string.OptionsDialogHideWriterMailMerge)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Writer/#fuse\Pages\MailMerge/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriter" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--# GENERAL #-->
+    <policy name="WriterLayoutOtherMeasureUnit" class="Machine" displayName="$(string.LibreOfficeCommon_MeasureUnit)" explainText="$(string.LibreOfficeCommon_MeasureUnitHelp)" presentation="$(presentation.LibreOfficeCommon_MeasureUnit)" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\Layout\Other\MeasureUnit">
+      <parentCategory ref="CAT_LibreOfficeWriterGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <enum id="LibreOfficeCommon_MeasureUnitValue" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\Layout\Other\MeasureUnit" valueName="Value">
+          <item displayName="$(string.LibreOfficeCommon_Millimeter)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Centimeter)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Inch)">
+            <value>
+              <string>8</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Pica)">
+            <value>
+              <string>7</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Point)">
+            <value>
+              <string>6</string>
+            </value>
+          </item>
+        </enum>
+        <decimal id="LibreOfficeCommon_TabStopValue" minValue="1" maxValue="5000" storeAsText="true" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\Layout\Other\TabStop" valueName="Value"/>
+      </elements>
+    </policy>
+    <policy name="ShowStandardizedPageCount" class="Machine" displayName="$(string.ShowStandardizedPageCount)" explainText="$(string.ShowStandardizedPageCountHelp)" presentation="$(presentation.ShowStandardizedPageCount)" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\WordCount\ShowStandardizedPageCount">
+      <parentCategory ref="CAT_LibreOfficeWriterGeneral" />
+      <supportedOn ref="SupportedLO4_3" />
+      <elements>
+        <boolean id="ShowStandardizedPageCountValue" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="ShowStandardizedPageCountEnforce" valueName="Final">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--# BASIC FONTS #-->
+    <policy name="DefaultFont" class="Machine" displayName="$(string.BasicFonts)" explainText="$(string.BasicFontsHelp)" presentation="$(presentation.BasicFonts)" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\DefaultFont">
+      <parentCategory ref="CAT_LibreOfficeWriterBasicFonts" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <text id="BasicFonts_Caption" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\DefaultFont\Caption" valueName="Value" required="true" expandable="true" />
+        <text id="BasicFonts_Index" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\DefaultFont\Index" valueName="Value" required="true" expandable="true" />
+        <text id="BasicFonts_List" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\DefaultFont\List" valueName="Value" required="true" expandable="true" />
+        <text id="BasicFonts_Standard" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\DefaultFont\Standard" valueName="Value" required="true" expandable="true" />
+        <text id="BasicFonts_Heading" key="Software\policies\LibreOffice\org.openoffice.Office.Writer\DefaultFont\Heading" valueName="Value" required="true" expandable="true" />
+      </elements>
+    </policy>
+    <!--## LIBREOFFICE WRITER/WEB ##-->
+    <policy name="OptionsDialogHideWriterWebView" class="Machine" displayName="$(string.OptionsDialogHideWriterWebView)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\WriterWeb/#fuse\Pages\View/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriterWeb" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterWebFormattingAids" class="Machine" displayName="$(string.OptionsDialogHideWriterWebFormattingAids)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\WriterWeb/#fuse\Pages\FormattingAids/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriterWeb" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterWebGrid" class="Machine" displayName="$(string.OptionsDialogHideWriterWebGrid)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\WriterWeb/#fuse\Pages\Grid/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriterWeb" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterWebPrint" class="Machine" displayName="$(string.OptionsDialogHideWriterWebPrint)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\WriterWeb/#fuse\Pages\Print/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriterWeb" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterWebTable" class="Machine" displayName="$(string.OptionsDialogHideWriterWebTable)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\WriterWeb/#fuse\Pages\Table/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriterWeb" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideWriterWebBackground" class="Machine" displayName="$(string.OptionsDialogHideWriterWebBackground)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\WriterWeb/#fuse\Pages\Background/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeWriterWeb" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--## LIBREOFFICE CALC ##-->
+    <policy name="OptionsDialogHideCalcGeneral" class="Machine" displayName="$(string.OptionsDialogHideCalcGeneral)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\General/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!-- 
+    <policy name="OptionsDialogHideCalcDefaults" class="Machine" displayName="$(string.OptionsDialogHideCalcDefaults)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\Defaults/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy> -->
+    <policy name="OptionsDialogHideCalcView" class="Machine" displayName="$(string.OptionsDialogHideCalcView)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\View/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideCalcCalculate" class="Machine" displayName="$(string.OptionsDialogHideCalcCalculate)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\Calculate/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideCalcFormula" class="Machine" displayName="$(string.OptionsDialogHideCalcFormula)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\Formula/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideCalcSortLists" class="Machine" displayName="$(string.OptionsDialogHideCalcSortLists)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\SortLists/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideCalcChanges" class="Machine" displayName="$(string.OptionsDialogHideCalcChanges)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\Changes/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideCalcCompatibility" class="Machine" displayName="$(string.OptionsDialogHideCalcCompatibility)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\Compatibility/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideCalcGrid" class="Machine" displayName="$(string.OptionsDialogHideCalcGrid)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\Grid/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideCalcPrint" class="Machine" displayName="$(string.OptionsDialogHideCalcPrint)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Calc/#fuse\Pages\Print/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeCalc" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--# GENERAL #-->
+    <policy name="CalcLayoutOtherMeasureUnit" class="Machine" displayName="$(string.LibreOfficeCommon_MeasureUnit)" explainText="$(string.LibreOfficeCommon_MeasureUnitHelp)" presentation="$(presentation.LibreOfficeCommon_MeasureUnit)" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Layout\Other\MeasureUnit">
+      <parentCategory ref="CAT_LibreOfficeCalcGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <enum id="LibreOfficeCommon_MeasureUnitValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Layout\Other\MeasureUnit\NonMetric" valueName="Value">
+          <item displayName="$(string.LibreOfficeCommon_Millimeter)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Centimeter)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Inch)">
+            <value>
+              <string>8</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Pica)">
+            <value>
+              <string>7</string>
+            </value>
+          </item>
+          <item displayName="$(string.LibreOfficeCommon_Point)">
+            <value>
+              <string>6</string>
+            </value>
+          </item>
+        </enum>
+        <decimal id="LibreOfficeCommon_TabStopValue" minValue="1" maxValue="5000" storeAsText="true" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Layout\Other\TabStop\NonMetric" valueName="Value"/>
+      </elements>
+    </policy>
+    <policy name="CalcContentUpdateLink" class="Machine" displayName="$(string.CalcContentUpdateLink)" explainText="$(string.CalcContentUpdateLinkHelp)" presentation="$(presentation.CalcContentUpdateLink)" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Content\Update\Link">
+      <parentCategory ref="CAT_LibreOfficeCalcGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <enum id="CalcContentUpdateLinkValue" valueName="Value">
+          <item displayName="$(string.CalcContentUpdateLinkAlways)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CalcContentUpdateLinkOnRequest)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.CalcContentUpdateLinkNever)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="CalcInput" class="Machine" displayName="$(string.CalcInput)" explainText="$(string.CalcInputHelp)" presentation="$(presentation.CalcInput)" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input">
+      <parentCategory ref="CAT_LibreOfficeCalcGeneral" />
+      <supportedOn ref="SupportedLO4_2" />
+      <elements>
+        <boolean id="CalcInputMoveSelectionValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\MoveSelection" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <enum id="CalcInputMoveSelectionDirectionValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\MoveSelectionDirection" valueName="Value">
+          <item displayName="$(string.CalcInputMoveSelectionDirectionDown)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.CalcInputMoveSelectionDirectionRight)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.CalcInputMoveSelectionDirectionUp)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.CalcInputMoveSelectionDirectionLeft)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+        <boolean id="CalcInputSwitchToEditModeValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\SwitchToEditMode" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CalcInputExpandFormattingValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\ExpandFormatting" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CalcInputExpandReferenceValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\ExpandReference" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CalcInputUpdateReferenceOnSortValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\UpdateReferenceOnSort" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CalcInputUseHighlightSelectionValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\HighlightSelection" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CalcInputUsePrinterMetricsValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\UsePrinterMetrics" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CalcInputReplaceCellsWarningValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\ReplaceCellsWarning" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+        <boolean id="CalcInputLegacyCellSelectionValue" key="Software\policies\LibreOffice\org.openoffice.Office.Calc\Input\LegacyCellSelection" valueName="Value">
+          <trueValue>
+            <string>true</string>
+          </trueValue>
+          <falseValue>
+            <string>false</string>
+          </falseValue>
+        </boolean>
+      </elements>
+    </policy>
+    <!--## LIBREOFFICE IMPRESS ##-->
+    <policy name="OptionsDialogHideImpressGeneral" class="Machine" displayName="$(string.OptionsDialogHideImpressGeneral)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Impress/#fuse\Pages\General/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeImpress" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideImpressView" class="Machine" displayName="$(string.OptionsDialogHideImpressView)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Impress/#fuse\Pages\View/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeImpress" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideImpressGrid" class="Machine" displayName="$(string.OptionsDialogHideImpressGrid)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Impress/#fuse\Pages\Grid/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeImpress" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideImpressPrint" class="Machine" displayName="$(string.OptionsDialogHideImpressPrint)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Impress/#fuse\Pages\Print/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeImpress" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--## LIBREOFFICE BASE ##-->
+    <policy name="OptionsDialogHideBaseConnections" class="Machine" displayName="$(string.OptionsDialogHideBaseConnections)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Base/#fuse\Pages\Connections/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeBase" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="OptionsDialogHideBaseDatabases" class="Machine" displayName="$(string.OptionsDialogHideBaseDatabases)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Base/#fuse\Pages\Databases/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_LibreOfficeBase" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--## CHARTS ##-->
+    <policy name="OptionsDialogHideChartsDefaultColors" class="Machine" displayName="$(string.OptionsDialogHideChartsDefaultColors)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Charts/#fuse\Pages\DefaultColors/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_Charts" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <!--## CHARTS ##-->
+    <policy name="OptionsDialogHideInternetProxy" class="Machine" displayName="$(string.OptionsDialogHideInternetProxy)" explainText="$(string.OptionsDialogHideHelp)" key="Software\policies\LibreOffice\org.openoffice.Office.OptionsDialog\OptionsDialogGroups\Internet/#fuse\Pages\Proxy/#fuse\Hide" valueName="Value">
+      <parentCategory ref="CAT_Internet" />
+      <supportedOn ref="SupportedLO4_2" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+  </policies>
+</policyDefinitions>

@@ -139,6 +139,12 @@ Si vous ne configurez pas ce paramètre de stratégie, Automatique est utilisé.
 </string>
       <string id="DevicePKInitBehavior_Automatic">Automatique</string>
       <string id="DevicePKInitBehavior_Force">Forcée</string>
+      <string id="CloudKerberosTicketRetrievalEnabled">Autoriser la récupération du ticket Kerberos cloud lors de la connexion</string>
+      <string id="CloudKerberosTicketRetrievalEnabled_explain">Ce paramètre de stratégie permet de récupérer le ticket Kerberos cloud pendant l’ouverture de session.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, le ticket Kerberos cloud n’est pas récupéré lors de l’ouverture de session.
+
+Si vous activez ce paramètre de stratégie, le ticket Kerberos cloud est récupéré lors de l’ouverture de session.</string>
     </stringTable>
     <presentationTable>
       <presentation id="hosttorealm">

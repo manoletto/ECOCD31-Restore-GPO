@@ -29,6 +29,12 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, l’icône
 Si vous activez ce paramètre de stratégie, l’icône Sécurité et maintenance n’est pas affichée dans la zone de notification système.
 
 Si vous désactivez ou ne configurez pas ce paramètre de stratégie, l’icône Sécurité et maintenance est affichée dans la zone de notification système.</string>
+      <string id="HideSCAMeetNow">Supprimer l’icône Conférence maintenant</string>
+      <string id="HideSCAMeetNow_Help">Ce paramètre de stratégie vous permet de supprimer l’icône Conférence maintenant de la zone de contrôle système.
+
+Si vous activez ce paramètre de stratégie, l’icône Conférence maintenant n’est pas affichée dans la zone de notification système.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, l’icône Conférence maintenant est affichée dans la zone de notification système.</string>
       <string id="TaskbarLockAll">Verrouiller tous les paramètres de la barre des tâches</string>
       <string id="TaskbarLockAll_Help">Ce paramètre de stratégie permet de verrouiller tous les paramètres de la barre des tâches.
 

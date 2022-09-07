@@ -7,13 +7,13 @@
     <stringTable>
       <string id="L_IME">IME</string>
       <string id="L_TurnOnMisconversionLoggingForMisconversionReport">Activer la journalisation des erreurs de conversion pour le rapport d’erreurs de conversion</string>
-      <string id="L_TurnOnMisconversionLoggingForMisconversionReportExplain">Ce paramètre de stratégie vous permet d'activer la journalisation de la conversion inversée pour le rapport de conversion inversée.
+      <string id="L_TurnOnMisconversionLoggingForMisconversionReportExplain">Ce paramètre de stratégie vous permet d’activer la journalisation des erreurs de conversion pour le rapport d’erreurs de conversion.
 
-Si vous activez ce paramètre de stratégie, la journalisation de la conversion inversée est activée.
+Si vous activez ce paramètre de stratégie, la journalisation des erreurs de conversion est activée.
 
-Si vous désactivez ou ne configurez pas ce paramètre de stratégie, la journalisation de la conversion inversée est désactivée.
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la journalisation des erreurs de conversion est désactivée.
 
-Ce paramètre de stratégie s'applique à l'IME Microsoft en japonais.</string>
+Ce paramètre de stratégie s’applique à l’IME Microsoft en japonais et à l’IME pour le chinois traditionnel.</string>
       <string id="L_TurnOffSavingAutoTuningDataToFile">Désactiver l’enregistrement des données de réglage automatique dans un fichier</string>
       <string id="L_TurnOffSavingAutoTuningDataToFileExplain">Ce paramètre de stratégie vous permet de désactiver l'enregistrement du résultat d'ajustement automatique dans le fichier.
 
@@ -138,6 +138,42 @@ Si vous désactivez ce paramètre de stratégie, la fonctionnalité associée à
 Si vous ne configurez pas ce paramètre de stratégie, il est activé par défaut et l'utilisateur peut activer et désactiver la fonction de mise à jour du lexique.
 
 Ce paramètre de stratégie s'applique uniquement à l'IME Microsoft CHS Pinyin.</string>
+      <string id="L_ConfigureSimplifiedChineseImeVersion">Configurer la version de l'IME en chinois simplifié</string>
+      <string id="L_ConfigureSimplifiedChineseImeVersionExplain">Ce paramètre de stratégie contrôle la version de l’IME Microsoft.
+
+Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut contrôler la version de l’IME à utiliser. Le nouvel IME Microsoft est activé par défaut.
+
+Si vous activez ce paramètre, l’utilisateur n’est pas autorisé à contrôler la version de l’IME à utiliser. La version précédente de l’IME Microsoft est toujours sélectionnée.
+
+Si vous désactivez ce paramètre, l’utilisateur n’est pas autorisé à contrôler la version de l’IME à utiliser. Le nouvel IME Microsoft est toujours sélectionné.
+
+Ce paramètre de stratégie s’applique uniquement à l’IME chinois simplifié Microsoft.
+
+Remarque : les modifications apportées à ce paramètre sont sans effet tant que l’utilisateur ne ferme pas sa session.</string>
+      <string id="L_ConfigureTraditionalChineseImeVersion">Configurer la version de l'IME en chinois traditionnel</string>
+      <string id="L_ConfigureTraditionalChineseImeVersionExplain">Ce paramètre de stratégie contrôle la version de l’IME Microsoft.
+
+Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut contrôler la version de l’IME à utiliser. Le nouvel IME Microsoft est activé par défaut.
+
+Si vous activez ce paramètre, l’utilisateur n’est pas autorisé à contrôler la version de l’IME à utiliser. La version précédente de l’IME Microsoft est toujours sélectionnée.
+
+Si vous désactivez ce paramètre, l’utilisateur n’est pas autorisé à contrôler la version de l’IME à utiliser. Le nouvel IME Microsoft est toujours sélectionné.
+
+Ce paramètre de stratégie s’applique uniquement à l’IME chinois traditionnel Microsoft.
+
+Remarque : les modifications apportées à ce paramètre sont sans effet tant que l’utilisateur ne ferme pas sa session.</string>
+      <string id="L_ConfigureJapaneseImeVersion">Configurer la version de l'IME en japonais</string>
+      <string id="L_ConfigureJapaneseImeVersionExplain">Ce paramètre de stratégie contrôle la version de l’IME Microsoft.
+
+Si vous ne configurez pas ce paramètre de stratégie, l’utilisateur peut contrôler la version de l’IME à utiliser. Le nouvel IME Microsoft est activé par défaut.
+
+Si vous activez ce paramètre, l’utilisateur n’est pas autorisé à contrôler la version de l’IME à utiliser. La version précédente de l’IME Microsoft est toujours sélectionnée.
+
+Si vous désactivez ce paramètre, l’utilisateur n’est pas autorisé à contrôler la version de l’IME à utiliser. Le nouvel IME Microsoft est toujours sélectionné.
+
+Ce paramètre de stratégie s’applique uniquement à l’IME japonais Microsoft.
+
+Remarque : les modifications apportées à ce paramètre sont sans effet tant que l’utilisateur ne ferme pas sa session.</string>
     </stringTable>
     <presentationTable>
       <presentation id="L_RestrictCharacterCodeRangeOfConversion">
