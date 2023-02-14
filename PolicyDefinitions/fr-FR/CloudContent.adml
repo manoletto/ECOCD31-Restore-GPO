@@ -67,6 +67,13 @@ Si vous désactivez ou que vous ne configurez pas cette stratégie, les fonction
 Si vous activez cette stratégie, l’expérience des écrans d’accueil de Windows ne s’affichera plus lorsque des mises à jour et modifications de Windows et de ses applications seront disponibles.
 
 Si vous désactivez ou ne configurez pas cette stratégie, l’expérience des écrans d’accueil de Windows sera lancée pour faciliter l’accueil des utilisateurs sur Windows, et leur indiquer les nouveautés, les évolutions et les suggestions.</string>
+      <string id="DisableCloudOptimizedContent">Désactiver le contenu optimisé pour le cloud</string>
+      <string id="DisableCloudOptimizedContent_Help">Ce paramètre de stratégie vous permet de désactiver le contenu optimisé pour le Cloud dans toutes les expériences Windows.
+
+Si vous activez cette stratégie, les expériences Windows qui utilisent le composant client de contenu optimisé dans le Cloud s’affichent au contenu de secours par défaut.
+
+Si vous désactivez ou ne configurez pas cette stratégie, les expériences Windows pourront utiliser le contenu optimisé pour le Cloud.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

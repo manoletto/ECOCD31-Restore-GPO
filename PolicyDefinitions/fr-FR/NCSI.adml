@@ -73,7 +73,7 @@
       </presentation>
       <presentation id="NCSI_PassivePolling">
         <text>La case à cocher suivante désactive le mécanisme d’interrogation passive dans NCSI.   Cela peut améliorer la charge de travail de l’UC sur les serveurs ou autres ordinateurs dont la connectivité réseau est statique.</text>
-        <checkBox refId="NCSI_DisablePassivePolling_Checkbox">Désactiver l’interrogation passive</checkBox>  
+        <checkBox refId="NCSI_DisablePassivePolling_Checkbox">Désactiver l’interrogation passive</checkBox>
       </presentation>
       <presentation id="NCSI_GlobalDns">
         <text>La case à cocher suivante désactive la liaison d'interface pendant les recherches DNS dans NCSI. Cela peut permettre à NCSI de mieux fonctionner avec des configurations réseau spéciales, comme un serveur DNS exécuté sur localhost.</text>

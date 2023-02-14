@@ -2,7 +2,7 @@
 <!--  Copyright (C) Microsoft. All rights reserved.  -->
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <!-- displayName and description are not used. Not supported by current Group Policy tools. -->
-  <displayName>Gestionnaire de package Appx</displayName> 
+  <displayName>Gestionnaire de package Appx</displayName>
   <description>Gestionnaire de package Appx</description>
   <resources>
     <stringTable>
@@ -30,11 +30,11 @@ Si vous activez ce paramètre de stratégie, la stratégie de groupe autorise le
 Si vous désactivez ou ne configurez pas ce paramètre de stratégie, la stratégie de groupe bloque les opérations de déploiement d’applications du Windows Store lorsqu’un profil spécifique est utilisé.</string>
       <string id="AllowDevelopmentWithoutDevLicense">Autorise le développement d’applications du Windows Store et leur installation depuis un environnement de développement intégré</string>
       <string id="AllowDevelopmentWithoutDevLicenseExplanation">
-        Autorise ou refuse le développement d’applications du Windows Store et leur installation directement depuis un environnement de développement intégré.
+        Autorise ou refuse le développement d’applications du Microsoft Store et leur installation directement à partir d’un environnement de développement intégré.
 
-        Si vous activez ce paramètre et la stratégie de groupe « Autoriser l’installation des applications approuvées », vous pouvez développer des applications du Windows Store et les installer directement depuis un environnement de développement intégré.
-        
-        Si vous désactivez ce paramètre ou ne le configurez pas, vous ne pourrez pas développer d'applications du Windows Store ni en installer directement depuis un environnement de développement intégré.      
+        Si vous activez ce paramètre et activez la stratégie de groupe « Autoriser l’installation des applications approuvées », vous pouvez développer des applications du Microsoft Store et les installer directement depuis un environnement de développement intégré.
+
+        Si vous désactivez ce paramètre ou si vous ne le configurez pas, vous ne pouvez pas développer d’applications du Microsoft Store ou les installer directement depuis un environnement de développement intégré.
       </string>
       <string id="DisableDeploymentToNonSystemVolumes">Désactiver l'installation d'applications Windows pour les volumes non-système</string>
       <string id="DisableDeploymentToNonSystemVolumesExplanation">
@@ -53,11 +53,18 @@ Si vous activez ce paramètre, toutes les données d'applications des utilisateu
 Si vous désactivez ou ne configurez pas ce paramètre, lorsqu'une application est déplacée vers un autre volume, les données d'applications des utilisateurs sont également déplacées vers ce volume.
       </string>
       <string id="AllowSharedLocalAppData">Autoriser une application Windows à partager des données d'applications entre les utilisateurs</string>
-      <string id="AllowSharedLocalAppDataExplanation">Gère la possibilité pour une application Windows de partager des données entre les utilisateurs ayant installé l'application.
-        
-Si vous activez cette stratégie, les applications Windows peuvent partager des données d'applications avec d'autres instances de ces applications. Les données sont partagées grâce à un dossier SharedLocal. Ce dossier est accessible via l'API Windows.Storage.
+      <string id="AllowSharedLocalAppDataExplanation">Gère la possibilité pour une application Windows de partager des données entre les utilisateurs qui ont installé l’application.
 
-Si vous désactivez cette stratégie, les applications Windows ne peuvent pas partager des données d'applications avec d'autres instances des ces applications. Si cette stratégie était activée auparavant, toutes les données d'applications partagées précédemment seront conservées dans le dossier SharedLocal. 
+        Si vous activez ce paramètre de stratégie, une application Windows peut partager des données d’application avec d’autres instances de cette application. Les données sont partagées dans le dossier SharedLocal. Ce dossier est accessible via l’API Windows. Storage API.
+
+        Si vous désactivez ce paramètre de stratégie, les applications Windows ne peuvent pas partager des données d’applications avec d’autres instances de cette application. Si cette stratégie était activée précédemment, toutes les données d’application partagées précédemment sont conservées dans le dossier SharedLocal.
+      </string>
+      <string id="BlockNonAdminUserInstall">Empêcher les utilisateurs non administrateurs d’installer des applications Windows empaquetées</string>
+      <string id="BlockNonAdminUserInstallExplanation">Gère la capacité des utilisateurs non-administrateurs à installer des packages d’applications Windows.
+
+        Si vous activez cette stratégie, les non-administrateurs ne peuvent pas initier l’installation des packages d’applications Windows. Les administrateurs qui souhaitent installer une application devront effectuer cette opération à partir d’un contexte d’administrateur (par exemple, une fenêtre PowerShell d’administrateur). Tous les utilisateurs pourront toujours installer des packages d’applications Windows via le Microsoft Store, si cela est autorisé par d’autres stratégies.
+
+        Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, tous les utilisateurs peuvent lancer l’installation des packages d’applications Windows.
       </string>
     </stringTable>
   </resources>

@@ -52,32 +52,40 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, la longueu
 REMARQUE : si les conditions ci-dessus pour la longueur maximale du code confidentiel ne sont pas remplies, les valeurs par défaut seront utilisées pour les longueurs maximale et minimale du code confidentiel.
         </string>
         <string id="MSPassport_UppercaseLetters">Exiger des lettres majuscules</string>
-        <string id="MSPassport_UppercaseLettersExplain">Utilisez ce paramètre de stratégie pour configurer l’utilisation des lettres majuscules dans le code confidentiel.
+        <string id="MSPassport_UppercaseLettersExplain">Utilisez ce paramètre de stratégie pour configurer l'utilisation des lettres majuscules dans le code PIN.
 
-Si vous activez ce paramètre de stratégie, Windows exige des utilisateurs qu’ils incluent au moins une lettre majuscule dans leur code confidentiel.
+Si vous activez ce paramètre de stratégie, Windows demande à l'utilisateur d'ajouter au moins une lettre en majuscule dans votre code PIN.
 
-Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Windows n’autorise pas les utilisateurs à utiliser des lettres majuscules dans leur code confidentiel.
+Si vous désactivez ce paramètre de stratégie, Windows n'autorise pas l'utilisateur à ajouter des lettres en majuscule dans leur code PIN.
+
+Si vous ne configurez pas ce paramètre de stratégie, Windows autorise les lettres majuscules dans le code PIN, mais n'en impose pas.
         </string>
         <string id="MSPassport_LowercaseLetters">Exiger des lettres minuscules</string>
-        <string id="MSPassport_LowercaseLettersExplain">Utilisez ce paramètre de stratégie pour configurer l’utilisation des lettres minuscules dans le code confidentiel.
+        <string id="MSPassport_LowercaseLettersExplain">Utilisez ce paramètre de stratégie pour configurer l'utilisation des lettres en minuscule dans le code PIN.
 
-Si vous activez ce paramètre de stratégie, Windows exige des utilisateurs qu’ils incluent au moins une lettre minuscule dans leur code confidentiel.
+Si vous activez ce paramètre de stratégie, Windows exige de l'utilisateur qu'il comprenne au moins une lettre en minuscule dans son code PIN.
 
-Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Windows n’autorise pas les utilisateurs à utiliser des lettres minuscules dans leur code confidentiel.
+Si vous désactivez ce paramètre de stratégie, Windows ne permet pas à l'utilisateur d'ajouter des lettres en minuscule dans son code PIN.
+
+Si vous ne configurez pas ce paramètre de stratégie, Windows autorise, sans utiliser, les lettres en minuscule dans le code PIN.
         </string>
         <string id="MSPassport_SpecialCharacters">Exiger des caractères spéciaux</string>
-        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Utilisez ce paramètre de stratégie pour configurer l’utilisation des caractères spéciaux dans le code confidentiel. Les caractères spéciaux autorisés sont les suivants : ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
+        <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Utilisez ce paramètre de stratégie pour configurer l'utilisation de caractères spéciaux dans le code PIN.  Les caractères spéciaux autorisés sont : ! " # $ % & ' ( ) * + , - . / : ; < = >? @ [ \ ] ^ _ ` { | } ~ .
 
-Si vous activez ce paramètre de stratégie, Windows exige des utilisateurs qu’ils incluent au moins un caractère spécial dans leur code confidentiel.
+Si vous activez ce paramètre de stratégie, Windows exige de l'utilisateur qu'il utilise au moins un caractère spécial dans son code PIN.
 
-Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Windows n’autorise pas les utilisateurs à utiliser des caractères spéciaux dans leur code confidentiel.]]>
+Si vous désactivez ce paramètre de stratégie, Windows ne permet pas à l'utilisateur d'ajouter des caractères spéciaux dans son code PIN.
+
+Si vous ne configurez pas ce paramètre de stratégie, Windows autorise les caractères spéciaux dans le code PIN, mais ne les exige pas.]]>
         </string>
         <string id="MSPassport_Digits">Exiger des chiffres</string>
-        <string id="MSPassport_DigitsExplain">Utilisez ce paramètre de stratégie pour configurer l’utilisation des chiffres dans le code confidentiel.
+        <string id="MSPassport_DigitsExplain">Utilisez ce paramètre de stratégie pour configurer l'utilisation de chiffres dans le code PIN.
 
-Si vous activez ce paramètre de stratégie ou ne le configurez pas, Windows exige des utilisateurs qu’ils incluent au moins un chiffre dans leur code confidentiel.
+Si vous activez ce paramètre de stratégie, Windows exige de l'utilisateur qu'il utilise au moins un chiffre dans son code confidentiel.
 
-Si vous désactivez ce paramètre de stratégie, Windows n’autorise pas les utilisateurs à utiliser des chiffres dans leur code confidentiel.
+Si vous désactivez ce paramètre de stratégie, Windows ne permet pas à l'utilisateur d'ajouter des chiffres dans ses codes PIN.
+
+Si vous ne configurez pas ce paramètre de stratégie, Windows autorise, sans les exiger, les chiffres dans le code confidentiel.
         </string>
         <string id="MSPassport_PINHistory">Historique</string>
         <string id="MSPassport_PINHistoryExplain">Ce paramètre spécifie le nombre de codes confidentiels pouvant être associés à un compte d'utilisateur qui ne peuvent pas être réutilisés. Cette stratégie permet aux administrateurs d'améliorer la sécurité en veillant à ce que les anciens codes confidentiels ne soient pas réutilisés continuellement. L'historique de code confidentiel n'est pas conservé par le biais d'une réinitialisation du code confidentiel.

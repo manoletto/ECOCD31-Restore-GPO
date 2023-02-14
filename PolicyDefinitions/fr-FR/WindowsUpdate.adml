@@ -16,6 +16,8 @@
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">Au minimum des systèmes d’exploitation Windows Server 2003 ou Windows XP Professionnel avec SP1, à l’exclusion de Windows RT</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">Au minimum Windows XP Professionnel Service Pack 1 ou au minimum Windows 2000 Service Pack 3 jusqu'à Windows 8.1 ou Windows Server 2012 R2 avec le service pack le plus récent</string>
       <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Au minimum Windows Vista jusqu'à Windows 8.1 ou Windows Server 2012 R2 avec le service pack le plus récent</string>
+      <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professionnel Service Pack 1 ou au minimum Windows 2000 Service Pack 3 
+Option 7 uniquement prise en charge sur les serveurs ou au moins édition Windows Server 2016</string>
       <string id="AUDontShowUasHelp">Ce paramètre de stratégie permet d’indiquer si l’option « Installer les mises à jour et éteindre » doit s’afficher dans la boîte de dialogue Arrêt de Windows.
 
 Si vous activez ce paramètre de stratégie, l’option « Installer les mises à jour et éteindre » n’apparaîtra pas dans la boîte de dialogue Arrêt de Windows, même si des mises à jour à installer sont disponibles lorsque l’utilisateur sélectionne l’option Arrêter dans le menu Démarrer.
@@ -62,30 +64,35 @@ Remarque : cette stratégie ne s’applique pas à Windows RT.
 
 Ce paramètre de stratégie vous permet de spécifier si les mises à jour automatiques sont activées sur cet ordinateur. Si le service est activé, vous devez sélectionner l’une des quatre options du paramètre de stratégie de groupe :
 
-        2 = Avertir avant de télécharger et d’installer des mises à jour.
+    2 = Avertir avant de télécharger et d’installer des mises à jour.
 
-        Lorsque Windows trouve des mises à jour s’appliquant à l’ordinateur, un message indique à l’utilisateur que des mises à jour sont prêtes pour le téléchargement. Après avoir accédé à Windows Update, les utilisateurs peuvent télécharger et installer les mises à jour disponibles.
+    Lorsque Windows trouve des mises à jour s’appliquant à l’ordinateur, un message indique à l’utilisateur que des mises à jour sont prêtes pour le téléchargement. Après avoir accédé à Windows Update, les utilisateurs peuvent télécharger et installer les mises à jour disponibles.
 
-        3 = (Valeur par défaut) Télécharger automatiquement les mises à jour et avertir l’utilisateur lorsqu’elles sont prêtes pour l’installation
+    3 = (Valeur par défaut) Télécharger automatiquement les mises à jour et avertir l’utilisateur lorsqu’elles sont prêtes pour l’installation
 
-        Windows trouve des mises à jour s’appliquant à votre ordinateur et les télécharge en tâche de fond (l’utilisateur n’est ni averti ni interrompu au cours du processus). Une fois les téléchargements terminés, un message indique aux utilisateurs que les mises à jour sont prêtes à être installées. Après avoir accédé à Windows Update, les utilisateurs peuvent les installer.
+    Windows trouve des mises à jour s’appliquant à votre ordinateur et les télécharge en tâche de fond (l’utilisateur n’est ni averti ni interrompu au cours du processus). Une fois les téléchargements terminés, un message indique aux utilisateurs que les mises à jour sont prêtes à être installées. Après avoir accédé à Windows Update, les utilisateurs peuvent les installer.
 
-        4 = Télécharger automatiquement les mises à jour et les installer selon la planification spécifié.
+    4 = Télécharger automatiquement les mises à jour et les installer selon la planification spécifié.
 
-        Lorsque « Automatique » est sélectionné comme heure d'installation planifiée, Windows vérifie, télécharge et installe automatiquement les mises à jour. L'appareil redémarrera conformément aux paramètres par défaut, à moins qu'il ait été configuré par une stratégie de groupe (s'applique à Windows 10, version 1809 et supérieure)
+    Lorsque « Automatique » est sélectionné comme heure d'installation planifiée, Windows vérifie, télécharge et installe automatiquement les mises à jour. L'appareil redémarrera conformément aux paramètres par défaut, à moins qu'il ait été configuré par une stratégie de groupe (s'applique à Windows 10, version 1809 et supérieure)
 
-        Spécifiez la planification à l’aide des options dans le paramètre de stratégie de groupe. Pour la version 1709 et ultérieures, vous pouvez également limiter la fréquence des mises à jour à hebdomadaire, bi-hebdomadaire ou mensuelle. Si aucune planification n’est spécifiée, la planification par défaut pour toutes les installations est chaque jour à 3h00. Si des mises à jour requièrent un démarrage pour terminer l’installation, Windows redémarre l’ordinateur automatiquement. (Si un utilisateur est connecté à l’ordinateur lorsque Windows est prêt à redémarrer, il en est informé par un message qui lui donne la possibilité de retarder le redémarrage.)
+    Spécifiez la planification à l’aide des options dans le paramètre de stratégie de groupe. Pour la version 1709 et ultérieures, vous pouvez également limiter la fréquence des mises à jour à hebdomadaire, bi-hebdomadaire ou mensuelle. Si aucune planification n’est spécifiée, la planification par défaut pour toutes les installations est chaque jour à 3h00. Si des mises à jour requièrent un démarrage pour terminer l’installation, Windows redémarre l’ordinateur automatiquement. (Si un utilisateur est connecté à l’ordinateur lorsque Windows est prêt à redémarrer, il en est informé par un message qui lui donne la possibilité de retarder le redémarrage).
 
-        Sur Windows 8 et versions ultérieures, vous pouvez configurer l’installation des mises à jour durant la maintenance automatique plutôt que selon une planification spécifique. La maintenance automatique installe les mises à jour quand l’ordinateur n’est pas en cours d’utilisation et évite de le faire quand il fonctionne sur batterie. Si la maintenance automatique n’est pas en mesure d’installer les mises à jour pendant deux jours, Windows Update les installe immédiatement. Les utilisateurs sont informés quant à l’imminence d’un redémarrage, qui n’a lieu que s’il n’y a aucun risque de perte accidentelle de données.
+     Sur Windows 8 et versions ultérieures, vous pouvez configurer l’installation des mises à jour durant la maintenance automatique plutôt que selon une planification spécifique. La maintenance automatique installe les mises à jour quand l’ordinateur n’est pas en cours d’utilisation et évite de le faire quand il fonctionne sur batterie. Si la maintenance automatique n’est pas en mesure d’installer les mises à jour pendant deux jours, Windows Update les installe immédiatement. Les utilisateurs sont informés quant à l’imminence d’un redémarrage, qui n’a lieu que s’il n’y a aucun risque de perte accidentelle de données.
 
-        5 = Autoriser les administrateurs locaux à sélectionner le mode configuration selon lequel les Mises à jour automatiques doivent informer l’utilisateur et installer les mises à jour. (Cette option n'est prise en charge par aucune des versions de Windows 10).
+     5 = Autoriser les administrateurs locaux à sélectionner le mode configuration selon lequel les Mises à jour automatiques doivent informer l’utilisateur et installer les mises à jour. (Cette option n'est prise en charge par aucune des versions de Windows 10).
 
-        Avec cette option, les administrateurs locaux sont autorisés à utiliser le Panneau de configuration Windows Update pour sélectionner l’option de configuration de leur choix. En revanche, ils ne sont pas autorisés à désactiver la configuration des mises à jour automatiques.
+      Avec cette option, les administrateurs locaux sont autorisés à utiliser le Panneau de configuration Windows Update pour sélectionner l’option de configuration de leur choix. En revanche, ils ne sont pas autorisés à désactiver la configuration des mises à jour automatiques.
+
+ 7 = Notifier pour installation et notifier pour redémarrage. (Serveur Windows uniquement)
+
+        Avec cette option de Windows Server 2016, applicable uniquement aux serveurs SKU, les administrateurs locaux sont autorisés à utiliser Windows Update pour réaliser manuellement des installations ou des redémarrages.
 
 Si l’état de cette stratégie est Désactivée, les mises à jour disponibles sur Windows Update doivent être téléchargées et installées manuellement. Pour cela, vous devez rechercher Windows Update par le biais de l’écran de démarrage.
 
-Si l’état est Non configurée, l’utilisation des Mises à jour automatiques n’est pas spécifié au niveau de la stratégie de groupe. Si vous activez ce paramètre, toutes les copies locales du profil itinérant de l’utilisateur sont supprimées quand l’utilisateur ferme sa session.</string>
+Si l’état est Non configurée, l’utilisation des Mises à jour automatiques n’est pas spécifié au niveau de la stratégie de groupe. Cependant, un administrateur peut toujours configurer des mises à jour automatiques via le panneau de configuration.</string>
 
+      <string id="AutoUpdateModeNotifyToInstallNotifyToReboot">7 - Téléchargement automatique, avertir de l’installation, avertir du redémarrage</string>
       <string id="AutoUpdateModeAdminChooses">5 - Autoriser l’administrateur local à choisir les paramètres</string>
       <string id="AutoUpdateModeAuto">4 - Téléchargement automatique et planification des installations</string>
       <string id="AutoUpdateModeDownload">3 - Téléchargement automatique et notification des installations</string>
@@ -145,7 +152,17 @@ Si l’état est Non configurée, l’utilisation des Mises à jour automatiques
 
         Remarque : l'option « Télécharger des fichiers sans URL... » n'est utilisée que si le « Serveur de téléchargement alternatif » est défini.
 
-        Remarque : cette stratégie n’est pas prise en charge sur Windows RT. La définition de cette stratégie n’a aucun effet sur les ordinateurs Windows RT.</string>
+        Remarque : cette stratégie n’est pas prise en charge sur Windows RT. La définition de cette stratégie n’a aucun effet sur les ordinateurs Windows RT. 
+
+        Remarque sur les proxy : Pour garantir le niveau de sécurité le plus élevé, Microsoft recommande la sécurisation de WSUS à l’aide du protocole TLS/SSL, ce qui permet d’utiliser les serveurs intranet basés sur HTTPS pour conserver des systèmes sécurisés. Si un proxy est obligatoire, nous recommandons la configuration du proxy système.
+
+        La sélection d’un comportement de proxy n’aura aucune incidences sur les clients utilisant des serveurs intranet basés sur HTTPS pour détecter des mises à jour. 
+
+        Dans le but de conserver des clients intrinsèquement sécurisés, nous n’autorisons plus les serveurs intranet HTTP pour tirer parti des proxy utilisateur par défaut pour la détection de mises à jour. Si vous devez tirer parti de proxy utilisateur pour la détections de mises à jour lorsque vous utilisez un serveur intranet basé sur HTTP malgré les vulnérabilités qu’il présente, vous devez configurer le comportement de proxy sur « Autoriser l’emploi du proxy utilisateur à en tant qu’action de secours si la détection utilisant le proxy système échoue ».
+
+        La détection des updates va échouer lorsque les serveurs intranet basés sur HTTP s’utilisent sans proxy système configuré si la stratégie pour employer un comportement proxy alternatif n’est pas configurée.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Utiliser uniquement le proxy système pour détecter les mises à jour (par défaut)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Autoriser l’utilisation du proxy utilisateur comme secours si la détection utilisant un proxy système échoue</string>
       <string id="DetectionFrequency_Help">Spécifie la durée en heures pendant laquelle Windows attendra avant de vérifier la disponibilité de nouvelles mises à jour. La durée exacte correspond à la somme de la valeur spécifique et d'une variante aléatoire comprise entre 0 et 4 heures.
 
 Si l’état Activé est sélectionné, Windows vérifiera la disponibilité des mises à jour à l’intervalle spécifié.
@@ -356,6 +373,10 @@ Pour empêcher la réception des mises à jour qualité à la date planifiée, v
 Pour reprendre la réception des mises à jour qualité suspendues, désélectionnez le champ de date de début.
 
 Si vous désactivez ou ne configurez pas cette stratégie, le comportement de Windows Update reste inchangé.</string>
+      <string id="TargetReleaseVersion_Title">Sélectionner la version de la mise à jour des fonctionnalités cible</string>
+      <string id="TargetReleaseVersion_Help">Activez cette stratégie pour spécifier une version de mise à jour des fonctionnalités à demander dans les analyses suivantes.
+
+Entrez la version, telle qu’elle apparaît sur la page Informations sur la version de Windows aka.ms/ReleaseInformationPage</string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Ne pas inclure les pilotes avec les mises à jour Windows</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Activez cette stratégie pour ne pas inclure les pilotes avec les mises à jour qualité Windows.
 
@@ -669,8 +690,9 @@ Cette stratégie remplacera les stratégies suivantes :
         <textBox refId="CorpWUContentHost_Name">
           <label>Définir le serveur de téléchargement alternatif :</label>
         </textBox>
-        <text>(par exemple : http://IntranetUpd01)</text>
+        <text>(exemple: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Téléchargez les fichiers sans URL dans les métadonnées si un serveur de téléchargement alternatif est défini.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Sélectionnez le comportement du proxy pour le client Windows Update pour la détection des mises à jour avec un service basé sur non-TLS (HTTP) :</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Vérifier la présence de mises à jour à</text>
@@ -705,6 +727,11 @@ Cette stratégie remplacera les stratégies suivantes :
         <text>ce délai pour enregistrer leur</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">travail (minutes) :  </decimalTextBox>
       </presentation>
+      <presentation id="TargetReleaseVersion">
+        <textBox refId="TargetReleaseVersionId">
+          <label>Version cible pour les mises à jour des fonctionnalités</label>
+        </textBox>
+      </presentation>      
       <presentation id="ManagePreviewBuilds">
         <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Définir le comportement pour recevoir les versions d’évaluation :</dropdownList>
       </presentation>

@@ -3,10 +3,10 @@
 <description>entrer la description ici</description>
 <resources>
     <stringTable>
-    <string id="AntiSpywareDefender">Antivirus Windows Defender</string>
+    <string id="AntiSpywareDefender">Antivirus Microsoft Defender</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusions</string>
-    <string id="ExploitGuard">Windows Defender Exploit Guard</string>
+    <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Réduction de la vulnérabilité aux attaques</string>
     <string id="ExploitGuard_ControlledFolderAccess">Dispositif d’accès contrôlé aux dossiers</string>
     <string id="ExploitGuard_NetworkProtection">Protection du réseau</string>
@@ -34,10 +34,10 @@ Si vous désactivez ce paramètre, le service anti-programme malveillant est cha
         Autorise un administrateur à spécifier si la fonctionnalité Exclusions automatiques pour les serveurs SKU doit être désactivée.
 
         Désactivé (par défaut) :
-        Windows Defender exclura de l'analyse la liste prédéfinie des chemins pour améliorer les performances.
+        Microsoft Defender exclut de l'analyse la liste prédéfinie des chemins d'accès pour améliorer les performances.
 
         Activé :
-        Windows Defender n'exclura pas de l'analyse la liste prédéfinie des chemins. Cela peut avoir un impact sur les performances de l'ordinateur dans certains cas.
+        Microsoft Defender n'exclut pas de l'analyse la liste prédéfinie des chemins d'accès. Cela peut avoir un impact sur les performances de l'ordinateur dans certains cas.
 
         Non configuré :
         Identique à Désactivé.
@@ -49,14 +49,14 @@ Si vous désactivez ce paramètre, le service anti-programme malveillant est cha
 
     Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, Endpoint Protection s'exécute par défaut et la recherche de programmes malveillants et autres programmes potentiellement indésirables sur les ordinateurs est effectuée.
     </string>
-    <string id="DisableAntiSpywareDefender">Désactiver l’antivirus Windows Defender</string>
-    <string id="DisableAntiSpywareDefender_Explain">Ce paramètre de stratégie désactive l’Antivirus Windows Defender.
+    <string id="DisableAntiSpywareDefender">Désactiver l’antivirus Microsoft Defender</string>
+    <string id="DisableAntiSpywareDefender_Explain">Ce paramètre de stratégie désactive l’antivirus Microsoft Defender.
     
-    Si vous activez ce paramètre de stratégie, l’Antivirus Windows Defender ne s’exécute pas et ne recherche pas de programmes malveillants ou autres logiciels potentiellement indésirables.
+    Si vous activez ce paramètre de stratégie, l’antivirus Microsoft Defender ne s’exécute pas et ne recherche pas de programmes malveillants ou autres logiciels potentiellement indésirables.
 
-    Si vous désactivez ce paramètre de stratégie, l’Antivirus Windows Defender s’exécute, indépendamment d’éventuels autres antivirus installés.
+    Si vous désactivez ce paramètre de stratégie, l’antivirus Microsoft Defender s’exécute, indépendamment d’éventuels autres antivirus installés.
 
-    Si vous ne configurez pas ce paramètre de stratégie, Windows gère en interne l’Antivirus Windows Defender. Si vous installez un autre antivirus, Windows désactive automatiquement l’Antivirus Windows Defender. Dans le cas contraire, l’Antivirus Windows Defender analyse vos ordinateurs pour y rechercher des programmes malveillants ou autres logiciels potentiellement indésirables.
+    Si vous ne configurez pas ce paramètre de stratégie, Windows gère en interne l’antivirus Microsoft Defender. Si vous installez un autre antivirus, Windows désactive automatiquement l’antivirus Microsoft Defender. Dans le cas contraire, l’antivirus Microsoft Defender analyse vos ordinateurs pour y rechercher des programmes malveillants ou d'autres logiciels potentiellement indésirables.
 
     L’activation ou la désactivation de cette stratégie peut entraîner un comportement inattendu ou non pris en charge. Nous vous recommandons de ne pas configurer ce paramètre de stratégie.</string>
     <string id="DisableLocalAdminMerge">Configurer le comportement de fusion de l’administrateur local pour les listes</string>
@@ -67,11 +67,11 @@ Si vous activez ou ne configurez pas ce paramètre, les éléments uniques défi
 Si vous désactivez ce paramètre, seuls les éléments définis par la stratégie de groupe sont utilisés dans la stratégie en cours produite. Les paramètres de stratégie de groupe remplacent les paramètres des préférences configurés par l’administrateur local.</string>
     <string id="DisableRoutinelyTakingAction">Désactiver la mise à jour de routine</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
-    Ce paramètre de stratégie vous permet de déterminer si l’antivirus Windows Defender intervient automatiquement sur toutes les menaces détectées. L’action à entreprendre sur une menace particulière est déterminée par la combinaison de l’action définie par la stratégie, de l’action définie par l’utilisateur et de l’action définie par la signature.
+    Ce paramètre de stratégie vous permet de déterminer si l’antivirus Microsoft Defender intervient automatiquement sur toutes les menaces détectées. L’action à entreprendre sur une menace particulière est déterminée par la combinaison de l’action définie par la stratégie, de l’action définie par l’utilisateur et de l’action définie par la signature.
 
-    Si vous activez ce paramètre de stratégie, l’antivirus Windows Defender n’intervient pas automatiquement sur les menaces détectées, mais invite les utilisateurs à choisir parmi les actions disponibles pour chaque menace.
+    Si vous activez ce paramètre de stratégie, l’antivirus Microsoft Defender n’intervient pas automatiquement sur les menaces détectées, mais invite les utilisateurs à choisir parmi les actions disponibles pour chaque menace.
 
-    Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’antivirus Windows Defender intervient automatiquement sur toutes les menaces détectées après un délai non configurable d’environ cinq secondes.</string>
+    Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’antivirus Microsoft Defender intervient automatiquement sur toutes les menaces détectées après un délai non configurable d’environ cinq secondes.</string>
     <string id="DisableRoutinelyTakingAction_Explain">
         Ce paramètre de stratégie permet de définir si Endpoint Protection effectue automatiquement une action pour chaque menace détectée. L'action à entreprendre pour une menace détectée est déterminée par la combinaison de l'action définie par la stratégie, de l'action définie par l'utilisateur et de l'action définie par la signature.
 
@@ -192,13 +192,13 @@ Si vous activez ou ne configurez pas ce paramètre, les notifications d’écrit
 
 Si vous désactivez ce paramètre, les notifications d’écriture sur un volume brut sont désactivées.</string>
     <string id="DisableRealtimeMonitoring">Désactiver la protection en temps réel</string>
-    <string id="DisableRealtimeMonitoringDefender_Explain">Ce paramètre de stratégie désactive les invites de protection en temps réel contre les programmes malveillants connus détectés.
+    <string id="DisableRealtimeMonitoringDefender_Explain">Ce paramètre de stratégie désactive les invites de protection en temps réel pour la détection de programmes malveillants connus.
 
-    L’antivirus Windows Defender vous avertit lorsque des programmes malveillants ou potentiellement indésirables tentent de s’installer ou de s’exécuter sur votre ordinateur.
+    L’antivirus Microsoft Defender vous avertit lorsque des programmes malveillants ou des logiciels potentiellement indésirables tentent de s’installer ou de s’exécuter sur votre ordinateur.
 
-    Si vous activez ce paramètre de stratégie, l’antivirus Windows Defender n’invite pas les utilisateurs à entreprendre des actions lorsque des programmes malveillants sont détectés.
+    Si vous activez ce paramètre de stratégie, l’antivirus Microsoft Defender n’invite pas les utilisateurs à entreprendre des actions lors des détections de programmes malveillants.
 
-    Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, l’antivirus Windows Defender invite les utilisateurs à entreprendre des actions lorsque des programmes malveillants sont détectés.</string>
+    Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, l’antivirus Microsoft Defender invite les utilisateurs à entreprendre des actions lors des détections de programmes malveillants.</string>
     <string id="DisableRealtimeMonitoring_Explain">
     Ce paramètre de stratégie désactive les invites de protection en temps réel contre les programmes malveillants détectés.
 
@@ -331,11 +331,11 @@ Si vous désactivez ce paramètre, les événements Watson ne sont pas envoyés.
     4 - Débogage</string>
     <string id="Reporting_DisableEnhancedNotifications">Désactiver les notifications améliorées</string>
     <string id="Reporting_DisableEnhancedNotifications_Explain">
-      Utilisez ce paramètre de stratégie pour indiquer si vous souhaitez que les notifications améliorées de l’antivirus Windows Defender s’affichent sur les clients.
+      Utilisez ce paramètre de stratégie pour indiquer si vous souhaitez que les notifications améliorées de l’antivirus Microsoft Defender s’affichent sur les clients.
       
-      Si vous désactivez ce paramètre ou ne le configurez pas, les notifications améliorées de l’antivirus Windows Defender s’afficheront sur les clients.
+      Si vous désactivez ce paramètre ou si vous ne le configurez pas, les notifications améliorées de l’antivirus Microsoft Defender s’affichent sur les clients.
       
-      Si vous activez ce paramètre, les notifications améliorées de l’antivirus Windows Defender ne s’afficheront pas sur les clients.
+      Si vous activez ce paramètre, les notifications améliorées de l’antivirus Microsoft Defender ne s’affichent pas sur les clients.
     </string>
 
       <string id="Scan_AllowPause">Autoriser les utilisateurs à suspendre l’analyse</string>
@@ -756,10 +756,10 @@ Les valeurs de l’action de mise à jour valides sont les suivantes :
       Si vous activez ce paramètre, l'interface utilisateur du logiciel anti-programme malveillant n'affiche pas les notifications de redémarrage.
     </string>
     <string id="UX_Configuration_Notification_Suppress">Supprimer toutes les notifications</string>
-    <string id="UX_Configuration_Notification_Suppress_Explain">Utilisez ce paramètre de stratégie pour indiquer si vous souhaitez que les notifications de l’antivirus Windows Defender s’affichent sur les clients.
-      Si vous désactivez ce paramètre ou ne le configurez pas, les notifications de l’antivirus Windows Defender s’afficheront sur les clients.
+    <string id="UX_Configuration_Notification_Suppress_Explain">Utilisez ce paramètre de stratégie pour indiquer si vous souhaitez que les notifications de l’antivirus Microsoft Defender s’affichent sur les clients.
+      Si vous désactivez ce paramètre ou si vous ne le configurez pas, les notifications de l’antivirus Microsoft Defender s’affichent sur les clients.
 
-      Si vous activez ce paramètre, les notifications de l’antivirus Windows Defender ne s’afficheront pas sur les clients.
+      Si vous activez ce paramètre, les notifications de l’antivirus Microsoft Defender ne s’affichent pas sur les clients.
     </string>
     <string id="UX_Configuration_CustomDefaultActionToastString">Afficher du texte supplémentaire pour les clients lorsqu’ils doivent effectuer une action</string>
     <string id="UX_Configuration_CustomDefaultActionToastString_Explain">Ce paramètre de stratégie vous permet de configurer s’il convient ou non d’afficher du texte supplémentaire pour les clients lorsqu’ils doivent effectuer une action. Le texte affiché est une chaîne définie par l’administrateur personnalisée. Il peut s’agir, par exemple, du numéro de téléphone pour appeler l’assistance de la société. L’interface client affiche uniquement un maximum de 1 024 caractères. Les chaînes plus longues sont tronquées avant d’être affichées.
@@ -769,42 +769,57 @@ Si vous activez ce paramètre, le texte supplémentaire spécifié est affiché.
 Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémentaire n’est affiché.</string>
     <string id="MpCloudBlockLevel">Sélectionner un niveau de protection du cloud</string>
     <string id="MpCloudBlockLevel_Explain">
-      Ce paramètre de stratégie détermine combien Antivirus Windows Defender peut se montrer agressif pour ce qui est de bloquer et d'analyser les fichiers suspects.
+      Ce paramètre de stratégie détermine combien l'antivirus Microsoft Defender peut se montrer agressif pour ce qui est de bloquer et d'analyser les fichiers suspects.
 
-      Si ce paramètre est activé, Windows Defender Antivirus sera plus agressif lorsqu'il identifiera des fichiers suspects à bloquer et à analyser ; sinon, il sera moins agressif et par conséquent, il en bloquera et analysera dans une moindre mesure. 
+      Si ce paramètre est activé, l'antivirus Microsoft Defender sera plus agressif lorsqu'il identifiera des fichiers suspects à bloquer et à analyser ; sinon, il sera moins agressif et par conséquent, il en bloquera et analysera dans une moindre mesure. 
       
-      Pour plus d’informations sur les valeurs spécifiques prises en charge, voir le site contenant la documentation sur l’Antivirus Windows Defender.
+      Pour plus d’informations sur les valeurs spécifiques prises en charge, consultez le site contenant la documentation sur l’antivirus Microsoft Defender.
 
-      Remarque : Cette fonctionnalité requiert l'activation du paramètre Rejoindre Microsoft MAPS.
+      Remarque : cette fonctionnalité requiert l’activation du paramètre « Rejoindre Microsoft MAPS ».
 
       Les options possibles sont :
-      (0x0) Le niveau de blocage par défaut de Windows Defender
-      (0x2) Le niveau de blocage élevé : bloque les fichiers inconnus de manière agressive tout en optimisant les performances du client (accroît les chances de faux positifs)
+      (0x0) Niveau de blocage par défaut l’antivirus Microsoft Defender
+      (0x1) Niveau de blocage modéré de l’antivirus Microsoft Defender, fournit le verdict uniquement pour les détections de niveau de confiance élevé
+      (0x2) Niveau de blocage élevé : bloque les fichiers inconnus de manière agressive tout en optimisant les performances du client (accroît les chances de faux positifs)
       (0x4) Niveau de blocage très élevé : bloque les fichiers inconnus de manière agressive et applique des mesures de protection complémentaires (susceptibles d'avoir un impact sur les performances du client)
       (0x6) Niveau de blocage Tolérance zéro : bloque tous les fichiers inconnus exécutables
     </string>
-    <string id="MpCloudBlockLevel_Default_Level">Niveau de blocage par défaut de l’antivirus Windows Defender</string>
+    <string id="MpCloudBlockLevel_Default_Level">Niveau de blocage par défaut</string>
+    <string id="MpCloudBlockLevel_Moderate_Level">Niveau de blocage modéré</string>
     <string id="MpCloudBlockLevel_High_Level">Niveau de blocage élevé</string>
     <string id="MpCloudBlockLevel_High_Plus_Level">Niveau de blocage très élevé</string>
     <string id="MpCloudBlockLevel_Zero_Tolerance_Level">Niveau de blocage Tolérance zéro</string>
     <string id="MpBafsExtendedTimeout">Configurer la vérification du cloud étendue</string>
     <string id="MpBafsExtendedTimeout_Explain">
-      Cette fonctionnalité permet à l’antivirus Windows Defender de bloquer un fichier suspect pendant 60 secondes au plus et de l’analyser dans le cloud pour s’assurer qu’il est sûr.
+      Cette fonctionnalité permet à l’antivirus Microsoft Defender de bloquer un fichier suspect pendant 60 secondes au plus et de l’analyser dans le cloud pour s’assurer qu’il est sûr.
       
-      Le délai d’expiration standard de la vérification du cloud dure 10 secondes. Pour activer la fonctionnalité de vérification du cloud étendue, spécifiez une durée étendue (en secondes) jusqu’à 50 secondes supplémentaires.
+      Le délai d’expiration standard de la vérification du cloud est de 10 secondes. Pour activer la fonctionnalité de vérification du cloud étendue, spécifiez une durée étendue (en secondes) jusqu’à 50 secondes supplémentaires.
 
-      Par exemple, si le délai d’expiration souhaité est de 60 secondes, spécifiez 50 secondes dans ce paramètre, ce qui active la fonctionnalité de vérification du cloud étendue, et fait passer le temps total à 60 secondes.
+      Par exemple, si le délai d’expiration souhaité est de 60 secondes, spécifiez 50 secondes dans ce paramètre, ce qui active la fonctionnalité de vérification du cloud étendue et fait passer le temps total à 60 secondes.
 
-      Remarque : cette fonctionnalité dépend de trois autres paramètres MAPS : Configurer la fonctionnalité « Bloquer à la première consultation », Rejoindre Microsoft MAPS et Envoyer des exemples de fichier lorsqu’une analyse supplémentaire est nécessaire. Tous les trois doivent être activés.
+      Remarque : cette fonctionnalité dépend de trois autres paramètres MAPS : Configurer la fonctionnalité « Bloquer à la première consultation », Rejoindre Microsoft MAPS et Envoyer des exemples de fichier lorsqu’une analyse supplémentaire est nécessaire. Tous les trois doivent être activés.
+    </string>
+    <string id="MpEngine_EnableFileHashComputation">Activer la fonctionnalité de calcul du hachage de fichier</string>
+    <string id="MpEngine_EnableFileHashComputation_Explain">
+        Activer ou désactiver la fonctionnalité de calcul du hachage de fichier.
+
+        Activé :
+        Lorsque cette fonctionnalité est activée, Microsoft Defender calcule la valeur de hachage des fichiers qu’il analyse.
+
+        Désactivé :
+        La valeur de hachage du fichier n’est pas calculée
+        
+        Non configuré :
+        Identique à Désactivé.
     </string>
     <string id="ExploitGuard_EnableNetworkProtection">Empêche les utilisateurs et les applications d'accéder à des sites Web dangereux</string>
     <string id="ExploitGuard_EnableNetworkProtection_Explain">
-    Active ou désactive la protection de réseau Windows Defender Exploit Guard pour empêcher les employés d'utiliser des applications permettant d'accéder à des domaines dangereux (pouvant héberger des sites Web de hameçonnage, exploiter un hébergement…) et à d'autres contenus malveillants d'Internet.
+    Active ou désactive la protection de réseau Microsoft Defender Exploit Guard pour empêcher les employés d'utiliser des applications permettant d'accéder à des domaines dangereux (pouvant héberger des sites web de hameçonnage, exploiter un hébergement…) et à d'autres contenus malveillants d'Internet.
 
         Activé :
         Spécifier le mode dans la section Option :
-        -Bloquer : Les utilisateurs et les applications ne pourront pas accéder à des domaines dangereux
-        -Audit : Les utilisateurs et les applications peuvent se connecter à des domaines dangereux. Toutefois, dans les cas où cette fonctionnalité bloque l'accès lorsque le paramètre Bloquer est activé, un rapport sur l'événement s'affiche dans le centre de sécurité Windows Defender.
+        - Bloquer : Les utilisateurs et les applications ne pourront pas accéder à des domaines dangereux
+        - Mode audit : Les utilisateurs et les applications peuvent se connecter à des domaines dangereux. Toutefois, dans les cas où cette fonctionnalité bloque l'accès lorsque le paramètre Bloquer est activé, un rapport sur l'événement s'affiche dans les journaux d'événements.
 
         Désactivé :
         Les utilisateurs et les applications pourront se connecter librement à des domaines dangereux.
@@ -865,55 +880,55 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess">Configurer le contrôle d'accès aux dossiers</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Explain">
-    Active ou désactive l’accès contrôlé aux dossiers pour les applications non approuvées. Vous pouvez choisir de bloquer, d’auditer ou d’autoriser les tentatives par des applications non approuvées pour :
+        Active ou désactive l’accès contrôlé aux dossiers pour les applications non approuvées. Vous pouvez choisir de bloquer, d’auditer ou d’autoriser les tentatives par des applications non approuvées pour :
     - modifier ou supprimer des fichiers dans des dossiers protégés, tels que le dossier Documents ;
     - écrire dans des secteurs de disque.
 
     Vous pouvez également choisir de ne bloquer ou n’auditer que les écritures dans des secteurs de disque tout en permettant la modification ou la suppression de fichiers dans des dossiers protégés.
 
-    L’Antivirus Windows Defender détermine automatiquement les applications qui peuvent être approuvées. Vous pouvez ajouter des applications approuvées dans le paramètre de stratégie de groupe Configurer des applications approuvées.
-    Les dossiers système par défaut sont automatiquement protégés, mais vous pouvez ajouter des dossiers dans le paramètre de stratégie Configurer des dossiers protégés.
+    L’antivirus Microsoft Defender détermine automatiquement les applications qui peuvent être approuvées. Vous pouvez ajouter des applications approuvées dans le paramètre de stratégie de groupe Configurer des applications approuvées.
+    Les dossiers système par défaut sont automatiquement protégés, mais vous pouvez ajouter des dossiers dans le paramètre de stratégie de groupe Configurer des dossiers protégés.
 
     Bloquer :
     Les opérations suivantes sont bloquées :
     - Tentatives par des applications non approuvées de modifier ou supprimer des fichiers dans des dossiers protégés
-    -Tentatives par des applications non approuvées d’écrire dans des secteurs de disque
-    Le journal des événements Windows enregistre ces blocages sous Journaux des applications et des services &gt; Microsoft &gt; Windows &gt; Windows Defender &gt; Opérationnel &gt; ID 1123.
-
-
-    Désactivé :
-    Les opérations suivantes ne sont pas bloquées et sont autorisées à s’exécuter :
-    - Tentatives par des applications non approuvées de modifier ou supprimer des fichiers dans des dossiers protégés
     - Tentatives par des applications non approuvées d’écrire dans des secteurs de disque
-    Ces tentatives ne sont pas enregistrées dans le journal des événements Windows.
+        Le journal des événements Windows enregistre ces blocages sous Journaux des applications et des services &gt; Microsoft &gt; Windows &gt; Windows Defender &gt; Opérationnel &gt; ID 1123.
 
 
-    Mode audit :
-    Les opérations suivantes ne sont pas bloquées et sont autorisées à s’exécuter :
-    - Tentatives par des applications non approuvées de modifier ou supprimer des fichiers dans des dossiers protégés
-    - Tentatives par des applications non approuvées d’écrire dans des secteurs de disque
-    Le journal des événements Windows enregistre ces tentatives sous Journaux des applications et des services &gt; Microsoft &gt; Windows &gt; Windows Defender &gt; Opérationnel &gt; ID 1124.
+        Désactivé :
+        Les opérations suivantes ne sont pas bloquées et sont autorisées à s’exécuter :
+        - Tentatives par des applications non approuvées de modifier ou supprimer des fichiers dans des dossiers protégés
+        - Tentatives par des applications non approuvées d’écrire dans des secteurs de disque
+        Ces tentatives ne sont pas enregistrées dans le journal des événements Windows.
 
 
-    Bloquer la modification du disque uniquement :
-    Les opérations suivantes sont bloquées :
-    - Tentatives par des applications non approuvées d’écrire dans des secteurs de disque
-    Le journal des événements Windows enregistre ces tentatives sous Journaux des applications et des services &gt; Microsoft &gt; Windows &gt; Windows Defender &gt; Opérationnel &gt; ID 1123.
-
-    Les opérations suivantes ne sont pas bloquées et sont autorisées à s’exécuter :
-    - Tentatives par des applications non approuvées de modifier ou supprimer des fichiers dans des dossiers protégés
-    Ces tentatives ne sont pas enregistrées dans le journal des événements Windows.
+        Mode audit :
+        Les opérations suivantes ne sont pas bloquées et sont autorisées à s’exécuter :
+        - Tentatives par des applications non approuvées de modifier ou supprimer des fichiers dans des dossiers protégés
+        - Tentatives par des applications non approuvées d’écrire dans des secteurs de disque
+        Le journal des événements Windows enregistre ces tentatives sous Journaux des applications et des services &gt; Microsoft &gt; Windows &gt; Windows Defender &gt; Opérationnel &gt; ID 1124.
 
 
-    Auditer la modification du disque uniquement :
-    Les opérations suivantes ne sont pas bloquées et sont autorisées à s’exécuter :
-    - Tentatives par des applications non approuvées d’écrire dans des secteurs de disque
-    - Tentatives par des applications non approuvées de modifier ou supprimer des fichiers dans des dossiers protégés
-    Seules les tentatives d’écrire dans des secteurs de disque protégé sont enregistrées dans le journal des événements Windows (sous Journaux des applications et des services &gt; Microsoft &gt; Windows &gt; Windows Defender &gt; Opérationnel &gt; ID 1124).
-    Les tentatives de modification ou de suppression des fichiers dans des dossiers protégés ne sont pas enregistrées.
+        Bloquer la modification du disque uniquement :
+        Les opérations suivantes sont bloquées :
+        - Tentatives par des applications non approuvées d’écrire dans des secteurs de disque
+        Le journal des événements Windows enregistre ces tentatives sous Journaux des applications et des services &gt; Microsoft &gt; Windows &gt; Windows Defender &gt; Opérationnel &gt; ID 1123.
 
-    Non configuré :
-    Identique à Désactivé.
+        Les opérations suivantes ne sont pas bloquées et sont autorisées à s’exécuter :
+        - Tentatives par des applications non approuvées de modifier ou supprimer des fichiers dans des dossiers protégés
+        Ces tentatives ne sont pas enregistrées dans le journal des événements Windows.
+
+
+        Auditer la modification du disque uniquement :
+        Les opérations suivantes ne sont pas bloquées et sont autorisées à s’exécuter :
+        - Tentatives par des applications non approuvées d’écrire dans des secteurs de disque
+        - Tentatives par des applications non approuvées de modifier ou supprimer des fichiers dans des dossiers protégés
+        Seules les tentatives d’écrire dans des secteurs de disque protégés sont enregistrées dans le journal des événements Windows (sous Journaux des applications et des services &gt; Microsoft &gt; Windows &gt; Windows Defender &gt; Opérationnel &gt; ID 1124).
+        Les tentatives de modification ou de suppression des fichiers dans des dossiers protégés ne sont pas enregistrées.
+
+        Non configuré :
+        Identique à Désactivé.
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Disable">Désactiver (par défaut)</string>
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_Block">Refuser</string>
@@ -922,24 +937,24 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     <string id="ExploitGuard_ControlledFolderAccess_EnableControlledFolderAccess_AuditDiskModifications">N'auditer que la modification du disque</string>
     <string id="ExploitGuard_ControlledFolderAccess_AllowedApplications">Configurer les applications autorisées</string>
     <string id="ExploitGuard_ControlledFolderAccess_AllowedApplications_Explain">
-    Ajoutez les applications supplémentaires qui devraient être considérées comme « approuvées » par la fonctionnalité de contrôle d'accès aux dossiers.
+    Ajoutez les applications supplémentaires qui devraient être considérées comme « approuvées » par la fonctionnalité d'accès contrôlé aux dossiers.
 
-        Ces applications sont autorisées à modifier ou à supprimer les fichiers qui se trouvent dans des dossiers dont l'accès est contrôlé.
+    Ces applications sont autorisées à modifier ou à supprimer les fichiers qui se trouvent dans des dossiers dont l'accès est contrôlé.
 
-         L'antivirus Windows Defender détermine automatiquement quelles applications devraient être approuvées. Vous pouvez configurer ce paramètre pour ajouter des applications supplémentaires.
+    L'antivirus Microsoft Defender détermine automatiquement quelles applications devraient être approuvées. Vous pouvez configurer ce paramètre pour ajouter des applications supplémentaires.
 
-        Activé :
-        Spécifiez les applications autorisées supplémentaires dans la section Options.
+    Activé :
+    Spécifie les applications autorisées supplémentaires dans la section Options.
 
-        Désactivé :
-        Aucune application supplémentaire ne sera ajoutée à la liste approuvée.
+    Désactivé :
+    Aucune application supplémentaire n'est ajoutée à la liste approuvée.
 
-        Non configuré :
-        Identique à Désactivé.
+    Non configuré :
+    Identique à Désactivé.
 
-        Vous pouvez activer le contrôle d'accès aux dossiers dans le paramètre de stratégie de groupe Configurer le contrôle d'accès aux dossiers.
+    Vous pouvez activer l'accès contrôlé aux dossiers dans le paramètre de stratégie de groupe Configurer l'accès contrôlé aux dossiers.
 
-        Les dossiers système par défaut sont automatiquement protégés, mais vous pouvez ajouter des dossiers approuvés dans le paramètre de stratégie de groupe Configurer les dossiers protégés.
+    Les dossiers système par défaut sont automatiquement protégés, mais vous pouvez ajouter des dossiers dans le paramètre de stratégie de groupe Configurer les dossiers protégés.
     </string>
     <string id="ExploitGuard_ControlledFolderAccess_ProtectedFolders">Configurer des dossiers protégés</string>
     <string id="ExploitGuard_ControlledFolderAccess_ProtectedFolders_Explain">
@@ -951,17 +966,17 @@ Si vous désactivez ou ne configurez pas ce paramètre, aucun texte supplémenta
     La liste de dossiers système par défaut qui sont protégés est affichée dans Sécurité Windows.
 
     Activé :
-    Spécifiez les dossiers supplémentaires qui devraient être protégés dans la section Options.
+    Spécifie les dossiers supplémentaires qui devraient être protégés dans la section Options.
 
     Désactivé :
-    Aucun dossier supplémentaire ne sera protégé.
+    Aucun dossier supplémentaire n'est protégé.
 
     Non configuré :
     Identique à Désactivé.
 
     Vous pouvez activer l'accès contrôlé aux dossiers dans le paramètre de stratégie de groupe Configurer l'accès contrôlé aux dossiers.
 
-    L'Antivirus Windows Defender détermine automatiquement les applications qui peuvent être approuvées. Vous pouvez ajouter des applications approuvées dans le paramètre de stratégie de groupe Configurer les applications autorisées.
+    L'antivirus Microsoft Defender détermine automatiquement les applications qui peuvent être approuvées. Vous pouvez ajouter des applications approuvées dans le paramètre de stratégie de groupe Configurer les applications autorisées.
     </string>
     </stringTable>
     <presentationTable>
