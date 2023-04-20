@@ -38,4 +38,6 @@
 	</Collection>
 	<Collection clsid="{53B533F5-224C-47e3-B01B-CA3B3F3FF4BF}" name="Firefox"><Registry clsid="{9CD4B2F4-923D-47f5-A062-E897DD1DAD50}" name="DisableAppUpdate" status="DisableAppUpdate" image="12" changed="2022-06-11 11:18:56" uid="{EF8FA99B-486E-4D31-B826-AB971712838E}" bypassErrors="1"><Properties action="U" displayDecimal="1" default="0" hive="HKEY_LOCAL_MACHINE" key="SOFTWARE\Policies\Mozilla\Firefox" name="DisableAppUpdate" type="REG_DWORD" value="00000001"/><Filters/></Registry>
 	</Collection>
+	<Collection clsid="{53B533F5-224C-47e3-B01B-CA3B3F3FF4BF}" name="AdBlock"><Registry clsid="{9CD4B2F4-923D-47f5-A062-E897DD1DAD50}" name="suppress_first_run_page" status="suppress_first_run_page" image="10" changed="2023-04-20 14:15:09" uid="{E0F274C5-6954-4304-8F1E-193F24B523FE}"><Properties action="C" displayDecimal="0" default="0" hive="HKEY_LOCAL_MACHINE" key="Software\Policies\Google\Chrome\3rdparty\extensions\cfhdojbkjhnklbpkdaibdccddilifddb\policy" name="suppress_first_run_page" type="REG_DWORD" value="00000001"/></Registry>
+	</Collection>
 </RegistrySettings>

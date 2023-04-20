@@ -4,9 +4,13 @@
     <using prefix="ns0" namespace="Google.Policies.Chrome"></using>
   </policyNamespaces>
   <comments>
-    <admTemplate></admTemplate>
+    <admTemplate>
+      <comment policyRef="ns0:ExtensionInstallForcelist" commentText="$(resource.ns0_ExtensionInstallForcelist)"></comment>
+    </admTemplate>
   </comments>
   <resources minRequiredRevision="1.0">
-    <stringTable></stringTable>
+    <stringTable>
+      <string id="ns0_ExtensionInstallForcelist">Ajout Ad Block</string>
+    </stringTable>
   </resources>
 </policyComments>
