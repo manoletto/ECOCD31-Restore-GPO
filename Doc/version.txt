@@ -6,7 +6,8 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
-Add "C: M:" value for NoDrives
+Modification modèles de stratégie de groupe Magret : ajout de la valeur 4100 "C: M:" pour NoDrives
+https://ss64.com/nt/syntax-nodrives.html
 
 v1.8 - 08/09/2021 - Emmanuel Fournier
 Suite au passage de l'image Windows Standard en version 20H2,
