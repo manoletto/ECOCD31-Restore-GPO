@@ -5,7 +5,7 @@
   <description></description>
 <resources>
 <stringTable>
-      <string id="mag_0">Magret-Utilisateurs 1805</string>            
+      <string id="mag_0">Magret-Utilisateurs 1805</string>
       <string id="mag_1000">01. Redirection de dossiers complements</string>
               <string id="mag_1001">Mes Documents</string>
               <string id="mag_1002">Mes images</string>
@@ -149,7 +149,7 @@
                               <string id="mag_4407">Forcer l'accueil à la taille plein écran ou taille de menu dans W10</string>
                                       <string id="mag_4408">Menu Démarrer</string>
                                       <string id="mag_4409">Plein écran de démarrage</string>
-                                                          
+
       <string id="mag_5000">05. Panneau de configuration</string>
               <string id="mag_5001">Désactiver le Panneau de configuration</string>
               <string id="mag_5002">Masquer les applications spécifiées</string>
@@ -217,7 +217,7 @@
                               <string id="mag_6117">Aucun des deux</string>
                               <string id="mag_6118">Pavé numérique</string>
                               <string id="mag_6119">Pavé numérique et Majuscules</string>
-                      <string id="mag_6120">Activer les raccourcis vers les options d'accessibilité</string>                                    
+                      <string id="mag_6120">Activer les raccourcis vers les options d'accessibilité</string>
               <string id="mag_6200">06.2. Restrictions</string>
                       <string id="mag_6201">Signatures du code des pilotes de périphériques</string>
                               <string id="mag_6202">Ignorer</string>
@@ -234,7 +234,7 @@
                       <string id="mag_6213">Ne pas exécuter les applications Windows spécifiées</string>
                       <string id="mag_6214">Désactiver la lecture automatique</string>
                               <string id="mag_6215">Lecteurs de CD ROM</string>
-                              <string id="mag_6216">Tous les lecteurs</string>                                                                                        
+                              <string id="mag_6216">Tous les lecteurs</string>
       <string id="mag_7000">07. Réseau</string>
               <string id="mag_7100">07.1. Fichiers hors connexion</string>
                       <string id="mag_7101">Désactiver la configuration utilisateur des fichiers hors connexion</string>
@@ -246,7 +246,7 @@
                       <string id="mag_7107">Désactiver le dossier  Fichiers hors connexion </string>
                       <string id="mag_7108">Taille du cache par défaut</string>
                       <string id="mag_7109">Désactiver les bulles de rappel</string>
-                      <string id="mag_7110">Supprimer les copies locales des fichiers hors connexion</string>              
+                      <string id="mag_7110">Supprimer les copies locales des fichiers hors connexion</string>
       <string id="mag_8000">08. Composants Windows</string>
               <string id="mag_8100">08.01. Explorateur Windows</string>
                       <string id="mag_8101">Activer l'environnement classique</string>
@@ -277,6 +277,7 @@
                               <string id="mag_8126">Les lecteurs A: B: C: D: E: F:</string>
                               <string id="mag_8127">Les lecteurs A: C: J: L:</string>
                               <string id="mag_8128">Les lecteurs A: C: J: L: M:</string>
+                              <string id="mag_81281">Les lecteurs C: M:</string>
                               <string id="mag_8129">Les lecteurs C: J: L:</string>
                               <string id="mag_8130">Les lecteurs C: J: M:</string>
                               <string id="mag_8131">Les lecteurs C: J: L: M:</string>
@@ -298,6 +299,7 @@
                               <string id="mag_8147">Les lecteurs A: B: C: D: E: F:</string>
                               <string id="mag_8148">Les lecteurs A: C: J: L:</string>
                               <string id="mag_8149">Les lecteurs A: C: J: L: M:</string>
+                              <string id="mag_81491">Les lecteurs C: M:</string>
                               <string id="mag_8150">Les lecteurs C: J: L:</string>
                               <string id="mag_8151">Les lecteurs C: J: L: M:</string>
                               <string id="mag_8152">Les lecteurs C: J: L: M: R:</string>
@@ -322,7 +324,7 @@
                       <string id="mag_8204">Empêche l'accès aux disques de stockage amovibles</string>
                       <string id="mag_8205">Empêche l'accès aux lecteurs de disquettes, meme USB</string>
                       <string id="mag_8206">Empêche l'accès aux lecteurs multimédia, téléphones mobiles, etc..</string>
-                      
+
               <string id="mag_8300">08.03. Nouveaux composants Windows 7 et 8</string>
                       <string id="mag_8310">08.03.1. Gadgets</string>
                               <string id="mag_8311">Désactiver tous les gadgets</string>
@@ -482,15 +484,15 @@
                       <string id="RechercheParDefaut">Fournisseur de recherche par défaut</string>
               <string id="mag_10500">10.5. Paramétrages Audacity</string>
                       <string id="mag_10501">Codec MP3</string>
-                      <string id="mag_10502">Langue Interface</string>    
-   
+                      <string id="mag_10502">Langue Interface</string>
+
 <!--Commentaires d'aide-->
 <string id="RedirectionsDossiersEnvironnements_Help">
-Dans toute la section 'Redirection des dossiers' :   
+Dans toute la section 'Redirection des dossiers' :
 - l'unité %HOMESHARE% correspond à la ressource personnelle de l'utilisateur
-- l'unité M: correspond au modèle lié à l'utilisateur par le script de connexion   
+- l'unité M: correspond au modèle lié à l'utilisateur par le script de connexion
 Sur %HOMESHARE% l'utilisateur a tous les droits donc le dossier est modifiable.
-Sur M: l'utilisateur n'a que le droit de lecture donc le dossier est verrouillé.        
+Sur M: l'utilisateur n'a que le droit de lecture donc le dossier est verrouillé.
 "Environnement" correspond à un dossier de stockage des éléments d'environnement communs à toutes les versions modernes de Windows.
 Attention : les redirections du menu Démarrer et de ses sous-dossiers Programmes et Démarrage sont fortement déconseillées sous W10 !
 </string>
@@ -558,7 +560,7 @@ La liste complète des noms canoniques et des noms de modules des éléments du 
 Ce paramètre affecte le menu Démarrer et le Panneau de configuration, ainsi que les autres moyens d'accéder au éléments du Panneau de configuration (tels que les raccourcis dans le Centre d'aide et de support ou les lignes de commande qui utilisent le fichier control.exe).
 Lorsque les deux paramètres Masquer les éléments du Panneau de configuration spécifiés et N'afficher que les éléments du Panneau de configuration spécifiés sont activés, le second paramètre est ignoré.
 Remarque : vous ne pouvez pas utiliser ce paramètre pour masquer les éléments du Panneau de configuration d'affichage dans le menu Démarrer du Bureau. Pour masquer les éléments du Panneau de configuration d'affichage et empêcher les utilisateurs de modifier les paramètres d'affichage de l'ordinateur, utilisez le paramètre Désactiver le Panneau de configuration d'affichage.
-</string>    
+</string>
 <string id="Connect_HomeDir_ToRoot_Explain">
 Restaure les définitions des variables d'environnement %HOMESHARE% et %HOMEPATH% à celles utilisées dans Windows NT 4.0 et versions antérieures.
 Si vous activez cette stratégie, le système utilise les définitions Windows NT 4.0. Si vous désactivez cette stratégie ou si vous ne la configurez pas, le système utilise les nouvelles définitions conà§ues pour Windows 2000.
@@ -640,17 +642,17 @@ Si vous désactivez ce paramètre ou si vous ne le configurez pas, les touches d
 Si vous activez ce paramètre de stratégie, Windows à la une sur l’écran de verrouillage, les conseils Windows, les fonctionnalités Microsoft grand public et les autres fonctionnalités associées seront désactivés. Vous devez activer ce paramètre de stratégie si votre objectif est de minimiser le trafic réseau à partir d’appareils cibles.
 Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les fonctionnalités Windows à la une sont autorisées et peuvent être contrôlées individuellement à l’aide de leurs paramètres de stratégie correspondants.
 </string>
-<string id="ForceStartSize_ExplainText">Si vous activez cette stratégie et la définissez sur Menu Démarrer ou Plein écran de démarrage, le démarrage prendra cette taille et les utilisateurs ne pourront pas modifier la taille de démarrage dans les paramètres. 
+<string id="ForceStartSize_ExplainText">Si vous activez cette stratégie et la définissez sur Menu Démarrer ou Plein écran de démarrage, le démarrage prendra cette taille et les utilisateurs ne pourront pas modifier la taille de démarrage dans les paramètres.
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows va sélectionner automatiquement la taille en fonction du facteur de forme matérielle et les utilisateurs ne pourront pas modifier la taille de démarrage dans les paramètres.
 </string>
 
 <string id="SUPPORTED_WXP">Microsoft Windows XP</string>
 <string id="SUPPORTED_W7">Microsoft Windows 7</string>
-   
+
 </stringTable>
 
 <presentationTable>
-    
+
 <!--Redirection de dossiers et compléments-->
       <presentation id="MesDocuments">
         <textBox refId="CheminpourobtenirleselementsdeMesDocuments">
@@ -676,7 +678,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
           <defaultValue>%HOMESHARE%\Travail\Mes videos</defaultValue>
         </textBox>
       </presentation>
-      
+
       <presentation id="Telechargements">
         <textBox refId="CheminpourobtenirleselementsdeTelechargements">
           <label>Dossier des Téléchargements:</label>
@@ -687,21 +689,21 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>des navigateurs doivents être redirigés vers ce même dossier.</text>
         <text>Les stratégies existent pour IE, FF et Chrome.</text>
       </presentation>
-      
+
       <presentation id="ApplicationData">
         <textBox refId="Cheminpourobtenirleselementsdesdonneesdapplications">
           <label>Chemin pour obtenir les elements des donnees d'applications :</label>
           <defaultValue>%HOMESHARE%\Environnement\Application Data</defaultValue>
         </textBox>
       </presentation>
-      <presentation id="Bureau">        
+      <presentation id="Bureau">
         <textBox refId="Cheminpourobtenirleselementsdubureau">
         <label>Chemin pour obtenir les elements du bureau :</label>
-        <defaultValue>M:\Environnement\Bureau</defaultValue>          
+        <defaultValue>M:\Environnement\Bureau</defaultValue>
         </textBox>
       </presentation>
       <presentation id="MenuDemarrer">
-        <textBox refId="CheminpourobtenirleselementsduMenuDemarrer">        
+        <textBox refId="CheminpourobtenirleselementsduMenuDemarrer">
           <label>Chemin pour obtenir les elements du Menu Demarrer :</label>
           <defaultValue>M:\Environnement\Menu Démarrer</defaultValue>
         </textBox>
@@ -724,13 +726,13 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <presentation id="Outilsdadministration">
         <textBox refId="Chemindesoutilsdadministration">
         <label>Chemin des outils d administration</label>
-        <defaultValue>M:\Environnement\Menu démarrer\Magret</defaultValue>         
+        <defaultValue>M:\Environnement\Menu démarrer\Magret</defaultValue>
         </textBox>
         <text>Définir des chemins qui ne donnent les outils d'administration</text>
         <text>qu'aux administrateurs et des outils moins sensibles aux utilisateurs</text>
         <text>comme les consoles pédagogiques de Magret par exemple.</text>
         </presentation>
-        
+
       <presentation id="Favorisreseau">
         <textBox refId="CheminpourobtenirleselementsdeFavorisreseau">
           <label>Chemin pour obtenir les éléments de Favoris réseau :</label>
@@ -742,7 +744,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>On peut aussi ne pas configurer cette option et masquer</text>
         <text>l'icône Favoris Réseau aux utilisateurs dans la stratégie du Bureau.</text>
       </presentation>
-      
+
       <presentation id="Documentsrecents">
         <textBox refId="Cheminpourobtenirleselementslesplusrecents">
           <label>Chemin pour obtenir les éléments les plus récents</label>
@@ -751,28 +753,28 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>Laissez l'option par défaut si l'utilisateur doit retrouver</text>
         <text>les documents récemment ouverts.</text>
       </presentation>
-      
+
       <presentation id="Envoyervers">
         <textBox refId="CheminpourobtenirleselementsdeEnvoyervers">
           <label>Chemin pour obtenir les éléments de Envoyer vers ...</label>
           <defaultValue>M:\Winconf\SendTo</defaultValue>
         </textBox>
       </presentation>
-      
+
       <presentation id="Documentsfavoris">
         <textBox refId="CheminpourobtenirleselementsdeFavoris">
           <label>Chemin pour obtenir les éléments de Favoris </label>
           <defaultValue>%HOMESHARE%\Environnement\Favoris</defaultValue>
         </textBox>
       </presentation>
-      
+
       <presentation id="Nouveaudocument">
         <textBox refId="CheminpourobtenirleselementsdeNouveaudocument">
           <label>Chemin pour obtenir les éléments de Nouveau document </label>
           <defaultValue>M:\Winconf\ShellNew</defaultValue>
         </textBox>
       </presentation>
-      
+
       <presentation id="Historique">
         <textBox refId="Chemindelhistorique">
           <label>Chemin de l'historique</label>
@@ -781,7 +783,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>%HOMESHARE%\Environnement\Historique correspond au dossier personnel</text>
         <text>commun à WXP et W7</text>
       </presentation>
-      
+
       <presentation id="CacheInternetTemporaryInternetFiles">
         <textBox refId="DossierducacheInternet">
           <label>Dossier du cache Internet</label>
@@ -790,7 +792,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>L'idéal est un dossier clairement identifié sur la station.</text>
         <text>Par exemple C:\Cache</text>
       </presentation>
-      
+
       <presentation id="Cookies">
         <textBox refId="Dossierdescookiesinternet">
           <label>Dossier des cookies internet</label>
@@ -803,14 +805,14 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>Le dossier sur la station évite la multiplication des cookies</text>
         <text>dans le dossier personnel de l'utilisateur</text>
       </presentation>
-      
+
       <presentation id="DossierdegravagedesCD">
         <textBox refId="ChemindudossierdegravagedesCD">
           <label>Chemin du dossier de gravage des CD</label>
           <defaultValue>C:\Cache\CDBurning</defaultValue>
         </textBox>
       </presentation>
-      
+
       <presentation id="Donneeslocales">
         <textBox refId="Chemindesdonneeslocales">
           <label>Chemin des données locales</label>
@@ -823,7 +825,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
           <defaultValue>%HOMESHARE%\Environnement\Application Data\LocSet\AppData</defaultValue>
         </textBox>
       </presentation>
-      
+
 <!--Redirection des caches de fichiers temporaires-->
       <presentation id="CacheTEMP">
         <textBox refId="DossierdesFichierstemporaires">
@@ -847,7 +849,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>C:\Cache peut être nettoyé par script à l'arrêt des stations</text>
         <text>ou aussi par magoff.bat à la fermeture de session de l'utilisateur.</text>
       </presentation>
-      
+
 <!--Bureau-->
       <presentation id="MasquerlesiconesclassiquesdubureauPostedetravailcorbeille" />
       <presentation id="SupprimerliconePostedetravaildubureau" />
@@ -867,7 +869,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="SupprimerleraccourciverslesfichiersdelutilisateursousW7">
         <text>Evite que l'utilisateur ait un accès à la racine de son %HOMESHARE%</text>
       </presentation>
-      
+
 <!--Papier peint-->
       <presentation id="Cheminetnomdupapierpeint">
         <textBox refId="Cheminetnom">
@@ -885,7 +887,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         </textBox>
         <text>Laissez cette valeur vide pour que les utilisateurs puissent personnaliser leur fond d'écran</text>
       </presentation>
-      
+
 <!--Active Desktop-->
       <presentation id="ActiverActiveDesktop">
         <text>Autorise les papiers peints HTML et JPEG</text>
@@ -920,14 +922,14 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <dropdownList refId="Styledupapierpeint">Style du papier peint : </dropdownList>
       </presentation>
       <presentation id="NautoriserquelespapierspeintsBMP" />
-      
+
 <!--Active Directory-->
       <presentation id="MasquerledossierActiveDirectory" />
       <presentation id="TaillemaximaledesrecherchesdansActiveDirectory">
         <decimalTextBox refId="Nombredobjetsrenvoyes" defaultValue="10000" spinStep="100">Nombre d'objets renvoyés : </decimalTextBox>
       </presentation>
       <presentation id="ActiverlefiltragedanslaboitededialogueRechercher" />
-      
+
 <!--Menu Démarrer et Barre des tâches-->
       <presentation id="AfficherleMenuDemarrerenmodeclassique" />
       <presentation id="SupprimerlasectionsuperieuredumenuDemarrer">
@@ -954,7 +956,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="GriserlesraccourcisdesprogrammesWindowsInstaller">
         <text>Laisse en grisé les raccourcis vers les programmes partiellement installés</text>
       </presentation>
-      
+
 <!--Liens divers pour W7-->
       <presentation id="ActiverlelienRecherchersurInternetdanslaboitederecherchedumenuDemarrer" />
       <presentation id="Nepasafficherdelienversledossierdetelechargement" />
@@ -969,7 +971,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="Nepaspromouvoirderaccourcisdanslazonedenotification" />
       <presentation id="Nepasafficherlesbullesdavertissements" />
       <presentation id="Nepasaffichercentremaintenance" />
-      
+
 <!--Fonctionnalités Menu Démarrer et barre des tâches spécifiques W7-->
       <presentation id="ForcerlaffichagedumenuExecuter" />
       <presentation id="Effacerlalistedesprogrammesrecentsalapremiereconnexion" />
@@ -989,7 +991,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="Nepasafficherlevolume" />
       <presentation id="Nepasafficherlesbullesdenotification" />
       <presentation id="AfficherSystemTray" />
-      
+
 <!--Personnaliser le volet droit du menu démarrer de W7-->
       <presentation id="NepasafficherdelienversDocuments" />
       <presentation id="NepasafficherdelienversImages" />
@@ -1004,7 +1006,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <dropdownList refId="Actionprincipaleduboutondalimentation">Action principale du bouton d'alimentation :</dropdownList>
       </presentation>
 
-<!--Fonctionnalités spécifiques W8.1 Entreprise et W10Edu-->      
+<!--Fonctionnalités spécifiques W8.1 Entreprise et W10Edu-->
       <presentation id="LockedStartLayout">
         <textBox refId="LockedStartLayout_Name">
           <label>Fichier de disposition de l'écran d'accueil</label>
@@ -1014,7 +1016,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Choisissez un des formats suivants</dropdownList>
       </presentation>
-      
+
 <!--Panneau de configuration-->
       <presentation id="DesactiverlePanneaudeconfiguration" />
       <presentation id="Masquerlesapplicationsspecifiees">
@@ -1032,7 +1034,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>par exemple : desk.cpl, et Microsoft.display. Voir l'aide pour plus de précisions.</text>
       </presentation>
       <presentation id="Forcerlestyleclassique" />
-      
+
 <!--Affichage-->
       <presentation id="DesactiverAffichage" />
       <presentation id="MasquerlongletArriereplan">
@@ -1054,7 +1056,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <decimalTextBox refId="Delaidactivationensecondes" defaultValue="900" spinStep="60">Secondes :</decimalTextBox>
       </presentation>
       <presentation id="Ecrandeveilleprotegeparmotdepasse" />
-      
+
 <!--Thèmes sous W7-->
       <presentation id="FichierdeTheme">
         <text>Chemin du fichier de thème à utiliser pour la première connexion</text>
@@ -1068,7 +1070,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="Themessonores">
         <text>Empêche l'utilisateur de modifier les thèmes sonores</text>
       </presentation>
-      
+
 <!--Imprimantes-->
       <presentation id="Desactiverlasuppressiondimprimantes" />
       <presentation id="Desactiverlajoutdimprimantes" />
@@ -1112,7 +1114,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text> </text>
         <dropdownList refId="Lorsdelamiseajourdespilotespouruneimprimanteexistante" defaultItem="2">Lors de la mise à jour  des pilotes pour une imprimante existante: </dropdownList>
       </presentation>
-      
+
 <!--Ajout Suppression de programmes-->
       <presentation id="DesactiverAjoutSuppressiondeprogrammes" />
       <presentation id="MasquerlapageModifierSupprimerdesprogrammes" />
@@ -1128,7 +1130,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
           <label>Categorie : </label>
         </textBox>
       </presentation>
-      
+
 <!--Sons envahissants-->
       <presentation id="DesactiverlesevenementssonoresWindows">
         <text>la valeur no désactive les évènements sonores de Windows, au démarrage, à l'arrêt,...</text>
@@ -1142,7 +1144,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
           <label>la valeur yes les réactive.</label>
         </textBox>
       </presentation>
-      
+
 <!--Système-->
 <!--Ouverture Fermeture de session-->
       <presentation id="Connecterlerepertoiredebasealaracinedupartage">
@@ -1200,7 +1202,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>en passant également par le Panneau de configuration.</text>
         <text>Il faut ajouter access.cpl dans la liste des applications masquées.</text>
       </presentation>
-      
+
 <!--Restrictions-->
       <presentation id="Signaturesducodedespilotesdeperipheriques">
         <dropdownList refId="LorsqueWindowsdetecteunfichierpilotesanssignaturenumerique" noSort="true" defaultItem="1">Lorsque Windows detecte un fichier pilote sans signature numerique</dropdownList>
@@ -1232,7 +1234,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="Desactiverlalectureautomatique">
         <dropdownList refId="Desactiverlalectureautomatiquedes">Désactiver la lecture automatique des :</dropdownList>
       </presentation>
-      
+
 <!--Réseau-->
 <!--Fichiers hors connexion-->
       <presentation id="Desactiverlaconfigurationutilisateurdesfichiershorsconnexion">
@@ -1271,7 +1273,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text> </text>
         <checkBox refId="Supprimeruniquementlesversionshorsconnexiontemporaires">Supprimer uniquement les versions hors connexion temporaires.</checkBox>
       </presentation>
-      
+
 <!--Composants Windows-->
 <!--Explorateur Windows-->
       <presentation id="Activerlenvironnementclassique" />
@@ -1333,18 +1335,18 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="Empechelaccesauxdisquesdestockageamovibles" />
       <presentation id="EmpechelaccesauxlecteursdedisquettesmemeUSB" />
       <presentation id="Empechelaccesauxlecteursmultimediatelephonesmobilesetc" />
-      
-<!--Nouveaux composants Windows 7-->      
+
+<!--Nouveaux composants Windows 7-->
 <!--Gadgets-->
       <presentation id="Desactivertouslesgadgets" />
       <presentation id="Autoriserlesgaleriesdegadgetsalternatives" />
       <presentation id="Restreindrelinstallationdegadgetsnonsignes" />
       <presentation id="Desactiverlinstallationdegadgetsmemesignes" />
-      
+
 <!--Miniatures-->
       <presentation id="Desactiverlaffichagedesminiatures" />
       <presentation id="Desactiverlaffichagedesminiaturesdanslesdossiersreseau" />
-      
+
 <!--Explorateur Windows 7-->
       <presentation id="DesactiverleboutonChercherencoresurInternetdanslexplorateur" />
       <presentation id="Desactiverlessuggestionsdelaboitederecherche" />
@@ -1352,14 +1354,14 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="Desactiverlesfonctionnalitesdesbibliotheques" />
       <presentation id="Montrerarborescence" />
       <presentation id="DevelopperDossierCourant" />
-      
+
 <!--Diaporamas-->
       <presentation id="Desactiverlesdiaporamas" />
-      
-    
+
+
 <!--Enregisteur de sons-->
       <presentation id="Activerlenregisteurdesons" />
-      
+
 <!--Options régionales et langues sous W7-->
       <presentation id="Localisation">
         <text>Empêche l'utilisateur de changer la localisation géographique</text>
@@ -1373,23 +1375,23 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="SeparateurDecimal">
         <dropdownList refId="SeparateurSelect" noSort="true" defaultItem="0">Imposer un séparateur décimal :</dropdownList>
       </presentation>
-      
+
 <!--Centre des programmes et fonctionnalités sous W7-->
       <presentation id="DesactiverlaccesauCentredesProgrammes" />
       <presentation id="EmpecherlajoutouleretraitdefonctionnalitesWindows" />
-      
+
 <!--Centre réseaux et partages sous W7-->
       <presentation id="Desactiverlassistantdeconnexion">
         <text>Empêche l'utilisateur de d'acceder à l'assitant de connexion</text>
         <text>Windows Connect Now et de changer de type de connexion</text>
         <text>ou de point d'accès WIFI</text>
       </presentation>
-      
+
 <!--Centre de contrôle des performances de W7 -->
       <presentation id="Accederaucentredecontroledesperformances" />
       <presentation id="Accederauxsolutionsducentredecontroledesperformances" />
       <presentation id="Cacherlespagesdepropriete" />
-             
+
 <!--Planificateur de tâches-->
       <presentation id="Empecherlexecutionetlarretdestaches" />
       <presentation id="Desactiverleglisserdeplacer" />
@@ -1397,7 +1399,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="Desactiverlasuppressiondetaches" />
       <presentation id="DesactiverlemenuAvance" />
       <presentation id="Interdireleparcours" />
-      
+
 <!--Windows Installer-->
       <presentation id="Toujoursinstalleravecdesdroitseleves">
         <checkBox refId="Cocherpouractiver">Cocher pour activer </checkBox>
@@ -1422,7 +1424,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <checkBox refId="Cocherpouractiver">Cocher pour activer </checkBox>
         <text>Empêche les utilisateurs d'installer des programmes à partir de médias amovibles.</text>
       </presentation>
-      
+
 <!--Internet Explorer-->
       <presentation id="Activerleproxymanuellementdesactiverloptionautomatique">
         <textBox refId="Protocolesadressesetports">
@@ -1463,14 +1465,14 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
           <defaultValue>%HOMESHARE%\Travail\Téléchargements</defaultValue>
         </textBox>
       </presentation>
-     
+
       <presentation id="Dossierdetelechargementpardefaut">
         <textBox refId="Dossiertelechargementpardefaut">
           <label>Dossier de téléchargement par défaut</label>
           <defaultValue>%HOMESHARE%\Travail\Téléchargements</defaultValue>
         </textBox>
       </presentation>
-      
+
       <presentation id="Intituledubandeau">
         <textBox refId="Intitule">
           <label>Intitule</label>
@@ -1504,7 +1506,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>Les GPO initiales intègrent des paramétrages pour IE7 et IE8</text>
         <text>uniquement accessibles si inetres est ajouté.</text>
       </presentation>
-      
+
 <!--Applications de courrier-->
       <presentation id="Chemindesdossiersdecourrier">
         <textBox refId="Chemindesdossiers">
@@ -1513,7 +1515,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       </presentation>
       <presentation id="DesactiverlaccesauxgroupesdeNewsdansWindowsMail" />
       <presentation id="DesactiverlaccesaWindowsMail" />
-      
+
 <!--Modules MAGRET-->
 <!--Fonctionnalités Magret Utilisateurs-->
       <presentation id="ActiverleclientMagretUtilisateur">
@@ -1598,7 +1600,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>simultanément sur plusieurs stations</text>
         <dropdownList refId="Modeinterdictionconnexionmultiple" defaultItem="0">Mode d'empêchement :</dropdownList>
       </presentation>
-      
+
       <presentation id="Fermerlasessionencasdinactivite">
         <textBox refId="Delaidinactiviteavantfermeturesessionenmn">
           <label>Délai d'inactivité avant fermeture de session(en mn) : </label>
@@ -1607,7 +1609,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>La valeur 0 désactive le fermeture de session automatique pour inactivité</text>
         <text>Attention : clients magret utilisateur en version 8.507 mini</text>
       </presentation>
-      
+
       <presentation id="ActiverLogsdimpressions">
         <textBox refId="MaxPages">
           <label>Indiquez le nombre maximal de pages imprimées avant alerte : </label>
@@ -1622,8 +1624,8 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
           <label>Indiquez les noms exacts des imprimantes à exclure du contrôle (ex photocopieur de la salle des profs), séparées par 2points (:)  </label>
          </textBox>
         <text>Voir fenêtre d'aide pour plus de précisions.</text>
-      </presentation>      
-     
+      </presentation>
+
       <presentation id="Controledesapplicationsautorisees" />
       <presentation id="DesactiverlutilisationdesclesUSB" />
       <presentation id="Affectationderoutes">
@@ -1642,7 +1644,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>Exemple : 192.168.220.0</text>
       </presentation>
       <presentation id="Detectercleusboubliee" />
-      
+
 <!--Magic user-->
       <presentation id="Listedesapplicationsautorisees">
         <listBox refId="Applicationsaexecuteravecdesdroitsetendus">Applications à exécuter avec des droits étendus :</listBox>
@@ -1654,7 +1656,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>nom de valeur : Word97</text>
         <text>valeur : C:\Program files\Microsoft Office\Office\winword.exe</text>
       </presentation>
-      
+
 <!--Console Utilisateurs-->
       <presentation id="MasquerlesiconesdegestiondelIntraWeb" />
       <presentation id="Masquerlesiconesdegestiondesaccesalinternet" />
@@ -1685,7 +1687,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>nom de valeur : Bloc-notes</text>
         <text>valeur : C:\Windows\notepad.exe</text>
       </presentation>
-      
+
 <!--Applications diverses-->
 <!--ENT et Internet Explorer-->
       <presentation id="ParametragedIEpourlENTParametresduproxyHTTP">
@@ -1704,7 +1706,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
       <presentation id="AutoriserlecontenuactifasexecuterdanslesfichiersdelazoneOrdinateurlocal">
         <text>Cette stratégie n'est valable qu'à partir de IE6</text>
       </presentation>
-     
+
 <!--Google Earth-->
       <presentation id="CheminsducacheetdesfichiersKML">
         <textBox refId="Cheminducache">
@@ -1720,7 +1722,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <text>dans un dossier unique sur le serveur.</text>
         <text>Il faudra alors que tous les utilisateurs aient le droit de modification dans ce dossier.</text>
       </presentation>
-      
+
 <!--Frontmotion Firefox Community Edition-->
       <presentation id="Configurationgenerale">
         <textBox refId="Pagedaccueil">
@@ -1781,7 +1783,7 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
           <label>Valeurs à séparer par virgule et espace</label>
         </textBox>
       </presentation>
-      
+
 <!--Liste fournisseurs de moteurs de rechercher pour IE7-->
       <presentation id="ListeFournisseurs">
         <checkBox refId="ProviderGoogle">Google</checkBox>
@@ -1795,8 +1797,8 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
         <checkBox refId="ProviderEcosia">Ecosia</checkBox>
         <dropdownList refId="RechercheParDefaut">Fournisseur de recherche par défaut</dropdownList>
       </presentation>
-      
-<!--Paramétrages pour Audacity-->     
+
+<!--Paramétrages pour Audacity-->
       <presentation id="CodecMP3">
         <textBox refId="ChemindelalibrairieLAME_ENC">
           <label>Chemin de la librairie LAME_ENC : </label>
@@ -1809,8 +1811,8 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
           <defaultValue>fr</defaultValue>
         </textBox>
       </presentation>
-      
-      
+
+
 </presentationTable>
 </resources>
 </policyDefinitionResources>
