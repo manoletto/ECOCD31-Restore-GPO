@@ -319,6 +319,25 @@ Si vous activez ce paramètre ou si vous ne le configurez pas, le système limit
 
 Si vous désactivez ce paramètre, le système ne limitera pas l’installation des pilotes d’impression sur cet ordinateur.
         </string>
+        <string id="RedirectionGuardPolicy">Configurer Redirection Guard</string>
+        <string id="RedirectionGuardPolicy_Disabled">Redirection Guard désactivée</string>
+        <string id="RedirectionGuardPolicy_Enabled">Redirection Guard activé</string>
+        <string id="RedirectionGuardPolicy_AuditOnly">Audit redirection Guard uniquement</string>
+        <string id="RedirectionGuardPolicy_Help">
+Détermine si Redirection Guard est activé pour le spouleur d’impression.
+
+Vous pouvez activer ce paramètre pour configurer la stratégie Redirection Guard appliquée au spouleur.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, Redirection Guard est par défaut « activé ».
+
+Si vous activez ce paramètre, vous pouvez sélectionner les options suivantes :
+
+ Activé : Redirection Guard empêchera toute redirection de fichier d’être suivie.
+
+. Désactivé : Redirection Guard ne sera pas activé et les redirections de fichiers pourront être utilisées dans le processus spouleur
+
+ Audit : Redirection Guard enregistrera les événements comme s’il était activé, mais n’empêchera pas réellement l’utilisation des redirections de fichiers dans le spouleur.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -385,6 +404,10 @@ Si vous désactivez ce paramètre, le système ne limitera pas l’installation 
         <textBox refId="ApprovedUsbPrintDevices_List">
           <label>vid/pid</label>
         </textBox>
+      </presentation>
+      <presentation id="RedirectionGuardPolicy">
+        <text>Configurer les options pour Redirection Guard</text>
+        <dropdownList defaultItem="1" noSort="true" refId="RedirectionGuardPolicy_Enum">Options de Redirection Guard</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

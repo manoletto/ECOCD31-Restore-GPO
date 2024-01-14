@@ -5,7 +5,9 @@
   <description>entrer la description ici</description>
   <resources>
     <stringTable>
-      <string id="TS_SUPPORTED_Windows10">Au moins Windows 10 ou Windows Server 2016</string>
+      <string id="TS_AUTOSUBSCRIPTION_NAME">Activer l’abonnement automatique</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Contrôle la liste des URL auxquelles l'utilisateur doit s'abonner automatiquement</string>      
+      <string id="TS_SUPPORTED_Windows10">Au moins Windows 10 ou Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Au minimum Windows 8 ou Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Au minimum Windows Server 2012</string>
       <string id="TS_SUPPORTED_Windows8_Enterprise_AND_Server"> Au minimum Windows 8 Entreprise ou Windows Server 2012</string>
@@ -787,6 +789,15 @@ Si vous activez ce paramètre de stratégie, le Bureau s’affiche toujours lors
 Si vous désactivez ce paramètre de stratégie ou ne le configurez pas, un programme initial peut être spécifié pour s’exécuter sur l’ordinateur distant après la connexion du client à ce dernier. Si aucun programme initial n’est spécifié, le Bureau est toujours affiché sur l’ordinateur distant après la connexion du client à cet ordinateur.
 
 Remarque : si ce paramètre de stratégie est activé, le paramètre de stratégie « Démarrer un programme à la connexion » est ignoré.</string>
+      <string id="TS_WEBAUTHN">Ne pas autoriser la redirection WebAuthn</string>
+      <string id="TS_WEBAUTHN_EXPLAIN">Ce paramètre de stratégie vous permet de contrôler la redirection des demandes d'authentification Web (WebAuthn) d'une session Bureau à distance vers le périphérique local . Cette redirection permet aux utilisateurs de s'authentifier auprès des ressources dans la session Remote Desktop à l'aide de leur authentificateur local (par exemple, Windows Hello for Business, clé de sécurité ou autre).
+
+Par défaut, Bureau à distance autorise la redirection des demandes WebAuthn.
+
+Si vous activez ce paramètre de stratégie, les utilisateurs ne peuvent pas utiliser leur authentificateur local dans la session Bureau à distance.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les utilisateurs peuvent utiliser des authentificateurs locaux au sein de la session Bureau à distance.
+</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Ce paramètre de stratégie permet de spécifier s’il faut requérir l’authentification utilisateur pour les connexions à distance au serveur Hôte de session Bureau à distance en utilisant l’authentification au niveau du réseau. Ce paramètre de stratégie renforce la sécurité en imposant l’authentification utilisateur plus tôt dans le processus de connexion à distance.
 
 Si vous activez ce paramètre de stratégie, seuls les ordinateurs client qui prennent en charge l’authentification au niveau du réseau peuvent se connecter au serveur Hôte de session Bureau à distance.

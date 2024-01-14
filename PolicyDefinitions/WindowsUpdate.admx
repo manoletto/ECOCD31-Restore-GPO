@@ -83,6 +83,13 @@
         </or>
       </definition>
 
+      <!--At least Windows Server 2019, or Windows 10 Version 1809-->
+      <definition name="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809" displayName="$(string.WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+        </or>
+      </definition>
+
       <!--At least Windows 10 2004-->
       <definition name="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004" displayName="$(string.WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004)">
         <or>
@@ -691,35 +698,40 @@
       </disabledValue>
     </policy>
     <policy name="ManagePreviewBuilds"
-            class="Machine"
-            displayName="$(string.ManagePreviewBuilds_Title)"
-            explainText="$(string.ManagePreviewBuilds_Help)"
-            key="Software\Policies\Microsoft\Windows\WindowsUpdate"
-            presentation="$(presentation.ManagePreviewBuilds)"
-            valueName="ManagePreviewBuilds">
+      class="Machine"
+      displayName="$(string.ManagePreviewBuilds_Title)"
+      explainText="$(string.ManagePreviewBuilds_Help)"
+      key="Software\Policies\Microsoft\Windows\WindowsUpdate"
+      presentation="$(presentation.ManagePreviewBuilds)"
+      valueName="ManagePreviewBuildsPolicyValue">
       <parentCategory ref="DeferUpdateCat" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
       <enabledValue>
-        <decimal value="1" />
+        <decimal value="2" />
       </enabledValue>
       <disabledValue>
-        <decimal value="0" />
+        <decimal value="1" />
       </disabledValue>
       <elements>
-        <enum id="ManagePreviewBuildsId" valueName="ManagePreviewBuildsPolicyValue" required="true">
-          <item displayName="$(string.DisablePreviewBuilds)">
-            <value>
-              <decimal value="0" />
-            </value>
-          </item>
-          <item displayName="$(string.DisablePreviewBuildsAndOptOut)">
-            <value>
-              <decimal value="1" />
-            </value>
-          </item>
-          <item displayName="$(string.EnablePreviewBuilds)">
+        <enum id="BranchReadinessLevelId" valueName="BranchReadinessLevel" required="true">
+          <item displayName="$(string.DevChannel)">
             <value>
               <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.BetaChannel)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.ReleasePreviewChannel)">
+            <value>
+              <decimal value="8" />
+            </value>
+          </item>
+          <item displayName="$(string.ReleasePreviewQualityOnly)">
+            <value>
+              <decimal value="64" />
             </value>
           </item>
         </enum>
@@ -741,38 +753,6 @@
             <decimal value="0" />
         </disabledValue>
         <elements>
-          <enum id="BranchReadinessLevelId" valueName="BranchReadinessLevel" required="true">
-            <item displayName="$(string.PreviewBuildFastFeatureUpdates)">
-              <value>
-                <decimal value="2" />
-              </value>
-            </item>
-            <item displayName="$(string.PreviewBuildSlowFeatureUpdates)">
-              <value>
-                <decimal value="4" />
-              </value>
-            </item>
-            <item displayName="$(string.ReleasePreviewBranchFeatureUpdates)">
-              <value>
-                <decimal value="8" />
-              </value>
-            </item>
-            <item displayName="$(string.SemiAnnualChannelFeatureUpdates)">
-              <value>
-                <decimal value="16" />
-              </value>
-            </item>
-            <item displayName="$(string.SemiAnnualChannelFeatureUpdatesDeprecated)">
-              <value>
-                <decimal value="32" />
-              </value>
-            </item>
-            <item displayName="$(string.SemiAnnualChannelFeatureUpdatesTargetedDeprecated)">
-              <value>
-                <decimal value="16" />
-              </value>
-            </item>
-          </enum>
           <decimal id="DeferFeatureUpdatesPeriodId" valueName="DeferFeatureUpdatesPeriodInDays" minValue="0" maxValue="365" />
           <text id="PauseFeatureUpdatesStartId" valueName="PauseFeatureUpdatesStartTime" maxLength="10" />
         </elements>
@@ -2366,7 +2346,7 @@
         presentation="$(presentation.UpdateNotificationLevel_Title)"
         valueName="SetUpdateNotificationLevel">
       <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <supportedOn ref="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>

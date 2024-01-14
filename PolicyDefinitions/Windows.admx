@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
@@ -219,6 +219,27 @@
 
       <!--At least Windows 10 RS7-->
       <definition name="SUPPORTED_Windows_10_0_RS7" displayName="$(string.SUPPORTED_Windows_10_0_RS7)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+          </or>
+      </definition>
+
+      <!--At least Windows 10 RS7 no SERVER-->
+      <definition name="SUPPORTED_Windows_10_0_RS7_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_RS7_NOSERVER)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="15"/>
+        </or>
+      </definition>
+
+      <!--At least Windows 10 20H1 no SERVER-->
+      <definition name="SUPPORTED_Windows_10_0_20H1_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_20H1_NOSERVER)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="15" maxVersionIndex="15"/>
+        </or>
+      </definition>
+
+      <!--At least Windows 10 20H1-->
+      <definition name="SUPPORTED_Windows_10_0_20H1" displayName="$(string.SUPPORTED_Windows_10_0_20H1)">
           <or>
               <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
           </or>

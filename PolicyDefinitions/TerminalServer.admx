@@ -208,6 +208,16 @@
   </categories>
 
   <policies>
+    <policy name="AutoSubscription" class="User" displayName="$(string.TS_AUTOSUBSCRIPTION_NAME)" explainText="$(string.TS_AUTOSUBSCRIPTION_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="AutoSubscription">
+      <parentCategory ref="AutoSubscription" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="TS_CLIENT_DISABLE_PASSWORD_SAVING_1" class="User" displayName="$(string.TS_CLIENT_DISABLE_PASSWORD_SAVING)" explainText="$(string.TS_CLIENT_DISABLE_PASSWORD_SAVING_USER_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="DisablePasswordSaving">
       <parentCategory ref="TS_CLIENT" />
       <supportedOn ref="windows:SUPPORTED_WindowsXPSP2_Or_WindowsNETSP1" />
@@ -1032,6 +1042,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="TS_WEBAUTHN" class="Machine" displayName="$(string.TS_WEBAUTHN)" explainText="$(string.TS_WEBAUTHN_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisableWebAuthn">
+      <parentCategory ref="TS_REDIRECTION" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_20H1" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>  
     <policy name="TS_RPC_ENCRYPTION" class="Machine" displayName="$(string.TS_RPC_ENCRYPTION)" explainText="$(string.TS_RPC_ENCRYPTION_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fEncryptRPCTraffic">
       <parentCategory ref="TS_SECURITY" />
       <supportedOn ref="windows:SUPPORTED_WindowsNET" />

@@ -827,5 +827,38 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.RedirectionGuardPolicy)"
+        explainText="$(string.RedirectionGuardPolicy_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="ConfigureRedirectionGuardPolicy"
+        presentation="$(presentation.RedirectionGuardPolicy)"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows7"/>
+      <elements>
+        <enum
+            id="RedirectionGuardPolicy_Enum"
+            valueName="RedirectionGuardPolicy"
+            >
+          <item displayName="$(string.RedirectionGuardPolicy_Disabled)">
+            <value>
+              <decimal value="0"/>
+            </value>
+          </item>
+          <item displayName="$(string.RedirectionGuardPolicy_Enabled)">
+            <value>
+              <decimal value="1"/>
+            </value>
+          </item>
+          <item displayName="$(string.RedirectionGuardPolicy_AuditOnly)">
+            <value>
+              <decimal value="2"/>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
   </policies>
 </policyDefinitions>

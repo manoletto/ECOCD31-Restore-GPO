@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <policyNamespaces>
@@ -209,6 +209,29 @@
     <policy name="NoFind" class="User" displayName="$(string.NoFind)" explainText="$(string.NoFind_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoFind">
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_WindowsXPOrServerOnly" />
+    </policy>
+    <policy name="ShowOrHideMostUsedApps" class="Both" displayName="$(string.ShowOrHideMostUsedApps)" explainText="$(string.ShowOrHideMostUsedApps_Help)" presentation="$(presentation.ShowOrHideMostUsedApps)" key="Software\Policies\Microsoft\Windows\Explorer">
+      <parentCategory ref="windows:StartMenu" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
+      <elements>
+        <enum id="ShowOrHideMostUsedAppsDropdown" valueName="ShowOrHideMostUsedApps" required="true">
+          <item displayName="$(string.MFU_NotConfigured)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.MFU_Show)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.MFU_Hide)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
     </policy>
     <policy name="NoFrequentUsedPrograms" class="Both" displayName="$(string.NoFrequentUsedPrograms)" explainText="$(string.NoFrequentUsedPrograms_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoStartMenuMFUprogramsList">
       <parentCategory ref="windows:StartMenu" />

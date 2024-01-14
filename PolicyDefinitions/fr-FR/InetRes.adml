@@ -3966,6 +3966,16 @@ Si vous activez ce paramètre de stratégie, « enregistrer la cible sous » s
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, « enregistrer la cible sous » n’apparaîtra pas dans le menu contextuel du mode Internet Explorer.
 
 Pour plus d’informations, voir https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Activer la liste des fenêtres globales en mode Internet Explorer</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">Ce paramètre permet à Internet Explorer mode d’utiliser la liste des fenêtres globales qui permet de partager l’état avec d’autres applications.
+Le paramètre prend effet uniquement lorsque Internet Explorer 11 est désactivé en tant que navigateur autonome.
+
+Si vous activez cette stratégie, Internet Explorer mode utilise la liste de fenêtres globale.
+
+Si vous désactivez ou ne configurez pas cette stratégie, Internet Explorer mode continue de conserver une liste de fenêtres distincte.
+
+Pour en savoir plus sur Internet Explorer mode, voir https://go.microsoft.com/fwlink/?linkid=2102921
+Pour en savoir plus sur la désactivation de Internet Explorer 11 en tant que navigateur autonome, voir https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Activer les touches d’accès rapide étendues en mode Internet Explorer</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">Ce paramètre de stratégie permet aux administrateurs d’activer les touches d’accès rapide au mode Microsoft Edge Internet Explorer étendues, telles que « Ctrl+S », de façon à utiliser la fonctionnalité « Enregistrer sous ».
 
@@ -3992,6 +4002,12 @@ Si vous activez cette stratégie, elle :
 -Remplace toutes les autres stratégies qui redirigent vers Internet Explorer 11.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, tous les sites sont ouverts à l’aide des paramètres actuels du navigateur actif. Remarque : le canal stable Microsoft Edge doit être installé pour que cette stratégie prenne effet.</string>
+      <string id="DisableIEAppDeprecationNotification">Masquer la notification de retrait d'Internet Explorer 11</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">Ce paramètre de stratégie vous permet d’indiquer si le rappel de la barre de notification indiquant que Internet Explorer est en cours de retrait s’affiche. Par défaut, la barre de notification est affichée dans Internet Explorer 11.
+
+Si vous activez ce paramètre de stratégie, la barre de notification n’est pas affichée dans Internet Explorer 11.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, la barre de notification s’affiche dans Internet Explorer 11.</string>
       <string id="NotifyDisableIEOptions_Never">Jamais</string>
       <string id="NotifyDisableIEOptions_Always">Toujours</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Une fois par utilisateur</string>
@@ -4196,6 +4212,12 @@ Si vous activez ce paramètre, Internet Explorer ne télécharge plus les mises
 Si vous désactivez ou que vous ne configurez pas ce paramètre, Internet Explorer continue de télécharger des versions à jour de VersionList.XML.
 
 Pour plus d’informations, consultez la page « Mise à jour pour bloquer les contrôles ActiveX obsolètes dans Internet Explorer » de la bibliothèque TechNet.</string>
+      <string id="DisableHTMLApplication">Désactiver l’application HTML</string>
+      <string id="DisableHTMLApplication_Explain">Ce paramètre de stratégie spécifie si l’exécution de l’application HTML (fichier HTA) est bloquée ou autorisée.
+
+Si vous activez ce paramètre de stratégie, l’exécution de l’application HTML (fichier HTA) est bloquée.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, l’exécution de l’application HTML (fichier HTA) est autorisée.</string>
     </stringTable>
     <presentationTable>
       <presentation id="VerMgmtDomainAllowlist_1">

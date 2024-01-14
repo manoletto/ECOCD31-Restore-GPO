@@ -18,6 +18,7 @@
       <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">Au moins Windows Vista via Windows 8.1 ou Windows Server 2012 R2 avec le Service Pack le plus récent. Non pris en charge sur Windows 10 et versions ultérieures.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professionnel Service Pack 1 ou au minimum Windows 2000 Service Pack 3 
 Option 7 uniquement prise en charge sur les serveurs ou au moins édition Windows Server 2016</string>
+      <string id="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809">Au minimum Windows Server 2019 ou Windows 10 version 1809</string>
       <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Au minimum Windows Server 2022 ou Windows 10 version 2004</string>
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 à Windows Server 2022 ou Windows 10</string>
       <string id="AUDontShowUasHelp">Ce paramètre de stratégie permet d’indiquer si l’option « Installer les mises à jour et éteindre » doit s’afficher dans la boîte de dialogue Arrêt de Windows.
@@ -333,46 +334,33 @@ L’activation de cette stratégie désactive cette fonctionnalité et peut prov
 Remarque : cette stratégie s’applique uniquement quand ce PC est configuré pour se connecter à un service de mise à jour intranet à l’aide de la stratégie « Spécifier l’emplacement intranet du service de Mise à jour Microsoft ».</string>
       <string id="DeferUpdateCat">Windows Update pour entreprises</string>
       <string id="ManagePreviewBuilds_Title">Gérer les versions d’évaluation</string>
-      <string id="ManagePreviewBuilds_Help">Sélectionner Désactiver les versions d’évaluation empêchera les versions d’évaluation de s’installer sur l’appareil. Cela empêchera les utilisateurs de s’abonner au Programme Windows Insider, via Paramètres &gt; Mise à jour et sécurité.
+      <string id="ManagePreviewBuilds_Help">Activez cette stratégie pour gérer les mises à jour que vous recevez avant la publication de la mise à jour dans le monde entier.
 
-Sélectionner Désactiver les versions d’évaluation une fois que la prochaine version est publique empêchera les versions d’évaluation de s’installer sur l’appareil lors de la sortie de la prochaine version commerciale de Windows. Cette option est utile si votre appareil est configuré pour installer les versions d’évaluation et que vous souhaitez désabonner l’appareil pour ne plus recevoir de versions d’évaluation. Cette option permet de disposer des versions d’évaluation jusqu’à ce que l’appareil puisse recevoir la nouvelle version commerciale.
+Canal développeurs
+Idéal pour les utilisateurs hautement techniques. Les participants au programme Insider du Canal développeurs recevront des builds de notre branche de développement active qui est la plus ancienne d’un cycle de développement. Ces builds ne correspondent pas à une version de Windows 10 spécifique.
 
-Sélectionner Activer les versions d’évaluation permet aux versions d’installation de s’installer sur l’appareil. Les utilisateurs peuvent télécharger et installer les versions d’évaluation Windows sur leurs appareils en s’abonnant via Paramètres -&gt; Mise à jour et sécurité -&gt; Programme Windows Insider. Lorsque cette valeur est définie, les administrateurs peuvent également utiliser d’autres stratégies pour gérer les paramètres des versions d’évaluation pour le compte des utilisateurs.</string>
-      <string id="DisablePreviewBuilds">Désactiver les versions d'évaluation</string>
-      <string id="DisablePreviewBuildsAndOptOut">Désactiver les versions d'évaluation une fois que la prochaine version est publique</string>
-      <string id="EnablePreviewBuilds">Activer les versions d'évaluation</string>
-      <string id="PreviewBuildFastFeatureUpdates">Version d'évaluation - Rapide</string>
-      <string id="PreviewBuildSlowFeatureUpdates">Version d'évaluation - Lente</string>
-      <string id="ReleasePreviewBranchFeatureUpdates">Aperçu de la version</string>
-      <string id="SemiAnnualChannelFeatureUpdates">Canal semi-annuel</string>
-      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Canal semi-annuel pour 1809 et inférieur (déconseillé)</string>
-      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Canal semi-annuel (ciblé) pour 1809 et inférieur (déconseillé)</string>
+Canal bêta
+Idéal pour les explorateurs de fonctionnalités qui souhaitent voir les fonctionnalités Windows 10 à venir. Vos commentaires seront particulièrement importants ici, car ils aideront nos ingénieurs à s’assurer que les problèmes clés sont résolus avant une publication majeure.
+
+Canal préversion (par défaut)
+Les Insiders du Canal préversion auront accès à la prochaine version de Windows 10 avant sa publication dans le monde entier. Ces builds sont prises en charge par Microsoft. Le Canal préversion est l’endroit où nous recommandons aux entreprises de prévisualiser et de valider les versions Windows 10 à venir avant un déploiement à grande échelle au sein de leur organisation.
+
+Publication du Canal préversion, les mises à jour qualité uniquement
+Idéal pour ceux qui souhaitent valider les fonctionnalités et les correctifs bientôt disponibles dans leur version actuelle. Notez que les mises à jour des fonctionnalités publiées continueront d’être proposées conformément aux stratégies configurées lorsque cette option sera sélectionnée.
+
+Remarque : l’inscription de build en préversion nécessite un paramètre de niveau de télémétrie égal ou supérieur à 2 et votre domaine inscrit sur insider.windows.com. Pour plus d’informations sur les builds en préversion, consultez : https://aka.ms/wipforbiz
+
+Si vous désactivez ou si vous ne configurez pas cette stratégie, Windows Update ne vous proposera aucune mise à jour en préversion et vous recevrez ce contenu une fois publié dans le monde entier. La désactivation de cette stratégie entraînera la désactivation de tous les appareils actuellement sur une version préliminaire et ils resteront sur la dernière mise à jour des fonctionnalités une fois publiée.</string>
+      <string id="DevChannel">Canal Développeur</string>
+      <string id="BetaChannel">Canal Bêta</string>
+      <string id="ReleasePreviewChannel">Canal préversion</string>
+      <string id="ReleasePreviewQualityOnly">Version d’évaluation des mises à jour qualité uniquement</string>
       <string id="DeferFeatureUpdates_Title">Choisir quand recevoir les versions d'évaluation et les mises à jour des fonctionnalités</string>
-      <string id="DeferFeatureUpdates_Help">Activez cette stratégie pour spécifier le niveau de la version d’évaluation ou des mises à jour de fonctionnalités à recevoir ainsi que le moment de leur réception.
+      <string id="DeferFeatureUpdates_Help">Activez cette stratégie pour spécifier quand recevoir les mises à jour des fonctionnalités.
 
-* Version d’évaluation - Rapide : les appareils définis sur ce niveau seront les premiers à recevoir les nouvelles builds de Windows avec des fonctionnalités qui ne sont pas encore à la disposition du grand public. Sélectionnez Rapide pour participer à l’identification et au signalement des problèmes à Microsoft et fournir des suggestions pour les nouvelles fonctionnalités.
-* Version d’évaluation - Lente : les appareils définis sur ce niveau reçoivent les nouvelles builds de Windows avant qu’elles soient à la disposition du grand public, mais à une cadence plus lente que ceux définis sur Rapide, et avec les modifications et les correctifs identifiés dans les builds antérieures.
-* Version d’évaluation : recevez les builds de Windows juste avant que Microsoft les mette à la disposition du grand public.
-* Canal semi-annuel : recevez les mises à jour des fonctionnalités dès qu’elles sont mises à la disposition du grand public.
+Différer les mises à jour | Cela permet aux appareils de différer de 14 jours (durée maximale pour un canal de version préliminaire) à 365 jours (pour un canal semi-annuel). Ou, si l’appareil est mis à jour à partir d’un canal semi-annuel, vous pouvez également spécifier une version à laquelle l’appareil peut passer ou à laquelle il doit rester, jusqu’à ce que la stratégie soit mise à jour ou que l’appareil atteigne sa date de fin de service. Remarque : si vous définissez les deux stratégies, la version spécifiée devient prioritaire et les reports ne sont pas appliqués. Si vous souhaitez obtenir des informations sur la version du système d’exploitation, consultez la page Informations sur les versions de Windows.
 
-Les états de préparation de Windows suivants ont été déconseillés et ne s’appliquent qu’à 1809 et inférieur :
-* Canal semi-annuel (ciblé) pour 1809 et inférieur : les mises à jour des fonctionnalités ont été publiées.
-* Canal semi-annuel pour 1809 et inférieur : les mises à jour des fonctionnalités ont été déclarées Canal semi-annuel, désignation indiquant que la publication est prête pour un déploiement étendu.
-Consultez la page d’informations de version à l’adresse http://aka.ms/ReleaseInformationPage pour connaître les dates de publication des options Canal semi-annuel (ciblé) et Canal semi-annuel.
-
-Pendant la sélection d’une version d’évaluation :
-    - Vous pouvez différer la réception des versions d’évaluation de 14 jours, au maximum.
-    - Pour empêcher la réception des versions d’évaluation au moment prévu, vous pouvez les suspendre temporairement. La suspension reste en vigueur pendant 35 jours à compter de l’heure de début indiquée.
-    - Pour reprendre la réception des mises à jour des fonctionnalités qui ont été suspendues, effacez la date de début dans le champ.
-
-L’inscription à la version d’évaluation nécessite un paramètre de télémétrie de niveau 2 ou supérieur et l’inscription de votre domaine sur insider.windows.com. Pour plus d’informations sur les versions d’évaluation, consultez : https://aka.ms/wipforbiz
-
-Pendant la sélection de l’option Canal semi-annuel :
-    - Vous pouvez différer la réception des mises à jour des fonctionnalités de 365 jours, au maximum.
-    - Pour empêcher la réception des mises à jour des fonctionnalités au moment prévu, vous pouvez les suspendre temporairement. La suspension reste en vigueur pendant 35 jours à compter de l’heure de début indiquée.
-    - Pour reprendre la réception des mises à jour des fonctionnalités qui ont été suspendues, effacez la date de début dans le champ.
-
-Si vous désactivez ou ne configurez pas cette stratégie, Windows Update ne change pas de comportement.</string>
+Interrompre les mises à jour | Pour empêcher la réception des mises à jour des fonctionnalités à l’heure planifiée, vous pouvez suspendre temporairement les mises à jour des fonctionnalités. Cette interruption reste effective pendant 35 jours à partir de la date de début spécifiée ou jusqu’à ce que le champ soit effacé (les mises à jour qualité seront toujours proposées).</string>
       <string id="DeferQualityUpdates_Title">Choisir quand recevoir les mises à jour qualité</string>
       <string id="DeferQualityUpdates_Help">Activez cette stratégie pour spécifier quand recevoir les mises à jour qualité.
 
@@ -766,11 +754,10 @@ Cette stratégie remplacera les stratégies suivantes :
         </textBox>
       </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Définir le comportement pour recevoir les versions d’évaluation :</dropdownList>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Sélectionner le niveau de disponibilité de Windows pour les mises à jour que vous voulez recevoir :</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Sélectionner le niveau de disponibilité de Windows pour les mises à jour que vous voulez recevoir :</dropdownList>
-        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Après la publication d’une version d'évaluation ou d'une mise à jour des fonctionnalités, différer sa réception pendant ce nombre de jours :</decimalTextBox>
+       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">Combien de jours, après la publication d’une mise à jour de fonctionnalité, voulez-vous différer la mise à jour avant qu’elle ne soit proposée à l’appareil ?</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>Démarrage de l'interruption des versions d'évaluation et des mises à jour des fonctionnalités :</label>
         </textBox>

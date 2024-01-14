@@ -6,13 +6,13 @@
   <resources>
     <stringTable>
       <string id="WAU">Processus d’ajout de fonctionnalités à Windows 10</string>
-      <string id="WAU_Help">Contient les paramètres permettant de contrôler le comportement de l’Assistant Ajouter des fonctionnalités à Windows 10.</string>
+      <string id="WAU_Help">Contient les paramètres permettant de contrôler le comportement de l’Assistant Ajouter des fonctionnalités à Windows 10.</string>
       <string id="DisableWAU">Empêcher l’exécution de l’assistant.</string>
-      <string id="DisableWAU_Help">Par défaut, Ajouter des fonctionnalités à Windows 10 est mis à disposition de tous les administrateurs. 
+      <string id="DisableWAU_Help">Par défaut, Ajouter des fonctionnalités à Windows 10 est mis à disposition de tous les administrateurs. 
 
 Si vous activez ce paramètre de stratégie, l’Assistant ne s’exécute pas.
 
-Si vous désactivez ce paramètre de stratégie ou que vous lui attribuez la valeur Non configuré, l’Assistant s’exécute.</string>
+Si vous désactivez ce paramètre de stratégie ou que vous lui attribuez la valeur Non configuré, l’Assistant s’exécute.</string>
     </stringTable>
   </resources>
 </policyDefinitionResources>

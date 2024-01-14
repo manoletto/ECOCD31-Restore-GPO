@@ -29,7 +29,15 @@
 Si vous activez ou ne configurez pas ce paramètre, le service anti-programme malveillant est chargé comme une tâche de priorité normale.
 
 Si vous désactivez ce paramètre, le service anti-programme malveillant est chargé comme une tâche de priorité basse.</string>
+    <string id="HideExclusionsFromLocalAdmins">Contrôlez si les exclusions sont visibles ou non par les administrateurs locaux.</string>
+    <string id="HideExclusionsFromLocalAdmins_Explain">
+    Ce paramètre de stratégie contrôle si les exclusions sont visibles ou non par les administrateurs locaux.  Pour les utilisateurs finaux (qui ne sont pas des administrateurs locaux), les exclusions ne sont pas visibles, que ce paramètre soit activé ou non.
+    Désactivé (par défaut) :
+        Si vous désactivez ou ne configurez pas ce paramètre, les administrateurs locaux peuvent voir les exclusions dans l’application Sécurité Windows ou via PowerShell.
 
+    Activé : 
+        Si vous activez ce paramètre, les administrateurs locaux ne peuvent plus voir la liste d’exclusion dans l’application Sécurité Windows ou via PowerShell.
+        Remarque : l’application de ce paramètre ne supprime pas les exclusions, elle empêche uniquement leur affichage par les administrateurs locaux. Cela est reflété dans Get-MpPreference.</string>
     <string id="DisableAutoExclusions">Désactiver les exclusions automatiques</string>
     <string id="DisableAutoExclusions_Explain">
         Autorise un administrateur à spécifier si la fonctionnalité Exclusions automatiques pour les serveurs SKU doit être désactivée.

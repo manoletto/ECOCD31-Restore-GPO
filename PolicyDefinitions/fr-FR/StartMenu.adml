@@ -6,7 +6,7 @@
   <resources>
     <stringTable>
       <string id="SUPPORTED_Win7UntilThreshold">Au minimum Windows Server 2008 R2 ou Windows 7. Non pris en charge sur Windows 10 ou version ultérieure</string>
-      <string id="SUPPORTED_Win7AndRedstone2">Windows 7 et Windows 10</string>
+      <string id="SUPPORTED_Win7AndRedstone2">Windows 7 et Windows 10</string>
       <string id="ClearRecentProgForNewUserInStartMenu">Effacer la liste des programmes récents pour les nouveaux utilisateurs</string>
       <string id="ClearRecentProgForNewUserInStartMenu_Help">Si ce paramètre de stratégie est activé, la liste des programmes récents dans le menu Démarrer est vide pour les nouveaux utilisateurs.
 
@@ -207,6 +207,19 @@ Dans l’Explorateur de fichiers, l’élément Rechercher s’affiche toujours 
 Ce paramètre de stratégie affecte uniquement les éléments de l’interface utilisateur spécifiés. Il n’affecte pas Internet Explorer et n’empêche pas l’utilisateur de recourir à d’autres méthodes de recherche.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, le lien Rechercher est disponible dans le menu Démarrer.</string>
+      <string id="ShowOrHideMostUsedApps">Afficher ou masquer la liste « Les plus utilisés » dans le menu Démarrer</string>
+      <string id="ShowOrHideMostUsedApps_Help">Si vous activez ce paramètre de stratégie, vous pouvez configurer menu Démarrer pour afficher ou masquer la liste des applications les plus utilisées de l’utilisateur, quels que soient les paramètres utilisateur.
+
+La sélection de « Afficher » force l’affichage de la liste « Le plus utilisé » et l’utilisateur ne peut pas la modifier pour la masquer à l’aide de l’application Paramètres.
+
+Si vous sélectionnez « Masquer », la liste « Le plus utilisé » est masquée et l’utilisateur ne peut pas la modifier pour l’afficher à l’aide de l’application Paramètres.
+
+En sélectionnant « Non configuré », ou si vous désactivez ou ne configurez pas ce paramètre de stratégie, tous les utilisateurs peuvent activer ou désactiver l’affichage de la liste « Les plus utilisés » à l’aide de l’application Paramètres. Il s’agit du comportement par défaut.
+
+Remarque : la configuration de cette stratégie sur « Afficher » ou « Masquer » sur les versions prises en charge de Windows 10 remplace tout paramètre de stratégie « Supprimer la liste des programmes fréquents du menu Démarrer » (qui gère la même partie de menu Démarrer mais avec moins d’options).</string>
+      <string id="MFU_NotConfigured">Non configuré</string>
+      <string id="MFU_Show">Afficher</string>
+      <string id="MFU_Hide">Masquer</string>
       <string id="NoFrequentUsedPrograms">Supprimer la liste de programmes fréquents du menu Démarrer</string>
       <string id="NoFrequentUsedPrograms_Help">Si vous activez ce paramètre, la liste de programmes fréquemment utilisés est supprimée du menu Démarrer.
 
@@ -636,6 +649,9 @@ Si vous activez cette stratégie, les appels de menus contextuels dans le menu D
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Choisissez un des formats suivants</dropdownList>
       </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Choisir l’une des actions suivantes</dropdownList>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

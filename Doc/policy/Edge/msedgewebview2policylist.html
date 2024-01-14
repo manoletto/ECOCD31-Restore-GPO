@@ -1,0 +1,464 @@
+<html>
+<head>
+  <meta name="title" content="Microsoft Edge Browser Policy Documentation">
+  <meta name="ms.author" content="stmoody">
+  <meta name="author" content="dan-wesley">
+  <meta name="manager" content="venkatk">
+  <meta name="ms.date" content="01/11/2024">
+  <meta name="audience" content="ITPro">
+  <meta name="ms.topic" content="reference">
+  <meta name="ms.prod" content="microsoft-edge">
+  <meta name="ms.localizationpriority" content="high">
+  <meta name="ms.collection" content="M365-modern-desktop">
+  <meta name="ms.custom" content="">
+  <meta name="description" content="Windows and Mac documentation for all policies supported by the Microsoft Edge Browser">
+<style>
+table,  th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<a name="stratégies-de-microsoft edge-webview2"></a>
+<h1>Stratégies de Microsoft Edge WebView2</h1>
+La dernière version de Microsoft Edge WebView2 inclut les stratégies suivantes. Vous pouvez utiliser ces stratégies pour configurer l’exécution de Microsoft Edge WebView2 au sein de votre organisation.
+
+Pour plus d’informations sur un ensemble de stratégies supplémentaires utilisées pour contrôler le mode et le moment de mise à jour de Microsoft Edge WebView2, consultez <a href="https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies">Référence de la stratégie de mise à jour Microsoft Edge</a>.
+
+
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span>REMARQUE</p>
+<p>Cet article s’applique à Microsoft Edge version 87 ou ultérieure.</p>
+</div>
+
+<h2>Stratégies disponibles</h2>
+Ces tableaux répertorient toutes les stratégies de groupe disponibles dans cette version de Microsoft Edge WebView2. Utilisez les liens de la table pour obtenir plus de détails sur les stratégies spécifiques.
+
+<table>
+
+<tr><td><a href="#Paramètres de remplacement du chargeur">Paramètres de remplacement du chargeur</a></td>
+
+<td><a href="#Additional">Additional</a></td></tr>
+
+</tr>
+</table>
+
+
+  
+    </table><br /><br />
+    <a name="Paramètres de remplacement du chargeur"><a href="#Paramètres de remplacement du chargeur-policies"><i>Paramètres de remplacement du chargeur</i></a></a>
+    <table>
+      <tr><th>Nom de la stratégie</th><th>Sous-titre</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#BrowserExecutableFolder">BrowserExecutableFolder</a></td>
+      <td>Configurer l’emplacement du dossier exécutable du navigateur</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ReleaseChannelPreference">ReleaseChannelPreference</a></td>
+      <td>Définition de la préférence d’ordre de recherche de canaux de publication</td>
+    </tr>
+  
+
+  
+    </table><br /><br />
+    <a name="Additional"><a href="#Additional-policies"><i>Additional</i></a></a>
+    <table>
+      <tr><th>Nom de la stratégie</th><th>Sous-titre</th></tr>
+  
+
+  
+    <tr>
+      <td><a href="#ExperimentationAndConfigurationServiceControl">ExperimentationAndConfigurationServiceControl</a></td>
+      <td>Contrôler la communication avec le service d’expérimentation et de configuration</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#ForcePermissionPolicyUnloadDefaultEnabled">ForcePermissionPolicyUnloadDefaultEnabled</a></td>
+      <td>Contrôle si les gestionnaires d’événements unload peuvent être désactivés.</td>
+    </tr>
+  
+
+  
+    <tr>
+      <td><a href="#NewPDFReaderWebView2List">NewPDFReaderWebView2List</a></td>
+      <td>Activer le lecteur PDF intégré optimisé par Adobe Acrobat pour WebView2</td>
+    </tr>
+  
+
+</table>
+
+
+  <h2><a name="Paramètres de remplacement du chargeur-policies"></a>Paramètres de remplacement du chargeur policies</h2>
+  <br /><a href="#stratégies-de-microsoft edge-webview2">Revenir au début</a>
+
+  <h3><a name="BrowserExecutableFolder"></a>BrowserExecutableFolder</h3>
+  <h4>Configurer l’emplacement du dossier exécutable du navigateur</h4>
+  
+  
+  <h5>Versions prises en charge :</h5>
+  <ul><li>Sur Windows depuis 87 ou ultérieur</li></ul>
+
+  <h5>Description</h5>
+  Cette stratégie configure les applications WebView2 pour utiliser le runtime WebView2 dans le chemin d’accès spécifié. Le dossier doit contenir les fichiers suivants : msedgewebview2.exe, msedge.dll, etc.<br><br>Pour définir la valeur du chemin d’accès au dossier, fournissez un nom et une paire valeur. Attribuez à nom de la valeur l’ID de modèle utilisateur de l’application ou le nom du fichier exécutable. Vous pouvez utiliser le caractère générique « * » comme nom de valeur à appliquer à toutes les applications.
+
+  <h5>Fonctionnalités prises en charge :</h5>
+  <ul>
+  <li>
+      Peut être obligatoire:
+       Oui
+  </li>
+  <li>
+      Peut être recommandé(e):
+       Non
+  </li>
+  <li>
+      Actualisation de la stratégie dynamique:
+      
+      Oui
+      
+  </li>
+  </ul>
+
+  <h5>Type de données:</h5>
+  <ul><li>Liste de chaînes</li></ul>
+
+
+  
+  <h5>Informations et paramètres Windows</h5>
+  <h6>Informations sur la stratégie de groupe (ADMX)</h6>
+  <ul>
+  <li>Nom unique de stratégie de groupe: BrowserExecutableFolder</li>
+  <li>Nom de la stratégie de groupe: Configurer l’emplacement du dossier exécutable du navigateur</li>
+  <li>Chemin d'accès à la stratégie de groupe (Obligatoire):
+    
+        Modèles d’administration/Microsoft Edge WebView2./Paramètres de remplacement du chargeur
+    </li>
+  <li>Chemin d'accès à la stratégie de groupe (Recommandé):
+    N/A</li>
+  <li>Nom du fichier ADMX de stratégie de groupe: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Paramètres du Registre Windows</h6>
+  <ul>
+  <li>Chemin (Obligatoire):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+    </li>
+  <li>Chemin (Recommandé):
+    N/A</li>
+  <li>Nom de la valeur:
+    liste de REG_SZ
+    </li>
+  <li>Type de la valeur:
+    liste de REG_SZ
+    </li>
+  </ul>
+  <h6>Exemple de valeur :</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+</pre>
+
+  
+
+
+  <br /><a href="#stratégies-de-microsoft edge-webview2">Revenir au début</a>
+
+
+  <h3><a name="ReleaseChannelPreference"></a>ReleaseChannelPreference</h3>
+  <h4>Définition de la préférence d’ordre de recherche de canaux de publication</h4>
+  
+  
+  <h5>Versions prises en charge :</h5>
+  <ul><li>Sur Windows depuis 87 ou ultérieur</li></ul>
+
+  <h5>Description</h5>
+  L’ordre de recherche des canaux par défaut est WebView2 Runtime, Beta, Dev et Canary.<br><br>Pour annuler l’ordre de recherche par défaut, attribuez la valeur 1 à cette stratégie.<br><br>Pour définir la valeur de la préférence de canal de publication, fournissez un nom de valeur et une paire de valeur. Définissez le nom de la valeur sur l’ID du modèle utilisateur de l’application ou le nom du fichier exécutable. Vous pouvez utiliser le caractère générique « * » comme nom de valeur à appliquer à toutes les applications.
+
+  <h5>Fonctionnalités prises en charge :</h5>
+  <ul>
+  <li>
+      Peut être obligatoire:
+       Oui
+  </li>
+  <li>
+      Peut être recommandé(e):
+       Non
+  </li>
+  <li>
+      Actualisation de la stratégie dynamique:
+      
+      Oui
+      
+  </li>
+  </ul>
+
+  <h5>Type de données:</h5>
+  <ul><li>Liste de chaînes</li></ul>
+
+
+  
+  <h5>Informations et paramètres Windows</h5>
+  <h6>Informations sur la stratégie de groupe (ADMX)</h6>
+  <ul>
+  <li>Nom unique de stratégie de groupe: ReleaseChannelPreference</li>
+  <li>Nom de la stratégie de groupe: Définition de la préférence d’ordre de recherche de canaux de publication</li>
+  <li>Chemin d'accès à la stratégie de groupe (Obligatoire):
+    
+        Modèles d’administration/Microsoft Edge WebView2./Paramètres de remplacement du chargeur
+    </li>
+  <li>Chemin d'accès à la stratégie de groupe (Recommandé):
+    N/A</li>
+  <li>Nom du fichier ADMX de stratégie de groupe: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Paramètres du Registre Windows</h6>
+  <ul>
+  <li>Chemin (Obligatoire):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+    </li>
+  <li>Chemin (Recommandé):
+    N/A</li>
+  <li>Nom de la valeur:
+    liste de REG_SZ
+    </li>
+  <li>Type de la valeur:
+    liste de REG_SZ
+    </li>
+  </ul>
+  <h6>Exemple de valeur :</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+</pre>
+
+  
+
+
+  <br /><a href="#stratégies-de-microsoft edge-webview2">Revenir au début</a>
+
+
+  <h2><a name="Additional-policies"></a>Additional policies</h2>
+  <br /><a href="#stratégies-de-microsoft edge-webview2">Revenir au début</a>
+
+  <h3><a name="ExperimentationAndConfigurationServiceControl"></a>ExperimentationAndConfigurationServiceControl</h3>
+  <h4>Contrôler la communication avec le service d’expérimentation et de configuration</h4>
+  
+  
+  <h5>Versions prises en charge :</h5>
+  <ul><li>Sur Windows depuis 97 ou ultérieur</li></ul>
+
+  <h5>Description</h5>
+  Le service d'expérimentation et de configuration est utilisé pour déployer les charges utiles d'expérimentation et de configuration sur le client.<br><br>Les charges utiles d'expérimentation consistent en une liste de fonctions en début de développement que Microsoft Corporation active pour les tester et obtenir un retour d'information.<br><br>  Les données utiles de configuration consistent en une liste de paramètres recommandés que Microsoft Corporation souhaite déployer pour optimiser l'expérience utilisateur.<br><br>    Les données utiles de configuration peuvent également contenir une liste d'actions à entreprendre sur certains domaines pour des raisons de compatibilité. Par exemple, le navigateur peut remplacer la chaîne User Agent d'un site Web si ce dernier n'est pas compatible. Chacune de ces actions est censée être temporaire pendant que Microsoft Corporation tente de résoudre le problème avec le propriétaire du site.<br><br>     Si vous définissez cette stratégie sur « FullMode », la charge utile complète est téléchargée depuis le service d'expérimentation et de configuration. Cela inclut les charges utiles d'expérimentation et de configuration.<br><br>    Si vous définissez cette stratégie sur « ConfigurationsOnlyMode », seuls les fichiers utiles de configuration sont téléchargés.<br><br>     Si vous définissez cette stratégie sur "RestrictedMode", la communication avec le service d'expérimentation et de configuration est complètement interrompue. Microsoft Corporation ne recommande pas ce paramètre.<br><br>     Si vous ne configurez pas cette stratégie sur un dispositif géré, le comportement sur les canaux Beta et Stable est le même que celui du 'ConfigurationsOnlyMode'. Sur les canaux Canary et Dev, le comportement est le même que celui du « FullMode ».<br><br>     Si vous ne configurez pas cette politique sur un dispositif non géré, le comportement est le même que celui du « FullMode ».<br><br>Mappage des options de stratégie :<br><br>* FullMode (2) = Récupérer les configurations et les expérimentations<br><br>* ConfigurationsOnlyMode (1) = Récupérer les configurations uniquement<br><br>* RestrictedMode (0) = Désactiver la communication avec le service d’expérimentation et de configuration<br><br>Utilisez les informations ci-dessus lors de la configuration de cette stratégie.
+
+  <h5>Fonctionnalités prises en charge :</h5>
+  <ul>
+  <li>
+      Peut être obligatoire:
+       Oui
+  </li>
+  <li>
+      Peut être recommandé(e):
+       Non
+  </li>
+  <li>
+      Actualisation de la stratégie dynamique:
+      
+      Oui
+      
+  </li>
+  </ul>
+
+  <h5>Type de données:</h5>
+  <ul><li>Entier</li></ul>
+
+
+  
+  <h5>Informations et paramètres Windows</h5>
+  <h6>Informations sur la stratégie de groupe (ADMX)</h6>
+  <ul>
+  <li>Nom unique de stratégie de groupe: ExperimentationAndConfigurationServiceControl</li>
+  <li>Nom de la stratégie de groupe: Contrôler la communication avec le service d’expérimentation et de configuration</li>
+  <li>Chemin d'accès à la stratégie de groupe (Obligatoire):
+    
+        Modèles d’administration/Microsoft Edge WebView2./
+    </li>
+  <li>Chemin d'accès à la stratégie de groupe (Recommandé):
+    N/A</li>
+  <li>Nom du fichier ADMX de stratégie de groupe: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Paramètres du Registre Windows</h6>
+  <ul>
+  <li>Chemin (Obligatoire):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Chemin (Recommandé):
+    N/A</li>
+  <li>Nom de la valeur:
+    ExperimentationAndConfigurationServiceControl</li>
+  <li>Type de la valeur:
+    REG_DWORD</li>
+  </ul>
+  <h6>Exemple de valeur :</h6>
+  <pre>0x00000002</pre>
+
+  
+
+
+  <br /><a href="#stratégies-de-microsoft edge-webview2">Revenir au début</a>
+
+
+  <h3><a name="ForcePermissionPolicyUnloadDefaultEnabled"></a>ForcePermissionPolicyUnloadDefaultEnabled</h3>
+  <h4>Contrôle si les gestionnaires d’événements unload peuvent être désactivés.</h4>
+  
+  
+  <h5>Versions prises en charge :</h5>
+  <ul><li>Sur Windows depuis 118 ou ultérieur</li></ul>
+
+  <h5>Description</h5>
+  unload les gestionnaires d’événements sont déconseillés. Leur déclenchement dépend de unload Permissions-Policy.<br>Actuellement, ils sont autorisés par la stratégie par défaut. À l’avenir, ils seront progressivement interdits par défaut et les sites devront les activer explicitement à l’aide des Permissions-Policy en-têtes.<br>Vous pouvez utiliser cette stratégie d’entreprise pour refuser cette désapprobation progressive en forçant la valeur par défaut à rester activée.<br><br>Les pages peuvent dépendre des gestionnaires d’événements unload pour enregistrer des données ou signaler la fin d’une session utilisateur au serveur.<br>Cette opération n’est pas recommandée, car elle n’est pas fiable et affecte les performances en bloquant l’utilisation de BackForwardCache.<br>Il existe des alternatives recommandées, mais l’événement unload a été utilisé depuis longtemps. Certaines applications peuvent encore s’appuyer sur elles.<br><br>Si vous désactivez cette stratégie ou ne la configurez pas, les gestionnaires d’événements unload seront progressivement déconseillés conformément au déploiement prévu de la désapprobation et les sites qui ne définissent pas l’en-tête Permissions-Policy cesseront de déclencher des événements de « déchargement ».<br><br>Si vous activez cette stratégie, alors les gestionnaires d’événements unload continueront à fonctionner par défaut.
+
+  <h5>Fonctionnalités prises en charge :</h5>
+  <ul>
+  <li>
+      Peut être obligatoire:
+       Oui
+  </li>
+  <li>
+      Peut être recommandé(e):
+       Non
+  </li>
+  <li>
+      Actualisation de la stratégie dynamique:
+      
+      Oui
+      
+  </li>
+  </ul>
+
+  <h5>Type de données:</h5>
+  <ul><li>Booléen</li></ul>
+
+
+  
+  <h5>Informations et paramètres Windows</h5>
+  <h6>Informations sur la stratégie de groupe (ADMX)</h6>
+  <ul>
+  <li>Nom unique de stratégie de groupe: ForcePermissionPolicyUnloadDefaultEnabled</li>
+  <li>Nom de la stratégie de groupe: Contrôle si les gestionnaires d’événements unload peuvent être désactivés.</li>
+  <li>Chemin d'accès à la stratégie de groupe (Obligatoire):
+    
+        Modèles d’administration/Microsoft Edge WebView2./
+    </li>
+  <li>Chemin d'accès à la stratégie de groupe (Recommandé):
+    N/A</li>
+  <li>Nom du fichier ADMX de stratégie de groupe: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Paramètres du Registre Windows</h6>
+  <ul>
+  <li>Chemin (Obligatoire):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2
+    </li>
+  <li>Chemin (Recommandé):
+    N/A</li>
+  <li>Nom de la valeur:
+    ForcePermissionPolicyUnloadDefaultEnabled</li>
+  <li>Type de la valeur:
+    REG_DWORD</li>
+  </ul>
+  <h6>Exemple de valeur :</h6>
+  <pre>0x00000001</pre>
+
+  
+
+
+  <br /><a href="#stratégies-de-microsoft edge-webview2">Revenir au début</a>
+
+
+  <h3><a name="NewPDFReaderWebView2List"></a>NewPDFReaderWebView2List</h3>
+  <h4>Activer le lecteur PDF intégré optimisé par Adobe Acrobat pour WebView2</h4>
+  
+  
+  <h5>Versions prises en charge :</h5>
+  <ul><li>Sur Windows depuis 116 ou ultérieur</li></ul>
+
+  <h5>Description</h5>
+  Cette stratégie configure les applications WebView2 pour qu'elles lancent la nouvelle version du lecteur PDF qui est alimentée par Adobe Acrobat's PDF reader. Le nouveau lecteur PDF garantit qu'il n'y a pas de perte de fonctionnalité et offre une expérience PDF améliorée. Cette expérience comprend un rendu plus riche, des performances améliorées, une sécurité renforcée pour le traitement des fichiers PDF et une plus grande accessibilité.<br><br>Si cette stratégie est spécifiée pour une application, il est possible qu'elle ait également un impact sur d'autres applications connexes. La politique est appliquée à tous les WebView2 qui partagent le même dossier de données utilisateur WebView2. Ces WebView2 peuvent potentiellement appartenir à plusieurs applications si ces applications, qui appartiennent probablement à la même famille de produits, sont conçues pour partager le même dossier de données utilisateur.<br><br>Utilisez une paire nom-valeur pour activer le nouveau lecteur PDF pour l'application. Définissez le nom comme étant l'ID du modèle d'utilisateur de l'application ou le nom du fichier exécutable. Vous pouvez utiliser le caractère générique "*" comme nom de valeur pour l'appliquer à toutes les applications. Définissez la valeur sur true pour activer le nouveau lecteur ou sur false pour utiliser le lecteur existant.<br><br>Si vous activez cette politique pour les applications WebView2 spécifiées, elles utiliseront le nouveau lecteur PDF propulsé par Adobe Acrobat pour ouvrir tous les fichiers PDF.<br><br>Si vous désactivez la politique pour les applications WebView2 spécifiées ou si vous ne la configurez pas, elles utiliseront le lecteur PDF existant pour ouvrir tous les fichiers PDF.
+
+  <h5>Fonctionnalités prises en charge :</h5>
+  <ul>
+  <li>
+      Peut être obligatoire:
+       Oui
+  </li>
+  <li>
+      Peut être recommandé(e):
+       Non
+  </li>
+  <li>
+      Actualisation de la stratégie dynamique:
+       Non - Nécessite le redémarrage du navigateur
+  </li>
+  </ul>
+
+  <h5>Type de données:</h5>
+  <ul><li>Liste de chaînes</li></ul>
+
+
+  
+  <h5>Informations et paramètres Windows</h5>
+  <h6>Informations sur la stratégie de groupe (ADMX)</h6>
+  <ul>
+  <li>Nom unique de stratégie de groupe: NewPDFReaderWebView2List</li>
+  <li>Nom de la stratégie de groupe: Activer le lecteur PDF intégré optimisé par Adobe Acrobat pour WebView2</li>
+  <li>Chemin d'accès à la stratégie de groupe (Obligatoire):
+    
+        Modèles d’administration/Microsoft Edge WebView2./
+    </li>
+  <li>Chemin d'accès à la stratégie de groupe (Recommandé):
+    N/A</li>
+  <li>Nom du fichier ADMX de stratégie de groupe: MSEdgeWebView2.admx</li>
+  </ul>
+  <h6>Paramètres du Registre Windows</h6>
+  <ul>
+  <li>Chemin (Obligatoire):
+    
+      SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List
+    </li>
+  <li>Chemin (Recommandé):
+    N/A</li>
+  <li>Nom de la valeur:
+    liste de REG_SZ
+    </li>
+  <li>Type de la valeur:
+    liste de REG_SZ
+    </li>
+  </ul>
+  <h6>Exemple de valeur :</h6>
+  <pre>SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "app1.exe", "value": true}
+SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "app_id_for_app2", "value": true}
+SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "*", "value": false}
+</pre>
+
+  
+
+
+  <br /><a href="#stratégies-de-microsoft edge-webview2">Revenir au début</a>
+
+
+
+<h2>Voir aussi</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/DeployEdge/configure-microsoft-edge">Configuration de Microsoft Edge</a></li>
+<li><a href="https://www.microsoftedgeinsider.com/enterprise">Page d’arrivée de Microsoft Edge Entreprise</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines">Blog des Bases de référence de sécurité Microsoft</a></li>
+</ul>
+
+</body>
+</html>
