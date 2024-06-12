@@ -6,6 +6,8 @@ Outil de déploiement des stratégies de groupe CD31
 
 Versions :
 
+- Remplacement du plugin Google Chrome AdBlock par uBlock Origin
+
 v3.0 - 12/01/2024 - Emmanuel Fournier
 - Mise-à-jour des templates ADMX pour la nouvelle image Windows 10 22H2, Firefox et Google Chrome.
 - Modification modèles de stratégie de groupe Magret : ajout de la valeur 4100 "C: M:" pour NoDrives
