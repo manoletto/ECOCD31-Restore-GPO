@@ -1,1 +1,0 @@
-Add-AppxPackage -Path 'C:\Program Files\WindowsApps\Microsoft.WindowsCalculator_11.2307.4.0_x64__8wekyb3d8bbwe\AppxManifest.xml' -Register -DisableDevelopmentMode
